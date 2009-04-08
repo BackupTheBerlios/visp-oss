@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DDA41115FEC3C0DF1C8B16C075D8C0" name="sendEmailToUser" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-10-27T11:21:58.140+0100" modificationDate="2008-10-27T14:12:38.625+0100">
+  <children xsi:type="bpmn:Pool" id="A1DDA4111A10A280DF1C8B16C075D8C0" name="VISP-Application - send email to user">
+    <fontColor/>
+    <lineColor/>
+    <font family="Arial" height="8"/>
+    <location x="33" y="23"/>
+    <size width="817" height="668"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DDA4111A10A281DF1C8B16C075D8C0" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Arial" height="8"/>
+      <size height="668"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DDA4117333B230DF1C8B16C075D8C0" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA4118C759BA0DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA4117B314A10DF1C8B16C075D8C0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="17" y="17"/>
+          <targetAnchor x="124" y="77"/>
+        </sourceConnections>
+        <location x="51" y="62"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DDA4118C759BA0DF1C8B16C075D8C0" id="A1DDA4117B314A10DF1C8B16C075D8C0" name="Global catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA4284F5F5DC0DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA4284841C5A0DF1C8B16C075D8C0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="11" y="155"/>
+          <targetAnchor x="60" y="25"/>
+          <boundaryEvent id="A1DDA42854F36FB0DF1C8B16C075D8C0">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DDA42854F36FB1DF1C8B16C075D8C0">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA4289BA5BBC0DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA4289A1C5CA0DF1C8B16C075D8C0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="16" y="473"/>
+          <targetAnchor x="17" y="11"/>
+        </sourceConnections>
+        <location x="214" y="25"/>
+        <size width="542" height="618"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DDA4118EE3DC80DF1C8B16C075D8C0" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA413B6702680DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA413AE4EB2F0DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="22" y="12"/>
+            <targetAnchor x="48" y="52"/>
+          </sourceConnections>
+          <location x="44" y="71"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA413B6702680DF1C8B16C075D8C0" id="A1DDA413AE4EB2F0DF1C8B16C075D8C0" name="Receive request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA413CBF86350DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA413C2D0CA60DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="107" y="36"/>
+            <targetAnchor x="25" y="33"/>
+          </sourceConnections>
+          <location x="148" y="43"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DDA413AE4EB2F1DF1C8B16C075D8C0"/>
+          <webService interface="emailuserwsdl:SendEmailToUser_PT" operation="SendEmailToUser" role="SendEmailToUser_Provider" partnerLink="emailUser" partnerLinkType="emailuserwsdl:SendEmailToUser_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA413CBF86350DF1C8B16C075D8C0" id="A1DDA413C2D0CA60DF1C8B16C075D8C0" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA427DC099C00DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA427C2F74E10DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="51" y="75"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="352" y="44"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <assignments to="A1DDA41431BA0A40DF1C8B16C075D8C0" fromXMLLiteral="sendEmailToUser: Unexpected error" id="A1DDA413D315FB70DF1C8B16C075D8C0" fromType="Literal" name="Assignment1"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA41499BEEA70DF1C8B16C075D8C0" id="A1DDA4148D73CA60DF1C8B16C075D8C0" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA414A9BA4140DF1C8B16C075D8C0" name="" routingType="RectilinearVertical" target="A1DDA414A0B65CF0DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="10" y="35"/>
+            <targetAnchor x="20" y="15"/>
+            <bendingPoints x="102" y="232"/>
+          </sourceConnections>
+          <location x="152" y="193"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <assignments id="A1DDA4281704A390DF1C8B16C075D8C0" name="Assignment1"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DDA414A9BA4140DF1C8B16C075D8C0" id="A1DDA414A0B65CF0DF1C8B16C075D8C0" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="49" y="216"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DDA414A3F8DDC0DF1C8B16C075D8C0">
+            <error errorCode="PD_fault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA427DDE67250DF1C8B16C075D8C0" id="A1DDA4151ACA31B0DF1C8B16C075D8C0" name="Send email to address" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA41535553CF0DF1C8B16C075D8C0" name="" routingType="RectilinearVertical" target="A1DDA4152DD5FCD0DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="6" y="37"/>
+            <targetAnchor x="81" y="44"/>
+            <bendingPoints x="314" y="380"/>
+            <boundaryEvent id="A1DDA41589543A90DF1C8B16C075D8C0">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DDA41589543A91DF1C8B16C075D8C0">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA420247837B0DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA42014461970DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="70"/>
+            <targetAnchor x="60" y="17"/>
+          </sourceConnections>
+          <location x="358" y="336"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DDA4151ACA31B1DF1C8B16C075D8C0"/>
+          <webService interface="emailwsdl:emailProxy_PT" operation="emailProxy" role="emailProxy_Provider" partnerLink="emailProxy" partnerLinkType="emailwsdl:emailProxy_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA41535553CF0DF1C8B16C075D8C0" id="A1DDA4152DD5FCD0DF1C8B16C075D8C0" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA41579921C30DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA41576FDB5B0DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="13" y="39"/>
+            <targetAnchor x="1" y="20"/>
+          </sourceConnections>
+          <location x="161" y="339"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <assignments to="A1DDA41431BA0A40DF1C8B16C075D8C0" fromXMLLiteral="sendEmailToUser: Cannot send email" id="A1DDA4153B4FD8E0DF1C8B16C075D8C0" fromType="Literal" name="Assignment1"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DDA41579921C30DF1C8B16C075D8C0" id="A1DDA41576FDB5B0DF1C8B16C075D8C0" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="59" y="363"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DDA4157C8851C0DF1C8B16C075D8C0">
+            <error errorCode="SendingFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA420247837B0DF1C8B16C075D8C0" id="A1DDA42014461970DF1C8B16C075D8C0" name="Send response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA42049441410DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA42046BB9470DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="16" y="38"/>
+            <targetAnchor x="5" y="16"/>
+          </sourceConnections>
+          <location x="357" y="484"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DDA413AE4EB2F2DF1C8B16C075D8C0"/>
+          <webService interface="emailuserwsdl:SendEmailToUser_PT" operation="SendEmailToUser" role="SendEmailToUser_Provider" partnerLink="emailUser" partnerLinkType="emailuserwsdl:SendEmailToUser_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DDA42049441410DF1C8B16C075D8C0" id="A1DDA42046BB9470DF1C8B16C075D8C0" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="211" y="505"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DDA427DC099C00DF1C8B16C075D8C0" id="A1DDA427C2F74E10DF1C8B16C075D8C0" name="Get user email address">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA41499BEEA70DF1C8B16C075D8C0" name="" routingType="RectilinearVertical" target="A1DDA4148D73CA60DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="100" y="37"/>
+            <targetAnchor x="98" y="37"/>
+            <bendingPoints x="317" y="233"/>
+            <boundaryEvent id="A1DDA4149C831380DF1C8B16C075D8C0">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DDA4149C831381DF1C8B16C075D8C0">
+                <error message="A1DDA427F2496900DF1C8B16C075D8C0" errorCode="pdwsdl:PD_Fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA427DDE67250DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA4151ACA31B0DF1C8B16C075D8C0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="40" y="60"/>
+            <targetAnchor x="58" y="30"/>
+          </sourceConnections>
+          <location x="359" y="195"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DDA427C2F74E11DF1C8B16C075D8C0"/>
+          <outMessage message="A1DDA427C2F74E12DF1C8B16C075D8C0"/>
+          <webService interface="pdwsdl:PD" operation="queryPDByLoginusername" role="PD_Provider" partnerLink="PD" partnerLinkType="pdwsdl:PD_LT"/>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DDA4284F5F5DC0DF1C8B16C075D8C0" id="A1DDA4284841C5A0DF1C8B16C075D8C0" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DDA42871FD5DA0DF1C8B16C075D8C0" name="" routingType="RectilinearHorizontal" target="A1DDA428598D4320DF1C8B16C075D8C0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="56" y="73"/>
+          <targetAnchor x="15" y="12"/>
+        </sourceConnections>
+        <location x="41" y="229"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <assignments id="A1DDA42857797E50DF1C8B16C075D8C0" name="Assignment1"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DDA42871FD5DA0DF1C8B16C075D8C0" id="A1DDA428598D4320DF1C8B16C075D8C0" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="86" y="365"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DDA4285BE3B640DF1C8B16C075D8C0" implementation="WebService">
+          <error message="A1DDA41431BA0A40DF1C8B16C075D8C0" errorCode="emailuserwsdl:SendEmailToUser_Fault"/>
+          <webService interface="emailuserwsdl:SendEmailToUser_PT" operation="SendEmailToUser" role="SendEmailToUser_Provider" partnerLink="emailUser" partnerLinkType="emailuserwsdl:SendEmailToUser_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DDA4289BA5BBC0DF1C8B16C075D8C0" id="A1DDA4289A1C5CA0DF1C8B16C075D8C0" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="75" y="532"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="sendEmailToUser" id="A1DDA411739EF720DF1C8B16C075D8C0" targetNamespace="urn:vispproject.org/052007/processes/bp/sendEmailToUser/bpel">
+      <messages name="SendEmailToUser_Request" type="emailuserwsdl:SendEmailToUser_Request" id="A1DDA413AE4EB2F1DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
+        <properties name="parameters" type="emailuserwsdl:SendEmailToUser"/>
+      </messages>
+      <messages name="SendEmailToUser_Response" type="emailuserwsdl:SendEmailToUser_Response" id="A1DDA413AE4EB2F2DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage">
+        <properties name="parameters" type="emailuserwsdl:SendEmailToUser_Response"/>
+      </messages>
+      <messages name="SendEmailToUser_Fault" type="emailuserwsdl:SendEmailToUser_Fault" id="A1DDA41431BA0A40DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error">
+        <properties name="parameters" type="emailuserwsdl:SendEmailToUser_Fault"/>
+      </messages>
+      <messages name="emailProxy_request" type="emailwsdl:emailProxy_request" id="A1DDA4151ACA31B1DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.5/@inMessage">
+        <properties name="parameters" type="emailwsdl:emailProxy"/>
+      </messages>
+      <messages name="queryPDByLoginusernameRequest" type="pdwsdl:queryPDByLoginusernameRequest" id="A1DDA427C2F74E11DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.10/@inMessage">
+        <properties name="parameters" type="pdwsdl:queryPDByLoginusername"/>
+      </messages>
+      <messages name="queryPDByLoginusernameResponse" type="pdwsdl:queryPDByLoginusernameResponse" id="A1DDA427C2F74E12DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.10/@outMessage">
+        <properties name="parameters" type="pdwsdl:queryPDByLoginusernameResponse"/>
+      </messages>
+      <messages name="PD_Fault" type="pdwsdl:PD_Fault" id="A1DDA427F2496900DF1C8B16C075D8C0" messageUsages="//@children.0/@children.0/@children.1/@children.10/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
+        <properties name="vispError" type="comxsd:VispError"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpel" value="http://docs.oasis-open.org/wsbpel/2.0/process/executable"/>
+  <xMLNSPrefixMap key="emailuserwsdl" value="urn:vispproject.org/052007/processes/bp/sendEmailToUser/wsdl"/>
+  <xMLNSPrefixMap key="emailwsdl" value="urn:vispproject.org/052007/enterpriseServices/emailProxy/wsdl"/>
+  <xMLNSPrefixMap key="pdwsdl" value="urn:vispproject.org/052007/enterpriseServices/pd/wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+</bpmn:Diagram>

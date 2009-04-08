@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD572353148AF0E22F9665472F4823" name="findSP_commodity" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-21T14:48:31.765+0200" modificationDate="2008-07-22T12:41:00.578+0200">
+  <children xsi:type="bpmn:Pool" id="A1DD572355C33030E22F9665472F4823" name="find service provider in Commodity Market - Broker">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="25" y="14"/>
+    <size width="974" height="1305"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD572355C33031E22F9665472F4823" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="1305"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DD5726B62429E0E22F9665472F4823" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5739634F32B0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5726BCAB7570E22F9665472F4823">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="14" y="16"/>
+          <targetAnchor x="100" y="68"/>
+        </sourceConnections>
+        <location x="49" y="67"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD5739634F32B0E22F9665472F4823" id="A1DD5726BCAB7570E22F9665472F4823" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57398438F2E0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD57396B566780E22F9665472F4823">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="16" y="174"/>
+          <targetAnchor x="59" y="17"/>
+          <boundaryEvent id="A1DD573988DEAD30E22F9665472F4823">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD573988DEAD31E22F9665472F4823">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5739B88DB530E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5739B602C490E22F9665472F4823">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="13" y="622"/>
+          <targetAnchor x="16" y="17"/>
+        </sourceConnections>
+        <location x="173" y="17"/>
+        <size width="755" height="1262"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD5732B8F30AE0E22F9665472F4823" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57344CC30CB0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5734433733B0E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="26" y="14"/>
+            <targetAnchor x="59" y="27"/>
+          </sourceConnections>
+          <location x="44" y="64"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD57344CC30CB0E22F9665472F4823" id="A1DD5734433733B0E22F9665472F4823" name="Receive request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5735039BAC80E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5734F522AFF0E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="107" y="39"/>
+            <targetAnchor x="10" y="39"/>
+          </sourceConnections>
+          <location x="141" y="39"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD57344339A4B0E22F9665472F4823"/>
+          <webService interface="comfindwsdl:findSP_commodity_PT" operation="findSP_commodity" role="findSP_commodity_Provider" partnerLink="findSP_commodity" partnerLinkType="comfindwsdl:findSP_commodity_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5735039BAC80E22F9665472F4823" id="A1DD5734F522AFF0E22F9665472F4823" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57365A7265C0E22F9665472F4823" name="" routingType="RectilinearVertical" target="A1DD57365694DD70E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="111" y="35"/>
+            <targetAnchor x="37" y="48"/>
+            <bendingPoints x="459" y="79"/>
+          </sourceConnections>
+          <location x="315" y="39"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD57365A7265C0E22F9665472F4823" id="A1DD57365694DD70E22F9665472F4823" name="Initialize loop conditions" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57368E4FD530E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD573666380220E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="532" y="32"/>
+          </sourceConnections>
+          <location x="500" y="39"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD57368E4FD530E22F9665472F4823" id="A1DD573666380220E22F9665472F4823" name="Select best provider" activityType="Subprocess" loopType="Standard">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5738F0EEF480E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5738E2B8CD50E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="90" y="752"/>
+            <targetAnchor x="60" y="16"/>
+          </sourceConnections>
+          <location x="27" y="196"/>
+          <size width="704" height="762"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:StartEvent" id="A1DD57367C6BE840E22F9665472F4823" name="StartEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573723C2F520E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD57371BAD6870E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="18" y="17"/>
+              <targetAnchor x="31" y="44"/>
+            </sourceConnections>
+            <location x="62" y="73"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD573723C2F520E22F9665472F4823" id="A1DD57371BAD6870E22F9665472F4823" name="Prepare request" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573730689140E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5737290ABBD0E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="111" y="36"/>
+              <targetAnchor x="37" y="46"/>
+            </sourceConnections>
+            <location x="188" y="47"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD573730689140E22F9665472F4823" id="A1DD5737290ABBD0E22F9665472F4823" name="Get Service Price" taskType="Send">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573736E1AC00E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5737332F2B50E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="54" y="73"/>
+              <targetAnchor x="25" y="22"/>
+            </sourceConnections>
+            <location x="366" y="50"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage message="A1DD5737290ABBD1E22F9665472F4823"/>
+            <webService interface="trdgetpricewsdl:getServicePrice_PT" operation="getServicePrice" role="getServcePrice_Provider" partnerLink="getServicePrice" partnerLinkType="trdgetpricewsdl:getServicePrice_LT"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DD573736E1AC00E22F9665472F4823" id="A1DD5737332F2B50E22F9665472F4823" name="Gateway1" exclusiveGatewayType="EventBased">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573745E75830E22F9665472F4823" name="" routingType="RectilinearVertical" target="A1DD573741251530E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="15" y="27"/>
+              <targetAnchor x="84" y="40"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573759821CE0E22F9665472F4823" name="" routingType="RectilinearVertical" target="A1DD573753C7BE40E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="38" y="25"/>
+              <targetAnchor x="72" y="44"/>
+              <bendingPoints x="502" y="219"/>
+            </sourceConnections>
+            <location x="394" y="193"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD573745E75830E22F9665472F4823" id="A1DD573741251530E22F9665472F4823" name="Get Service Price Response" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5737FF679860E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5737DF11B3C0E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="57" y="70"/>
+              <targetAnchor x="58" y="21"/>
+            </sourceConnections>
+            <location x="189" y="177"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DD573741251531E22F9665472F4823"/>
+            <webService interface="trdgetpricewsdl:getServicePrice_CB" operation="getServicePrice_Response" role="getServicePrice_Requester" partnerLink="getServicePrice" partnerLinkType="trdgetpricewsdl:getServicePrice_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD573759821CE0E22F9665472F4823" id="A1DD573753C7BE40E22F9665472F4823" name="Get Service Price Error" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5737AAFD55D0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5737A743A930E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="61" y="78"/>
+              <targetAnchor x="56" y="28"/>
+              <bendingPoints x="588" y="274"/>
+            </sourceConnections>
+            <location x="530" y="179"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DD573753C7BE41E22F9665472F4823"/>
+            <webService interface="trdgetpricewsdl:getServicePrice_CB" operation="getServicePrice_Error" role="getServicePrice_Requester" partnerLink="getServicePrice" partnerLinkType="trdgetpricewsdl:getServicePrice_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD5737AAFD55D0E22F9665472F4823" id="A1DD5737A743A930E22F9665472F4823" name="Continou with others" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5737CA352040E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5737C8511E00E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="58" y="77"/>
+              <targetAnchor x="15" y="7"/>
+            </sourceConnections>
+            <location x="528" y="303"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5737CA352040E22F9665472F4823" id="A1DD5737C8511E00E22F9665472F4823" name="EndEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="569" y="433"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD5737FF679860E22F9665472F4823" id="A1DD5737DF11B3C0E22F9665472F4823" name="Check if price is the best" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573806A8E520E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD573802ECC780E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="54" y="74"/>
+              <targetAnchor x="26" y="18"/>
+            </sourceConnections>
+            <location x="190" y="300"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DD573806A8E520E22F9665472F4823" id="A1DD573802ECC780E22F9665472F4823" name="Gateway2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57383A7F28A0E22F9665472F4823" name="not the best" routingType="RectilinearVertical" target="A1DD57380B50E960E22F9665472F4823" conditionType="Expression" conditionExpression="'not the best'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="8" y="25"/>
+              <targetAnchor x="79" y="43"/>
+              <labelLocation x="-26" y="-28"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57384CEB3150E22F9665472F4823" name="the best" routingType="RectilinearVertical" target="A1DD5738453047C0E22F9665472F4823" conditionType="Expression" conditionExpression="'the best'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="26" y="28"/>
+              <targetAnchor x="109" y="37"/>
+            </sourceConnections>
+            <location x="219" y="428"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD57383A7F28A0E22F9665472F4823" id="A1DD57380B50E960E22F9665472F4823" name="Continue with other" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5738D6668150E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5738D3B7DC10E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="51" y="79"/>
+              <targetAnchor x="15" y="17"/>
+            </sourceConnections>
+            <location x="35" y="408"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD57384CEB3150E22F9665472F4823" id="A1DD5738453047C0E22F9665472F4823" name="Save current provider" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5738C7DCBBE0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5738C4BE16C0E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="58" y="76"/>
+              <targetAnchor x="59" y="27"/>
+            </sourceConnections>
+            <location x="353" y="416"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD5738C7DCBBE0E22F9665472F4823" id="A1DD5738C4BE16C0E22F9665472F4823" name="Continue with other" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5738D07C8730E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5738CE130140E22F9665472F4823">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="58" y="75"/>
+              <targetAnchor x="15" y="17"/>
+            </sourceConnections>
+            <location x="354" y="544"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5738D07C8730E22F9665472F4823" id="A1DD5738CE130140E22F9665472F4823" name="EndEvent2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="398" y="670"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5738D6668150E22F9665472F4823" id="A1DD5738D3B7DC10E22F9665472F4823" name="EndEvent3">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="73" y="544"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <loop xsi:type="bpmn:StandardLoop" loopCondition="'another provider available'" testTime="Before"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5738F0EEF480E22F9665472F4823" id="A1DD5738E2B8CD50E22F9665472F4823" name="Check if provider is found" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5738F7F24DE0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5738F48C1870E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="112" y="42"/>
+            <targetAnchor x="28" y="26"/>
+          </sourceConnections>
+          <location x="62" y="1004"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD5738F7F24DE0E22F9665472F4823" id="A1DD5738F48C1870E22F9665472F4823" name="Gateway1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573905E10BD0E22F9665472F4823" name="not found" routingType="RectilinearVertical" target="A1DD5738FA5E44D0E22F9665472F4823" conditionType="Expression" conditionExpression="'not found'">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="41" y="26"/>
+            <targetAnchor x="78" y="35"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57393693EF40E22F9665472F4823" name="found" routingType="RectilinearHorizontal" target="A1DD57392ECF8FD0E22F9665472F4823" conditionType="Expression" conditionExpression="'found'">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="26" y="40"/>
+            <targetAnchor x="49" y="19"/>
+            <bendingPoints x="274" y="1113"/>
+          </sourceConnections>
+          <location x="250" y="1020"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD573905E10BD0E22F9665472F4823" id="A1DD5738FA5E44D0E22F9665472F4823" name="Assing error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573914F780E0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD57390D6EA3D0E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="112" y="39"/>
+            <targetAnchor x="15" y="16"/>
+          </sourceConnections>
+          <location x="393" y="1012"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD573914F780E0E22F9665472F4823" id="A1DD57390D6EA3D0E22F9665472F4823" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="576" y="1033"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD5739106E4F40E22F9665472F4823">
+            <error errorCode="ProviderNotAvailable"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD57393693EF40E22F9665472F4823" id="A1DD57392ECF8FD0E22F9665472F4823" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD57395425D1E0E22F9665472F4823" name="" routingType="RectilinearVertical" target="A1DD57394CB97D80E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="104" y="35"/>
+            <targetAnchor x="68" y="40"/>
+            <bendingPoints x="376" y="1180"/>
+          </sourceConnections>
+          <location x="215" y="1140"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD57395425D1E0E22F9665472F4823" id="A1DD57394CB97D80E22F9665472F4823" name="Send response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD573959D1B190E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5739572CA940E22F9665472F4823">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="117" y="41"/>
+            <targetAnchor x="10" y="14"/>
+          </sourceConnections>
+          <location x="393" y="1141"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD57394CB97D81E22F9665472F4823"/>
+          <webService interface="comfindwsdl:findSP_commodity_CB" operation="findSP_commodity_Reply" role="findSP_commodity_Requester" partnerLink="findSP_commodity" partnerLinkType="comfindwsdl:findSP_commodity_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD573959D1B190E22F9665472F4823" id="A1DD5739572CA940E22F9665472F4823" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="576" y="1167"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD57398438F2E0E22F9665472F4823" id="A1DD57396B566780E22F9665472F4823" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5739A6300460E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD57398C82D600E22F9665472F4823">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="56" y="75"/>
+          <targetAnchor x="59" y="9"/>
+        </sourceConnections>
+        <location x="28" y="264"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD5739A6300460E22F9665472F4823" id="A1DD57398C82D600E22F9665472F4823" name="Send error message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5739AECD5EB0E22F9665472F4823" name="" routingType="RectilinearHorizontal" target="A1DD5739AB58D160E22F9665472F4823">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="62" y="75"/>
+          <targetAnchor x="14" y="12"/>
+        </sourceConnections>
+        <location x="29" y="394"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD57398C82D601E22F9665472F4823"/>
+        <webService interface="comfindwsdl:findSP_commodity_CB" operation="findSP_commodity_Fault" role="findSP_commodity_Requester" partnerLink="findSP_commodity" partnerLinkType="comfindwsdl:findSP_commodity_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5739AECD5EB0E22F9665472F4823" id="A1DD5739AB58D160E22F9665472F4823" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="74" y="524"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5739B88DB530E22F9665472F4823" id="A1DD5739B602C490E22F9665472F4823" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="71" y="680"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="findSP_commodity" id="A1DD5726B6FF95C0E22F9665472F4823" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/commodity/findSP/bpel">
+      <messages name="findSP_commodity_Request" type="comfindwsdl:findSP_commodity_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DD57344339A4B0E22F9665472F4823">
+        <properties name="parameters" type="comfindwsdl:findSP_commodity"/>
+      </messages>
+      <messages name="getServicePrice_Request" type="trdgetpricewsdl:getServicePrice_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.2/@inMessage" id="A1DD5737290ABBD1E22F9665472F4823">
+        <properties name="parameters" type="trdgetpricewsdl:getServicePrice"/>
+      </messages>
+      <messages name="getServicePrice_Response" type="trdgetpricewsdl:getServicePrice_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.4/@outMessage" id="A1DD573741251531E22F9665472F4823">
+        <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Response"/>
+      </messages>
+      <messages name="getServicePrice_Error" type="trdgetpricewsdl:getServicePrice_Error" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.5/@outMessage" id="A1DD573753C7BE41E22F9665472F4823">
+        <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Error"/>
+      </messages>
+      <messages name="findSP_commodity_Response" type="comfindwsdl:findSP_commodity_Response" messageUsages="//@children.0/@children.0/@children.1/@children.10/@inMessage" id="A1DD57394CB97D81E22F9665472F4823">
+        <properties name="parameters" type="comfindwsdl:findSP_commodity_Response"/>
+      </messages>
+      <messages name="findSP_commodity_Fault" type="comfindwsdl:findSP_commodity_Fault" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DD57398C82D601E22F9665472F4823">
+        <properties name="vispError" type="comfindwsdl:findSP_commodity_Fault"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="comfindwsdl" value="urn:vispproject.org/052007/processes/bp/trading/commodity/findSP/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\businessProcesses\trading\commodityMarket\findSP_commodity\wsdl\findSP_commodity.wsdl"/>
+  <xMLNSPrefixMap key="trdgetpricewsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/getServicePrice/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\businessProcesses\trading\common\getServicePrice\wsdl\getServicePrice.wsdl"/>
+</bpmn:Diagram>

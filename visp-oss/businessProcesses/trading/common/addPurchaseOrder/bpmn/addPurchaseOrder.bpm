@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCCE6F962EE660C8719711E7961027" name="addPurchaseOrder" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-01-29T14:39:16.811+0100" modificationDate="2008-01-29T17:06:11.048+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCCE6FDD073100C8719711E7961027" name="Add Purchase Order - process on Provider's side">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="20" y="30"/>
+    <size width="1012" height="723"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCCE6FDD073101C8719711E7961027" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="723"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCCE7B7CB75080C8719711E7961027" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7BD74513C0C8719711E7961027" name="" routingType="RectilinearVertical" target="A1DCCE7BAAD1FCE0C8719711E7961027">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="24" y="18"/>
+          <targetAnchor x="46" y="47"/>
+          <bendingPoints x="138" y="67"/>
+        </sourceConnections>
+        <location x="62" y="54"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7BD74513C0C8719711E7961027" id="A1DCCE7BAAD1FCE0C8719711E7961027" name="Create Purchase Order in ERP" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7DDE1BA5E0C8719711E7961027" name="" routingType="RectilinearVertical" target="A1DCCE7DD9AA6910C8719711E7961027">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="12" y="179"/>
+          <targetAnchor x="12" y="10"/>
+          <bendingPoints x="138" y="202"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7E0ABDBC00C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7DE7706950C8719711E7961027">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="23" y="280"/>
+          <targetAnchor x="60" y="36"/>
+          <boundaryEvent id="A1DCCE7E111FA540C8719711E7961027">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCCE7E111FA541C8719711E7961027">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="179" y="24"/>
+        <size width="780" height="677"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7C0F4CCBF0C8719711E7961027" id="A1DCCE7BE31DEA00C8719711E7961027" name="Receive Request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C35EE79C0C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7C1F4D52E0C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="110" y="42"/>
+            <targetAnchor x="19" y="33"/>
+          </sourceConnections>
+          <location x="24" y="45"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCCE7BE31DEA01C8719711E7961027"/>
+          <webService interface="trdpurchwsdl:addPurchaseOrder_PT" operation="addPurchaseOrder" role="addPurchaseOrder_Provider" partnerLink="addPurchaseOrder" partnerLinkType="trdpurchwsdl:addPurchaseOrder_LT"/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DCCE7BE6659AF0C8719711E7961027" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C0F4CCBF0C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7BE31DEA00C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="12" y="14"/>
+            <targetAnchor x="51" y="36"/>
+            <bendingPoints x="80" y="138"/>
+          </sourceConnections>
+          <location x="66" y="166"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7C35EE79C0C8719711E7961027" id="A1DCCE7C1F4D52E0C8719711E7961027" name="Create PurchaseOrder from ServiceProfile" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C4C3C2970C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7C41D6E060C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="64" y="70"/>
+            <targetAnchor x="60" y="17"/>
+          </sourceConnections>
+          <location x="222" y="45"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7C4C3C2970C8719711E7961027" id="A1DCCE7C41D6E060C8719711E7961027" name="Send ProcessPurchaseOrder" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C63431700C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7C526A0A60C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="69"/>
+            <targetAnchor x="252" y="23"/>
+          </sourceConnections>
+          <location x="226" y="188"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCCE7C41D6E061C8719711E7961027"/>
+          <webService interface="trdorderwsdl:RequestCreatePurchaseOrder" operation="ProcessPurchaseOrder" role="createPurchaseOrder_Provider" partnerLink="createOrder" partnerLinkType="trdorderwsdl:createPurchaseOrder_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7C63431700C8719711E7961027" id="A1DCCE7C526A0A60C8719711E7961027" name="Receive Reply" activityType="Subprocess">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7D57481D50C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7D54922510C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="447" y="16"/>
+            <targetAnchor x="60" y="65"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7D8542BE90C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7D7A1B5E00C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="614" y="12"/>
+            <targetAnchor x="60" y="56"/>
+            <boundaryEvent id="A1DCCE7D8B075660C8719711E7961027">
+              <triggers xsi:type="bpmn:TimerTrigger" id="A1DCCE7D8B075661C8719711E7961027">
+                <timer timeCycle="P0Y0M0DT0H10M0S"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="32" y="318"/>
+          <size width="718" height="325"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:StartEvent" id="A1DCCE7C6693C8A0C8719711E7961027" name="StartEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C80288D00C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7C76944F90C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="22" y="17"/>
+              <targetAnchor x="26" y="8"/>
+            </sourceConnections>
+            <location x="28" y="18"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DCCE7C80288D00C8719711E7961027" id="A1DCCE7C76944F90C8719711E7961027" name="Gateway1" exclusiveGatewayType="EventBased">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7C9708DFC0C8719711E7961027" name="" routingType="RectilinearVertical" target="A1DCCE7C8C905CD0C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="25" y="47"/>
+              <targetAnchor x="76" y="46"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7CCF91AED0C8719711E7961027" name="" routingType="RectilinearVertical" target="A1DCCE7CCBA72E30C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="40" y="26"/>
+              <targetAnchor x="110" y="44"/>
+            </sourceConnections>
+            <location x="100" y="83"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7C9708DFC0C8719711E7961027" id="A1DCCE7C8C905CD0C8719711E7961027" name="Receive ShowPurchaseOrder" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7CBBAB6230C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7CA153EA10C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="108" y="38"/>
+              <targetAnchor x="46" y="42"/>
+            </sourceConnections>
+            <location x="61" y="192"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DCCE7C8C905CD1C8719711E7961027"/>
+            <webService interface="trdorderwsdl:ResponseCreatePurchaseOrder" operation="ShowPurchaseOrder" role="createPurchaseOrder_Requester" partnerLink="createOrder" partnerLinkType="trdorderwsdl:createPurchaseOrder_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7CBBAB6230C8719711E7961027" id="A1DCCE7CA153EA10C8719711E7961027" name="PurchaseOrder into TradingInformation" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7CE9A2CF20C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7CE68AB9B0C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="115" y="38"/>
+              <targetAnchor x="13" y="11"/>
+            </sourceConnections>
+            <location x="251" y="194"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7CCF91AED0C8719711E7961027" id="A1DCCE7CCBA72E30C8719711E7961027" name="Recive ConfirmBOD" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7D16961280C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7D0BDF4E10C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="110" y="40"/>
+              <targetAnchor x="26" y="35"/>
+            </sourceConnections>
+            <location x="243" y="64"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DCCE7CCBA72E31C8719711E7961027"/>
+            <webService interface="trdorderwsdl:ResponseCreatePurchaseOrder" operation="ConfirmBOD" role="createPurchaseOrder_Requester" partnerLink="createOrder" partnerLinkType="trdorderwsdl:createPurchaseOrder_LT"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7CE9A2CF20C8719711E7961027" id="A1DCCE7CE68AB9B0C8719711E7961027" name="EndEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="465" y="219"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7D16961280C8719711E7961027" id="A1DCCE7D0BDF4E10C8719711E7961027" name="Create ErrorMessage" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7D1B777640C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7D19965A30C8719711E7961027">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="106" y="38"/>
+              <targetAnchor x="26" y="23"/>
+            </sourceConnections>
+            <location x="430" y="62"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7D1B777640C8719711E7961027" id="A1DCCE7D19965A30C8719711E7961027" name="EndEvent2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="627" y="84"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DCCE7D25057220C8719711E7961027">
+              <error errorCode="PurchaseOrderCannotBeCreated"/>
+            </results>
+          </children>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7D57481D50C8719711E7961027" id="A1DCCE7D54922510C8719711E7961027" name="Send Confirmation" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7D6FB132F0C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7D6C1EE470C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="11"/>
+            <targetAnchor x="16" y="18"/>
+          </sourceConnections>
+          <location x="399" y="166"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCCE7D54922511C8719711E7961027"/>
+          <webService interface="trdpurchwsdl:addPurchaseOrder_CB" operation="addPurchaseOrder_Reply" role="addPurchaseOrder_Requester" partnerLink="addPurchaseOrder" partnerLinkType="trdpurchwsdl:addPurchaseOrder_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7D6FB132F0C8719711E7961027" id="A1DCCE7D6C1EE470C8719711E7961027" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="440" y="59"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7D8542BE90C8719711E7961027" id="A1DCCE7D7A1B5E00C8719711E7961027" name="Assign Timeout Error" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7DB17486B0C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7DAE244A40C8719711E7961027">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="62" y="7"/>
+            <targetAnchor x="15" y="14"/>
+          </sourceConnections>
+          <location x="584" y="163"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7DB17486B0C8719711E7961027" id="A1DCCE7DAE244A40C8719711E7961027" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="628" y="65"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCCE7DCF3FC8D0C8719711E7961027">
+            <error errorCode="Timeout"/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7DDE1BA5E0C8719711E7961027" id="A1DCCE7DD9AA6910C8719711E7961027" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="69" y="186"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCCE7E0ABDBC00C8719711E7961027" id="A1DCCE7DE7706950C8719711E7961027" name="Send Fault Message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCCE7E183267F0C8719711E7961027" name="" routingType="RectilinearHorizontal" target="A1DCCE7E15AD6AC0C8719711E7961027">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="64" y="70"/>
+          <targetAnchor x="15" y="22"/>
+        </sourceConnections>
+        <location x="22" y="350"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DCCE7DE7706951C8719711E7961027"/>
+        <webService interface="trdpurchwsdl:addPurchaseOrder_CB" operation="addPurchaseOrder_Fault" role="addPurchaseOrder_Requester" partnerLink="addPurchaseOrder" partnerLinkType="trdpurchwsdl:addPurchaseOrder_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCCE7E183267F0C8719711E7961027" id="A1DCCE7E15AD6AC0C8719711E7961027" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="71" y="504"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="addPurchaseOrder" id="A1DCCE7B7D1FFD60C8719711E7961027" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/addPurchaseOrder/bpel">
+      <messages name="addPurchaseOrder_Request" type="trdpurchwsdl:addPurchaseOrder_Request" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DCCE7BE31DEA01C8719711E7961027">
+        <properties name="parameters" type="trdpurchwsdl:addPurchaseOrder"/>
+      </messages>
+      <messages name="ProcessPurchaseOrder" type="trdorderwsdl:ProcessPurchaseOrder" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DCCE7C41D6E061C8719711E7961027">
+        <properties name="parameters" type="oa:ProcessPurchaseOrder"/>
+      </messages>
+      <messages name="ShowPurchaseOrder" type="trdorderwsdl:ShowPurchaseOrder" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.2/@outMessage" id="A1DCCE7C8C905CD1C8719711E7961027">
+        <properties name="parameters" type="oa:ShowPurchaseOrder"/>
+      </messages>
+      <messages name="ConfirmBOD" type="trdorderwsdl:ConfirmBOD" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.4/@outMessage" id="A1DCCE7CCBA72E31C8719711E7961027">
+        <properties name="parameters" type="oa:ConfirmBOD"/>
+      </messages>
+      <messages name="addPurchaseOrder_Response" type="trdpurchwsdl:addPurchaseOrder_Response" messageUsages="//@children.0/@children.0/@children.1/@children.5/@inMessage" id="A1DCCE7D54922511C8719711E7961027">
+        <properties name="parameters" type="trdpurchwsdl:addPurchaseOrder_Response"/>
+      </messages>
+      <messages name="addPurchaseOrder_Fault" type="trdpurchwsdl:addPurchaseOrder_Fault" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DCCE7DE7706951C8719711E7961027">
+        <properties name="vispError" type="comxsd:VispError"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="trdpurchwsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/addPurchaseOrder/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\businessProcesses\trading\common\addPurchaseOrder\wsdl\addPurchaseOrder.wsdl"/>
+  <xMLNSPrefixMap key="trdorderwsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/createPurchaseOrder/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\businessProcesses\trading\common\createPurchaseOrder\wsdl\createPurchaseOrder.wsdl"/>
+  <xMLNSPrefixMap key="oa" value="http://www.openapplications.org/oagis/9"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+</bpmn:Diagram>
