@@ -1,0 +1,2123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD899807DA8A60D8A68E6E061625FA" name="worklist-erp-ms" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-09-23T19:49:55.078+0200" modificationDate="2008-09-26T15:49:47.156+0200">
+  <children xsi:type="bpmn:Pool" id="A1DD89981931C7B0D8A68E6E061625FA" name="Worklist ERP Mediation Service - Business Process">
+    <fontColor/>
+    <lineColor/>
+    <font family="Arial" height="8"/>
+    <location x="17" y="13"/>
+    <size width="2077" height="1856"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD89981931C7B1D8A68E6E061625FA" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Arial" height="8"/>
+      <size height="1856"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DD89983FB20AD0D8A68E6E061625FA" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD89986A894C00D8A68E6E061625FA" name="" routingType="RectilinearHorizontal" target="A1DD8998632B7690D8A68E6E061625FA">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="18" y="18"/>
+          <targetAnchor x="27" y="14"/>
+          <bendingPoints x="1016" y="80"/>
+        </sourceConnections>
+        <location x="86" y="45"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DD89986A894C00D8A68E6E061625FA" id="A1DD8998632B7690D8A68E6E061625FA" name="Gateway1" exclusiveGatewayType="EventBased" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8998E599F750D8A68E6E061625FA" name="" routingType="RectilinearVertical" target="A1DD8998C6399640D8A68E6E061625FA">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="7" y="26"/>
+          <targetAnchor x="74" y="42"/>
+          <bendingPoints x="268" y="148"/>
+          <bendingPoints x="99" y="176"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD89993FD18440D8A68E6E061625FA" name="" routingType="RectilinearVertical" target="A1DD89992BBD49D0D8A68E6E061625FA">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="16" y="40"/>
+          <targetAnchor x="111" y="39"/>
+          <bendingPoints x="520" y="170"/>
+          <bendingPoints x="502" y="207"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC8A0C4E040FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BC893B8BA46FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="42"/>
+          <targetAnchor x="55" y="30"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBC2D565D0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCB9A1B5F7AFA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="34" y="34"/>
+          <targetAnchor x="38" y="33"/>
+          <bendingPoints x="1356" y="162"/>
+          <bendingPoints x="1345" y="201"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBCC9CC130FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCBAC5079AAFA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="39" y="27"/>
+          <targetAnchor x="44" y="44"/>
+          <bendingPoints x="1726" y="149"/>
+          <bendingPoints x="1753" y="220"/>
+        </sourceConnections>
+        <location x="991" y="123"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8998E599F750D8A68E6E061625FA" id="A1DD8998C6399640D8A68E6E061625FA" name="Receive Get Service Availability Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCDEBFE21C0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCF51AD35A0FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="53" y="77"/>
+          <targetAnchor x="62" y="52"/>
+        </sourceConnections>
+        <location x="39" y="238"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DD8998C6399641D8A68E6E061625FA"/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="GetServiceAvailability" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD89993FD18440D8A68E6E061625FA" id="A1DD89992BBD49D0D8A68E6E061625FA" name="Receive Get Service Price Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3F53AFBF0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD14EEA0C10FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="51" y="69"/>
+          <targetAnchor x="59" y="68"/>
+        </sourceConnections>
+        <location x="446" y="234"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DD89992BBD49D1D8A68E6E061625FA"/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="GetServicePrice" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCDF0B47DE0FA8DCFB7E9C4ACB2" id="A1DD8999907FD040D8A68E6E061625FA" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBF63DA53D0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBF5C300C10DF01C8A170F265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="248" y="904"/>
+          <targetAnchor x="58" y="26"/>
+          <boundaryEvent id="A1DD8BC7A96B57C0FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BC7A96B57C1FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC7FB1FC920FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BBF4FFCB9C0DF01C8A170F265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="84" y="903"/>
+          <targetAnchor x="14" y="21"/>
+          <bendingPoints x="116" y="1587"/>
+        </sourceConnections>
+        <location x="24" y="633"/>
+        <size width="352" height="910"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD8999A2D62E10D8A68E6E061625FA" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BB1AAD45FA0E1DFC130A794702F" name="" routingType="RectilinearVertical" target="A1DD8BB19CA2CC50E1DFC130A794702F">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="11" y="16"/>
+            <targetAnchor x="45" y="43"/>
+            <bendingPoints x="138" y="85"/>
+          </sourceConnections>
+          <location x="28" y="68"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BB1AAD45FA0E1DFC130A794702F" id="A1DD8BB19CA2CC50E1DFC130A794702F" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BB1D2AE3F50E1DFC130A794702F" name="" routingType="RectilinearHorizontal" target="A1DD8BB1C4058030E1DFC130A794702F">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="75"/>
+            <targetAnchor x="60" y="32"/>
+          </sourceConnections>
+          <location x="200" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BB1D2AE3F50E1DFC130A794702F" id="A1DD8BB1C4058030E1DFC130A794702F" name="Create message for worklist" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBDF84F9DB0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBDE7493F80DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="75"/>
+            <targetAnchor x="59" y="32"/>
+            <bendingPoints x="256" y="279"/>
+          </sourceConnections>
+          <location x="199" y="179"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBDF84F9DB0DF01C8A170F265C1" id="A1DD8BBDE7493F80DF01C8A170F265C1" name="Invoke Worklist">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBE121228D0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBE0A3140B0DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="73"/>
+            <targetAnchor x="25" y="16"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBE4037D1B0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBE2F9A6E80DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="39"/>
+            <targetAnchor x="85" y="41"/>
+            <boundaryEvent id="A1DD8BBE44DFFD00DF01C8A170F265C1">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BBE44E4B7F0DF01C8A170F265C1">
+                <error message="A1DD8BBE6D633C10DF01C8A170F265C1" errorCode="iwlwsdl:InvokeWorklist_SyncFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBDE74BB080DF01C8A170F265C1"/>
+          <outMessage message="A1DD8BBDE74BB081DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD8BBE121228D0DF01C8A170F265C1" id="A1DD8BBE0A3140B0DF01C8A170F265C1" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBEA1B58D60DF01C8A170F265C1" name="" routingType="RectilinearVertical" target="A1DD8BBE97E70610DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="15" y="25"/>
+            <targetAnchor x="55" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBF26307FF0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBF1EF1A430DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="21" y="39"/>
+            <targetAnchor x="60" y="26"/>
+            <bendingPoints x="254" y="560"/>
+          </sourceConnections>
+          <location x="229" y="460"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBE4037D1B0DF01C8A170F265C1" id="A1DD8BBE2F9A6E80DF01C8A170F265C1" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBE89C159A0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBE86FAE6A0DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="65" y="5"/>
+            <targetAnchor x="17" y="19"/>
+            <bendingPoints x="74" y="267"/>
+          </sourceConnections>
+          <location x="17" y="317"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BBE89C159A0DF01C8A170F265C1" id="A1DD8BBE86FAE6A0DF01C8A170F265C1" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="60" y="211"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBEA1B58D60DF01C8A170F265C1" id="A1DD8BBE97E70610DF01C8A170F265C1" name="Invoke Worklist Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBEC3711C80DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBEB11D08A0DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="18" y="443"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBE97E70611DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBEC3711C80DF01C8A170F265C1" id="A1DD8BBEB11D08A0DF01C8A170F265C1" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC7F4D42700FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BBEE3011910DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="58" y="71"/>
+            <targetAnchor x="60" y="21"/>
+          </sourceConnections>
+          <location x="20" y="580"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC7F6A2A570FA8DCFB7E9C4ACB2" id="A1DD8BBF083CF550DF01C8A170F265C1" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="65" y="841"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBF26307FF0DF01C8A170F265C1" id="A1DD8BBF1EF1A430DF01C8A170F265C1" name="Invoke Worklist Fault" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBF30BB7970DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBF2D3B0540DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="196" y="587"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBF1EF1A431DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBF30BB7970DF01C8A170F265C1" id="A1DD8BBF2D3B0540DF01C8A170F265C1" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BBF474C4CA0DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BBF36998CB0DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="193" y="728"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BBF474C4CA0DF01C8A170F265C1" id="A1DD8BBF36998CB0DF01C8A170F265C1" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="238" y="846"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC7F4D42700FA8DCFB7E9C4ACB2" id="A1DD8BBEE3011910DF01C8A170F265C1" name="Send Get Service Availability Response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC7F6A2A570FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BBF083CF550DF01C8A170F265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="56" y="71"/>
+            <targetAnchor x="17" y="11"/>
+          </sourceConnections>
+          <location x="25" y="722"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBEE3011911DF01C8A170F265C1"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="GetServiceAvailability_Response" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC7FB1FC920FA8DCFB7E9C4ACB2" id="A1DD8BBF4FFCB9C0DF01C8A170F265C1" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="100" y="1629"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BBF63DA53D0DF01C8A170F265C1" id="A1DD8BBF5C300C10DF01C8A170F265C1" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC0A9F21820DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BC09D396930DF01C8A170F265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="111" y="37"/>
+          <targetAnchor x="24" y="49"/>
+          <bendingPoints x="280" y="1709"/>
+        </sourceConnections>
+        <location x="222" y="1601"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC0A9F21820DF01C8A170F265C1" id="A1DD8BC09D396930DF01C8A170F265C1" name="Send Get Service Availability Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC0BDAE4780DF01C8A170F265C1" name="" routingType="RectilinearHorizontal" target="A1DD8BC0B9AD0A90DF01C8A170F265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="40"/>
+          <targetAnchor x="15" y="21"/>
+        </sourceConnections>
+        <location x="225" y="1737"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD8BC09D396931DF01C8A170F265C1"/>
+        <webService interface="erpmswsdl:erpMs_CB" operation="GetServiceAvailability_Error" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC0BDAE4780DF01C8A170F265C1" id="A1DD8BC0B9AD0A90DF01C8A170F265C1" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="124" y="1761"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC3DB522425FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522420FA8DCFB7E9C4ACB2" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="494" y="1611"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC3DB54952BFA8DCFB7E9C4ACB2" id="A1DD8BC3DB522421FA8DCFB7E9C4ACB2" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="497" y="1762"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB522426FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522422FA8DCFB7E9C4ACB2" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522423FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB54952AFA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="111" y="37"/>
+          <targetAnchor x="24" y="49"/>
+          <bendingPoints x="678" y="1710"/>
+        </sourceConnections>
+        <location x="617" y="1604"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCE2CC673B0FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522424FA8DCFB7E9C4ACB2" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522425FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522420FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="80" y="901"/>
+          <targetAnchor x="15" y="15"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522426FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522422FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="248" y="904"/>
+          <targetAnchor x="58" y="26"/>
+          <boundaryEvent id="A1DD8BC7B117E970FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BC7B117E971FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="425" y="634"/>
+        <size width="352" height="910"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD8BC3DB522427FA8DCFB7E9C4ACB2" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522428FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BC3DB522429FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="11" y="16"/>
+            <targetAnchor x="45" y="43"/>
+            <bendingPoints x="138" y="85"/>
+          </sourceConnections>
+          <location x="28" y="68"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB522428FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522429FA8DCFB7E9C4ACB2" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB52242AFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB52242BFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="75"/>
+            <targetAnchor x="60" y="32"/>
+          </sourceConnections>
+          <location x="200" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB52242AFA8DCFB7E9C4ACB2" id="A1DD8BC3DB52242BFA8DCFB7E9C4ACB2" name="Create message for worklist" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB52242CFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB52242DFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="75"/>
+            <targetAnchor x="59" y="32"/>
+            <bendingPoints x="256" y="279"/>
+          </sourceConnections>
+          <location x="199" y="179"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB52242CFA8DCFB7E9C4ACB2" id="A1DD8BC3DB52242DFA8DCFB7E9C4ACB2" name="Invoke Worklist">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB52242EFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522432FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="73"/>
+            <targetAnchor x="25" y="16"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB52242FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522435FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="39"/>
+            <targetAnchor x="85" y="41"/>
+            <boundaryEvent id="A1DD8BC3DB522430FA8DCFB7E9C4ACB2">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BC3DB522431FA8DCFB7E9C4ACB2">
+                <error message="A1DD8BBE6D633C10DF01C8A170F265C1" errorCode="iwlwsdl:InvokeWorklist_SyncFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBDE74BB080DF01C8A170F265C1"/>
+          <outMessage message="A1DD8BBDE74BB081DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD8BC3DB52242EFA8DCFB7E9C4ACB2" id="A1DD8BC3DB522432FA8DCFB7E9C4ACB2" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522433FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BC3DB522439FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="15" y="25"/>
+            <targetAnchor x="55" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522434FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB549524FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="21" y="39"/>
+            <targetAnchor x="60" y="26"/>
+            <bendingPoints x="254" y="560"/>
+          </sourceConnections>
+          <location x="229" y="460"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB52242FFA8DCFB7E9C4ACB2" id="A1DD8BC3DB522435FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB522436FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522437FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="65" y="5"/>
+            <targetAnchor x="17" y="19"/>
+            <bendingPoints x="74" y="267"/>
+          </sourceConnections>
+          <location x="17" y="317"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC3DB522436FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522437FA8DCFB7E9C4ACB2" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="60" y="211"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BC3DB522438FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB522433FA8DCFB7E9C4ACB2" id="A1DD8BC3DB522439FA8DCFB7E9C4ACB2" name="Invoke Worklist Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB52243AFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB52243BFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="18" y="443"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBE97E70611DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB52243AFA8DCFB7E9C4ACB2" id="A1DD8BC3DB52243BFA8DCFB7E9C4ACB2" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB549520FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB549521FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="64" y="78"/>
+            <targetAnchor x="58" y="25"/>
+          </sourceConnections>
+          <location x="20" y="580"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB549520FA8DCFB7E9C4ACB2" id="A1DD8BC3DB549521FA8DCFB7E9C4ACB2" name="Send Get Service Price Response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB549522FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB549523FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="16" y="15"/>
+          </sourceConnections>
+          <location x="26" y="724"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BC4652A8840FA8DCFB7E9C4ACB2"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="GetServicePrice_Response" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC3DB549522FA8DCFB7E9C4ACB2" id="A1DD8BC3DB549523FA8DCFB7E9C4ACB2" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="73" y="844"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB522434FA8DCFB7E9C4ACB2" id="A1DD8BC3DB549524FA8DCFB7E9C4ACB2" name="Invoke Worklist Fault" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB549525FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB549526FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="196" y="587"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBF1EF1A431DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB549525FA8DCFB7E9C4ACB2" id="A1DD8BC3DB549526FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB549527FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB549528FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="193" y="728"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC3DB549527FA8DCFB7E9C4ACB2" id="A1DD8BC3DB549528FA8DCFB7E9C4ACB2" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="238" y="846"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BC3DB549529FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3DB522423FA8DCFB7E9C4ACB2" id="A1DD8BC3DB54952AFA8DCFB7E9C4ACB2" name="Send Get Service Price Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC3DB54952BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522421FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="40"/>
+          <targetAnchor x="15" y="21"/>
+        </sourceConnections>
+        <location x="625" y="1741"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD8BC4696E7380FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_CB" operation="GetServicePrice_Error" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA4BFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA20FA8DCFB7E9C4ACB2" name="Send Register Internal Purchase Order Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA21FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA49FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="40"/>
+          <targetAnchor x="15" y="21"/>
+        </sourceConnections>
+        <location x="1038" y="1740"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD8BC90B7AFDC0FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_CB" operation="RegisterInternalPurchaseOrder_Error" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD19CBEAB30FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA22FA8DCFB7E9C4ACB2" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA23FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA48FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="80" y="901"/>
+          <targetAnchor x="15" y="15"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA24FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA4AFA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="248" y="904"/>
+          <targetAnchor x="58" y="26"/>
+          <boundaryEvent id="A1DD8BC893B8BA25FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BC893B8BA26FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="838" y="633"/>
+        <size width="352" height="910"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD8BC893B8BA27FA8DCFB7E9C4ACB2" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA28FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BC893B8BA29FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="11" y="16"/>
+            <targetAnchor x="45" y="43"/>
+            <bendingPoints x="138" y="85"/>
+          </sourceConnections>
+          <location x="28" y="68"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA28FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA29FA8DCFB7E9C4ACB2" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA2AFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA2BFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="75"/>
+            <targetAnchor x="60" y="32"/>
+          </sourceConnections>
+          <location x="200" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA2AFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA2BFA8DCFB7E9C4ACB2" name="Create message for worklist" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA2CFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA2DFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="75"/>
+            <targetAnchor x="59" y="32"/>
+            <bendingPoints x="256" y="279"/>
+          </sourceConnections>
+          <location x="199" y="179"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA2CFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA2DFA8DCFB7E9C4ACB2" name="Invoke Worklist">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA2EFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA32FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="73"/>
+            <targetAnchor x="25" y="16"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA2FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA35FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="39"/>
+            <targetAnchor x="85" y="41"/>
+            <boundaryEvent id="A1DD8BC893B8BA30FA8DCFB7E9C4ACB2">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BC893B8BA31FA8DCFB7E9C4ACB2">
+                <error message="A1DD8BBE6D633C10DF01C8A170F265C1" errorCode="iwlwsdl:InvokeWorklist_SyncFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBDE74BB080DF01C8A170F265C1"/>
+          <outMessage message="A1DD8BBDE74BB081DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD8BC893B8BA2EFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA32FA8DCFB7E9C4ACB2" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA33FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BC893B8BA39FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="15" y="25"/>
+            <targetAnchor x="55" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA34FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA40FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="21" y="39"/>
+            <targetAnchor x="60" y="26"/>
+            <bendingPoints x="254" y="560"/>
+          </sourceConnections>
+          <location x="229" y="460"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA2FFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA35FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA36FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA37FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="65" y="5"/>
+            <targetAnchor x="17" y="19"/>
+            <bendingPoints x="74" y="267"/>
+          </sourceConnections>
+          <location x="17" y="317"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC893B8BA36FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA37FA8DCFB7E9C4ACB2" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="60" y="211"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BC893B8BA38FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA33FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA39FA8DCFB7E9C4ACB2" name="Invoke Worklist Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA3AFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA3BFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="18" y="443"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBE97E70611DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA3AFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA3BFA8DCFB7E9C4ACB2" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA3CFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA3DFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="64" y="78"/>
+            <targetAnchor x="58" y="25"/>
+          </sourceConnections>
+          <location x="20" y="580"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA3CFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA3DFA8DCFB7E9C4ACB2" name="Send Register Internal Purchase Order Response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA3EFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA3FFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="16" y="15"/>
+          </sourceConnections>
+          <location x="26" y="724"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BC93261A3D0FA8DCFB7E9C4ACB2"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="RegisterInternalPurchaseOrder_Response" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC893B8BA3EFA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA3FFA8DCFB7E9C4ACB2" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="73" y="844"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA34FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA40FA8DCFB7E9C4ACB2" name="Invoke Worklist Fault" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA41FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA42FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="196" y="587"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBF1EF1A431DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA41FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA42FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA43FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA44FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="193" y="728"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC893B8BA43FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA44FA8DCFB7E9C4ACB2" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="238" y="846"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BC893B8BA45FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC8A0C4E040FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA46FA8DCFB7E9C4ACB2" name="Receive Register Internal Purchase Order Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD18A3AFBD0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD16D67D553FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="35" y="44"/>
+          <targetAnchor x="58" y="22"/>
+          <bendingPoints x="1023" y="331"/>
+          <bendingPoints x="958" y="343"/>
+        </sourceConnections>
+        <location x="959" y="232"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DD8BC8B13518F0FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterInternalPurchaseOrder" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC893B8BA23FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA48FA8DCFB7E9C4ACB2" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="907" y="1610"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BC893B8BA21FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA49FA8DCFB7E9C4ACB2" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="910" y="1761"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC893B8BA24FA8DCFB7E9C4ACB2" id="A1DD8BC893B8BA4AFA8DCFB7E9C4ACB2" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BC893B8BA4BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA20FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="111" y="37"/>
+          <targetAnchor x="24" y="49"/>
+          <bendingPoints x="1092" y="1713"/>
+        </sourceConnections>
+        <location x="1030" y="1603"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCB9A1B5F52FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F50FA8DCFB7E9C4ACB2" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1323" y="1763"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F79FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F51FA8DCFB7E9C4ACB2" name="Send Register Offer For Customer Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F52FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F50FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="40"/>
+          <targetAnchor x="15" y="21"/>
+        </sourceConnections>
+        <location x="1451" y="1742"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD8BCC3BC66570FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_CB" operation="RegisterOfferForCustomer_Error" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD199A00610FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F53FA8DCFB7E9C4ACB2" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F54FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F77FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="80" y="901"/>
+          <targetAnchor x="15" y="15"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F55FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F78FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="248" y="904"/>
+          <targetAnchor x="58" y="26"/>
+          <boundaryEvent id="A1DD8BCB9A1B5F56FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCB9A1B5F57FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1251" y="635"/>
+        <size width="352" height="910"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD8BCB9A1B5F58FA8DCFB7E9C4ACB2" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F59FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCB9A1B5F5AFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="11" y="16"/>
+            <targetAnchor x="45" y="43"/>
+            <bendingPoints x="138" y="85"/>
+          </sourceConnections>
+          <location x="28" y="68"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F59FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F5AFA8DCFB7E9C4ACB2" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F5BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F5CFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="75"/>
+            <targetAnchor x="60" y="32"/>
+          </sourceConnections>
+          <location x="200" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F5BFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F5CFA8DCFB7E9C4ACB2" name="Create message for worklist" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F5DFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F5EFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="75"/>
+            <targetAnchor x="59" y="32"/>
+            <bendingPoints x="256" y="279"/>
+          </sourceConnections>
+          <location x="199" y="179"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F5DFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F5EFA8DCFB7E9C4ACB2" name="Invoke Worklist">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F5FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F63FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="73"/>
+            <targetAnchor x="25" y="16"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F60FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F66FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="39"/>
+            <targetAnchor x="85" y="41"/>
+            <boundaryEvent id="A1DD8BCB9A1B5F61FA8DCFB7E9C4ACB2">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCB9A1B5F62FA8DCFB7E9C4ACB2">
+                <error message="A1DD8BBE6D633C10DF01C8A170F265C1" errorCode="iwlwsdl:InvokeWorklist_SyncFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBDE74BB080DF01C8A170F265C1"/>
+          <outMessage message="A1DD8BBDE74BB081DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD8BCB9A1B5F5FFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F63FA8DCFB7E9C4ACB2" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F64FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCB9A1B5F6AFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="15" y="25"/>
+            <targetAnchor x="55" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F65FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F71FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="21" y="39"/>
+            <targetAnchor x="60" y="26"/>
+            <bendingPoints x="254" y="560"/>
+          </sourceConnections>
+          <location x="229" y="460"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F60FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F66FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F67FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F68FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="65" y="5"/>
+            <targetAnchor x="17" y="19"/>
+            <bendingPoints x="74" y="267"/>
+          </sourceConnections>
+          <location x="17" y="317"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCB9A1B5F67FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F68FA8DCFB7E9C4ACB2" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="60" y="211"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BCB9A1B5F69FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F64FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F6AFA8DCFB7E9C4ACB2" name="Invoke Worklist Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F6BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F6CFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="18" y="443"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBE97E70611DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F6BFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F6CFA8DCFB7E9C4ACB2" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F6DFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F6EFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="64" y="78"/>
+            <targetAnchor x="58" y="25"/>
+          </sourceConnections>
+          <location x="20" y="580"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F6DFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F6EFA8DCFB7E9C4ACB2" name="Send Register Offer For Customer Response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F6FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F70FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="16" y="15"/>
+          </sourceConnections>
+          <location x="26" y="724"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BCC3DB64E90FA8DCFB7E9C4ACB2"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="RegisterOfferForCustomer_Response" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCB9A1B5F6FFA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F70FA8DCFB7E9C4ACB2" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="73" y="844"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F65FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F71FA8DCFB7E9C4ACB2" name="Invoke Worklist Fault" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F72FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F73FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="196" y="587"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBF1EF1A431DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F72FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F73FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F74FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F75FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="193" y="728"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCB9A1B5F74FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F75FA8DCFB7E9C4ACB2" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="238" y="846"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BCB9A1B5F76FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCB9A1B5F54FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F77FA8DCFB7E9C4ACB2" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1320" y="1612"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCB9A1B5F55FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F78FA8DCFB7E9C4ACB2" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCB9A1B5F79FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F51FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="111" y="37"/>
+          <targetAnchor x="24" y="49"/>
+          <bendingPoints x="1502" y="1707"/>
+        </sourceConnections>
+        <location x="1443" y="1605"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBC2D565D0FA8DCFB7E9C4ACB2" id="A1DD8BCB9A1B5F7AFA8DCFB7E9C4ACB2" name="Receive Register Offer For Customer Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD1904D6580FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD173FD78C3FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="56" y="71"/>
+          <targetAnchor x="57" y="16"/>
+        </sourceConnections>
+        <location x="1284" y="238"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DD8BCBE2EAE610FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterOfferForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCBAC507982FA8DCFB7E9C4ACB2" id="A1DD8BCBAC507980FA8DCFB7E9C4ACB2" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1729" y="1768"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC5079A9FA8DCFB7E9C4ACB2" id="A1DD8BCBAC507981FA8DCFB7E9C4ACB2" name="Send Register Sales Order For Customer Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507982FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507980FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="28" y="40"/>
+          <targetAnchor x="15" y="21"/>
+        </sourceConnections>
+        <location x="1857" y="1747"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD8BCC3F684450FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_CB" operation="RegisterSalesOrderForCustomer_Error" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD195DA7290FA8DCFB7E9C4ACB2" id="A1DD8BCBAC507983FA8DCFB7E9C4ACB2" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507984FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A7FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="80" y="901"/>
+          <targetAnchor x="15" y="15"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507985FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A8FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="248" y="904"/>
+          <targetAnchor x="58" y="26"/>
+          <boundaryEvent id="A1DD8BCBAC507986FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCBAC507987FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1657" y="640"/>
+        <size width="352" height="910"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD8BCBAC507988FA8DCFB7E9C4ACB2" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507989FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCBAC50798AFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="11" y="16"/>
+            <targetAnchor x="45" y="43"/>
+            <bendingPoints x="138" y="85"/>
+          </sourceConnections>
+          <location x="28" y="68"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC507989FA8DCFB7E9C4ACB2" id="A1DD8BCBAC50798AFA8DCFB7E9C4ACB2" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50798BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC50798CFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="75"/>
+            <targetAnchor x="60" y="32"/>
+          </sourceConnections>
+          <location x="200" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC50798BFA8DCFB7E9C4ACB2" id="A1DD8BCBAC50798CFA8DCFB7E9C4ACB2" name="Create message for worklist" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50798DFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC50798EFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="75"/>
+            <targetAnchor x="59" y="32"/>
+            <bendingPoints x="256" y="279"/>
+          </sourceConnections>
+          <location x="199" y="179"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC50798DFA8DCFB7E9C4ACB2" id="A1DD8BCBAC50798EFA8DCFB7E9C4ACB2" name="Invoke Worklist">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50798FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507993FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="54" y="73"/>
+            <targetAnchor x="25" y="16"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507990FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507996FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="39"/>
+            <targetAnchor x="85" y="41"/>
+            <boundaryEvent id="A1DD8BCBAC507991FA8DCFB7E9C4ACB2">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCBAC507992FA8DCFB7E9C4ACB2">
+                <error message="A1DD8BBE6D633C10DF01C8A170F265C1" errorCode="iwlwsdl:InvokeWorklist_SyncFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BBDE74BB080DF01C8A170F265C1"/>
+          <outMessage message="A1DD8BBDE74BB081DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD8BCBAC50798FFA8DCFB7E9C4ACB2" id="A1DD8BCBAC507993FA8DCFB7E9C4ACB2" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507994FA8DCFB7E9C4ACB2" name="" routingType="RectilinearVertical" target="A1DD8BCBAC50799AFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="15" y="25"/>
+            <targetAnchor x="55" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507995FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A1FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="21" y="39"/>
+            <targetAnchor x="60" y="26"/>
+            <bendingPoints x="254" y="560"/>
+          </sourceConnections>
+          <location x="229" y="460"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC507990FA8DCFB7E9C4ACB2" id="A1DD8BCBAC507996FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC507997FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507998FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="65" y="5"/>
+            <targetAnchor x="17" y="19"/>
+            <bendingPoints x="74" y="267"/>
+          </sourceConnections>
+          <location x="17" y="317"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCBAC507997FA8DCFB7E9C4ACB2" id="A1DD8BCBAC507998FA8DCFB7E9C4ACB2" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="60" y="211"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BCBAC507999FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC507994FA8DCFB7E9C4ACB2" id="A1DD8BCBAC50799AFA8DCFB7E9C4ACB2" name="Invoke Worklist Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50799BFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC50799CFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="59" y="15"/>
+          </sourceConnections>
+          <location x="18" y="443"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBE97E70611DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC50799BFA8DCFB7E9C4ACB2" id="A1DD8BCBAC50799CFA8DCFB7E9C4ACB2" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50799DFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC50799EFA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="64" y="78"/>
+            <targetAnchor x="58" y="25"/>
+          </sourceConnections>
+          <location x="20" y="580"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC50799DFA8DCFB7E9C4ACB2" id="A1DD8BCBAC50799EFA8DCFB7E9C4ACB2" name="Send Register Sales Order For Customer Response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC50799FFA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A0FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="16" y="15"/>
+          </sourceConnections>
+          <location x="26" y="724"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD8BCC405B7DF0FA8DCFB7E9C4ACB2"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="RegisterSalesOrderForCustomer_Response" role="erp-ms_Requester" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCBAC50799FFA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A0FA8DCFB7E9C4ACB2" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="73" y="844"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC507995FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A1FA8DCFB7E9C4ACB2" name="Invoke Worklist Fault" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC5079A2FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A3FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="57" y="75"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="196" y="587"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD8BBF1EF1A431DF01C8A170F265C1"/>
+          <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC5079A2FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A3FA8DCFB7E9C4ACB2" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC5079A4FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC5079A5FA8DCFB7E9C4ACB2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="193" y="728"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCBAC5079A4FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A5FA8DCFB7E9C4ACB2" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="238" y="846"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8BCBAC5079A6FA8DCFB7E9C4ACB2">
+            <error errorCode="WMESFault"/>
+          </results>
+        </children>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCBAC507984FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A7FA8DCFB7E9C4ACB2" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1726" y="1617"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBAC507985FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079A8FA8DCFB7E9C4ACB2" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCBAC5079A9FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507981FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="111" y="37"/>
+          <targetAnchor x="24" y="49"/>
+          <bendingPoints x="1911" y="1725"/>
+        </sourceConnections>
+        <location x="1849" y="1610"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCBCC9CC130FA8DCFB7E9C4ACB2" id="A1DD8BCBAC5079AAFA8DCFB7E9C4ACB2" name="Receive Register Sales Order For Customer Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD1942150E0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD17C50F8D3FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="58" y="65"/>
+          <targetAnchor x="57" y="36"/>
+        </sourceConnections>
+        <location x="1694" y="239"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DD8BCC98225900FA8DCFB7E9C4ACB2"/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterSalesOrderForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCD720946B0FA8DCFB7E9C4ACB2" id="A1DD8BCD6E2BBE60FA8DCFB7E9C4ACB2" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="244" y="442"/>
+        <size width="31" height="31"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <results xsi:type="bpmn:ErrorResult" implementation="WebService">
+          <error message="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" errorCode="erpmswsdl:ErpFault"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="GetServiceAvailability" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCF601C9540FA8DCFB7E9C4ACB2" id="A1DD8BCDE1D76850FA8DCFB7E9C4ACB2" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCDF0B47DE0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8999907FD040D8A68E6E061625FA">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="55" y="75"/>
+          <targetAnchor x="81" y="15"/>
+        </sourceConnections>
+        <location x="41" y="489"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage message="A1DD8998C6399642D8A68E6E061625FA"/>
+        <outMessage/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="GetServiceAvailability" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD15A84C7E0FA8DCFB7E9C4ACB2" id="A1DD8BCE20A8A530FA8DCFB7E9C4ACB2" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCE2CC673B0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC3DB522424FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="59" y="73"/>
+          <targetAnchor x="75" y="26"/>
+        </sourceConnections>
+        <location x="445" y="497"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage message="A1DD8998C6399642D8A68E6E061625FA"/>
+        <outMessage/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="GetServicePrice" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BCE51297C20FA8DCFB7E9C4ACB2" id="A1DD8BCE3D3B6750FA8DCFB7E9C4ACB2" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="656" y="442"/>
+        <size width="31" height="31"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD8BCE3D3B6751FA8DCFB7E9C4ACB2" implementation="WebService">
+          <error message="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" errorCode="erpmswsdl:ErpFault"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="GetServicePrice" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BCDEBFE21C0FA8DCFB7E9C4ACB2" id="A1DD8BCF51AD35A0FA8DCFB7E9C4ACB2" name="Validate input message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCF601C9540FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCDE1D76850FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="61" y="70"/>
+          <targetAnchor x="57" y="21"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCD720946B0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCD6E2BBE60FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="113" y="38"/>
+          <targetAnchor x="14" y="18"/>
+          <boundaryEvent id="A1DD8BCD79519850FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCD79519851FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="36" y="361"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BC3F53AFBF0FA8DCFB7E9C4ACB2" id="A1DD8BD14EEA0C10FA8DCFB7E9C4ACB2" name="Validate input message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD15A84C7E0FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCE20A8A530FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="43" y="61"/>
+          <targetAnchor x="55" y="18"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BCE51297C20FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCE3D3B6750FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="107" y="37"/>
+          <targetAnchor x="9" y="20"/>
+          <boundaryEvent id="A1DD8BCE54AED250FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BCE54AED251FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="445" y="375"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD16D67D554FA8DCFB7E9C4ACB2" id="A1DD8BD16D67D550FA8DCFB7E9C4ACB2" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD19CBEAB30FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BC893B8BA22FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="54" y="69"/>
+          <targetAnchor x="97" y="20"/>
+        </sourceConnections>
+        <location x="882" y="499"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage message="A1DD8998C6399642D8A68E6E061625FA"/>
+        <outMessage/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterInternalPurchaseOrder" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BD16D67D555FA8DCFB7E9C4ACB2" id="A1DD8BD16D67D551FA8DCFB7E9C4ACB2" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1093" y="444"/>
+        <size width="31" height="31"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD8BD16D67D552FA8DCFB7E9C4ACB2" implementation="WebService">
+          <error message="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" errorCode="erpmswsdl:ErpFault"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="RegisterInternalPurchaseOrder" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD18A3AFBD0FA8DCFB7E9C4ACB2" id="A1DD8BD16D67D553FA8DCFB7E9C4ACB2" name="Validate input message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD16D67D554FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD16D67D550FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="43" y="61"/>
+          <targetAnchor x="55" y="18"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD16D67D555FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD16D67D551FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="107" y="37"/>
+          <targetAnchor x="9" y="20"/>
+          <boundaryEvent id="A1DD8BD16D67D556FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BD16D67D557FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="882" y="377"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD173FD78C4FA8DCFB7E9C4ACB2" id="A1DD8BD173FD78C0FA8DCFB7E9C4ACB2" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD199A00610FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCB9A1B5F53FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="52" y="71"/>
+          <targetAnchor x="91" y="14"/>
+        </sourceConnections>
+        <location x="1286" y="507"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage message="A1DD8998C6399642D8A68E6E061625FA"/>
+        <outMessage/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterOfferForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BD173FD78C5FA8DCFB7E9C4ACB2" id="A1DD8BD173FD78C1FA8DCFB7E9C4ACB2" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1497" y="452"/>
+        <size width="31" height="31"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD8BD173FD78C2FA8DCFB7E9C4ACB2" implementation="WebService">
+          <error message="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" errorCode="erpmswsdl:ErpFault"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="RegisterOfferForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD1904D6580FA8DCFB7E9C4ACB2" id="A1DD8BD173FD78C3FA8DCFB7E9C4ACB2" name="Validate input message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD173FD78C4FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD173FD78C0FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="43" y="61"/>
+          <targetAnchor x="55" y="18"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD173FD78C5FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD173FD78C1FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="107" y="37"/>
+          <targetAnchor x="9" y="20"/>
+          <boundaryEvent id="A1DD8BD173FD78C6FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BD173FD78C7FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1286" y="385"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD17C50F8D4FA8DCFB7E9C4ACB2" id="A1DD8BD17C50F8D0FA8DCFB7E9C4ACB2" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD195DA7290FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BCBAC507983FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="55" y="70"/>
+          <targetAnchor x="84" y="19"/>
+        </sourceConnections>
+        <location x="1690" y="507"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage message="A1DD8998C6399642D8A68E6E061625FA"/>
+        <outMessage/>
+        <webService interface="erpmswsdl:erpMs_PT" operation="RegisterSalesOrderForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8BD17C50F8D5FA8DCFB7E9C4ACB2" id="A1DD8BD17C50F8D1FA8DCFB7E9C4ACB2" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="1901" y="452"/>
+        <size width="31" height="31"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD8BD17C50F8D2FA8DCFB7E9C4ACB2" implementation="WebService">
+          <error message="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" errorCode="erpmswsdl:ErpFault"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="RegisterSalesOrderForCustomer" role="erp-ms_Provider" partnerLink="erpms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8BD1942150E0FA8DCFB7E9C4ACB2" id="A1DD8BD17C50F8D3FA8DCFB7E9C4ACB2" name="Validate input message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD17C50F8D4FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD17C50F8D0FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="43" y="61"/>
+          <targetAnchor x="55" y="18"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8BD17C50F8D5FA8DCFB7E9C4ACB2" name="" routingType="RectilinearHorizontal" target="A1DD8BD17C50F8D1FA8DCFB7E9C4ACB2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="107" y="37"/>
+          <targetAnchor x="9" y="20"/>
+          <boundaryEvent id="A1DD8BD17C50F8D6FA8DCFB7E9C4ACB2">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD8BD17C50F8D7FA8DCFB7E9C4ACB2">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1690" y="385"/>
+        <size width="120" height="80"/>
+        <fillColor red="186" green="197" blue="205"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+    </children>
+    <process name="worklist-erp-ms" id="A1DD899841212B31D8A68E6E061625FA" targetNamespace="urn:vispproject.org/052007/mediationServices/erp/worklist-erp-ms/bpel">
+      <messages name="GetServiceAvailability_Request" type="erpmswsdl:GetServiceAvailability_Request" id="A1DD8998C6399641D8A68E6E061625FA" messageUsages="//@children.0/@children.0/@children.2/@outMessage">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability"/>
+      </messages>
+      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" id="A1DD8998C6399642D8A68E6E061625FA" messageUsages="//@children.0/@children.0/@children.33/@inMessage //@children.0/@children.0/@children.34/@inMessage //@children.0/@children.0/@children.38/@inMessage //@children.0/@children.0/@children.41/@inMessage //@children.0/@children.0/@children.44/@inMessage">
+        <properties name="parameters" type="erpmswsdl:SynchronousConfirmation"/>
+      </messages>
+      <messages name="GetServicePrice_Request" type="erpmswsdl:GetServicePrice_Request" id="A1DD89992BBD49D1D8A68E6E061625FA" messageUsages="//@children.0/@children.0/@children.3/@outMessage">
+        <properties name="parameters" type="erpmswsdl:GetServicePrice"/>
+      </messages>
+      <messages name="InvokeWorklist_SyncRequest" type="iwlwsdl:InvokeWorklist_SyncRequest" id="A1DD8BBDE74BB080DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.3/@inMessage //@children.0/@children.0/@children.12/@children.3/@inMessage //@children.0/@children.0/@children.15/@children.3/@inMessage //@children.0/@children.0/@children.22/@children.3/@inMessage //@children.0/@children.0/@children.28/@children.3/@inMessage">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist"/>
+      </messages>
+      <messages name="InvokeWorklist_SyncResponse" type="iwlwsdl:InvokeWorklist_SyncResponse" id="A1DD8BBDE74BB081DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.3/@outMessage //@children.0/@children.0/@children.12/@children.3/@outMessage //@children.0/@children.0/@children.15/@children.3/@outMessage //@children.0/@children.0/@children.22/@children.3/@outMessage //@children.0/@children.0/@children.28/@children.3/@outMessage">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist_SyncResponse"/>
+      </messages>
+      <messages name="InvokeWorklist_SyncFault" type="iwlwsdl:InvokeWorklist_SyncFault" id="A1DD8BBE6D633C10DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.12/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.15/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.22/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.28/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist_SyncFault"/>
+      </messages>
+      <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" id="A1DD8BBE97E70611DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.7/@outMessage //@children.0/@children.0/@children.12/@children.7/@outMessage //@children.0/@children.0/@children.15/@children.7/@outMessage //@children.0/@children.0/@children.22/@children.7/@outMessage //@children.0/@children.0/@children.28/@children.7/@outMessage">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist_Response"/>
+      </messages>
+      <messages name="GetServiceAvailability_Response" type="erpmswsdl:GetServiceAvailability_Response" id="A1DD8BBEE3011911DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.13/@inMessage">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Response"/>
+      </messages>
+      <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" id="A1DD8BBF1EF1A431DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.4/@children.10/@outMessage //@children.0/@children.0/@children.12/@children.11/@outMessage //@children.0/@children.0/@children.15/@children.11/@outMessage //@children.0/@children.0/@children.22/@children.11/@outMessage //@children.0/@children.0/@children.28/@children.11/@outMessage">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist_Fault"/>
+      </messages>
+      <messages name="GetServiceAvailability_Error" type="erpmswsdl:GetServiceAvailability_Error" id="A1DD8BC09D396931DF01C8A170F265C1" messageUsages="//@children.0/@children.0/@children.7/@inMessage">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Error"/>
+      </messages>
+      <messages name="GetServicePrice_Response" type="erpmswsdl:GetServicePrice_Response" id="A1DD8BC4652A8840FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.12/@children.9/@inMessage">
+        <properties name="parameters" type="erpmswsdl:GetServicePrice_Response"/>
+      </messages>
+      <messages name="GetServicePrice_Error" type="erpmswsdl:GetServicePrice_Error" id="A1DD8BC4696E7380FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.13/@inMessage">
+        <properties name="parameters" type="erpmswsdl:GetServicePrice_Error"/>
+      </messages>
+      <messages name="RegisterInternalPurchaseOrder_Request" type="erpmswsdl:RegisterInternalPurchaseOrder_Request" id="A1DD8BC8B13518F0FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.16/@outMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterInternalPurchaseOrder"/>
+      </messages>
+      <messages name="RegisterInternalPurchaseOrder_Error" type="erpmswsdl:RegisterInternalPurchaseOrder_Error" id="A1DD8BC90B7AFDC0FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.14/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterInternalPurchaseOrder_Error"/>
+      </messages>
+      <messages name="RegisterInternalPurchaseOrder_Response" type="erpmswsdl:RegisterInternalPurchaseOrder_Response" id="A1DD8BC93261A3D0FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.15/@children.9/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterInternalPurchaseOrder_Response"/>
+      </messages>
+      <messages name="RegisterOfferForCustomer_Request" type="erpmswsdl:RegisterOfferForCustomer_Request" id="A1DD8BCBE2EAE610FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.25/@outMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterOfferForCustomer"/>
+      </messages>
+      <messages name="RegisterOfferForCustomer_Error" type="erpmswsdl:RegisterOfferForCustomer_Error" id="A1DD8BCC3BC66570FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.21/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterOfferForCustomer_Error"/>
+      </messages>
+      <messages name="RegisterOfferForCustomer_Response" type="erpmswsdl:RegisterOfferForCustomer_Response" id="A1DD8BCC3DB64E90FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.22/@children.9/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterOfferForCustomer_Response"/>
+      </messages>
+      <messages name="RegisterSalesOrderForCustomer_Error" type="erpmswsdl:RegisterSalesOrderForCustomer_Error" id="A1DD8BCC3F684450FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.27/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer_Error"/>
+      </messages>
+      <messages name="RegisterSalesOrderForCustomer_Response" type="erpmswsdl:RegisterSalesOrderForCustomer_Response" id="A1DD8BCC405B7DF0FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.28/@children.9/@inMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer_Response"/>
+      </messages>
+      <messages name="RegisterSalesOrderForCustomer_Request" type="erpmswsdl:RegisterSalesOrderForCustomer_Request" id="A1DD8BCC98225900FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.31/@outMessage">
+        <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer"/>
+      </messages>
+      <messages name="ErpFault" type="erpmswsdl:ErpFault" id="A1DD8BCD61434CE0FA8DCFB7E9C4ACB2" messageUsages="//@children.0/@children.0/@children.32/@results.0/@error //@children.0/@children.0/@children.35/@results.0/@error //@children.0/@children.0/@children.39/@results.0/@error //@children.0/@children.0/@children.42/@results.0/@error //@children.0/@children.0/@children.45/@results.0/@error">
+        <properties name="parameters" type="erpmswsdl:ErpFault"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpel" value="http://docs.oasis-open.org/wsbpel/2.0/process/executable"/>
+  <xMLNSPrefixMap key="erpmswsdl" value="urn:vispproject.org/052007/mediationServices/erp/erp-ms/wsdl"/>
+  <xMLNSPrefixMap key="iwlwsdl" value="urn:vispproject.org/052007/enterpriseServices/supportingServices/invokeWorklist/wsdl"/>
+</bpmn:Diagram>

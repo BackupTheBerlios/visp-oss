@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD5561DEF5480EC8DBCBC2268E0B9" name="addCharacteristic" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-07T09:24:35.790+0100" modificationDate="2008-02-07T13:03:12.672+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCD5562DD9E270EC8DBCBC2268E0B9" name="VISP-Application - Add Characteristic">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="15" y="11"/>
+    <size width="707" height="686"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD5562DD9E271EC8DBCBC2268E0B9" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="686"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCD556E1C39FB0EC8DBCBC2268E0B9" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD5572C6B41D0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD5571337B040EC8DBCBC2268E0B9">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="19" y="18"/>
+          <targetAnchor x="39" y="70"/>
+        </sourceConnections>
+        <location x="54" y="54"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD5572C6B41D0EC8DBCBC2268E0B9" id="A1DCD5571337B040EC8DBCBC2268E0B9" name="AddCharacteristic" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55B57428630EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD558474D0320EC8DBCBC2268E0B9">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="29" y="136"/>
+          <targetAnchor x="59" y="42"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55B8DA17060EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55B889EC900EC8DBCBC2268E0B9">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="18" y="412"/>
+          <targetAnchor x="58" y="36"/>
+          <boundaryEvent id="A1DCD55D8E20C7A0EC8DBCBC2268E0B9">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD55D8E20C7A1EC8DBCBC2268E0B9">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="166" y="13"/>
+        <size width="471" height="647"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DCD55730F90750EC8DBCBC2268E0B9" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD5573F7956E0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD557361F8A60EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="25" y="17"/>
+            <targetAnchor x="48" y="41"/>
+          </sourceConnections>
+          <location x="34" y="22"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD5573F7956E0EC8DBCBC2268E0B9" id="A1DCD557361F8A60EC8DBCBC2268E0B9" name="Add Characteristic Request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55CCF4CD9E0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55CBCAEC4B0EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="70"/>
+            <targetAnchor x="54" y="24"/>
+          </sourceConnections>
+          <location x="77" y="84"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCD557361F8A61EC8DBCBC2268E0B9"/>
+          <webService interface="addchrwsdl:addCharacteristic_PT" operation="addCharacteristic" role="addCharacteristic_Provider" partnerLink="addCharacteristic" partnerLinkType="addchrwsdl:addCharacteristic_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD55CCF4CD9E0EC8DBCBC2268E0B9" id="A1DCD55CBCAEC4B0EC8DBCBC2268E0B9" name="Prepare input" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55D43C7E1C0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55CE1BB2C80EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="68"/>
+            <targetAnchor x="58" y="38"/>
+          </sourceConnections>
+          <location x="83" y="218"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD55D43C7E1C0EC8DBCBC2268E0B9" id="A1DCD55CE1BB2C80EC8DBCBC2268E0B9" documentation="Currently this Java Web Service implements steps 12-15 because it is technicaly easier to do so in Java" name="Invoke Add Characteristic Java Service">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55D81B6ADE0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55D4A8139D0EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="58" y="73"/>
+            <targetAnchor x="56" y="41"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD56D2EB72BA0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD56D2BE43580EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="105" y="38"/>
+            <targetAnchor x="58" y="46"/>
+            <boundaryEvent id="A1DCD56D32E7B5F0EC8DBCBC2268E0B9">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD56D32E7B5F1EC8DBCBC2268E0B9">
+                <error message="A1DCD57470CDA440EC8DBCBC2268E0B9" errorCode="SSC_Fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="89" y="350"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCD55CE1BB2C81EC8DBCBC2268E0B9"/>
+          <outMessage message="A1DCD55CE1BD7670EC8DBCBC2268E0B9"/>
+          <webService interface="sscwsdl:sscAccess_PT" operation="addCharacteristicToService" role="SSC_Provider" partnerLink="SSC" partnerLinkType="sscwsdl:SSC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD55D81B6ADE0EC8DBCBC2268E0B9" id="A1DCD55D4A8139D0EC8DBCBC2268E0B9" name="Prepare confirmation" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55D63D3C510EC8DBCBC2268E0B9" name="" routingType="RectilinearVertical" target="A1DCD55D60F0C960EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="54" y="74"/>
+            <targetAnchor x="15" y="7"/>
+            <bendingPoints x="141" y="593"/>
+          </sourceConnections>
+          <location x="92" y="475"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD55D63D3C510EC8DBCBC2268E0B9" id="A1DCD55D60F0C960EC8DBCBC2268E0B9" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="24" y="576"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD56D2EB72BA0EC8DBCBC2268E0B9" id="A1DCD56D2BE43580EC8DBCBC2268E0B9" name="Assign Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD5744D927A00EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD5741E990660EC8DBCBC2268E0B9">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="71" y="55"/>
+            <targetAnchor x="15" y="5"/>
+          </sourceConnections>
+          <location x="263" y="349"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD5744D927A00EC8DBCBC2268E0B9" id="A1DCD5741E990660EC8DBCBC2268E0B9" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="313" y="505"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD5744BF56BD0EC8DBCBC2268E0B9">
+            <error errorCode="addCharacteristicToServiceFault"/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD55B57428630EC8DBCBC2268E0B9" id="A1DCD558474D0320EC8DBCBC2268E0B9" name="Send Confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55B7EB391F0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55B7D2CA3D0EC8DBCBC2268E0B9">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="47" y="75"/>
+          <targetAnchor x="15" y="17"/>
+        </sourceConnections>
+        <location x="21" y="192"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DCD557361F8A62EC8DBCBC2268E0B9"/>
+        <webService interface="addchrwsdl:addCharacteristic_PT" operation="addCharacteristic" role="addCharacteristic_Provider" partnerLink="addCharacteristic" partnerLinkType="addchrwsdl:addCharacteristic_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD55B7EB391F0EC8DBCBC2268E0B9" id="A1DCD55B7D2CA3D0EC8DBCBC2268E0B9" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="63" y="315"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD55B8DA17060EC8DBCBC2268E0B9" id="A1DCD55B889EC900EC8DBCBC2268E0B9" name="Assign Error Message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD55C0A961DF0EC8DBCBC2268E0B9" name="" routingType="RectilinearHorizontal" target="A1DCD55B9B6C79B0EC8DBCBC2268E0B9">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="49" y="72"/>
+          <targetAnchor x="15" y="20"/>
+        </sourceConnections>
+        <location x="24" y="453"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD55C0A961DF0EC8DBCBC2268E0B9" id="A1DCD55B9B6C79B0EC8DBCBC2268E0B9" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="62" y="583"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DCD55B9F155D70EC8DBCBC2268E0B9" implementation="WebService">
+          <error message="A1DCD55BACD47FE0EC8DBCBC2268E0B9" errorCode="addCharacteristicFault"/>
+          <webService interface="addchrwsdl:addCharacteristic_PT" operation="addCharacteristic" role="addCharacteristic_Provider" partnerLink="addCharacteristic" partnerLinkType="addchrwsdl:addCharacteristic_LT"/>
+        </results>
+      </children>
+    </children>
+    <process name="addCharacteristic" id="A1DCD556E2208CC0EC8DBCBC2268E0B9" targetNamespace="urn:vispproject.org/052007/useCases/67/addCharacteristic/bpel">
+      <messages name="addCharacteristic_Request" type="addchrwsdl:addCharacteristic_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCD557361F8A61EC8DBCBC2268E0B9">
+        <properties name="parameters" type="addchrwsdl:addCharacteristic"/>
+      </messages>
+      <messages name="addCharacteristic_Response" type="addchrwsdl:addCharacteristic_Response" messageUsages="//@children.0/@children.0/@children.2/@inMessage" id="A1DCD557361F8A62EC8DBCBC2268E0B9">
+        <properties name="parameters" type="addchrwsdl:addCharacteristic_Response"/>
+      </messages>
+      <messages name="addCharacteristic_Error" type="addchrwsdl:addCharacteristic_Error" messageUsages="//@children.0/@children.0/@children.5/@results.0/@error" id="A1DCD55BACD47FE0EC8DBCBC2268E0B9">
+        <properties name="parameters" type="comxsd:VispError"/>
+      </messages>
+      <messages name="addCharacteristicToService_Request" type="sscwsdl:addCharacteristicToService_Request" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DCD55CE1BB2C81EC8DBCBC2268E0B9">
+        <properties name="parameters" type="sscwsdl:addCharacteristicToService"/>
+      </messages>
+      <messages name="addCharacteristicToService_Response" type="sscwsdl:addCharacteristicToService_Response" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DCD55CE1BD7670EC8DBCBC2268E0B9">
+        <properties name="parameters" type="sscwsdl:addCharacteristicToService_Output"/>
+      </messages>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error" id="A1DCD57470CDA440EC8DBCBC2268E0B9">
+        <properties name="vispError" type="comxsd:VispError"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="addchrwsdl" value="urn:vispproject.org/052007/useCases/67/addCharacteristic/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\useCases\uc-6-7\wsdl\addCharacteristic.wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+  <xMLNSPrefixMap key="sscwsdl" value="urn:vispproject.org/052007/enterpriseServices/ssc/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\enterpriseServices\ssc\wsdl\SSC.wsdl"/>
+</bpmn:Diagram>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF01036DB31B0D901A441E2DFA44B" name="moveServiceInList" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T09:42:14.475+0100" modificationDate="2008-03-12T10:19:44.955+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCF01070377D60D901A441E2DFA44B" name="VISP-Application - Move a Service in the List">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="19" y="17"/>
+    <size width="743" height="848"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCF01070377D61D901A441E2DFA44B" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="848"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCF012F4312010D901A441E2DFA44B" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0154216C440D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF012F8686120D901A441E2DFA44B">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="14" y="14"/>
+          <targetAnchor x="60" y="48"/>
+        </sourceConnections>
+        <location x="56" y="62"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCF0154216C440D901A441E2DFA44B" id="A1DCF012F8686120D901A441E2DFA44B" name="Global catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0143CBFB0C0D901A441E2DFA44B" name="" routingType="RectilinearVertical" target="A1DCF0143A2F1AD0D901A441E2DFA44B">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="41" y="160"/>
+          <targetAnchor x="58" y="41"/>
+          <bendingPoints x="139" y="219"/>
+          <boundaryEvent id="A1DCF0144158C0E0D901A441E2DFA44B">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCF0144158C0E1D901A441E2DFA44B">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF01545A20DE0D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF0153986D770D901A441E2DFA44B">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="38" y="585"/>
+          <targetAnchor x="14" y="15"/>
+        </sourceConnections>
+        <location x="181" y="28"/>
+        <size width="501" height="795"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DCF0130A19A550D901A441E2DFA44B" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0132950FA90D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013110530F0D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="16" y="16"/>
+            <targetAnchor x="57" y="39"/>
+          </sourceConnections>
+          <location x="47" y="64"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0132950FA90D901A441E2DFA44B" id="A1DCF013110530F0D901A441E2DFA44B" name="Receive Request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF01335351B70D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013312D9CF0D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="61" y="74"/>
+            <targetAnchor x="59" y="17"/>
+          </sourceConnections>
+          <location x="140" y="40"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCF0131107A1F0D901A441E2DFA44B"/>
+          <webService interface="moveinlist:moveServiceInList_PT" operation="moveServiceInList" role="moveServiceInList_Provider" partnerLink="moveServiceInList" partnerLinkType="moveinlist:moveServiceInList_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF01335351B70D901A441E2DFA44B" id="A1DCF013312D9CF0D901A441E2DFA44B" name="Initialize Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF013312D9CF1D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013312D9CF2D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="76"/>
+            <targetAnchor x="58" y="26"/>
+          </sourceConnections>
+          <location x="141" y="162"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF013312D9CF1D901A441E2DFA44B" id="A1DCF013312D9CF2D901A441E2DFA44B" name="Prepare Input Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF013653D3FF0D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF01346E415B0D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="73"/>
+            <targetAnchor x="59" y="45"/>
+          </sourceConnections>
+          <location x="140" y="280"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF013653D3FF0D901A441E2DFA44B" id="A1DCF01346E415B0D901A441E2DFA44B" name="moveAServiceInListOfServices">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF01374D2F720D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF01371BF0060D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="72"/>
+            <targetAnchor x="58" y="37"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF013CE335DF0D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013C6C6E280D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="112" y="38"/>
+            <targetAnchor x="69" y="54"/>
+            <boundaryEvent id="A1DCF013D168BF60D901A441E2DFA44B">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCF013D168BF61D901A441E2DFA44B">
+                <error errorCode="sscwsdl:SSC_Fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="140" y="403"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCF01346E415B1D901A441E2DFA44B"/>
+          <outMessage message="A1DCF01346E8D0A0D901A441E2DFA44B"/>
+          <webService interface="sscwsdl:sscAccess_PT" operation="moveAServiceInListOfServices" role="SSC_Provider" partnerLink="SSC" partnerLinkType="sscwsdl:SSC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF01374D2F720D901A441E2DFA44B" id="A1DCF01371BF0060D901A441E2DFA44B" name="Prepare Confirmation" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0139F152440D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF0138B07EEB0D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="51" y="74"/>
+            <targetAnchor x="60" y="30"/>
+          </sourceConnections>
+          <location x="145" y="529"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0139F152440D901A441E2DFA44B" id="A1DCF0138B07EEB0D901A441E2DFA44B" name="Send Confirmation" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF013B64BFB70D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013B3B1C890D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="114" y="34"/>
+            <targetAnchor x="21" y="21"/>
+          </sourceConnections>
+          <location x="146" y="663"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCF0131107A1F1D901A441E2DFA44B"/>
+          <webService interface="moveinlist:moveServiceInList_PT" operation="moveServiceInList" role="moveServiceInList_Provider" partnerLink="moveServiceInList" partnerLinkType="moveinlist:moveServiceInList_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF013B64BFB70D901A441E2DFA44B" id="A1DCF013B3B1C890D901A441E2DFA44B" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="348" y="681"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF013CE335DF0D901A441E2DFA44B" id="A1DCF013C6C6E280D901A441E2DFA44B" name="Assign Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0140D873850D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF013F69CD370D901A441E2DFA44B">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="10"/>
+            <targetAnchor x="14" y="20"/>
+          </sourceConnections>
+          <location x="320" y="404"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF0140D873850D901A441E2DFA44B" id="A1DCF013F69CD370D901A441E2DFA44B" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="362" y="305"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCF013FA129940D901A441E2DFA44B">
+            <error errorCode="ErrorWithSSCOperation"/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCF0143CBFB0C0D901A441E2DFA44B" id="A1DCF0143A2F1AD0D901A441E2DFA44B" name="Finalize Error Message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF01446A4F460D901A441E2DFA44B" name="" routingType="RectilinearHorizontal" target="A1DCF01442BEE090D901A441E2DFA44B">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="56" y="72"/>
+          <targetAnchor x="14" y="19"/>
+        </sourceConnections>
+        <location x="29" y="330"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF01446A4F460D901A441E2DFA44B" id="A1DCF01442BEE090D901A441E2DFA44B" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="70" y="463"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DCF01445F8FCF0D901A441E2DFA44B" implementation="WebService">
+          <error message="A1DCF014555554A0D901A441E2DFA44B" errorCode="moveServiceInListFault"/>
+          <webService interface="moveinlist:moveServiceInList_PT" operation="moveServiceInList" role="moveServiceInList_Provider" partnerLink="moveServiceInList" partnerLinkType="moveinlist:moveServiceInList_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF01545A20DE0D901A441E2DFA44B" id="A1DCF0153986D770D901A441E2DFA44B" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="67" y="657"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="moveServiceInList" id="A1DCF012F4A62900D901A441E2DFA44B" targetNamespace="urn:vispproject.org/052007/useCases/613/moveServiceInList/bpel">
+      <messages name="MoveServiceInList_Request" type="moveinlist:MoveServiceInList_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCF0131107A1F0D901A441E2DFA44B">
+        <properties name="parameters" type="moveinlist:moveServiceInList"/>
+      </messages>
+      <messages name="MoveServiceInList_Response" type="moveinlist:MoveServiceInList_Response" messageUsages="//@children.0/@children.0/@children.1/@children.6/@inMessage" id="A1DCF0131107A1F1D901A441E2DFA44B">
+        <properties name="parameters" type="moveinlist:moveServiceInList_Response"/>
+      </messages>
+      <messages name="moveAServiceInListOfServices_Request" type="sscwsdl:moveAServiceInListOfServices_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCF01346E415B1D901A441E2DFA44B">
+        <properties name="parameters" type="sscwsdl:moveAServiceInListOfServices"/>
+      </messages>
+      <messages name="moveAServiceInListOfServices_Response" type="sscwsdl:moveAServiceInListOfServices_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCF01346E8D0A0D901A441E2DFA44B">
+        <properties name="parameters" type="sscwsdl:moveAServiceInListOfServices_Output"/>
+      </messages>
+      <messages name="MoveServiceInList_Fault" type="moveinlist:MoveServiceInList_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCF014555554A0D901A441E2DFA44B"/>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="moveinlist" value="urn:vispproject.org/052007/useCases/613/moveServiceInList/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\useCases\uc-6-13\wsdl\moveServiceInList.wsdl"/>
+  <xMLNSPrefixMap key="sscwsdl" value="urn:vispproject.org/052007/enterpriseServices/ssc/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\enterpriseServices\ssc\wsdl\SSC.wsdl"/>
+</bpmn:Diagram>

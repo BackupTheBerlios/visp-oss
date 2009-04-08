@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF0537D056690C747A60C01E325D2" name="moveTreeBranch" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T17:43:48.473+0100" modificationDate="2008-03-13T11:36:35.688+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCF053A1F593D0C747A60C01E325D2" name="VISP-Application - Move a Tree Branch">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="42" y="17"/>
+    <size width="746" height="837"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCF053A1F593D1C747A60C01E325D2" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="837"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCF053CBBDAEF0C747A60C01E325D2" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E8BFF362F0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF053E0129BE0C747A60C01E325D2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="23" y="14"/>
+          <targetAnchor x="25" y="52"/>
+        </sourceConnections>
+        <location x="54" y="64"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E8BFF362F0FF7AE2035D812C56" id="A1DCF053E0129BE0C747A60C01E325D2" name="Global Catch All" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E8DC9BA8E0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E8D98D5770FF7AE2035D812C56">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="36" y="187"/>
+          <targetAnchor x="57" y="8"/>
+          <boundaryEvent id="A1DCF0E8E1B5A8D0FF7AE2035D812C56">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCF0E8E1B5A8D1FF7AE2035D812C56">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E95510E8D0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E9517D88E0FF7AE2035D812C56">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="13" y="603"/>
+          <targetAnchor x="15" y="2"/>
+        </sourceConnections>
+        <location x="173" y="27"/>
+        <size width="488" height="784"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DCF0E681DCFC80FF7AE2035D812C56" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E69A323C00FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E68D7128A0FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="11" y="11"/>
+            <targetAnchor x="56" y="41"/>
+          </sourceConnections>
+          <location x="29" y="64"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E69A323C00FF7AE2035D812C56" id="A1DCF0E68D7128A0FF7AE2035D812C56" name="Receive Request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E6BD7DE100FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E6BA220BD0FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="71"/>
+            <targetAnchor x="58" y="40"/>
+          </sourceConnections>
+          <location x="120" y="37"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCF0E68D7128A1FF7AE2035D812C56"/>
+          <webService interface="movebranch:moveTreeBranch_PT" operation="moveTreeBranch" role="moveTreeBranch_Provider" partnerLink="moveTreeBranch" partnerLinkType="movebranch:moveTreeBranch_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E6BD7DE100FF7AE2035D812C56" id="A1DCF0E6BA220BD0FF7AE2035D812C56" name="Initialize Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E6BA220BD1FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E6BA220BD2FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="76"/>
+            <targetAnchor x="58" y="26"/>
+          </sourceConnections>
+          <location x="121" y="164"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E6BA220BD1FF7AE2035D812C56" id="A1DCF0E6BA220BD2FF7AE2035D812C56" name="Prepare Input Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E6D026CBA0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E6CCC3CA80FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="66" y="74"/>
+            <targetAnchor x="59" y="31"/>
+          </sourceConnections>
+          <location x="120" y="282"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E6D026CBA0FF7AE2035D812C56" id="A1DCF0E6CCC3CA80FF7AE2035D812C56" name="moveABranchInTheTreeOfServices">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E6D7F60080FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E6D5E87D40FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="107" y="41"/>
+            <targetAnchor x="28" y="45"/>
+            <boundaryEvent id="A1DCF0E6DCD28240FF7AE2035D812C56">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCF0E6DCD28241FF7AE2035D812C56">
+                <error message="A1DCF0E6FA4E1DC0FF7AE2035D812C56" errorCode="sscwsdl:SSC_Fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E80182CAE0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E7FD3E4360FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="65" y="75"/>
+            <targetAnchor x="57" y="44"/>
+          </sourceConnections>
+          <location x="126" y="415"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCF0E6CCC63B80FF7AE2035D812C56"/>
+          <outMessage message="A1DCF0E6CCCAF670FF7AE2035D812C56"/>
+          <webService interface="sscwsdl:sscAccess_PT" operation="moveABranchInTheTreeOfServices" role="SSC_Provider" partnerLink="SSC" partnerLinkType="sscwsdl:SSC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E6D7F60080FF7AE2035D812C56" id="A1DCF0E6D5E87D40FF7AE2035D812C56" name="Assign Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E739CE1130FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E73727D060FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="7"/>
+            <targetAnchor x="15" y="20"/>
+          </sourceConnections>
+          <location x="305" y="412"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF0E739CE1130FF7AE2035D812C56" id="A1DCF0E73727D060FF7AE2035D812C56" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="346" y="301"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCF0E74106D270FF7AE2035D812C56">
+            <error errorCode="ErrorWithSSCOperation"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E80182CAE0FF7AE2035D812C56" id="A1DCF0E7FD3E4360FF7AE2035D812C56" name="Prepare Confirmation" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E88DE53540FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E870465A50FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="77"/>
+            <targetAnchor x="58" y="31"/>
+          </sourceConnections>
+          <location x="128" y="544"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E88DE53540FF7AE2035D812C56" id="A1DCF0E870465A50FF7AE2035D812C56" name="Send Confirmation" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E8B616D1E0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E8B3D48300FF7AE2035D812C56">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="107" y="34"/>
+            <targetAnchor x="11" y="12"/>
+          </sourceConnections>
+          <location x="129" y="677"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCF0E68D7128A2FF7AE2035D812C56"/>
+          <webService interface="movebranch:moveTreeBranch_PT" operation="moveTreeBranch" role="moveTreeBranch_Provider" partnerLink="moveTreeBranch" partnerLinkType="movebranch:moveTreeBranch_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF0E8B616D1E0FF7AE2035D812C56" id="A1DCF0E8B3D48300FF7AE2035D812C56" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="341" y="693"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCF0E8DC9BA8E0FF7AE2035D812C56" id="A1DCF0E8D98D5770FF7AE2035D812C56" name="Finalize Error Message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCF0E8EC9467A0FF7AE2035D812C56" name="" routingType="RectilinearHorizontal" target="A1DCF0E8E6594040FF7AE2035D812C56">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="51" y="65"/>
+          <targetAnchor x="16" y="18"/>
+        </sourceConnections>
+        <location x="29" y="312"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF0E8EC9467A0FF7AE2035D812C56" id="A1DCF0E8E6594040FF7AE2035D812C56" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="65" y="478"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DCF0E8EAFF21A0FF7AE2035D812C56" implementation="WebService">
+          <error message="A1DCF0E8F54D6040FF7AE2035D812C56" errorCode="moveTreeBranchFault"/>
+          <webService interface="movebranch:moveTreeBranch_PT" operation="moveTreeBranch" role="moveTreeBranch_Provider" partnerLink="moveTreeBranch" partnerLinkType="movebranch:moveTreeBranch_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCF0E95510E8D0FF7AE2035D812C56" id="A1DCF0E9517D88E0FF7AE2035D812C56" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="59" y="709"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="moveTreeBranch" id="A1DCF053CC2B3DD0C747A60C01E325D2" targetNamespace="urn:vispproject.org/052007/useCases/614/moveTreeBranch/bpel">
+      <messages name="MoveTreeBranch_Request" type="movebranch:MoveTreeBranch_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCF0E68D7128A1FF7AE2035D812C56">
+        <properties name="parameters" type="movebranch:moveTreeBranch"/>
+      </messages>
+      <messages name="MoveTreeBranch_Response" type="movebranch:MoveTreeBranch_Response" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage" id="A1DCF0E68D7128A2FF7AE2035D812C56">
+        <properties name="parameters" type="movebranch:moveTreeBranch_Response"/>
+      </messages>
+      <messages name="moveABranchInTheTreeOfServices_Request" type="sscwsdl:moveABranchInTheTreeOfServices_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCF0E6CCC63B80FF7AE2035D812C56">
+        <properties name="parameters" type="sscwsdl:moveABranchInTheTreeOfServices"/>
+      </messages>
+      <messages name="moveABranchInTheTreeOfServices_Response" type="sscwsdl:moveABranchInTheTreeOfServices_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCF0E6CCCAF670FF7AE2035D812C56">
+        <properties name="parameters" type="sscwsdl:moveABranchInTheTreeOfServices_Output"/>
+      </messages>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DCF0E6FA4E1DC0FF7AE2035D812C56"/>
+      <messages name="MoveTreeBranch_Fault" type="movebranch:MoveTreeBranch_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCF0E8F54D6040FF7AE2035D812C56"/>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="movebranch" value="urn:vispproject.org/052007/useCases/614/moveTreeBranch/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\useCases\uc-6-14\wsdl\moveTreeBranch.wsdl"/>
+  <xMLNSPrefixMap key="sscwsdl" value="urn:vispproject.org/052007/enterpriseServices/ssc/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\enterpriseServices\ssc\wsdl\SSC.wsdl"/>
+</bpmn:Diagram>

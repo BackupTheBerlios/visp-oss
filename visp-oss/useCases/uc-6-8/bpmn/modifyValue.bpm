@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD8348E716F50C591B8DC5D6A1C9C" name="modifyValue" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-11T01:01:55.162+0100" modificationDate="2008-02-11T01:32:02.457+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCD8349F1F7450C591B8DC5D6A1C9C" name="VISP-Application - Modify Characteristic Value">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="17" y="10"/>
+    <size width="842" height="772"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD8349F1F7451C591B8DC5D6A1C9C" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="772"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCD834C90D18D0C591B8DC5D6A1C9C" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD835A33443D0C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD834CBD846C0C591B8DC5D6A1C9C">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="18" y="17"/>
+          <targetAnchor x="35" y="55"/>
+        </sourceConnections>
+        <location x="36" y="51"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD835A33443D0C591B8DC5D6A1C9C" id="A1DCD834CBD846C0C591B8DC5D6A1C9C" name="modifyValue" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD835ABA44C90C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD835A6CA14C0C591B8DC5D6A1C9C">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="23" y="168"/>
+          <targetAnchor x="16" y="20"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD835B12090C0C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD835AF1D94D0C591B8DC5D6A1C9C">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="41" y="327"/>
+          <targetAnchor x="14" y="10"/>
+          <boundaryEvent id="A1DCD8378DD63960C591B8DC5D6A1C9C">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD8378DD63961C591B8DC5D6A1C9C">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="163" y="24"/>
+        <size width="472" height="723"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DCD834DB316A20C591B8DC5D6A1C9C" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD834E24C9140C591B8DC5D6A1C9C" name="" routingType="RectilinearVertical" target="A1DCD834DF161E60C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="22" y="10"/>
+            <targetAnchor x="51" y="35"/>
+            <bendingPoints x="124" y="43"/>
+            <bendingPoints x="152" y="53"/>
+          </sourceConnections>
+          <location x="32" y="28"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD834E24C9140C591B8DC5D6A1C9C" id="A1DCD834DF161E60C591B8DC5D6A1C9C" name="Modify Value Request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD83509250680C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD8350017AC50C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="71"/>
+            <targetAnchor x="56" y="30"/>
+          </sourceConnections>
+          <location x="94" y="74"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCD834DF161E61C591B8DC5D6A1C9C"/>
+          <webService interface="modvalwsdl:modifyValue_PT" operation="modifyValue" role="modifyValue_Provider" partnerLink="modifyValue" partnerLinkType="modvalwsdl:modifyValue_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD83509250680C591B8DC5D6A1C9C" id="A1DCD8350017AC50C591B8DC5D6A1C9C" name="Prepare Input" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD83531657030C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD835181555F0C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="54" y="79"/>
+            <targetAnchor x="55" y="29"/>
+          </sourceConnections>
+          <location x="96" y="208"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD83531657030C591B8DC5D6A1C9C" id="A1DCD835181555F0C591B8DC5D6A1C9C" name="Invoke Modify Value Java Service">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD8353FAED140C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD835365049D0C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="114" y="40"/>
+            <targetAnchor x="11" y="36"/>
+            <boundaryEvent id="A1DCD835430464E0C591B8DC5D6A1C9C">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD835430464E1C591B8DC5D6A1C9C">
+                <error message="A1DCD838B3B787F0C591B8DC5D6A1C9C" errorCode="SSC_Fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD8358C9E8EA0C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD8356D620940C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="51" y="75"/>
+            <targetAnchor x="56" y="22"/>
+          </sourceConnections>
+          <location x="102" y="336"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCD835181555F1C591B8DC5D6A1C9C"/>
+          <outMessage message="A1DCD83518179FE0C591B8DC5D6A1C9C"/>
+          <webService interface="sscwsdl:sscAccess_PT" operation="modifyCharacteristicToService" role="SSC_Provider" partnerLink="SSC" partnerLinkType="sscwsdl:SSC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD8353FAED140C591B8DC5D6A1C9C" id="A1DCD835365049D0C591B8DC5D6A1C9C" name="Assign Error" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD8356473A8C0C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD8354C549470C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="73"/>
+            <targetAnchor x="14" y="16"/>
+            <bendingPoints x="331" y="434"/>
+          </sourceConnections>
+          <location x="279" y="334"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD8356473A8C0C591B8DC5D6A1C9C" id="A1DCD8354C549470C591B8DC5D6A1C9C" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="315" y="460"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD8354FBAC9E0C591B8DC5D6A1C9C">
+            <error errorCode="SSC_Failed"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD8358C9E8EA0C591B8DC5D6A1C9C" id="A1DCD8356D620940C591B8DC5D6A1C9C" name="Prepare Confirmation" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD8358F4FA4E0C591B8DC5D6A1C9C" name="" routingType="RectilinearHorizontal" target="A1DCD8357E744E50C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="60" y="69"/>
+            <targetAnchor x="56" y="26"/>
+          </sourceConnections>
+          <location x="101" y="468"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD8358F4FA4E0C591B8DC5D6A1C9C" id="A1DCD8357E744E50C591B8DC5D6A1C9C" name="Send Confirmation" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD8359270BB00C591B8DC5D6A1C9C" name="" routingType="RectilinearVertical" target="A1DCD8358A3EA5A0C591B8DC5D6A1C9C">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="95" y="43"/>
+            <targetAnchor x="12" y="14"/>
+            <bendingPoints x="275" y="637"/>
+          </sourceConnections>
+          <location x="104" y="601"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCD834DF186850C591B8DC5D6A1C9C"/>
+          <webService interface="modvalwsdl:modifyValue_PT" operation="modifyValue" role="modifyValue_Provider" partnerLink="modifyValue" partnerLinkType="modvalwsdl:modifyValue_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD8359270BB00C591B8DC5D6A1C9C" id="A1DCD8358A3EA5A0C591B8DC5D6A1C9C" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="327" y="620"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD835ABA44C90C591B8DC5D6A1C9C" id="A1DCD835A6CA14C0C591B8DC5D6A1C9C" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="61" y="242"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD835B12090C0C591B8DC5D6A1C9C" id="A1DCD835AF1D94D0C591B8DC5D6A1C9C" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="58" y="398"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DCD835B5623210C591B8DC5D6A1C9C" implementation="WebService">
+          <error message="A1DCD835FE9387E0C591B8DC5D6A1C9C" errorCode="modifyValueFault"/>
+          <webService interface="modvalwsdl:modifyValue_PT" operation="modifyValue" role="modifyValue_Provider" partnerLink="modifyValue" partnerLinkType="modvalwsdl:modifyValue_LT"/>
+        </results>
+      </children>
+    </children>
+    <process name="modifyValue" id="A1DCD834C9654AF0C591B8DC5D6A1C9C" targetNamespace="urn:vispproject.org/052007/useCases/68/modifyValue/bpel">
+      <messages name="modifyValue_Request" type="modvalwsdl:modifyValue_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCD834DF161E61C591B8DC5D6A1C9C">
+        <properties name="parameters" type="modvalwsdl:modifyValue"/>
+      </messages>
+      <messages name="modifyValue_Response" type="modvalwsdl:modifyValue_Response" messageUsages="//@children.0/@children.0/@children.1/@children.7/@inMessage" id="A1DCD834DF186850C591B8DC5D6A1C9C">
+        <properties name="parameters" type="modvalwsdl:modifyValue_Response"/>
+      </messages>
+      <messages name="modifyCharacteristicToService_Request" type="sscwsdl:modifyCharacteristicToService_Request" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DCD835181555F1C591B8DC5D6A1C9C">
+        <properties name="parameters" type="sscwsdl:modifyCharacteristicToService"/>
+      </messages>
+      <messages name="modifyCharacteristicToService_Response" type="sscwsdl:modifyCharacteristicToService_Response" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DCD83518179FE0C591B8DC5D6A1C9C">
+        <properties name="parameters" type="sscwsdl:modifyCharacteristicToService_Output"/>
+      </messages>
+      <messages name="modifyValue_Error" type="modvalwsdl:modifyValue_Error" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCD835FE9387E0C591B8DC5D6A1C9C"/>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DCD838B3B787F0C591B8DC5D6A1C9C"/>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="modvalwsdl" value="urn:vispproject.org/052007/useCases/68/modifyValue/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\useCases\uc-6-8\wsdl\modifyValue.wsdl"/>
+  <xMLNSPrefixMap key="sscwsdl" value="urn:vispproject.org/052007/enterpriseServices/ssc/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\enterpriseServices\ssc\wsdl\SSC.wsdl"/>
+</bpmn:Diagram>

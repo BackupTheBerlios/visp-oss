@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD0CB2B2E10D0DFD9FF8DC612E14B" name="sreset-7-13" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-01T14:39:53.565+0100" modificationDate="2008-08-05T12:35:42.156+0200">
+  <children xsi:type="bpmn:Pool" id="A1DCD4A00C2B1C40ECFAFA6BD454A40A" name="VISP-Application - Reset Service Instance">
+    <fontColor/>
+    <lineColor/>
+    <font family="Lucida Grande" height="8"/>
+    <location x="60" y="-72"/>
+    <size width="1753" height="2317"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD4A00C2B1C41ECFAFA6BD454A40A" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Lucida Grande" height="8"/>
+      <size height="2317"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCD4A00C2B1C42ECFAFA6BD454A40A" name="Process start event">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C43ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C44ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="15" y="10"/>
+          <targetAnchor x="60" y="15"/>
+          <bendingPoints x="196" y="101"/>
+        </sourceConnections>
+        <location x="180" y="84"/>
+        <size width="31" height="31"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C43ECFAFA6BD454A40A" id="A1DCD4A00C2B1C44ECFAFA6BD454A40A" name="Receive reset request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C45ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C46ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="112" y="32"/>
+          <targetAnchor x="39" y="123"/>
+          <bendingPoints x="380" y="156"/>
+        </sourceConnections>
+        <location x="312" y="60"/>
+        <size width="132" height="80"/>
+        <fillColor green="255"/>
+        <outMessage message="A1DCD4A5457B67C0ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_PT" operation="resetService_Request" role="resetService_Provider" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C45ECFAFA6BD454A40A" id="A1DCD4A00C2B1C46ECFAFA6BD454A40A" name="Reset service" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C47ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DD62D9215A1540C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="1176" y="270"/>
+          <targetAnchor x="68" y="34"/>
+          <bendingPoints x="1516" y="364"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C48ECFAFA6BD454A40A" name="visp error" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CD0ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="1191" y="434"/>
+          <targetAnchor x="14" y="27"/>
+          <boundaryEvent id="A1DCD4A00C2B1C49ECFAFA6BD454A40A">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C4AECFAFA6BD454A40A">
+              <error errorCode="vispFault"/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C4BECFAFA6BD454A40A" name="system error" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CDBECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="1180" y="1198"/>
+          <targetAnchor x="24" y="22"/>
+          <boundaryEvent id="A1DCD4A00C2B1C4CECFAFA6BD454A40A">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C4DECFAFA6BD454A40A">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="96" y="180"/>
+        <size width="1192" height="2101"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C8AECFAFA6BD454A40A" id="A1DCD4A00C2B1C4EECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C4FECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C52ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="117" y="37"/>
+            <targetAnchor x="10" y="21"/>
+          </sourceConnections>
+          <location x="779" y="377"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C5BECFAFA6BD454A40A" id="A1DCD4A00C2B1C50ECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C51ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C54ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="118" y="35"/>
+            <targetAnchor x="17" y="18"/>
+            <bendingPoints x="1035" y="587"/>
+          </sourceConnections>
+          <location x="779" y="545"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C4FECFAFA6BD454A40A" id="A1DCD4A00C2B1C52ECFAFA6BD454A40A" name="Service instance status illegal" labelWidth="118">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="401"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <labelLocation x="-50" y="40"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C53ECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C51ECFAFA6BD454A40A" id="A1DCD4A00C2B1C54ECFAFA6BD454A40A" name="Error setOperationalStatus for SI pre" labelWidth="127">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="569"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <labelLocation x="-50" y="40"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C55ECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DCD4A00C2B1C56ECFAFA6BD454A40A" name="Local start event">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C57ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CB2ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="27" y="12"/>
+            <targetAnchor x="26" y="32"/>
+          </sourceConnections>
+          <location x="81" y="69"/>
+          <size width="31" height="31"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CB3ECFAFA6BD454A40A" id="A1DCD4A00C2B1C58ECFAFA6BD454A40A" name="Bind to SIB" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C59ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C87ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="70" y="54"/>
+            <targetAnchor x="94" y="22"/>
+            <bendingPoints x="203" y="177"/>
+          </sourceConnections>
+          <location x="441" y="45"/>
+          <size width="132" height="80"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C60ECFAFA6BD454A40A A1DCD4A00C2B1C9EECFAFA6BD454A40A" id="A1DCD4A00C2B1C5AECFAFA6BD454A40A" documentation="" name="Invoke setOperationalStatus for SI pre">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C5BECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C50ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="176" y="42"/>
+            <targetAnchor x="19" y="43"/>
+            <boundaryEvent id="A1DCD4A00C2B1C5CECFAFA6BD454A40A">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C5DECFAFA6BD454A40A">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C5EECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C8EECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="98" y="67"/>
+            <targetAnchor x="77" y="32"/>
+            <bendingPoints x="249" y="664"/>
+            <bendingPoints x="153" y="677"/>
+          </sourceConnections>
+          <location x="419" y="545"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCD4A63076E470ECFAFA6BD454A40A"/>
+          <outMessage message="A1DCD4A631A5A070ECFAFA6BD454A40A"/>
+          <webService interface="sibwsdl:sibAccess_PT" operation="setServiceInstanceStatus" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C8BECFAFA6BD454A40A" id="A1DCD4A00C2B1C5FECFAFA6BD454A40A" documentation="Define input parameter" name="Prepare setOperationalStatus  for SI pre" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C60ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C5AECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="178" y="43"/>
+            <targetAnchor x="46" y="40"/>
+          </sourceConnections>
+          <location x="59" y="545"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CB5ECFAFA6BD454A40A" id="A1DCD4A00C2B1C61ECFAFA6BD454A40A" documentation="Define input parameters and bind to appropriate ATP" name="Prepare ATP_reset" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C62ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C63ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="179" y="42"/>
+            <targetAnchor x="66" y="39"/>
+          </sourceConnections>
+          <location x="59" y="1209"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C62ECFAFA6BD454A40A A1DCD4A00C2B1CA4ECFAFA6BD454A40A" id="A1DCD4A00C2B1C63ECFAFA6BD454A40A" name="Invoke ATP_reset" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C64ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C72ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="100" y="63"/>
+            <targetAnchor x="26" y="3"/>
+            <bendingPoints x="449" y="1306"/>
+          </sourceConnections>
+          <location x="419" y="1209"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCD4A6B13D0C60ECFAFA6BD454A40A"/>
+          <webService interface="invwsdl:invokeATP_PT" operation="invokeATP" role="invokeATP_Provider" partnerLink="invokeATP" partnerLinkType="invwsdl:invokeATP_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C73ECFAFA6BD454A40A" id="A1DCD4A00C2B1C65ECFAFA6BD454A40A" name="Receive resetconfirmation" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C66ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C69ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="98" y="77"/>
+            <targetAnchor x="70" y="31"/>
+            <bendingPoints x="139" y="1525"/>
+          </sourceConnections>
+          <location x="59" y="1413"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <outMessage message="A1DCD4A6B4902F00ECFAFA6BD454A40A"/>
+          <webService interface="invwsdl:invokeATP_CB" operation="invokeATP_Response" role="invokeATP_Requester" partnerLink="invokeATP" partnerLinkType="invwsdl:invokeATP_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C74ECFAFA6BD454A40A" id="A1DCD4A00C2B1C67ECFAFA6BD454A40A" name="Receive reset error" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C68ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C78ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="167" y="42"/>
+            <targetAnchor x="16" y="44"/>
+          </sourceConnections>
+          <location x="419" y="1413"/>
+          <size width="180" height="80"/>
+          <fillColor red="255"/>
+          <outMessage message="A1DCD4A6B5DB9AC0ECFAFA6BD454A40A"/>
+          <webService interface="invwsdl:invokeATP_CB" operation="invokeATP_Fault" role="invokeATP_Requester" partnerLink="invokeATP" partnerLinkType="invwsdl:invokeATP_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C66ECFAFA6BD454A40A" id="A1DCD4A00C2B1C69ECFAFA6BD454A40A" name="Prepare setOperationalStatus for SI post" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C6AECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C6BECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="162" y="42"/>
+            <targetAnchor x="13" y="43"/>
+          </sourceConnections>
+          <location x="57" y="1617"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C6AECFAFA6BD454A40A A1DCD4A00C2B1CA2ECFAFA6BD454A40A" id="A1DCD4A00C2B1C6BECFAFA6BD454A40A" name="Invoke setOperationalStatus for SI post">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C6CECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C7CECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="170" y="42"/>
+            <targetAnchor x="21" y="54"/>
+            <bendingPoints x="684" y="1653"/>
+            <boundaryEvent id="A1DCD4A00C2B1C6DECFAFA6BD454A40A">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C6EECFAFA6BD454A40A">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCE3C23487D530CB2C846274619719" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CA5ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="90" y="61"/>
+            <targetAnchor x="84" y="29"/>
+            <bendingPoints x="247" y="1751"/>
+          </sourceConnections>
+          <location x="419" y="1617"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCD4A63076E470ECFAFA6BD454A40A"/>
+          <outMessage message="A1DCD4A631A5A070ECFAFA6BD454A40A"/>
+          <webService interface="sibwsdl:sibAccess_PT" operation="setServiceInstanceStatus" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1C70ECFAFA6BD454A40A" text="Retrieve information about the &#xD;&#xA;service instance from SIB">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1C71ECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C80ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="14" y="26"/>
+            <targetAnchor x="126" y="22"/>
+          </sourceConnections>
+          <location x="599" y="137"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1C64ECFAFA6BD454A40A" id="A1DCD4A00C2B1C72ECFAFA6BD454A40A" name="Wait for reply" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C73ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C65ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="18" y="23"/>
+            <targetAnchor x="78" y="11"/>
+            <bendingPoints x="245" y="1353"/>
+            <bendingPoints x="141" y="891"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C74ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C67ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="39" y="23"/>
+            <targetAnchor x="98" y="9"/>
+            <bendingPoints x="429" y="1353"/>
+          </sourceConnections>
+          <location x="299" y="1329"/>
+          <size width="51" height="51"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1CA8ECFAFA6BD454A40A" id="A1DCD4A00C2B1C75ECFAFA6BD454A40A" name="Local end event">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="501" y="2001"/>
+          <size width="31" height="31"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C79ECFAFA6BD454A40A" id="A1DCD4A00C2B1C76ECFAFA6BD454A40A" name="Error ATP_reset">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="1437"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C77ECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C68ECFAFA6BD454A40A" id="A1DCD4A00C2B1C78ECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C79ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C76ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="117" y="37"/>
+            <targetAnchor x="10" y="21"/>
+            <bendingPoints x="982" y="1454"/>
+          </sourceConnections>
+          <location x="779" y="1413"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C7DECFAFA6BD454A40A" id="A1DCD4A00C2B1C7AECFAFA6BD454A40A" name="Error setOperationalStatus for SI post" labelWidth="126">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="1641"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <labelLocation x="-50" y="36"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C7BECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C6CECFAFA6BD454A40A" id="A1DCD4A00C2B1C7CECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C7DECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C7AECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="118" y="35"/>
+            <targetAnchor x="17" y="18"/>
+            <bendingPoints x="937" y="1656"/>
+          </sourceConnections>
+          <location x="779" y="1617"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C81ECFAFA6BD454A40A" id="A1DCD4A00C2B1C7EECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C7FECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C85ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="117" y="37"/>
+            <targetAnchor x="10" y="21"/>
+          </sourceConnections>
+          <location x="779" y="209"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C88ECFAFA6BD454A40A A1DCD4A00C2B1C71ECFAFA6BD454A40A" id="A1DCD4A00C2B1C80ECFAFA6BD454A40A" name="Invoke getsibDescription">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C81ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C7EECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="177" y="41"/>
+            <targetAnchor x="44" y="43"/>
+            <boundaryEvent id="A1DCD4A00C2B1C82ECFAFA6BD454A40A">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C83ECFAFA6BD454A40A">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C84ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C8CECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="81" y="49"/>
+            <targetAnchor x="82" y="4"/>
+            <bendingPoints x="369" y="341"/>
+          </sourceConnections>
+          <location x="419" y="209"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCD4A61C7806C0ECFAFA6BD454A40A"/>
+          <outMessage message="A1DCD4A61DADEEB0ECFAFA6BD454A40A"/>
+          <webService interface="sibwsdl:sibAccess_PT" operation="getServiceInstanceDescription" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C7FECFAFA6BD454A40A" id="A1DCD4A00C2B1C85ECFAFA6BD454A40A" name="Error getsibDescription">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="233"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C86ECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C59ECFAFA6BD454A40A" id="A1DCD4A00C2B1C87ECFAFA6BD454A40A" documentation="Define input parameters" name="Prepare getSibDescription" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C88ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C80ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="179" y="41"/>
+            <targetAnchor x="50" y="43"/>
+          </sourceConnections>
+          <location x="59" y="209"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1C8DECFAFA6BD454A40A A1DCD4A00C2B1C9CECFAFA6BD454A40A" id="A1DCD4A00C2B1C89ECFAFA6BD454A40A" name="Check operational status">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C8AECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C4EECFAFA6BD454A40A" conditionType="Default">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="30" y="28"/>
+            <targetAnchor x="53" y="36"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C8BECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C5FECFAFA6BD454A40A" conditionType="Expression" conditionExpression="status=activated">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="28" y="37"/>
+            <targetAnchor x="97" y="13"/>
+            <bendingPoints x="503" y="473"/>
+            <bendingPoints x="346" y="497"/>
+            <bendingPoints x="141" y="521"/>
+          </sourceConnections>
+          <location x="479" y="389"/>
+          <size width="51" height="51"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C84ECFAFA6BD454A40A" id="A1DCD4A00C2B1C8CECFAFA6BD454A40A" documentation="Define input parameters" name="Prepare checkOperationalStatus" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C8DECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C89ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="166" y="42"/>
+            <targetAnchor x="33" y="26"/>
+            <bendingPoints x="315" y="415"/>
+          </sourceConnections>
+          <location x="59" y="377"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C5EECFAFA6BD454A40A" id="A1DCD4A00C2B1C8EECFAFA6BD454A40A" name="Bind to SSC" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C8FECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C90ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="60" y="74"/>
+            <targetAnchor x="94" y="22"/>
+          </sourceConnections>
+          <location x="83" y="705"/>
+          <size width="132" height="80"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C8FECFAFA6BD454A40A" id="A1DCD4A00C2B1C90ECFAFA6BD454A40A" documentation="Define input parameter" name="Prepare setOperationalStatus for SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C91ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C92ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="178" y="43"/>
+            <targetAnchor x="46" y="40"/>
+          </sourceConnections>
+          <location x="59" y="873"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C91ECFAFA6BD454A40A A1DCD4A00C2B1CA0ECFAFA6BD454A40A" id="A1DCD4A00C2B1C92ECFAFA6BD454A40A" documentation="Define operational status as &quot;suspending&quot;" name="Invoke setOperationalStatus for SvS">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C93ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C99ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="176" y="42"/>
+            <targetAnchor x="19" y="43"/>
+            <boundaryEvent id="A1DCD4A00C2B1C94ECFAFA6BD454A40A">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1C95ECFAFA6BD454A40A">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C96ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CB6ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="52" y="72"/>
+            <targetAnchor x="92" y="16"/>
+          </sourceConnections>
+          <location x="419" y="873"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCE3C3308E43F0CB2C846274619719"/>
+          <outMessage message="A1DCE3C3316012E0CB2C846274619719"/>
+          <webService interface="sscwsdl:sscAccess_PT" operation="setOperationalStatus" role="SSC_Provider" partnerLink="SSC" partnerLinkType="sscwsdl:SSC_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1C9AECFAFA6BD454A40A" id="A1DCD4A00C2B1C97ECFAFA6BD454A40A" name="Error setOperationalStatus for SvS" labelWidth="131">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1091" y="897"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <labelLocation x="-50" y="36"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1C98ECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C93ECFAFA6BD454A40A" id="A1DCD4A00C2B1C99ECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1C9AECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C97ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="118" y="35"/>
+            <targetAnchor x="17" y="18"/>
+            <bendingPoints x="989" y="915"/>
+          </sourceConnections>
+          <location x="779" y="873"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1C9BECFAFA6BD454A40A" text="Step11: The system checkes that the &#xD;&#xA;service instance status is &quot;activated&quot;">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1C9CECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C89ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="11" y="26"/>
+            <targetAnchor x="23" y="16"/>
+          </sourceConnections>
+          <location x="599" y="309"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1C9DECFAFA6BD454A40A" text="Step12: The system sets the &#xD;&#xA;service instance status to &quot;resetting&quot;">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1C9EECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C5AECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="31" y="23"/>
+            <targetAnchor x="126" y="20"/>
+          </sourceConnections>
+          <location x="599" y="477"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1C9FECFAFA6BD454A40A" text="Step13: The system sets the service set &#xD;&#xA;operational status to &quot;maintaining&quot;">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1CA0ECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C92ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="54" y="22"/>
+            <targetAnchor x="113" y="29"/>
+          </sourceConnections>
+          <location x="599" y="717"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1CA1ECFAFA6BD454A40A" text="Step15: The system sets the &#xD;&#xA;service instance status to &quot;activated&quot;">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1CA2ECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C6BECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="87" y="16"/>
+            <targetAnchor x="78" y="26"/>
+          </sourceConnections>
+          <location x="611" y="1521"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1CA3ECFAFA6BD454A40A" text="Step14: The system starts the reset process">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1CA4ECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1C63ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="46" y="13"/>
+            <targetAnchor x="145" y="3"/>
+          </sourceConnections>
+          <location x="647" y="1149"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCE3C23487D530CB2C846274619719" id="A1DCD4A00C2B1CA5ECFAFA6BD454A40A" documentation="Define input parameter" name="Prepare updateSvsStatus" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CA6ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CA7ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="178" y="43"/>
+            <targetAnchor x="46" y="40"/>
+          </sourceConnections>
+          <location x="57" y="1821"/>
+          <size width="180" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CA6ECFAFA6BD454A40A A1DCD4A00C2B1CB1ECFAFA6BD454A40A" id="A1DCD4A00C2B1CA7ECFAFA6BD454A40A" documentation="Define operational status as &quot;suspending&quot;" name="Invoke updateSvsStatus">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CA8ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1C75ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="99" y="75"/>
+            <targetAnchor x="16" y="22"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CA9ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CAEECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="175" y="42"/>
+            <targetAnchor x="11" y="44"/>
+            <boundaryEvent id="A1DCD4A00C2B1CAAECFAFA6BD454A40A">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4A00C2B1CABECFAFA6BD454A40A">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="417" y="1821"/>
+          <size width="180" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DCE3C8EEB69620CB2C846274619719"/>
+          <outMessage message="A1DCE3C8EFB0FBB0CB2C846274619719"/>
+          <webService interface="updwsdl:updateSvsStatus_PT" operation="updateSvsStatus" role="updateSvsStatus_Provider" partnerLink="updateSvsStatus" partnerLinkType="updwsdl:updateSvsStatus_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1CAFECFAFA6BD454A40A" id="A1DCD4A00C2B1CACECFAFA6BD454A40A" name="Error updateSvsStatus" labelWidth="131">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <location x="1089" y="1845"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <labelLocation x="-50" y="36"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4A00C2B1CADECFAFA6BD454A40A">
+            <error errorCode="vispFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CA9ECFAFA6BD454A40A" id="A1DCD4A00C2B1CAEECFAFA6BD454A40A" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CAFECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CACECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="118" y="35"/>
+            <targetAnchor x="17" y="18"/>
+            <bendingPoints x="952" y="1857"/>
+          </sourceConnections>
+          <location x="777" y="1821"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1CB0ECFAFA6BD454A40A" text="Step16: The system sets the service set operational &#xD;&#xA;status to the appropriate value if finished">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCD4A00C2B1CB1ECFAFA6BD454A40A" name="" target="A1DCD4A00C2B1CA7ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="51" y="28"/>
+            <targetAnchor x="142" y="1"/>
+          </sourceConnections>
+          <location x="609" y="1725"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C57ECFAFA6BD454A40A" id="A1DCD4A00C2B1CB2ECFAFA6BD454A40A" name="Initialize SyncPartFinished" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CB3ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C58ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="116" y="38"/>
+            <targetAnchor x="121" y="43"/>
+          </sourceConnections>
+          <location x="213" y="45"/>
+          <size width="132" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CB7ECFAFA6BD454A40A" id="A1DCD4A00C2B1CB4ECFAFA6BD454A40A" name="Set the value of SyncPartFinished to True" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CB5ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1C61ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="10" y="36"/>
+            <targetAnchor x="80" y="34"/>
+          </sourceConnections>
+          <location x="165" y="1041"/>
+          <size width="132" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C96ECFAFA6BD454A40A" id="A1DCD4A00C2B1CB6ECFAFA6BD454A40A" name="Reset Service Instance Sync Reply" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CB7ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CB4ECFAFA6BD454A40A">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="8" y="38"/>
+            <targetAnchor x="104" y="38"/>
+          </sourceConnections>
+          <location x="369" y="1041"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCD4A67D2D6960ECFAFA6BD454A40A"/>
+          <webService interface="resetsiwsdl:resetService_PT" operation="resetService_Request" role="resetService_Provider" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+        </children>
+        <messages name="getServiceInstanceDescription_Request" type="sibwsdl:getServiceInstanceDescription_Request" messageUsages="//@children.0/@children.0/@children.2/@children.22/@inMessage" id="A1DCD4A61C7806C0ECFAFA6BD454A40A">
+          <properties name="getServiceInstanceDescription_Input" type="repxsd:ReferenceNumber"/>
+        </messages>
+        <messages name="getServiceInstanceDescription_Response" type="sibwsdl:getServiceInstanceDescription_Response" messageUsages="//@children.0/@children.0/@children.2/@children.22/@outMessage" id="A1DCD4A61DADEEB0ECFAFA6BD454A40A">
+          <properties name="getServiceInstanceDescription_Output" type="repxsd:ServiceInstanceDescription"/>
+        </messages>
+        <messages name="setServiceInstanceStatus_Request" type="sibwsdl:setServiceInstanceStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.6/@inMessage //@children.0/@children.0/@children.2/@children.13/@inMessage" id="A1DCD4A63076E470ECFAFA6BD454A40A">
+          <properties name="SetServiceInstanceStatus_Input" type="sibwsdl:SetServiceInstanceStatus_Input"/>
+        </messages>
+        <messages name="setServiceInstanceStatus_Response" type="sibwsdl:setServiceInstanceStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.6/@outMessage //@children.0/@children.0/@children.2/@children.13/@outMessage" id="A1DCD4A631A5A070ECFAFA6BD454A40A">
+          <properties name="setServiceInstanceStatus_Output" type="comxsd:String"/>
+        </messages>
+        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.2/@children.9/@inMessage" id="A1DCD4A6B13D0C60ECFAFA6BD454A40A">
+          <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
+        </messages>
+        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.2/@children.10/@outMessage" id="A1DCD4A6B4902F00ECFAFA6BD454A40A">
+          <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
+        </messages>
+        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.2/@children.11/@outMessage" id="A1DCD4A6B5DB9AC0ECFAFA6BD454A40A">
+          <properties name="vispError" type="comxsd:VispError"/>
+        </messages>
+        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" id="A1DCD968A43C8C90F20DE5E98CCF87E2">
+          <properties name="parameters" type="sscwsdl:getServiceSet"/>
+        </messages>
+        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" id="A1DCD968A54EBFE0F20DE5E98CCF87E2">
+          <properties name="parameters" type="sscwsdl:getServiceSet_Output"/>
+        </messages>
+        <messages name="serviceTreeToList_Request" type="sscwsdl:serviceTreeToList_Request" id="A1DCD968B8C0EDF0F20DE5E98CCF87E2">
+          <properties name="serviceTreeToList_Input" type="sscwsdl:ServiceTreeToList_Input"/>
+        </messages>
+        <messages name="serviceTreeToList_Response" type="sscwsdl:serviceTreeToList_Response" id="A1DCD968BA135E90F20DE5E98CCF87E2">
+          <properties name="serviceTreeToList_Output" type="sscwsdl:ServiceTreeToList_Output"/>
+        </messages>
+        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.29/@inMessage" id="A1DCE3C3308E43F0CB2C846274619719">
+          <properties name="parameters" type="sscwsdl:setOperationalStatus"/>
+        </messages>
+        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.29/@outMessage" id="A1DCE3C3316012E0CB2C846274619719">
+          <properties name="parameters" type="sscwsdl:setOperationalStatus_Output"/>
+        </messages>
+        <messages name="updateSvsStatus_Request" type="updwsdl:updateSvsStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.38/@inMessage" id="A1DCE3C8EEB69620CB2C846274619719">
+          <properties name="updateSvsStatus_Input" type="updwsdl:UpdateSvsStatus_Input"/>
+        </messages>
+        <messages name="updateSvsStatus_Response" type="updwsdl:updateSvsStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.38/@outMessage" id="A1DCE3C8EFB0FBB0CB2C846274619719">
+          <properties name="updateSvsStatus_Output" type="updwsdl:UpdateSvsStatus_Output"/>
+        </messages>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CC4ECFAFA6BD454A40A" id="A1DCD4A00C2B1CC1ECFAFA6BD454A40A" name="Send system error message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CC2ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CCFECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="56" y="64"/>
+          <targetAnchor x="14" y="22"/>
+          <bendingPoints x="1560" y="2069"/>
+        </sourceConnections>
+        <location x="1381" y="2024"/>
+        <size width="120" height="80"/>
+        <fillColor red="255"/>
+        <inMessage message="A1DCD4A726318A00ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_CB" operation="resetService_Fault" role="resetService_Requester" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD62DA07E45520C6F3ED6B0D1BC0BE" id="A1DCD4A00C2B1CC3ECFAFA6BD454A40A" name="Assign system error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CC4ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CC1ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="58" y="72"/>
+          <targetAnchor x="58" y="38"/>
+          <bendingPoints x="1439" y="1980"/>
+          <bendingPoints x="1453" y="1994"/>
+        </sourceConnections>
+        <location x="1378" y="1888"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD62D9AC2A6DF0C6F3ED6B0D1BC0BE" id="A1DCD4A00C2B1CC5ECFAFA6BD454A40A" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CC6ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DCD4A00C2B1CC7ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="62" y="64"/>
+          <targetAnchor x="58" y="54"/>
+          <bendingPoints x="1439" y="1182"/>
+        </sourceConnections>
+        <location x="1379" y="1064"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CC6ECFAFA6BD454A40A" id="A1DCD4A00C2B1CC7ECFAFA6BD454A40A" name="Send error message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CC8ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CCEECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="72" y="66"/>
+          <targetAnchor x="14" y="26"/>
+          <bendingPoints x="1558" y="1240"/>
+        </sourceConnections>
+        <location x="1383" y="1200"/>
+        <size width="120" height="80"/>
+        <fillColor red="255"/>
+        <inMessage message="A1DCD4A726318A00ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_CB" operation="resetService_Fault" role="resetService_Requester" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CCCECFAFA6BD454A40A" id="A1DCD4A00C2B1CC9ECFAFA6BD454A40A" name="Send confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CCAECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CCDECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="62" y="20"/>
+          <targetAnchor x="14" y="10"/>
+          <bendingPoints x="1195" y="75"/>
+        </sourceConnections>
+        <location x="1221" y="31"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+        <inMessage message="A1DCD4A723796EE0ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_CB" operation="resetService_Response" role="resetService_Requester" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD62D95E3B9010C6F3ED6B0D1BC0BE" id="A1DCD4A00C2B1CCBECFAFA6BD454A40A" name="Prepare confirmation" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CCCECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CC9ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="58" y="12"/>
+          <targetAnchor x="58" y="54"/>
+          <bendingPoints x="1380" y="71"/>
+        </sourceConnections>
+        <location x="1423" y="38"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1CCAECFAFA6BD454A40A" id="A1DCD4A00C2B1CCDECFAFA6BD454A40A" name="Process end event">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <location x="1078" y="59"/>
+        <size width="31" height="31"/>
+        <fillColor green="255"/>
+        <labelLocation x="-37" y="-25"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1CC8ECFAFA6BD454A40A" id="A1DCD4A00C2B1CCEECFAFA6BD454A40A" name="Application error">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <location x="1607" y="1223"/>
+        <size width="31" height="31"/>
+        <fillColor red="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4A00C2B1CC2ECFAFA6BD454A40A" id="A1DCD4A00C2B1CCFECFAFA6BD454A40A" name="System error">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <location x="1595" y="2054"/>
+        <size width="31" height="31"/>
+        <fillColor red="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1C48ECFAFA6BD454A40A" id="A1DCD4A00C2B1CD0ECFAFA6BD454A40A" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CD1ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD5ECFAFA6BD454A40A" conditionType="Expression" conditionExpression="'syncPartFinished = false'">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="47" y="23"/>
+          <targetAnchor x="54" y="25"/>
+          <bendingPoints x="1479" y="613"/>
+          <bendingPoints x="1581" y="624"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CD2ECFAFA6BD454A40A" name="SyncPartFinished" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD3ECFAFA6BD454A40A" conditionType="Expression" conditionExpression="'syncPartFinished = true'">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="28" y="39"/>
+          <targetAnchor x="32" y="32"/>
+          <labelLocation x="-52" y="-14"/>
+        </sourceConnections>
+        <location x="1416" y="588"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1CD2ECFAFA6BD454A40A A1DCD4A00C2B1CD6ECFAFA6BD454A40A" id="A1DCD4A00C2B1CD3ECFAFA6BD454A40A" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CD4ECFAFA6BD454A40A" name="" routingType="RectilinearHorizontal" target="A1DD62D99C449AF0C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="29" y="30"/>
+          <targetAnchor x="46" y="59"/>
+          <bendingPoints x="1441" y="818"/>
+        </sourceConnections>
+        <location x="1416" y="732"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CD1ECFAFA6BD454A40A" id="A1DCD4A00C2B1CD5ECFAFA6BD454A40A" name="Send Sync Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CD6ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD3ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="61" y="75"/>
+          <targetAnchor x="38" y="26"/>
+          <bendingPoints x="1507" y="758"/>
+        </sourceConnections>
+        <location x="1512" y="648"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DCD4A72794C380ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_PT" operation="resetService_Request" role="resetService_Provider" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1CDCECFAFA6BD454A40A" id="A1DCD4A00C2B1CD7ECFAFA6BD454A40A" name="Send Sync Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CD8ECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD9ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="61" y="75"/>
+          <targetAnchor x="38" y="26"/>
+          <bendingPoints x="1496" y="1524"/>
+        </sourceConnections>
+        <location x="1512" y="1416"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DCD4A72794C380ECFAFA6BD454A40A"/>
+        <webService interface="resetsiwsdl:resetService_PT" operation="resetService_Request" role="resetService_Provider" partnerLink="resetService" partnerLinkType="resetsiwsdl:resetService_LT"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1CDDECFAFA6BD454A40A A1DCD4A00C2B1CD8ECFAFA6BD454A40A" id="A1DCD4A00C2B1CD9ECFAFA6BD454A40A" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CDAECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DD62D9F056AB63C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="26" y="36"/>
+          <targetAnchor x="53" y="47"/>
+          <labelLocation x="-4"/>
+        </sourceConnections>
+        <location x="1416" y="1500"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DCD4A00C2B1C4BECFAFA6BD454A40A" id="A1DCD4A00C2B1CDBECFAFA6BD454A40A" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Lucida Grande" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CDCECFAFA6BD454A40A" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD7ECFAFA6BD454A40A" conditionType="Expression" conditionExpression="'syncPartFinished = false'">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="47" y="23"/>
+          <targetAnchor x="54" y="25"/>
+          <bendingPoints x="1500" y="1380"/>
+          <bendingPoints x="1571" y="1430"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4A00C2B1CDDECFAFA6BD454A40A" name="SyncPartFinished" routingType="RectilinearVertical" target="A1DCD4A00C2B1CD9ECFAFA6BD454A40A" conditionType="Expression" conditionExpression="'syncPartFinished = true'">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="28" y="39"/>
+          <targetAnchor x="32" y="32"/>
+          <labelLocation x="-52" y="-14"/>
+        </sourceConnections>
+        <location x="1416" y="1356"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4A00C2B1C47ECFAFA6BD454A40A A1DD62D939F9F250C6F3ED6B0D1BC0BE" id="A1DD62D9215A1540C6F3ED6B0D1BC0BE" name="Set Service Instance FaultStatus">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D947E8B040C6F3ED6B0D1BC0BE" name="" routingType="RectilinearHorizontal" target="A1DD62D93EB2BF70C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="59" y="12"/>
+          <targetAnchor x="25" y="28"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D95310FB30C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DD62D93EB2BF70C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="110" y="16"/>
+          <targetAnchor x="34" y="21"/>
+          <bendingPoints x="1558" y="354"/>
+          <bendingPoints x="1575" y="294"/>
+          <bendingPoints x="1533" y="230"/>
+          <boundaryEvent id="A1DD62D959615840C6F3ED6B0D1BC0BE">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD62D959615841C6F3ED6B0D1BC0BE">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1419" y="325"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD62D9215A1541C6F3ED6B0D1BC0BE"/>
+        <outMessage message="A1DD62D9215C8640C6F3ED6B0D1BC0BE"/>
+        <webService interface="sibwsdl:sibAccess_PT" operation="setServiceInstanceFaultStatus" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DD62D9383E86B0C6F3ED6B0D1BC0BE" text="Reset error flag in SIB">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD62D939F9F250C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DD62D9215A1540C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="15" y="16"/>
+          <targetAnchor x="95" y="39"/>
+          <bendingPoints x="1572" y="386"/>
+        </sourceConnections>
+        <location x="1595" y="300"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DD62D947E8B040C6F3ED6B0D1BC0BE A1DD62D95310FB30C6F3ED6B0D1BC0BE" id="A1DD62D93EB2BF70C6F3ED6B0D1BC0BE" name="Gateway1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D95E3B9010C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CCBECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="25" y="17"/>
+          <targetAnchor x="48" y="64"/>
+        </sourceConnections>
+        <location x="1454" y="204"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD62D99C449AF2C6F3ED6B0D1BC0BE A1DCD4A00C2B1CD4ECFAFA6BD454A40A" id="A1DD62D99C449AF0C6F3ED6B0D1BC0BE" name="Set Service Instance FaultStatus">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D9B5D085B0C6F3ED6B0D1BC0BE" name="" routingType="RectilinearHorizontal" target="A1DD62D9A968B5E0C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="49" y="72"/>
+          <targetAnchor x="25" y="36"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D9B8B86360C6F3ED6B0D1BC0BE" name="" routingType="RectilinearHorizontal" target="A1DD62D9A968B5E0C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="110" y="49"/>
+          <targetAnchor x="35" y="18"/>
+          <bendingPoints x="1560" y="943"/>
+          <bendingPoints x="1514" y="992"/>
+          <boundaryEvent id="A1DD62D9BEBC7530C6F3ED6B0D1BC0BE">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD62D9BEBC7531C6F3ED6B0D1BC0BE">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1384" y="839"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD62D9215A1541C6F3ED6B0D1BC0BE"/>
+        <outMessage message="A1DD62D9215C8640C6F3ED6B0D1BC0BE"/>
+        <webService interface="sibwsdl:sibAccess_PT" operation="setServiceInstanceFaultStatus" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DD62D99C449AF1C6F3ED6B0D1BC0BE" text="Set error flag in SIB">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD62D99C449AF2C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DD62D99C449AF0C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="15" y="16"/>
+          <targetAnchor x="95" y="39"/>
+          <bendingPoints x="1526" y="860"/>
+        </sourceConnections>
+        <location x="1561" y="791"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DD62D9B5D085B0C6F3ED6B0D1BC0BE A1DD62D9B8B86360C6F3ED6B0D1BC0BE" id="A1DD62D9A968B5E0C6F3ED6B0D1BC0BE" name="Gateway2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D9AC2A6DF0C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CC5ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="25" y="43"/>
+          <targetAnchor x="60" y="21"/>
+        </sourceConnections>
+        <location x="1413" y="966"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DD62D9F056AB64C6F3ED6B0D1BC0BE A1DD62D9F056AB65C6F3ED6B0D1BC0BE" id="A1DD62D9F056AB60C6F3ED6B0D1BC0BE" name="Gateway2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62DA07E45520C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DCD4A00C2B1CC3ECFAFA6BD454A40A">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="23" y="37"/>
+          <targetAnchor x="76" y="31"/>
+        </sourceConnections>
+        <location x="1413" y="1749"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DD62D9F056AB61C6F3ED6B0D1BC0BE" text="Set error flag in SIB">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD62D9F056AB62C6F3ED6B0D1BC0BE" name="" routingType="RectilinearVertical" target="A1DD62D9F056AB63C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="15" y="16"/>
+          <targetAnchor x="95" y="39"/>
+          <bendingPoints x="1516" y="1633"/>
+        </sourceConnections>
+        <location x="1561" y="1574"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD62D9F056AB62C6F3ED6B0D1BC0BE A1DCD4A00C2B1CDAECFAFA6BD454A40A" id="A1DD62D9F056AB63C6F3ED6B0D1BC0BE" name="Set Service Instance FaultStatus">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D9F056AB64C6F3ED6B0D1BC0BE" name="" routingType="RectilinearHorizontal" target="A1DD62D9F056AB60C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="49" y="72"/>
+          <targetAnchor x="25" y="36"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD62D9F056AB65C6F3ED6B0D1BC0BE" name="" routingType="RectilinearHorizontal" target="A1DD62D9F056AB60C6F3ED6B0D1BC0BE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="110" y="49"/>
+          <targetAnchor x="35" y="18"/>
+          <bendingPoints x="1550" y="1716"/>
+          <bendingPoints x="1494" y="1774"/>
+          <boundaryEvent id="A1DD62D9F056AB66C6F3ED6B0D1BC0BE">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD62D9F056AB67C6F3ED6B0D1BC0BE">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1384" y="1622"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD62D9215A1541C6F3ED6B0D1BC0BE"/>
+        <outMessage message="A1DD62D9215C8640C6F3ED6B0D1BC0BE"/>
+        <webService interface="sibwsdl:sibAccess_PT" operation="setServiceInstanceFaultStatus" role="SIB_Provider" partnerLink="SIB" partnerLinkType="sibwsdl:sibAccess_LT"/>
+      </children>
+    </children>
+    <process name="sreset-7-13-gen" id="A1DCD4A00C2B1CDEECFAFA6BD454A40A" targetNamespace="urn:vispproject.org/052007/useCases/resetSI/bpel">
+      <messages name="resetService_Request" type="resetsiwsdl:resetService_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DCD4A5457B67C0ECFAFA6BD454A40A">
+        <properties name="resetService_Input" type="resetsiwsdl:ResetService_Input"/>
+      </messages>
+      <messages name="resetService_syncResponse" type="resetsiwsdl:resetService_syncResponse" messageUsages="//@children.0/@children.0/@children.2/@children.44/@inMessage" id="A1DCD4A67D2D6960ECFAFA6BD454A40A">
+        <properties name="parameters" type="resetsiwsdl:ResetService_SyncOutput"/>
+      </messages>
+      <messages name="resetService_Response" type="resetsiwsdl:resetService_Response" messageUsages="//@children.0/@children.0/@children.7/@inMessage" id="A1DCD4A723796EE0ECFAFA6BD454A40A">
+        <properties name="resetSI_Output" type="resetsiwsdl:ResetService_Output"/>
+      </messages>
+      <messages name="resetService_Fault" type="resetsiwsdl:resetService_Fault" messageUsages="//@children.0/@children.0/@children.6/@inMessage //@children.0/@children.0/@children.3/@inMessage" id="A1DCD4A726318A00ECFAFA6BD454A40A">
+        <properties name="vispError" type="comxsd:VispError"/>
+      </messages>
+      <messages name="resetService_syncFault" type="resetsiwsdl:resetService_syncFault" messageUsages="//@children.0/@children.0/@children.15/@inMessage //@children.0/@children.0/@children.14/@inMessage" id="A1DCD4A72794C380ECFAFA6BD454A40A">
+        <properties name="parameters" type="comxsd:VispError"/>
+      </messages>
+      <messages name="setServiceInstanceFaultStatus_Request" type="sibwsdl:setServiceInstanceFaultStatus_Request" messageUsages="//@children.0/@children.0/@children.18/@inMessage //@children.0/@children.0/@children.21/@inMessage //@children.0/@children.0/@children.26/@inMessage" id="A1DD62D9215A1541C6F3ED6B0D1BC0BE">
+        <properties name="setServiceInstanceFaultStatus_Input" type="sibwsdl:SetServiceInstanceFaultStatus"/>
+      </messages>
+      <messages name="setServiceInstanceFaultStatus_Response" type="sibwsdl:setServiceInstanceFaultStatus_Response" messageUsages="//@children.0/@children.0/@children.18/@outMessage //@children.0/@children.0/@children.21/@outMessage //@children.0/@children.0/@children.26/@outMessage" id="A1DD62D9215C8640C6F3ED6B0D1BC0BE">
+        <properties name="setServiceInstanceFaultStatus_Output" type="comxsd:Boolean"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DCD4A00C2B1CE4ECFAFA6BD454A40A" text="Author:  Michal Smaga&#xD;&#xA;Source:  D7.0 Draft 1.0&#xD;&#xA;Version: 1.0&#xD;&#xA;File:        sreset-7-13&#xD;&#xA;Date:     2008-02-05">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="60" y="2292"/>
+    <size width="169"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="resetsiwsdl" value="urn:vispproject.org/052007/useCases/resetSI/wsdl" location="D:/VISP/workspaces/release2\Project\modeling\useCases\uc-7-13\wsdl\resetSI.wsdl"/>
+  <xMLNSPrefixMap key="sibwsdl" value="urn:vispproject.org/052007/enterpriseServices/sib/wsdl" location="D:/VISP/workspaces/release2\Project\modeling\enterpriseServices\sib\wsdl\SIB.wsdl"/>
+  <xMLNSPrefixMap key="repxsd" value="urn:vispproject.org/052007/repositories/xsd"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+  <xMLNSPrefixMap key="sscwsdl" value="urn:vispproject.org/052007/enterpriseServices/ssc/wsdl" location="D:/VISP/workspaces/release2\Project\modeling\enterpriseServices\ssc\wsdl\SSC.wsdl"/>
+  <xMLNSPrefixMap key="invwsdl" value="urn:vispproject.org/052007/processes/bp/invokeATP/wsdl" location="D:/VISP/workspaces/release2\Project\modeling\businessProcesses\invokeATP\wsdl\invokeATP.wsdl"/>
+  <xMLNSPrefixMap key="invxsd" value="urn:vispproject.org/052007/processes/bp/invokeATP/xsd"/>
+  <xMLNSPrefixMap key="updwsdl" value="urn:vispproject.org/052007/processes/bp/updateSvsStatus/wsdl" location="D:/VISP/workspaces/release2\Project\modeling\businessProcesses\updateSvsStatus\wsdl\updateSvsStatus.wsdl"/>
+</bpmn:Diagram>

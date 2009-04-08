@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC6DA8C4B2AE90F00FB21953B8142E" name="FindServiceProvider" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-09-28T11:54:12.953+0200" modificationDate="2008-07-18T12:46:15.203+0200">
+  <children xsi:type="bpmn:Pool" id="A1DC6DA8EF4BD550F00FB21953B8142E" name="find service provider in Monopoly - Broker">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="62" y="-40"/>
+    <size width="1230" height="897"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DC6DA8EF4BD551F00FB21953B8142E" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="897"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DC6DA9CE62BBF0F00FB21953B8142E" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DAA16679FB0F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DA9D900A130F00FB21953B8142E">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="14" y="16"/>
+          <targetAnchor x="32" y="52"/>
+          <bendingPoints x="87" y="177"/>
+        </sourceConnections>
+        <location x="72" y="198"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC6DAA16679FB0F00FB21953B8142E" id="A1DC6DA9D900A130F00FB21953B8142E" name="Receive Find Provider Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB1B3A27640F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DB136049060F00FB21953B8142E">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="115" y="40"/>
+          <targetAnchor x="23" y="49"/>
+        </sourceConnections>
+        <location x="23" y="64"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <outMessage message="A1DC70CC6EE5B760FB45A933B4A40317"/>
+        <webService interface="monfindwsdl:findSP_monopoly_PT" operation="findSP_monopoly" role="findSP_monopoly_Provider" partnerLink="findSP_monopoly" partnerLinkType="monfindwsdl:findSP_monopoly_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB1B3A27640F00FB21953B8142E" id="A1DC6DB136049060F00FB21953B8142E" name="Find Service Provider" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB651A426A0F00FB21953B8142E" name="" routingType="RectilinearVertical" target="A1DC77DEE8E180D0FBAAF1CA7DFF25AE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="21" y="545"/>
+          <targetAnchor x="112" y="47"/>
+          <bendingPoints x="161" y="824"/>
+          <bendingPoints x="93" y="806"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DD2AB644FF0F00FB21953B8142E" name="" routingType="RectilinearVertical" target="A1DC77DEAFBE6D90FBAAF1CA7DFF25AE">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="12" y="414"/>
+          <targetAnchor x="90" y="39"/>
+          <bendingPoints x="156" y="538"/>
+          <bendingPoints x="88" y="510"/>
+          <boundaryEvent id="A1DC77EF992DFFD0FBAAF1CA7DFF25AE">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DC77EF992DFFD1FBAAF1CA7DFF25AE">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="178" y="22"/>
+        <size width="1000" height="850"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DC6DB1B1853B90F00FB21953B8142E" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB1D52987E0F00FB21953B8142E" name="" routingType="RectilinearVertical" target="A1DC7D63CDFBD560DDB2BF128211BB38">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="27" y="13"/>
+            <targetAnchor x="41" y="72"/>
+            <bendingPoints x="144" y="65"/>
+          </sourceConnections>
+          <location x="63" y="49"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC7D67A4E6E0D0DDB2BF128211BB38" id="A1DC6DB226DBAF50F00FB21953B8142E" name="Get quote from Provider" activityType="Subprocess" loopType="Standard">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB60754DDB0F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DB5F09B73E0F00FB21953B8142E">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="471" y="15"/>
+            <targetAnchor x="15" y="15"/>
+            <bendingPoints x="639" y="98"/>
+          </sourceConnections>
+          <location x="38" y="147"/>
+          <size width="927" height="655"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:StartEvent" id="A1DC6DB28F688430F00FB21953B8142E" name="StartEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7D66DE9846D0DDB2BF128211BB38" name="" routingType="RectilinearHorizontal" target="A1DC7D663BA1D4F0DDB2BF128211BB38">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="11" y="20"/>
+              <targetAnchor x="27" y="41"/>
+              <bendingPoints x="90" y="201"/>
+            </sourceConnections>
+            <location x="74" y="233"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DD54B61FDDE600F669D265E946F168" id="A1DC6DB356C6B970F00FB21953B8142E" name="Gateway1" exclusiveGatewayType="EventBased">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB3A08979D0F00FB21953B8142E" name="" routingType="RectilinearVertical" target="A1DD54B63996FB40F669D265E946F168">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="7" y="26"/>
+              <targetAnchor x="89" y="33"/>
+              <bendingPoints x="306" y="466"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB54D1F5740F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DD54B628A891E0F669D265E946F168">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="44" y="25"/>
+              <targetAnchor x="8" y="42"/>
+              <bendingPoints x="359" y="575"/>
+              <bendingPoints x="436" y="556"/>
+            </sourceConnections>
+            <location x="334" y="442"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DC7D70B7659810DDB2BF128211BB38" id="A1DC6DB510F7DDA0F00FB21953B8142E" name="Successful">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="219" y="558"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB57D7092B0F00FB21953B8142E" id="A1DC6DB55FD07F40F00FB21953B8142E" name="Delete partner from list" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DD1DFC20860F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DD1C6685130F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="54"/>
+              <targetAnchor x="16" y="26"/>
+              <bendingPoints x="548" y="335"/>
+              <labelLocation x="11"/>
+            </sourceConnections>
+            <location x="488" y="392"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DC78A11D88E1D0FBAAF1CA7DFF25AE" id="A1DC6DB574B688A0F00FB21953B8142E" name="Select another Provider">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="685" y="418"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DC6DD1DFC20860F00FB21953B8142E" id="A1DC6DD1C6685130F00FB21953B8142E" name="Check if another partner available">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DD1F47AE740F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC78A0EFE8E3B0FBAAF1CA7DFF25AE" conditionType="Expression" conditionExpression="Another partner available">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="39" y="26"/>
+              <targetAnchor x="27" y="39"/>
+              <bendingPoints x="619" y="248"/>
+              <labelLocation x="-8" y="-25"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DD20C4B3F50F00FB21953B8142E" name="Trading impossible" routingType="RectilinearHorizontal" target="A1DC78A12CDB0050FBAAF1CA7DFF25AE" conditionType="Expression" conditionExpression="Another partner unavailable">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="13" y="25"/>
+              <targetAnchor x="52" y="48"/>
+              <bendingPoints x="547" y="242"/>
+              <labelLocation x="-41" y="-3"/>
+            </sourceConnections>
+            <location x="523" y="295"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <labelLocation x="-61" y="63"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DC7E2E4421BF50FE859B784165BBCC" id="A1DC6DD207C939A0F00FB21953B8142E" name="No Service Provider Available">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="828" y="186"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DC6DD20ABF6F30F00FB21953B8142E">
+              <error errorCode="no_partner_available"/>
+            </results>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC6DD1F47AE740F00FB21953B8142E" id="A1DC78A0EFE8E3B0FBAAF1CA7DFF25AE" name="Continue with others" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC78A11D88E1D0FBAAF1CA7DFF25AE" name="" routingType="RectilinearHorizontal" target="A1DC6DB574B688A0F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="59" y="71"/>
+              <targetAnchor x="14" y="14"/>
+            </sourceConnections>
+            <location x="639" y="282"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC6DD20C4B3F50F00FB21953B8142E" id="A1DC78A12CDB0050FBAAF1CA7DFF25AE" name="Set leave loop with Error" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC78A151F0B6F0FBAAF1CA7DFF25AE" name="" routingType="RectilinearHorizontal" target="A1DC7E2E2CCB0410FE859B784165BBCC">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="13" y="42"/>
+              <targetAnchor x="45" y="47"/>
+            </sourceConnections>
+            <location x="488" y="163"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC77E683133610FBAAF1CA7DFF25AE" id="A1DC7127496BFF70C6C281FD28A4515E" name="Set leave loop with Error" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC71277E2269C0C6C281FD28A4515E" name="" routingType="RectilinearVertical" target="A1DC7E2DFDF4F6F0FE859B784165BBCC">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="110" y="35"/>
+              <targetAnchor x="13" y="37"/>
+              <bendingPoints x="636" y="81"/>
+            </sourceConnections>
+            <location x="492" y="44"/>
+            <size width="114" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DC7E2E0E2BD020FE859B784165BBCC" id="A1DC71275B7FAEF0C6C281FD28A4515E" name="Process cannot be continued">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="833" y="62"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <labelLocation x="-63" y="38"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DC77E809E91320FBAAF1CA7DFF25AE">
+              <error errorCode="selectBestProvider_monopoly_Fault"/>
+            </results>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DC712737964350C6C281FD28A4515E" id="A1DC71272AF7AC10C6C281FD28A4515E" name="Gateway1" exclusiveGatewayType="EventBased">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC71273B81FC70C6C281FD28A4515E" name="" routingType="RectilinearHorizontal" target="A1DC7D6687B3DC80DDB2BF128211BB38">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="24" y="28"/>
+              <targetAnchor x="35" y="20"/>
+              <bendingPoints x="228" y="181"/>
+              <bendingPoints x="266" y="205"/>
+              <labelLocation x="6" y="2"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC712754838180C6C281FD28A4515E" name="" routingType="RectilinearHorizontal" target="A1DC7D6663ADE830DDB2BF128211BB38">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="30" y="18"/>
+              <targetAnchor x="78" y="39"/>
+              <bendingPoints x="228" y="78"/>
+            </sourceConnections>
+            <location x="202" y="118"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC7D66DE9846D0DDB2BF128211BB38" id="A1DC7D663BA1D4F0DDB2BF128211BB38" name="Select Best Provider" taskType="Send">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC712737964350C6C281FD28A4515E" name="" routingType="RectilinearVertical" target="A1DC71272AF7AC10C6C281FD28A4515E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="96" y="31"/>
+              <targetAnchor x="22" y="27"/>
+              <bendingPoints x="349" y="144"/>
+            </sourceConnections>
+            <location x="30" y="102"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage message="A1DC7D663BA1D4F1DDB2BF128211BB38"/>
+            <webService interface="monselbestwsdl:selectBestProvider_monopoly_PT" operation="selectBestProvider_monopoly" role="selectBestProvider_monopoly_Provider" partnerLink="selectBestProvider" partnerLinkType="monselbestwsdl:selectBestProvider_monopoly_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC712754838180C6C281FD28A4515E" id="A1DC7D6663ADE830DDB2BF128211BB38" name="Receive Error" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC77E683133610FBAAF1CA7DFF25AE" name="" routingType="RectilinearVertical" target="A1DC7127496BFF70C6C281FD28A4515E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="99" y="14"/>
+              <targetAnchor x="22" y="38"/>
+              <bendingPoints x="440" y="81"/>
+            </sourceConnections>
+            <location x="303" y="47"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DC7D6663ADE831DDB2BF128211BB38"/>
+            <webService interface="monselbestwsdl:selectBestProvider_monopoly_CB" operation="selectBestProvider_monopoly_Fault" role="selectBestProvider_monopoly_Requester" partnerLink="selectBestProvider" partnerLinkType="monselbestwsdl:selectBestProvider_monopoly_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC71273B81FC70C6C281FD28A4515E" id="A1DC7D6687B3DC80DDB2BF128211BB38" name="Receive Selected Provider" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD54B614C663F0F669D265E946F168" name="" routingType="RectilinearHorizontal" target="A1DD54B60B60B090F669D265E946F168">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="57" y="73"/>
+              <targetAnchor x="59" y="24"/>
+            </sourceConnections>
+            <location x="300" y="169"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DC7D6687B3DC81DDB2BF128211BB38"/>
+            <webService interface="monselbestwsdl:selectBestProvider_monopoly_CB" operation="selectBestProvider_monopoly_Reply" role="selectBestProvider_monopoly_Requester" partnerLink="selectBestProvider" partnerLinkType="monselbestwsdl:selectBestProvider_monopoly_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC7D70CAE3AD00DDB2BF128211BB38" id="A1DC7D6EDCD03760DDB2BF128211BB38" name="Set Service Provider Found" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7D70B7659810DDB2BF128211BB38" name="" routingType="RectilinearHorizontal" target="A1DC6DB510F7DDA0F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="112" y="38"/>
+              <targetAnchor x="22" y="27"/>
+            </sourceConnections>
+            <location x="25" y="534"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC71277E2269C0C6C281FD28A4515E" id="A1DC7E2DFDF4F6F0FE859B784165BBCC" name="Assign Error Message" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7E2E0E2BD020FE859B784165BBCC" name="" routingType="RectilinearHorizontal" target="A1DC71275B7FAEF0C6C281FD28A4515E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="111" y="34"/>
+              <targetAnchor x="15" y="15"/>
+            </sourceConnections>
+            <location x="647" y="46"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC78A151F0B6F0FBAAF1CA7DFF25AE" id="A1DC7E2E2CCB0410FE859B784165BBCC" name="Assign Error Message" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7E2E4421BF50FE859B784165BBCC" name="" routingType="RectilinearVertical" target="A1DC6DD207C939A0F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="114" y="40"/>
+              <targetAnchor x="23" y="15"/>
+              <bendingPoints x="802" y="202"/>
+            </sourceConnections>
+            <location x="648" y="165"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD54B614C663F0F669D265E946F168" id="A1DD54B60B60B090F669D265E946F168" name="Get Service Availability" taskType="Send">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD54B61FDDE600F669D265E946F168" name="" routingType="RectilinearHorizontal" target="A1DC6DB356C6B970F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="59" y="72"/>
+              <targetAnchor x="25" y="17"/>
+            </sourceConnections>
+            <location x="301" y="306"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage message="A1DD54B60B60B091F669D265E946F168"/>
+            <webService interface="trdavailablwsdl:getServiceAvailability_PT" operation="getServiceAvailability" role="getServiceAvailability_Provider" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB54D1F5740F00FB21953B8142E" id="A1DD54B628A891E0F669D265E946F168" name="Service unavailable" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB57D7092B0F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DB55FD07F40F00FB21953B8142E">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="63" y="10"/>
+              <targetAnchor x="52" y="54"/>
+              <bendingPoints x="548" y="498"/>
+            </sourceConnections>
+            <location x="492" y="514"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DD54B628A891E1F669D265E946F168"/>
+            <webService interface="trdavailablwsdl:getServiceAvailability_CB" operation="getServiceAvailability_Error" role="getServiceAvailability_Requester" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB3A08979D0F00FB21953B8142E" id="A1DD54B63996FB40F669D265E946F168" name="Receive confirmation" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7D70CAE3AD00DDB2BF128211BB38" name="" routingType="RectilinearVertical" target="A1DC7D6EDCD03760DDB2BF128211BB38">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="4" y="37"/>
+              <targetAnchor x="37" y="62"/>
+              <bendingPoints x="113" y="468"/>
+              <bendingPoints x="85" y="480"/>
+            </sourceConnections>
+            <location x="151" y="427"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <outMessage message="A1DD54B63996FB41F669D265E946F168"/>
+            <webService interface="trdavailablwsdl:getServiceAvailability_CB" operation="getServiceAvailability_Response" role="getServiceAvailability_Requester" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+          </children>
+          <loop xsi:type="bpmn:StandardLoop" loopCondition="Received proper Quote" testTime="Before"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC6DB60754DDB0F00FB21953B8142E" id="A1DC6DB5F09B73E0F00FB21953B8142E" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="623" y="42"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB1D52987E0F00FB21953B8142E" id="A1DC7D63CDFBD560DDB2BF128211BB38" name="Initialize loop conditions" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC7D67A4E6E0D0DDB2BF128211BB38" name="" routingType="RectilinearVertical" target="A1DC6DB226DBAF50F00FB21953B8142E">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="115" y="29"/>
+            <targetAnchor x="311" y="23"/>
+            <bendingPoints x="324" y="65"/>
+          </sourceConnections>
+          <location x="185" y="28"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DC6DB65A276940F00FB21953B8142E" id="A1DC6DB657B44660F00FB21953B8142E" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="76" y="624"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DC6DD2B6798810F00FB21953B8142E" id="A1DC6DD2B2011F50F00FB21953B8142E" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="75" y="300"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC6DD2AB644FF0F00FB21953B8142E" id="A1DC77DEAFBE6D90FBAAF1CA7DFF25AE" name="Find Service Provider Error" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DD2B6798810F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DD2B2011F50F00FB21953B8142E">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="38" y="9"/>
+          <targetAnchor x="9" y="16"/>
+          <bendingPoints x="89" y="369"/>
+        </sourceConnections>
+        <location x="28" y="403"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DC70CC756D2A00FB45A933B4A40317"/>
+        <webService interface="monfindwsdl:findSP_monopoly_CB" operation="findSP_monopoly_Fault" role="findSP_monopoly_Requester" partnerLink="findSP_monopoly" partnerLinkType="monfindwsdl:findSP_monopoly_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC6DB651A426A0F00FB21953B8142E" id="A1DC77DEE8E180D0FBAAF1CA7DFF25AE" name="Find Service Provider Reply" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC6DB65A276940F00FB21953B8142E" name="" routingType="RectilinearHorizontal" target="A1DC6DB657B44660F00FB21953B8142E">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="90" y="67"/>
+          <targetAnchor x="14" y="14"/>
+        </sourceConnections>
+        <location x="27" y="701"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DC70CC748F4D20FB45A933B4A40317"/>
+        <webService interface="monfindwsdl:findSP_monopoly_CB" operation="findSP_monopoly_Reply" role="findSP_monopoly_Requester" partnerLink="findSP_monopoly" partnerLinkType="monfindwsdl:findSP_monopoly_LT"/>
+      </children>
+    </children>
+    <process name="findSP_monopoly-gen" id="A1DC6DA9CED9E7C0F00FB21953B8142E" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/monopoly/findSP/bpel">
+      <messages name="findSP_monopoly_Request" type="monfindwsdl:findSP_monopoly_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DC70CC6EE5B760FB45A933B4A40317">
+        <properties name="parameters" type="monfindwsdl:findSP_monopoly"/>
+      </messages>
+      <messages name="findSP_monopoly_Response" type="monfindwsdl:findSP_monopoly_Response" messageUsages="//@children.0/@children.0/@children.6/@inMessage" id="A1DC70CC748F4D20FB45A933B4A40317">
+        <properties name="parameters" type="monfindwsdl:findSP_monopoly_Response"/>
+      </messages>
+      <messages name="findSP_monopoly_Fault" type="monfindwsdl:findSP_monopoly_Fault" messageUsages="//@children.0/@children.0/@children.5/@inMessage" id="A1DC70CC756D2A00FB45A933B4A40317">
+        <properties name="vispError" type="comxsd:VispError"/>
+      </messages>
+      <messages name="selectBestProvider_monopoly_Request" type="monselbestwsdl:selectBestProvider_monopoly_Request" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.12/@inMessage" id="A1DC7D663BA1D4F1DDB2BF128211BB38"/>
+      <messages name="selectBestProvider_monopoly_Fault" type="monselbestwsdl:selectBestProvider_monopoly_Fault" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.13/@outMessage" id="A1DC7D6663ADE831DDB2BF128211BB38"/>
+      <messages name="selectBestProvider_monopoly_Response" type="monselbestwsdl:selectBestProvider_monopoly_Response" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.14/@outMessage" id="A1DC7D6687B3DC81DDB2BF128211BB38"/>
+      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.18/@inMessage" id="A1DD54B60B60B091F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability"/>
+      </messages>
+      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.19/@outMessage" id="A1DD54B628A891E1F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Error"/>
+      </messages>
+      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.20/@outMessage" id="A1DD54B63996FB41F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Response"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/" location=""/>
+  <xMLNSPrefixMap key="monfindwsdl" value="urn:vispproject.org/052007/processes/bp/trading/monopoly/findSP/wsdl" location="D:\ITTI\Workspaces\VISP - ActiveBPEL 2\Project2\modeling\businessProcesses\Trading\monopoly\findSP_monopoly\wsdl\findSP_monopoly.wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+  <xMLNSPrefixMap key="" value="" location=""/>
+  <xMLNSPrefixMap key="trdgetofferwsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/getOfferDetails/wsdl" location="D:\ITTI\Workspaces\VISP - ActiveBPEL 2\Development_r2\modeling\businessProcesses\Trading\common\getOfferDetails\wsdl\getOfferDetails_LT.wsdl"/>
+  <xMLNSPrefixMap key="monselbestwsdl" value="urn:vispproject.org/052007/processes/bp/trading/monopoly/selectBestProvider/wsdl" location="D:\ITTI\Workspaces\VISP - ActiveBPEL 2\Development_r2\modeling\businessProcesses\trading\monopoly\selectBestProvider_monopoly\wsdl\selectBestProvider_monopoly_LT.wsdl"/>
+  <xMLNSPrefixMap key="trdavailablwsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/getServiceAvailability/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\businessProcesses\trading\common\getServiceAvailability\wsdl\getServiceAvailability.wsdl"/>
+</bpmn:Diagram>

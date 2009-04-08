@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD4B2A2B65DC0DB0AB3C23085EDD0" name="retrieveService_6_7" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-06T13:54:21.074+0100" modificationDate="2008-02-06T16:06:00.984+0100">
+  <children xsi:type="bpmn:Pool" id="A1DCD4B2B5E01120DB0AB3C23085EDD0" name="Retrieve Service from SKB for UC6.7">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="273" y="17"/>
+    <size width="619" height="674"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD4B2B5E01121DB0AB3C23085EDD0" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="674"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DCD4B2CA3F8560DB0AB3C23085EDD0" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B3CFA00EC0DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B4EA5011B0DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="26" y="17"/>
+          <targetAnchor x="37" y="83"/>
+        </sourceConnections>
+        <location x="55" y="61"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B3CFA00EC0DB0AB3C23085EDD0" id="A1DCD4B4EA5011B0DB0AB3C23085EDD0" name="retrieve service" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B58D769440DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B5FB22C040DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="13" y="129"/>
+          <targetAnchor x="56" y="21"/>
+          <bendingPoints x="146" y="142"/>
+          <boundaryEvent id="A1DCD4B5CDB7DBE0DB0AB3C23085EDD0">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4B5CDB7DBE1DB0AB3C23085EDD0">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B6A64C8000DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B657011F60DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="20" y="365"/>
+          <targetAnchor x="58" y="18"/>
+        </sourceConnections>
+        <location x="199" y="42"/>
+        <size width="352" height="595"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B502E20C10DB0AB3C23085EDD0 A1DCD4B7FC213290DB0AB3C23085EDD0" id="A1DCD4B3C66E1590DB0AB3C23085EDD0" name="Receive retrieveService_67 request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B52A961440DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B512AAE130DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="53" y="65"/>
+            <targetAnchor x="54" y="35"/>
+          </sourceConnections>
+          <location x="201" y="110"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DCD4B3C66E1591DB0AB3C23085EDD0"/>
+          <webService interface="retrserv67wsdl:retrieveService_67_PT" operation="retrieveService_67" role="retrieveService_67_Provider" partnerLink="retrieveService_67" partnerLinkType="retrserv67wsdl:retrieveService_67_LT"/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DCD4B4FEC9C4B0DB0AB3C23085EDD0" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B502E20C10DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B3C66E1590DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="25" y="10"/>
+            <targetAnchor x="33" y="18"/>
+            <bendingPoints x="256" y="85"/>
+          </sourceConnections>
+          <location x="53" y="42"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B52A961440DB0AB3C23085EDD0" id="A1DCD4B512AAE130DB0AB3C23085EDD0" name="Prepair input message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B532083500DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B5B5AFF910DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="52" y="71"/>
+            <targetAnchor x="66" y="8"/>
+            <bendingPoints x="256" y="353"/>
+          </sourceConnections>
+          <location x="200" y="250"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4B53B271B60DB0AB3C23085EDD0" id="A1DCD4B53561E750DB0AB3C23085EDD0" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="245" y="512"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B532083500DB0AB3C23085EDD0 A1DCD4B81D392EB0DB0AB3C23085EDD0" id="A1DCD4B5B5AFF910DB0AB3C23085EDD0" name="getServicesDetails">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B53B271B60DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B53561E750DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="48" y="58"/>
+            <targetAnchor x="16" y="18"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCD4B81B5860C0DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B809E92EA0DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="109" y="17"/>
+            <targetAnchor x="95" y="91"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4C49A9F9360DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4C492450E70DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="15" y="43"/>
+            <targetAnchor x="112" y="45"/>
+            <boundaryEvent id="A1DCD4C49E289310DB0AB3C23085EDD0">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCD4C49E289311DB0AB3C23085EDD0">
+                <error message="A1DCD4C4A8D67DE0DB0AB3C23085EDD0" errorCode="SKB_fault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="199" y="382"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DCD4B5B5AFF911DB0AB3C23085EDD0"/>
+          <outMessage message="A1DCD4B5B5B26A10DB0AB3C23085EDD0"/>
+          <webService interface="skbwsdl:SKB_PT" operation="getServicesDetails" role="SKB_Provider" partnerLink="SKB" partnerLinkType="skbwsdl:SKB_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCD4C49A9F9360DB0AB3C23085EDD0" id="A1DCD4C492450E70DB0AB3C23085EDD0" name="Assign Error Message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4C4E0692D20DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4C4DC09F1B0DB0AB3C23085EDD0">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="50" y="10"/>
+            <targetAnchor x="13" y="9"/>
+            <bendingPoints x="86" y="331"/>
+          </sourceConnections>
+          <location x="31" y="384"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4C4E0692D20DB0AB3C23085EDD0" id="A1DCD4C4DC09F1B0DB0AB3C23085EDD0" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="71" y="264"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCD4C4DF849980DB0AB3C23085EDD0">
+            <error errorCode="SKB_fault"/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B58D769440DB0AB3C23085EDD0" id="A1DCD4B5FB22C040DB0AB3C23085EDD0" name="Assign Error Message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B634D912D0DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B62DA75670DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="54" y="73"/>
+          <targetAnchor x="15" y="8"/>
+          <bendingPoints x="105" y="295"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCD4B801B76760DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B7F2BF76D0DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="2" y="29"/>
+          <targetAnchor x="118" y="71"/>
+        </sourceConnections>
+        <location x="56" y="197"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCD4B6A64C8000DB0AB3C23085EDD0" id="A1DCD4B657011F60DB0AB3C23085EDD0" name="Send Retireve Service Response" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCD4B6ADA1A2E0DB0AB3C23085EDD0" name="" routingType="RectilinearHorizontal" target="A1DCD4B6AAA552D0DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="54" y="75"/>
+          <targetAnchor x="15" y="17"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCD4B804685690DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B7F2BF76D0DB0AB3C23085EDD0">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="9" y="26"/>
+          <targetAnchor x="126" y="301"/>
+        </sourceConnections>
+        <location x="30" y="438"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DCD4B3C6705F80DB0AB3C23085EDD0"/>
+        <webService interface="retrserv67wsdl:retrieveService_67_PT" operation="retrieveService_67" role="retrieveService_67_Provider" partnerLink="retrieveService_67" partnerLinkType="retrserv67wsdl:retrieveService_67_LT"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4B6ADA1A2E0DB0AB3C23085EDD0" id="A1DCD4B6AAA552D0DB0AB3C23085EDD0" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="78" y="577"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCD4B634D912D0DB0AB3C23085EDD0" id="A1DCD4B62DA75670DB0AB3C23085EDD0" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="89" y="323"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DCD4B6420DF6A0DB0AB3C23085EDD0" implementation="WebService">
+          <error message="A1DCD4B6696C3DB0DB0AB3C23085EDD0" errorCode="retrieveService67Fault"/>
+          <webService interface="retrserv67wsdl:retrieveService_67_PT" operation="retrieveService_67" role="retrieveService_67_Provider" partnerLink="retrieveService_67" partnerLinkType="retrserv67wsdl:retrieveService_67_LT"/>
+        </results>
+      </children>
+    </children>
+    <process name="retrieveService_6_7" id="A1DCD4B2CA895FA0DB0AB3C23085EDD0" targetNamespace="urn:vispproject.org/052007/useCases/67/retrieveService_6_7/bpel">
+      <messages name="retrieveService_67_Request" type="retrserv67wsdl:retrieveService_67_Request" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DCD4B3C66E1591DB0AB3C23085EDD0">
+        <properties name="parameters" type="retrserv67wsdl:retrieveService_67"/>
+      </messages>
+      <messages name="retrieveService_67_Response" type="retrserv67wsdl:retrieveService_67_Response" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DCD4B3C6705F80DB0AB3C23085EDD0">
+        <properties name="parameters" type="retrserv67wsdl:retrieveService_67_Response"/>
+      </messages>
+      <messages name="getServicesDetails_Request" type="skbwsdl:getServicesDetails_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCD4B5B5AFF911DB0AB3C23085EDD0">
+        <properties name="parameters" type="skbwsdl:getServicesDetails"/>
+      </messages>
+      <messages name="getServicesDetails_Response" type="skbwsdl:getServicesDetails_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCD4B5B5B26A10DB0AB3C23085EDD0">
+        <properties name="parameters" type="repxsd:ServiceDescription"/>
+      </messages>
+      <messages name="retrieveService_67_Error" type="retrserv67wsdl:retrieveService_67_Fault" messageUsages="//@children.0/@children.0/@children.5/@results.0/@error" id="A1DCD4B6696C3DB0DB0AB3C23085EDD0"/>
+      <messages name="skb_fault" type="skbwsdl:visp_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.2/@boundaryEvent/@triggers.0/@error" id="A1DCD4C4A8D67DE0DB0AB3C23085EDD0"/>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <children xsi:type="bpmn:Pool" targetConnections="A1DCD4B801B76760DB0AB3C23085EDD0 A1DCD4B804685690DB0AB3C23085EDD0" id="A1DCD4B7F2BF76D0DB0AB3C23085EDD0" name="GUI">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCD4B7FC213290DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B3C66E1590DB0AB3C23085EDD0">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <sourceAnchor x="87" y="20"/>
+      <targetAnchor x="34" y="15"/>
+    </sourceConnections>
+    <location x="25" y="174"/>
+    <size width="176" height="334"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD4B7F2BF76D1DB0AB3C23085EDD0" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="334"/>
+      <fillColor red="255" green="255" blue="255"/>
+    </children>
+    <participant>
+      <role name="Participant2"/>
+    </participant>
+  </children>
+  <children xsi:type="bpmn:Pool" targetConnections="A1DCD4B81B5860C0DB0AB3C23085EDD0" id="A1DCD4B809E92EA0DB0AB3C23085EDD0" name="SKB Enterprise Services">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCD4B81D392EB0DB0AB3C23085EDD0" name="" routingType="RectilinearVertical" target="A1DCD4B5B5AFF910DB0AB3C23085EDD0">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <sourceAnchor x="50" y="138"/>
+      <targetAnchor x="80" y="55"/>
+    </sourceConnections>
+    <location x="948" y="373"/>
+    <size width="296" height="265"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCD4B809E92EA1DB0AB3C23085EDD0" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="265"/>
+      <fillColor red="255" green="255" blue="255"/>
+    </children>
+    <participant>
+      <role name="Participant3"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="retrserv67wsdl" value="urn:vispproject.org/052007/useCases/67/retrieveService_6_7/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\useCases\uc-6-7\wsdl\retrieveService_6_7.wsdl"/>
+  <xMLNSPrefixMap key="skbwsdl" value="urn:vispproject.org/052007/enterpriseServices/skb/wsdl" location="D:\ITTI\Workspaces\Project_2_dev\Project\modeling\enterpriseServices\skb\wsdl\SKB.wsdl"/>
+  <xMLNSPrefixMap key="repxsd" value="urn:vispproject.org/052007/repositories/xsd"/>
+</bpmn:Diagram>

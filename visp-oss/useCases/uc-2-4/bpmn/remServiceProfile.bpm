@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5F1179D26FE0F0ABBEBC1C9A5F25" name="remServiceProfile" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-31T17:00:55.390+0200" modificationDate="2008-07-31T17:17:32.843+0200">
+  <children xsi:type="bpmn:Pool" id="A1DD5F117DC09A00F0ABBEBC1C9A5F25" name="Remove service profile business process">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="46" y="30"/>
+    <size width="802" height="624"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD5F117DC09A01F0ABBEBC1C9A5F25" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="624"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DD5F118D829150F0ABBEBC1C9A5F25" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F11E13C6FA0F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F11B6200F20F0ABBEBC1C9A5F25">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="24" y="13"/>
+          <targetAnchor x="52" y="49"/>
+        </sourceConnections>
+        <location x="78" y="60"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD5F11E13C6FA0F0ABBEBC1C9A5F25" id="A1DD5F11B6200F20F0ABBEBC1C9A5F25" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F13709408B0F0ABBEBC1C9A5F25" name="" routingType="RectilinearVertical" target="A1DD5F1369F98340F0ABBEBC1C9A5F25">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="7" y="130"/>
+          <targetAnchor x="60" y="10"/>
+          <bendingPoints x="150" y="164"/>
+          <boundaryEvent id="A1DD5F1374951E90F0ABBEBC1C9A5F25">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD5F1374951E91F0ABBEBC1C9A5F25">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F13C82D9230F0ABBEBC1C9A5F25" name="" routingType="RectilinearVertical" target="A1DD5F13C638EE20F0ABBEBC1C9A5F25">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="20" y="503"/>
+          <targetAnchor x="10" y="18"/>
+          <bendingPoints x="167" y="520"/>
+        </sourceConnections>
+        <location x="212" y="23"/>
+        <size width="542" height="578"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD5F11CBD0E290F0ABBEBC1C9A5F25" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F1298C80BC0F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F1296909250F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="18" y="16"/>
+            <targetAnchor x="86" y="50"/>
+          </sourceConnections>
+          <location x="83" y="50"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F129A91CF40F0ABBEBC1C9A5F25" id="A1DD5F11CF075570F0ABBEBC1C9A5F25" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F126ADDE540F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F1264EF3030F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="94" y="40"/>
+            <targetAnchor x="66" y="40"/>
+            <bendingPoints x="457" y="134"/>
+          </sourceConnections>
+          <location x="397" y="28"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F126ADDE540F0ABBEBC1C9A5F25" id="A1DD5F1264EF3030F0ABBEBC1C9A5F25" name="Prepare request" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F12CA28E270F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F127E384590F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="15" y="40"/>
+            <targetAnchor x="51" y="48"/>
+          </sourceConnections>
+          <location x="398" y="163"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F12CA28E270F0ABBEBC1C9A5F25" id="A1DD5F127E384590F0ABBEBC1C9A5F25" name="Remove Service Profile">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F12DBD3BE00F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F12CBFEB3E0F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="23" y="39"/>
+            <targetAnchor x="100" y="39"/>
+            <boundaryEvent id="A1DD5F12DF8D6AA0F0ABBEBC1C9A5F25">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD5F12DF8D6AA1F0ABBEBC1C9A5F25">
+                <error message="A1DD5F12F515A770F0ABBEBC1C9A5F25" errorCode="mdwsdl:MDFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F1313CCA920F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F1311659430F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="71"/>
+            <targetAnchor x="59" y="40"/>
+          </sourceConnections>
+          <location x="215" y="163"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD5F127E384591F0ABBEBC1C9A5F25"/>
+          <outMessage message="A1DD5F127E3AB690F0ABBEBC1C9A5F25"/>
+          <webService interface="mdwsdl:MD" operation="RemoveServiceProfile" role="MD_Provider" partnerLink="MD" partnerLinkType="mdwsdl:MD_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F1298C80BC0F0ABBEBC1C9A5F25" id="A1DD5F1296909250F0ABBEBC1C9A5F25" name="Receive request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F129A91CF40F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F11CF075570F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="107" y="38"/>
+            <targetAnchor x="60" y="45"/>
+          </sourceConnections>
+          <location x="214" y="31"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD5F1296909251F0ABBEBC1C9A5F25"/>
+          <webService interface="remspwsdl:removeServiceProfile_PT" operation="removeServiceProfile" role="remServiceProfile_Provider" partnerLink="remSP" partnerLinkType="remspwsdl:remServiceProfile_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F12DBD3BE00F0ABBEBC1C9A5F25" id="A1DD5F12CBFEB3E0F0ABBEBC1C9A5F25" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F13008311B0F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F12FD8CDC20F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="72"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="33" y="161"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5F13008311B0F0ABBEBC1C9A5F25" id="A1DD5F12FD8CDC20F0ABBEBC1C9A5F25" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="76" y="292"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD5F12FFC91080F0ABBEBC1C9A5F25">
+            <error errorCode="MDFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F1313CCA920F0ABBEBC1C9A5F25" id="A1DD5F1311659430F0ABBEBC1C9A5F25" name="Prepare response" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F1356805050F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F1339A3B3F0F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="59" y="74"/>
+            <targetAnchor x="55" y="14"/>
+          </sourceConnections>
+          <location x="215" y="295"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5F1356805050F0ABBEBC1C9A5F25" id="A1DD5F1339A3B3F0F0ABBEBC1C9A5F25" name="Send response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F135FF1C380F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F135DB58F20F0ABBEBC1C9A5F25">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="16" y="41"/>
+            <targetAnchor x="20" y="21"/>
+          </sourceConnections>
+          <location x="220" y="419"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD5F1296930350F0ABBEBC1C9A5F25"/>
+          <webService interface="remspwsdl:removeServiceProfile_PT" operation="removeServiceProfile" role="remServiceProfile_Provider" partnerLink="remSP" partnerLinkType="remspwsdl:remServiceProfile_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5F135FF1C380F0ABBEBC1C9A5F25" id="A1DD5F135DB58F20F0ABBEBC1C9A5F25" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="80" y="441"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD5F13709408B0F0ABBEBC1C9A5F25" id="A1DD5F1369F98340F0ABBEBC1C9A5F25" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5F13B4F97E90F0ABBEBC1C9A5F25" name="" routingType="RectilinearHorizontal" target="A1DD5F1376660E00F0ABBEBC1C9A5F25">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="55" y="77"/>
+          <targetAnchor x="16" y="13"/>
+        </sourceConnections>
+        <location x="44" y="223"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5F13B4F97E90F0ABBEBC1C9A5F25" id="A1DD5F1376660E00F0ABBEBC1C9A5F25" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="79" y="360"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD5F137971C760F0ABBEBC1C9A5F25" implementation="WebService">
+          <error message="A1DD5F1354191450F0ABBEBC1C9A5F25" errorCode="remspwsdl:removeServiceProfileFault"/>
+          <webService interface="remspwsdl:removeServiceProfile_PT" operation="removeServiceProfile" role="remServiceProfile_Provider" partnerLink="remSP" partnerLinkType="remspwsdl:remServiceProfile_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD5F13C82D9230F0ABBEBC1C9A5F25" id="A1DD5F13C638EE20F0ABBEBC1C9A5F25" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="83" y="504"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="removeServiceProfile" id="A1DD5F118DEDFD50F0ABBEBC1C9A5F25" targetNamespace="urn:vispproject.org/052007/useCases/24/removeServiceProfile/bpel">
+      <messages name="RemoveServiceProfileRequest" type="mdwsdl:RemoveServiceProfileRequest" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DD5F127E384591F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="mdwsdl:RemoveServiceProfile"/>
+      </messages>
+      <messages name="RemoveServiceProfileResponse" type="mdwsdl:RemoveServiceProfileResponse" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DD5F127E3AB690F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="mdwsdl:RemoveServiceProfileResponse"/>
+      </messages>
+      <messages name="removeServiceProfile_Request" type="remspwsdl:removeServiceProfile_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD5F1296909251F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="remspwsdl:removeServiceProfile"/>
+      </messages>
+      <messages name="removeServiceProfile_Response" type="remspwsdl:removeServiceProfile_Response" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage" id="A1DD5F1296930350F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="remspwsdl:removeServiceProfile_Response"/>
+      </messages>
+      <messages name="MDFault" type="mdwsdl:MDFault" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD5F12F515A770F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="comxsd:VispError"/>
+      </messages>
+      <messages name="removeServiceProfile_Fault" type="remspwsdl:removeServiceProfile_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DD5F1354191450F0ABBEBC1C9A5F25">
+        <properties name="parameters" type="remspwsdl:removeServiceProfile_Fault"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="mdwsdl" value="urn:vispproject.org/052007/enterpriseServices/md/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\enterpriseServices\md\wsdl\MD.wsdl"/>
+  <xMLNSPrefixMap key="remspwsdl" value="urn:vispproject.org/052007/useCases/24/removeServiceProfile/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\useCases\uc-2-4\wsdl\remServiceProfile.wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+</bpmn:Diagram>

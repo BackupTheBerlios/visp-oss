@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCFCDF7D835DA0E0C5FF08F2D265C1" name="ttp-65" author="kpe" version="1.0" language="Deutsch" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-28T16:56:12.450+0100" modificationDate="2008-08-13T18:14:35.812+0200">
+  <children xsi:type="bpmn:Pool" id="A1DCFCDF874D2A00E0C5FF08F2D265C1" name="WMES">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="-9" y="-108"/>
+    <size width="1781" height="298"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCFCDF874D2A01E0C5FF08F2D265C1" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="298"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE1E627522B0E09099EB1BF5E274" id="A1DCFCE1BC50DF10E0C5FF08F2D265C1" name="WMES activities" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE1E6AE9E660E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE1E677C8500E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="851" y="68"/>
+          <targetAnchor x="19" y="18"/>
+        </sourceConnections>
+        <location x="381" y="22"/>
+        <size width="1275" height="244"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE1359E7310E0C5FF08F2D265C1" id="A1DCFCE10B079640E0C5FF08F2D265C1" name="Receive addWorklistItem" taskType="Receive" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFCE11F681BF0E0C5FF08F2D265C1" name="" routingType="RectilinearHorizontal" target="A1DCFCE115EA9AD0E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="79" y="42"/>
+            <targetAnchor x="46" y="46"/>
+          </sourceConnections>
+          <location x="353" y="125"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <outMessage message="A1DCFCE10B079641E0C5FF08F2D265C1"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE11F681BF0E0C5FF08F2D265C1 A1DCFE271F28A7D0E09099EB1BF5E274" id="A1DCFCE115EA9AD0E0C5FF08F2D265C1" name="Send reply addWorklistItem" taskType="Send" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCFCE139D40670E0C5FF08F2D265C1" name="" routingType="RectilinearHorizontal" target="A1DCFCE0D99840A0E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="55" y="36"/>
+            <targetAnchor x="71" y="20"/>
+            <bendingPoints x="1026" y="218"/>
+          </sourceConnections>
+          <location x="561" y="125"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <inMessage message="A1DCFCE10B079642E0C5FF08F2D265C1"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD176B398CEF20D6DD95F30F5CB2AD" id="A1DCFCE1A8C22850E0C5FF08F2D265C1" name="Return result of item execution" taskType="Send" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCFCE1B1FA6310E0C5FF08F2D265C1" name="" routingType="RectilinearHorizontal" target="A1DCFCE1972333A0E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="57" y="66"/>
+            <targetAnchor x="68" y="29"/>
+            <bendingPoints x="1290" y="249"/>
+          </sourceConnections>
+          <location x="841" y="129"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <inMessage message="A1DCFCE10B079642E0C5FF08F2D265C1"/>
+        </children>
+        <children xsi:type="bpmn:Activity" id="A1DD0AE18945DF40DF14CEB1792BFAE2" name="Execute WorkListItem" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD0AE1B0743CB0DF14CEB1792BFAE2" name="" routingType="RectilinearHorizontal" target="A1DD176B30BFF950D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="119" y="39"/>
+            <targetAnchor x="26" y="11"/>
+          </sourceConnections>
+          <location x="976" y="14"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD176B3FCA6070D6DD95F30F5CB2AD" id="A1DD176B07E94310D6DD95F30F5CB2AD" name="Return item execution error" taskType="Send" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD176B7822A9A0D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1600FDF536E0EA48EE06A2EE06A4">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="87" y="67"/>
+            <targetAnchor x="18" y="14"/>
+          </sourceConnections>
+          <location x="1116" y="129"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <inMessage message="A1DD176B07E94311D6DD95F30F5CB2AD"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD0AE1B0743CB0DF14CEB1792BFAE2" id="A1DD176B30BFF950D6DD95F30F5CB2AD" name="">
+          <fontColor red="255" green="255"/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176B398CEF20D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DCFCE1A8C22850E0C5FF08F2D265C1" conditionType="Default">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="8" y="26"/>
+            <targetAnchor x="102" y="32"/>
+            <bendingPoints x="980" y="168"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176B3FCA6070D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD176B07E94310D6DD95F30F5CB2AD" conditionType="Expression" conditionExpression="false">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="40" y="25"/>
+            <targetAnchor x="70" y="25"/>
+            <bendingPoints x="1073" y="168"/>
+          </sourceConnections>
+          <location x="1013" y="143"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255"/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:StartEvent" id="A1DCFE1E5FCDA960E09099EB1BF5E274" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE1E627522B0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE1BC50DF10E0C5FF08F2D265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="15" y="17"/>
+          <targetAnchor x="12" y="72"/>
+        </sourceConnections>
+        <location x="282" y="179"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE1E6AE9E660E09099EB1BF5E274" id="A1DCFE1E677C8500E09099EB1BF5E274" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="1708" y="174"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE26E399EBC0E09099EB1BF5E274" text="Step 5:&#xD;&#xA;The Worklist service returns either &#xD;&#xA;an answer to the operation&#xD;&#xA;addWorklistItem() or a fault.">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DCFE271F28A7D0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE115EA9AD0E0C5FF08F2D265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="189" y="55"/>
+          <targetAnchor x="68" y="34"/>
+          <bendingPoints x="977" y="138"/>
+        </sourceConnections>
+        <location x="908" y="33"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="WMES" id="A1DCFCE06B6B4BE1E0C5FF08F2D265C1">
+      <messages name="addWorklistItem_Request" type="wmeswsdl:addWorklistItem_Request" messageUsages="//@children.0/@children.0/@children.0/@children.0/@outMessage" id="A1DCFCE10B079641E0C5FF08F2D265C1"/>
+      <messages name="addWorklistItem_Response" type="wmeswsdl:addWorklistItem_Response" messageUsages="//@children.0/@children.0/@children.0/@children.1/@inMessage //@children.0/@children.0/@children.0/@children.2/@inMessage" id="A1DCFCE10B079642E0C5FF08F2D265C1"/>
+      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" messageUsages="//@children.0/@children.0/@children.0/@children.4/@inMessage" id="A1DD176B07E94311D6DD95F30F5CB2AD"/>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <children xsi:type="bpmn:Pool" id="A1DCFCDF8E257BC0E0C5FF08F2D265C1" name="invokeWorklist">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="-1" y="267"/>
+    <size width="1776" height="978"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DCFCDF8E257BC1E0C5FF08F2D265C1" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="978"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE2074805BD0E09099EB1BF5E274" id="A1DCFCDFEBEBD4C0E0C5FF08F2D265C1" name="WMES interaction" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE3956888210E3F984E1C03A91D3" name="" routingType="RectilinearHorizontal" target="A1DCFE39034D2290E3F984E1C03A91D3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="1038" y="588"/>
+          <targetAnchor x="63" y="12"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE39CD899890E3F984E1C03A91D3" name="" routingType="RectilinearHorizontal" target="A1DD176D85219E70D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="606" y="593"/>
+          <targetAnchor x="39" y="48"/>
+          <boundaryEvent id="A1DCFE39DB62F9C0E3F984E1C03A91D3">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCFE39DB62F9C1E3F984E1C03A91D3">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="475" y="27"/>
+        <size width="1236" height="663"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE139D40670E0C5FF08F2D265C1 A1DCFE25B85203E0E09099EB1BF5E274 A1DCFE26C8DA8A10E09099EB1BF5E274" id="A1DCFCE0D99840A0E0C5FF08F2D265C1" name="Invoke addWorklistItem">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DCFCE1359E7310E0C5FF08F2D265C1" name="" routingType="RectilinearHorizontal" target="A1DCFCE10B079640E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="71" y="13"/>
+            <targetAnchor x="49" y="45"/>
+            <bendingPoints x="810" y="164"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE261D207130E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE2604AE0CC0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="92" y="66"/>
+            <targetAnchor x="56" y="12"/>
+            <bendingPoints x="444" y="196"/>
+            <bendingPoints x="503" y="227"/>
+            <bendingPoints x="444" y="240"/>
+            <boundaryEvent id="A1DCFE2698FE3080E09099EB1BF5E274">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DCFE2698FE3081E09099EB1BF5E274">
+                <error message="A1DD1600A30F8FA0EA48EE06A2EE06A4" errorCode="wmesFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2AB9D6B5D0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE2A705B85C0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="110" y="45"/>
+            <targetAnchor x="32" y="43"/>
+          </sourceConnections>
+          <location x="360" y="30"/>
+          <size width="120" height="80"/>
+          <fillColor green="255"/>
+          <inMessage message="A1DD16009EC93360EA48EE06A2EE06A4"/>
+          <outMessage message="A1DD1600A0F254F0EA48EE06A2EE06A4"/>
+          <webService interface="wmeswsdl:Wmes_PT" operation="AddWorklistItem" role="wmes_Provider" partnerLink="wmes" partnerLinkType="wmeswsdl:wmes_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFE2ABCE4B920E09099EB1BF5E274" id="A1DCFCE1705DD130E0C5FF08F2D265C1" name="Wait for final response from WMES" activityType="Subprocess" loopType="Standard">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFCE25C6B5A20E0C5FF08F2D265C1" name="" routingType="RectilinearHorizontal" target="A1DCFCE24C002A80E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="27" y="186"/>
+            <targetAnchor x="96" y="44"/>
+            <bendingPoints x="1069" y="487"/>
+            <boundaryEvent id="A1DCFCE262686710E0C5FF08F2D265C1">
+              <triggers xsi:type="bpmn:TimerTrigger" id="A1DCFCE262686711E0C5FF08F2D265C1">
+                <timer timeCycle="P0Y0M5DT0H0M0S"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE38E4C10170E3F984E1C03A91D3" name="" routingType="RectilinearHorizontal" target="A1DCFE38D4239E40E3F984E1C03A91D3">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="45" y="405"/>
+            <targetAnchor x="15" y="24"/>
+            <bendingPoints x="927" y="513"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176CBA001FA0D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD176C835E8720D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="100" y="475"/>
+            <targetAnchor x="95" y="10"/>
+            <boundaryEvent id="A1DD176CC5EE52A1D6DD95F30F5CB2AD">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD176CC5EE52A0D6DD95F30F5CB2AD">
+                <error errorCode="WMES execution error"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="703" y="13"/>
+          <size width="505" height="477"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE1B1FA6310E0C5FF08F2D265C1 A1DCFE28A0E74410E09099EB1BF5E274 A1DD16017156DF80EA48EE06A2EE06A4" id="A1DCFCE1972333A0E0C5FF08F2D265C1" name="Receive item execution result" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE295F761280E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE293195B000E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="62" y="57"/>
+              <targetAnchor x="60" y="24"/>
+            </sourceConnections>
+            <location x="35" y="100"/>
+            <size width="120" height="80"/>
+            <fillColor green="255"/>
+            <outMessage message="A1DD16014538ED80EA48EE06A2EE06A4"/>
+            <webService interface="wmeswsdl:Wmes_CB" operation="AddWorklistItem_Response" role="wmes_Requester" partnerLink="wmes" partnerLinkType="wmeswsdl:wmes_LT"/>
+          </children>
+          <children xsi:type="bpmn:StartEvent" id="A1DCFE28CD1AB9E0E09099EB1BF5E274" name="Start loop">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE28DE6FAD40E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DD15FF5DBB1B50EA48EE06A2EE06A4">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="17" y="15"/>
+              <targetAnchor x="24" y="22"/>
+            </sourceConnections>
+            <location x="251" y="46"/>
+            <size width="31" height="31"/>
+            <fillColor green="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCFE295F761280E09099EB1BF5E274 A1DCFE29A9237620E09099EB1BF5E274" id="A1DCFE293195B000E09099EB1BF5E274" name="Extract return parameters" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2B258711D0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE29C18538C0E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="58" y="61"/>
+              <targetAnchor x="26" y="25"/>
+            </sourceConnections>
+            <location x="37" y="237"/>
+            <size width="120" height="80"/>
+            <fillColor green="255"/>
+          </children>
+          <children xsi:type="bpmn:TextAnnotation" id="A1DCFE296AD54BF0E09099EB1BF5E274" text="Step 7:&#xD;&#xA;Extract the following attributes&#xD;&#xA;from the notification:&#xD;&#xA;&#xD;&#xA;o   [ItemId]: &lt;ReferenceNumber>&#xD;&#xA;o   [TransactionId]: &lt;TransactionId>&#xD;&#xA;o   [FromState]: &lt;ItemStatus>&#xD;&#xA;o   EndState: &lt;ItemStatus>&#xD;&#xA;o   [ResultInformation]: &lt;ResultInformation>">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:Association" id="A1DCFE29A9237620E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE293195B000E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="37" y="82"/>
+              <targetAnchor x="97" y="54"/>
+            </sourceConnections>
+            <location x="159" y="169"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DCFE2B258711D0E09099EB1BF5E274 A1DCFE38A7C08CF0E3F984E1C03A91D3" id="A1DCFE29C18538C0E09099EB1BF5E274" name="Check Status">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2B22AFFD00E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE2B1CF59E60E09099EB1BF5E274" conditionType="Expression" conditionExpression="not(complete)">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="25" y="33"/>
+              <targetAnchor x="16" y="18"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2B28CE4D90E09099EB1BF5E274" name="completed" routingType="RectilinearVertical" target="A1DCFE2B00E15B10E09099EB1BF5E274" conditionType="Default">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="38" y="26"/>
+              <targetAnchor x="39" y="42"/>
+            </sourceConnections>
+            <location x="72" y="353"/>
+            <size width="51" height="51"/>
+            <fillColor green="255"/>
+            <labelLocation x="-16" y="53"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DCFE2B28CE4D90E09099EB1BF5E274 A1DCFE2B63B3F860E09099EB1BF5E274" id="A1DCFE2B00E15B10E09099EB1BF5E274" name="Update loop condition" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2B193E62C0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE2B141CC1B0E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="107" y="38"/>
+              <targetAnchor x="16" y="15"/>
+            </sourceConnections>
+            <location x="256" y="338"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE2B193E62C0E09099EB1BF5E274" id="A1DCFE2B141CC1B0E09099EB1BF5E274" name="">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="410" y="363"/>
+            <size width="31" height="31"/>
+            <fillColor green="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE2B22AFFD00E09099EB1BF5E274" id="A1DCFE2B1CF59E60E09099EB1BF5E274" name="">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="82" y="435"/>
+            <size width="31" height="31"/>
+            <fillColor green="255"/>
+          </children>
+          <children xsi:type="bpmn:TextAnnotation" id="A1DCFE2B587B0BA0E09099EB1BF5E274" text="completed = true">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:Association" id="A1DCFE2B63B3F860E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE2B00E15B10E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="19" y="10"/>
+              <targetAnchor x="43" y="59"/>
+            </sourceConnections>
+            <location x="323" y="417"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:TextAnnotation" id="A1DCFE389B0545F0E3F984E1C03A91D3" text="Step 7 cont.:&#xD;&#xA;Check if EndState&#xD;&#xA;is &quot;COMPLETED&quot;">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:Association" id="A1DCFE38A7C08CF0E3F984E1C03A91D3" name="" routingType="RectilinearVertical" target="A1DCFE29C18538C0E09099EB1BF5E274">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="31" y="17"/>
+              <targetAnchor x="40" y="27"/>
+              <bendingPoints x="128" y="405"/>
+            </sourceConnections>
+            <location x="145" y="389"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DCFE28DE6FAD40E09099EB1BF5E274" id="A1DD15FF5DBB1B50EA48EE06A2EE06A4" name="" exclusiveGatewayType="EventBased">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD16017156DF80EA48EE06A2EE06A4" name="" routingType="RectilinearVertical" target="A1DCFCE1972333A0E0C5FF08F2D265C1">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="28" y="26"/>
+              <targetAnchor x="92" y="51"/>
+              <bendingPoints x="188" y="139"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD160175ADDD90EA48EE06A2EE06A4" name="" routingType="RectilinearVertical" target="A1DD1600FDF536E0EA48EE06A2EE06A4">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="26" y="22"/>
+              <targetAnchor x="82" y="50"/>
+              <bendingPoints x="313" y="140"/>
+            </sourceConnections>
+            <location x="240" y="114"/>
+            <size width="51" height="51"/>
+            <fillColor green="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD160175ADDD90EA48EE06A2EE06A4 A1DD176B7822A9A0D6DD95F30F5CB2AD A1DD176BC2B03410D6DD95F30F5CB2AD" id="A1DD1600FDF536E0EA48EE06A2EE06A4" name="Receive item execution error" taskType="Receive">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176A90B3AF10D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD176A6EE77E20D6DD95F30F5CB2AD">
+              <fontColor/>
+              <lineColor/>
+              <font family="Tahoma" height="8"/>
+              <sourceAnchor x="65" y="67"/>
+              <targetAnchor x="14" y="12"/>
+            </sourceConnections>
+            <location x="360" y="100"/>
+            <size width="120" height="80"/>
+            <fillColor red="255"/>
+            <outMessage message="A1DD16014B0637E0EA48EE06A2EE06A4"/>
+            <webService interface="wmeswsdl:Wmes_CB" operation="AddWorklistItem_Fault" role="wmes_Requester" partnerLink="wmes" partnerLinkType="wmeswsdl:wmes_LT"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD176A90B3AF10D6DD95F30F5CB2AD" id="A1DD176A6EE77E20D6DD95F30F5CB2AD" name="WMES execution error">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <location x="409" y="275"/>
+            <size width="31" height="31"/>
+            <fillColor red="255"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DD176A7EB58360D6DD95F30F5CB2AD">
+              <error errorCode="Item execution error"/>
+            </results>
+          </children>
+          <loop xsi:type="bpmn:StandardLoop" loopCondition="completed" testTime="Before"/>
+          <messages name="AddWorklistItem_Response" type="wmeswsdl:AddWorklistItem_Response" id="A1DD1600E0A87390EA48EE06A2EE06A4">
+            <properties name="parameters" type="wmeswsdl:AddWorklistItem_Response"/>
+          </messages>
+          <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" id="A1DD1600E3D326A0EA48EE06A2EE06A4">
+            <properties name="parameters" type="wmeswsdl:Wmes_Fault"/>
+          </messages>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE25C6B5A20E0C5FF08F2D265C1 A1DCFE3A714D1E70E3F984E1C03A91D3" id="A1DCFCE24C002A80E0C5FF08F2D265C1" name="Prepare timeout fault message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2910A97ED0E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE28FD185710E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="74" y="62"/>
+            <targetAnchor x="15" y="18"/>
+            <bendingPoints x="1094" y="588"/>
+          </sourceConnections>
+          <location x="990" y="550"/>
+          <size width="120" height="80"/>
+          <fillColor red="255"/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DCFE203F385FE0E09099EB1BF5E274" name="Start WMES interaction">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FE5E82F4A0EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DCFE24CAC491B0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="15" y="14"/>
+            <targetAnchor x="50" y="60"/>
+          </sourceConnections>
+          <location x="32" y="57"/>
+          <size width="31" height="31"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD15FE5E82F4A0EA48EE06A2EE06A4" id="A1DCFE24CAC491B0E09099EB1BF5E274" name="Prepare add worklist item request" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE25B85203E0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE0D99840A0E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="95" y="33"/>
+            <targetAnchor x="66" y="57"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DD15FE8FB8EAC0EA48EE06A2EE06A4" name="" routingType="RectilinearVertical" target="A1DCFE2501EE1EE0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="58" y="44"/>
+            <targetAnchor x="164" y="105"/>
+          </sourceConnections>
+          <location x="163" y="33"/>
+          <size width="120" height="80"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" targetConnections="A1DD15FE8FB8EAC0EA48EE06A2EE06A4" id="A1DCFE2501EE1EE0E09099EB1BF5E274" text="Step 4:&#xD;&#xA;Prepare a request toWMES operation &#xD;&#xA;addWorklistItem(). Use the following parameters. &#xD;&#xA;&#xD;&#xA;o   [ItemId]: &quot;&lt;ReferenceNumber>&quot; &#xD;&#xA;o   [TransactionId]: “&lt;TransactionId>”&#xD;&#xA;     unique identifier of the calling process&#xD;&#xA;o   [Type]: Type of the worklist item to be created&#xD;&#xA;o   Name: &quot;&lt;String>&quot; short name for the Worklist item&#xD;&#xA;o   [Description]:&#xD;&#xA;     &quot;There is an incoming request number &lt;ItemId> &#xD;&#xA;     from the process identfied by &lt;TransactionId>. &#xD;&#xA;     The description is as follows: &lt;Description>&quot; &#xD;&#xA;o   [StartDate]: &lt;Date>&#xD;&#xA;     a date in ISO “YYYY-mm-dd” format&#xD;&#xA;o   [ExpiryDate]:&lt;Date> &#xD;&#xA;     a date in ISO “YYYY-mm-dd” format, &#xD;&#xA;     calculated as current date + &lt;Timeout>&#xD;&#xA;o   TargetVirtualActorId: &quot;&lt;VirtualActorId>&quot; &#xD;&#xA;o   [Status]: “&lt;ItemStatus>”   (“READY”) &#xD;&#xA;o   [Priority]: “&lt;ItemPriority>”  (“NORMAL”)&#xD;&#xA;o   [InputInformation]: &lt;InputInformation>">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="63" y="164"/>
+          <size width="330"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFE261D207130E09099EB1BF5E274 A1DD176925F60CF0D6DD95F30F5CB2AD" id="A1DCFE2604AE0CC0E09099EB1BF5E274" name="Prepare fault message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2679480E50E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE2670A11710E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="94" y="62"/>
+            <targetAnchor x="15" y="14"/>
+            <bendingPoints x="473" y="387"/>
+          </sourceConnections>
+          <location x="409" y="265"/>
+          <size width="120" height="80"/>
+          <fillColor red="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCFE262D73FA20E09099EB1BF5E274" text="Step 5 alt:&#xD;&#xA;Return error message: &#xD;&#xA;worklist item could&#xD;&#xA;not be added.">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DD176925F60CF0D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DCFE2604AE0CC0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="46" y="46"/>
+            <targetAnchor x="105" y="30"/>
+          </sourceConnections>
+          <location x="527" y="179"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE2679480E50E09099EB1BF5E274" id="A1DCFE2670A11710E09099EB1BF5E274" name="Add item error">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="459" y="575"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCFE26800FBE40E09099EB1BF5E274">
+            <error errorCode="AddItemFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE2910A97ED0E09099EB1BF5E274" id="A1DCFE28FD185710E09099EB1BF5E274" name="Timeout error">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="1155" y="575"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DCFE290A033990E09099EB1BF5E274">
+            <error errorCode="Timeout"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCFE2AB4F57920E09099EB1BF5E274 A1DCFE2AB9D6B5D0E09099EB1BF5E274" id="A1DCFE2A705B85C0E09099EB1BF5E274" name="Initialize loop condition" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2ABCE4B920E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE1705DD130E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="110" y="37"/>
+            <targetAnchor x="6" y="68"/>
+          </sourceConnections>
+          <location x="554" y="40"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCFE2AA71E88F0E09099EB1BF5E274" text="completed = false">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCFE2AB4F57920E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE2A705B85C0E09099EB1BF5E274">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="14"/>
+            <targetAnchor x="57" y="61"/>
+          </sourceConnections>
+          <location x="567" y="136"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE38E4C10170E3F984E1C03A91D3" id="A1DCFE38D4239E40E3F984E1C03A91D3" name="End WMES interaction">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="911" y="575"/>
+          <size width="31" height="31"/>
+          <fillColor green="255"/>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DCFE3A5D9F6E00E3F984E1C03A91D3" text="Timeout - &#xD;&#xA;prepare fault message">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DCFE3A714D1E70E3F984E1C03A91D3" name="" routingType="RectilinearVertical" target="A1DCFCE24C002A80E0C5FF08F2D265C1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="45" y="21"/>
+            <targetAnchor x="45" y="46"/>
+            <bendingPoints x="1118" y="567"/>
+          </sourceConnections>
+          <location x="1083" y="500"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD176CBA001FA0D6DD95F30F5CB2AD A1DD176D2116CF40D6DD95F30F5CB2AD" id="A1DD176C835E8720D6DD95F30F5CB2AD" name="Prepare execution fault message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176D090F88B0D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD176CDBCEC190D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="20" y="42"/>
+            <targetAnchor x="18" y="16"/>
+          </sourceConnections>
+          <location x="743" y="550"/>
+          <size width="120" height="80"/>
+          <fillColor red="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD176D090F88B0D6DD95F30F5CB2AD" id="A1DD176CDBCEC190D6DD95F30F5CB2AD" name="Item execution error">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="658" y="575"/>
+          <size width="31" height="31"/>
+          <fillColor red="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD176D56DAB1F0D6DD95F30F5CB2AD">
+            <error errorCode="Item execution error"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:TextAnnotation" id="A1DD176D114FF5F0D6DD95F30F5CB2AD" text="WMES error -&#xD;&#xA;prepare fault message">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:Association" id="A1DD176D2116CF40D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD176C835E8720D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="28" y="23"/>
+            <targetAnchor x="22" y="18"/>
+          </sourceConnections>
+          <location x="685" y="495"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <messages name="AddWorklistItem_SyncRequest" type="wmeswsdl:AddWorklistItem_SyncRequest" messageUsages="//@children.1/@children.0/@children.0/@children.0/@inMessage" id="A1DD16009EC93360EA48EE06A2EE06A4">
+          <properties name="parameters" type="wmeswsdl:AddWorklistItem"/>
+        </messages>
+        <messages name="AddWorklistItem_SyncResponse" type="wmeswsdl:AddWorklistItem_SyncResponse" messageUsages="//@children.1/@children.0/@children.0/@children.0/@outMessage" id="A1DD1600A0F254F0EA48EE06A2EE06A4">
+          <properties name="parameters" type="wmeswsdl:AddWorklistItem_SyncResponse"/>
+        </messages>
+        <messages name="AddWorklistItem_SyncFault" type="wmeswsdl:AddWorklistItem_SyncFault" messageUsages="//@children.1/@children.0/@children.0/@children.0/@sourceConnections.1/@boundaryEvent/@triggers.0/@error" id="A1DD1600A30F8FA0EA48EE06A2EE06A4">
+          <properties name="parameters" type="wmeswsdl:Wmes_SyncFault"/>
+        </messages>
+      </children>
+      <children xsi:type="bpmn:StartEvent" id="A1DCFE1E900BAAF0E09099EB1BF5E274" name="Start invokeWorlist">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FB4F87B010EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DD15F83D4EA5A0EA48EE06A2EE06A4">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="11" y="20"/>
+          <targetAnchor x="56" y="32"/>
+          <bendingPoints x="90" y="816"/>
+        </sourceConnections>
+        <location x="76" y="891"/>
+        <size width="31" height="31"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE233B317640E09099EB1BF5E274 A1DD15FA2BEC59E0EA48EE06A2EE06A4" id="A1DCFE1F0F841D30E09099EB1BF5E274" name="Check parameters" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE20260BFA40E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE23457C0B60E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="52" y="66"/>
+          <targetAnchor x="27" y="15"/>
+        </sourceConnections>
+        <location x="24" y="626"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE1F9F4D8050E09099EB1BF5E274" text="Step 1:&#xD;&#xA;Check the presence and eventually &#xD;&#xA;format of all mandatory parameters;&#xD;&#xA;Extract the following parameters:&#xD;&#xA;o    [ItemId]: &lt;ReferenceNumber>&#xD;&#xA;o    TransactionId: &lt;TransactionId>&#xD;&#xA;o   [Type]: Type of the worklist item to be created&#xD;&#xA;o    Name: &lt;String>&#xD;&#xA;o    [Description]: &lt;String>&#xD;&#xA;o    TargetVirtualActorId: &lt;VirtualActorId>&#xD;&#xA;o   [InputInformation]: &lt;InputInformation>">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DCFE233B317640E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE1F0F841D30E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="129" y="41"/>
+          <targetAnchor x="75" y="39"/>
+        </sourceConnections>
+        <location x="88" y="445"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE233F00A6B0E09099EB1BF5E274 A1DD15FA2FEB25D0EA48EE06A2EE06A4" id="A1DCFE1FE27D0E40E09099EB1BF5E274" name="Define timeout value" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE2074805BD0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCDFEBEBD4C0E0C5FF08F2D265C1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="106" y="41"/>
+          <targetAnchor x="21" y="460"/>
+        </sourceConnections>
+        <location x="290" y="146"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE1FF5353B20E09099EB1BF5E274" text="Step 3:&#xD;&#xA;o   Name: Timeout&#xD;&#xA;o   Value: 5 [days]">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DCFE233F00A6B0E09099EB1BF5E274" name="" routingType="RectilinearVertical" target="A1DCFE1FE27D0E40E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="102" y="34"/>
+          <targetAnchor x="60" y="13"/>
+        </sourceConnections>
+        <location x="290" y="57"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DCFE20260BFA40E09099EB1BF5E274" id="A1DCFE23457C0B60E09099EB1BF5E274" name="Parameters ok">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE23532A64F0E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DD1765F10E60D0F57DE01D9F64BBA5" conditionType="Default">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="23" y="26"/>
+          <targetAnchor x="63" y="59"/>
+          <bendingPoints x="84" y="267"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE23842C04A0E09099EB1BF5E274" name="Invalid parameter" routingType="RectilinearVertical" target="A1DCFE236DCF87E0E09099EB1BF5E274" conditionType="Expression" conditionExpression="false">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="25" y="21"/>
+          <targetAnchor x="69" y="22"/>
+          <bendingPoints x="247" y="379"/>
+          <bendingPoints x="346" y="474"/>
+        </sourceConnections>
+        <location x="59" y="354"/>
+        <size width="51" height="51"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE23842C04A0E09099EB1BF5E274 A1DCFE244952C070E09099EB1BF5E274" id="A1DCFE236DCF87E0E09099EB1BF5E274" name="Prepare fault message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15F95AA0A3A0EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DCFE23CC570E00E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="56" y="42"/>
+          <targetAnchor x="14" y="20"/>
+          <bendingPoints x="352" y="688"/>
+        </sourceConnections>
+        <location x="289" y="626"/>
+        <size width="120" height="80"/>
+        <fillColor red="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD15F95AA0A3A0EA48EE06A2EE06A4" id="A1DCFE23CC570E00E09099EB1BF5E274" name="Parameter error">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD1770C508FEE0D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD1770673DEAF0D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="11" y="18"/>
+          <targetAnchor x="94" y="16"/>
+          <bendingPoints x="264" y="1236"/>
+        </sourceConnections>
+        <location x="342" y="891"/>
+        <size width="31" height="31"/>
+        <fillColor red="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD15F9685F9F00EA48EE06A2EE06A4" implementation="WebService">
+          <error message="A1DD17649355DFF0F57DE01D9F64BBA5" errorCode="InvokeWorklist_SyncFault"/>
+          <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:InvokeWorklist_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE23F781C660E09099EB1BF5E274" text="Step 1 var:&#xD;&#xA;Terminate process and send a fault message to the calling entity&#xD;&#xA;informing that some of the input parameters are missing &#xD;&#xA;or eventually malformed.&#xD;&#xA;o    Visp error">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DCFE244952C070E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFE236DCF87E0E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="45" y="49"/>
+          <targetAnchor x="76" y="32"/>
+          <bendingPoints x="415" y="717"/>
+          <bendingPoints x="442" y="702"/>
+          <bendingPoints x="415" y="674"/>
+        </sourceConnections>
+        <location x="362" y="734"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE3956888210E3F984E1C03A91D3 A1DD176E01827070D6DD95F30F5CB2AD" id="A1DCFE39034D2290E3F984E1C03A91D3" name="Prepare final response" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FA6CF53740EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DD17657790B190F57DE01D9F64BBA5">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="60" y="56"/>
+          <targetAnchor x="61" y="36"/>
+        </sourceConnections>
+        <location x="1116" y="724"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE39283CB390E3F984E1C03A91D3" text="Step 8a:&#xD;&#xA;Prepare a final response to the calling process. &#xD;&#xA;It should contain the following values:&#xD;&#xA;o   [ItemId]: “&lt;ReferenceNumber>”&#xD;&#xA;o   [TransactionId]: &quot;&lt;TransactionId>&quot;&#xD;&#xA;o   [ResultInformation]: &lt;ResultInformation>">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD176E01827070D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DCFE39034D2290E3F984E1C03A91D3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="27" y="44"/>
+          <targetAnchor x="97" y="38"/>
+        </sourceConnections>
+        <location x="1305" y="721"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD15FA760C2E60EA48EE06A2EE06A4" id="A1DCFE3947C0C940E3F984E1C03A91D3" name="End invokeWorklist">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="1328" y="891"/>
+        <size width="31" height="31"/>
+        <fillColor green="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE39843E2B10E3F984E1C03A91D3" text="Step 8b:&#xD;&#xA;Send final response">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD176E080E9E00D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD17657790B190F57DE01D9F64BBA5">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="16" y="15"/>
+          <targetAnchor x="100" y="28"/>
+        </sourceConnections>
+        <location x="1305" y="831"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DCFE39F827A150E3F984E1C03A91D3" id="A1DCFE39ED2F18F0E3F984E1C03A91D3" name="invokeWorklist error">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="954" y="891"/>
+        <size width="31" height="31"/>
+        <fillColor red="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DCFE3A3F965F90E3F984E1C03A91D3" text="Step 8 alt:&#xD;&#xA;Return error message&#xD;&#xA;including correlation alias:&#xD;&#xA;&#xD;&#xA;o   [ItemId]:&#xD;&#xA;     &quot;&lt;ReferenceNumber>&quot;&#xD;&#xA;o   VispError: &quot;&lt;VispError>&quot;">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD176567DAA120F57DE01D9F64BBA5" name="" routingType="RectilinearVertical" target="A1DD176D85219E70D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="19" y="20"/>
+          <targetAnchor x="90" y="39"/>
+        </sourceConnections>
+        <location x="920" y="698"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD15FB4F87B010EA48EE06A2EE06A4 A1DD17707E308D30D6DD95F30F5CB2AD" id="A1DD15F83D4EA5A0EA48EE06A2EE06A4" name="Receive InvokeWorklist Request" taskType="Receive" instantiate="true">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FA2BEC59E0EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DCFE1F0F841D30E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="48" y="42"/>
+          <targetAnchor x="55" y="55"/>
+          <bendingPoints x="90" y="643"/>
+        </sourceConnections>
+        <location x="25" y="769"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+        <outMessage message="A1DD1764890B4AD0F57DE01D9F64BBA5"/>
+        <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DD15F9EC125F90EA48EE06A2EE06A4" text="Step 2:&#xD;&#xA;Send a synchronous confirmation&#xD;&#xA;to the calling process:&#xD;&#xA;o    [ResponseValue]: &quot;&lt;string>&quot; &quot;Success&quot;">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD15FA0995EA50EA48EE06A2EE06A4" name="" routingType="RectilinearVertical" target="A1DD1765F10E60D0F57DE01D9F64BBA5">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="82" y="36"/>
+          <targetAnchor x="106" y="53"/>
+          <bendingPoints x="153" y="200"/>
+          <bendingPoints x="191" y="129"/>
+        </sourceConnections>
+        <location x="109" y="253"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD176DABDB1A00D6DD95F30F5CB2AD A1DD1D9975365640C2E5960955D9E3A1" id="A1DD17652E858160F57DE01D9F64BBA5" name="Send final error message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCFE39F827A150E3F984E1C03A91D3" name="" routingType="RectilinearHorizontal" target="A1DCFE39ED2F18F0E3F984E1C03A91D3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="92" y="47"/>
+          <targetAnchor x="17" y="15"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD177133AAD580D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1770FF61FA10D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="61" y="59"/>
+          <targetAnchor x="64" y="28"/>
+        </sourceConnections>
+        <location x="776" y="866"/>
+        <size width="120" height="80"/>
+        <fillColor red="255"/>
+        <inMessage message="A1DD17652E858161F57DE01D9F64BBA5"/>
+        <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Fault" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD15FA6CF53740EA48EE06A2EE06A4 A1DD176E080E9E00D6DD95F30F5CB2AD" id="A1DD17657790B190F57DE01D9F64BBA5" name="Send final response" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FA760C2E60EA48EE06A2EE06A4" name="" routingType="RectilinearVertical" target="A1DCFE3947C0C940E3F984E1C03A91D3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="81" y="50"/>
+          <targetAnchor x="13" y="24"/>
+          <bendingPoints x="1299" y="910"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD177139082000D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD17711090C7D0D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="59" y="51"/>
+          <targetAnchor x="56" y="42"/>
+        </sourceConnections>
+        <location x="1116" y="866"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+        <inMessage message="A1DD17657790B191F57DE01D9F64BBA5"/>
+        <webService interface="iwlwsdl:InvokeWorklist_CB" operation="InvokeWorklist_Response" role="invokeWorklist_Requester" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD15FA0995EA50EA48EE06A2EE06A4 A1DCFE23532A64F0E09099EB1BF5E274" id="A1DD1765F10E60D0F57DE01D9F64BBA5" name="Send synchronous confirmation" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD15FA2FEB25D0EA48EE06A2EE06A4" name="" routingType="RectilinearHorizontal" target="A1DCFE1FE27D0E40E09099EB1BF5E274">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="91" y="39"/>
+          <targetAnchor x="54" y="31"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD17708C8A9010D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD1770673DEAF0D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="24" y="43"/>
+          <targetAnchor x="44" y="38"/>
+          <bendingPoints x="34" y="922"/>
+        </sourceConnections>
+        <location x="21" y="146"/>
+        <size width="120" height="80"/>
+        <fillColor green="255"/>
+        <inMessage message="A1DD1765C7B226E2F57DE01D9F64BBA5"/>
+        <webService interface="iwlwsdl:InvokeWorklist_PT" operation="InvokeWorklist" role="invokeWorklist_Provider" partnerLink="invokeWorklist" partnerLinkType="iwlwsdl:invokeWorklist_LT"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DCFE39CD899890E3F984E1C03A91D3 A1DD176567DAA120F57DE01D9F64BBA5" id="A1DD176D85219E70D6DD95F30F5CB2AD" name="Prepare final error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD176DABDB1A00D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD17652E858160F57DE01D9F64BBA5">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="57" y="61"/>
+          <targetAnchor x="60" y="28"/>
+        </sourceConnections>
+        <location x="769" y="742"/>
+        <size width="120" height="80"/>
+        <fillColor red="255"/>
+      </children>
+      <children xsi:type="bpmn:TextAnnotation" id="A1DD1D995367DB60C2E5960955D9E3A1" text="Step 8b alt:&#xD;&#xA;Send final error message">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:Association" id="A1DD1D9975365640C2E5960955D9E3A1" name="" routingType="RectilinearVertical" target="A1DD17652E858160F57DE01D9F64BBA5">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="18" y="25"/>
+          <targetAnchor x="87" y="33"/>
+        </sourceConnections>
+        <location x="920" y="844"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="invokeWorklist-gen-BPEL1" id="A1DCFCDFEC48C1D0E0C5FF08F2D265C1" targetNamespace="urn:vispproject.org/052007/enterpriseServices/supportingServices/invokeWorklist/bpel">
+      <messages name="AddWorklistItem_Response" type="wmeswsdl:AddWorklistItem_Response" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DD16014538ED80EA48EE06A2EE06A4"/>
+      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.11/@outMessage" id="A1DD16014B0637E0EA48EE06A2EE06A4"/>
+      <messages name="InvokeWorklist_SyncRequest" type="iwlwsdl:InvokeWorklist_SyncRequest" messageUsages="//@children.1/@children.0/@children.16/@outMessage" id="A1DD1764890B4AD0F57DE01D9F64BBA5"/>
+      <messages name="InvokeWorklist_SyncFault" type="iwlwsdl:InvokeWorklist_SyncFault" messageUsages="//@children.1/@children.0/@children.8/@results.0/@error" id="A1DD17649355DFF0F57DE01D9F64BBA5">
+        <properties name="parameters" type="iwlwsdl:InvokeWorklist_SyncFault"/>
+      </messages>
+      <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" messageUsages="//@children.1/@children.0/@children.18/@inMessage" id="A1DD17652E858161F57DE01D9F64BBA5"/>
+      <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" messageUsages="//@children.1/@children.0/@children.19/@inMessage" id="A1DD17657790B191F57DE01D9F64BBA5"/>
+      <messages name="InvokeWorklist_SyncResponse" type="iwlwsdl:InvokeWorklist_SyncResponse" messageUsages="//@children.1/@children.0/@children.20/@inMessage" id="A1DD1765C7B226E2F57DE01D9F64BBA5"/>
+    </process>
+    <participant>
+      <role name="Participant2"/>
+    </participant>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DCFE26B74EA830E09099EB1BF5E274" text="Step 5:&#xD;&#xA;Send request to&#xD;&#xA;WMES service">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <sourceConnections xsi:type="bpmn:Association" id="A1DCFE26C8DA8A10E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE0D99840A0E0C5FF08F2D265C1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <sourceAnchor x="72" y="31"/>
+      <targetAnchor x="25" y="35"/>
+      <bendingPoints x="926" y="284"/>
+      <labelLocation x="-4" y="-33"/>
+    </sourceConnections>
+    <location x="858" y="202"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DCFE2865D1FDC0E09099EB1BF5E274" text="Step 6:&#xD;&#xA;Wait until WMES sends&#xD;&#xA;the result of the execution&#xD;&#xA;of the item or its new state.">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <sourceConnections xsi:type="bpmn:Association" id="A1DCFE28A0E74410E09099EB1BF5E274" name="" routingType="RectilinearHorizontal" target="A1DCFCE1972333A0E0C5FF08F2D265C1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <sourceAnchor x="26" y="32"/>
+      <targetAnchor x="108" y="28"/>
+      <bendingPoints x="1323" y="304"/>
+    </sourceConnections>
+    <location x="1355" y="195"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DCFE3D52B44BC0E3F984E1C03A91D3" text="Author:  Eckert&#xD;&#xA;Source:  D6.1.1 Rel. 21&#xD;&#xA;Version: 2.4&#xD;&#xA;File:        invokeWorklist&#xD;&#xA;Date:     2008-08-13">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location y="1587"/>
+    <size width="157"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DD176BB01E05C0D6DD95F30F5CB2AD" text="Step 6 alt:&#xD;&#xA;Wait until WMES sends&#xD;&#xA;an error message">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <sourceConnections xsi:type="bpmn:Association" id="A1DD176BC2B03410D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1600FDF536E0EA48EE06A2EE06A4">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <sourceAnchor x="37" y="38"/>
+      <targetAnchor x="63" y="49"/>
+    </sourceConnections>
+    <location x="1639" y="200"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:Pool" id="A1DD17700E889130D6DD95F30F5CB2AD" name="Invoking process">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="-3" y="1295"/>
+    <size width="1832" height="272"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD17700E889131D6DD95F30F5CB2AD" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="272"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD1771D81793B0D6DD95F30F5CB2AD" id="A1DD1770433EFB80D6DD95F30F5CB2AD" name="Invoke wrapper around worklist system" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD1771F2F5EF10D6DD95F30F5CB2AD" name="" routingType="RectilinearHorizontal" target="A1DD1771EA02D3A0D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="1240" y="156"/>
+          <targetAnchor x="14" y="14"/>
+        </sourceConnections>
+        <location x="53" y="33"/>
+        <size width="1256" height="212"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD17708C8A9010D6DD95F30F5CB2AD A1DD1770C508FEE0D6DD95F30F5CB2AD" id="A1DD1770673DEAF0D6DD95F30F5CB2AD" name="Invoke wrapper" taskType="None" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:MessageFlow" id="A1DD17707E308D30D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD15F83D4EA5A0EA48EE06A2EE06A4">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="38" y="24"/>
+            <targetAnchor x="80" y="34"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD1770B293A760D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1770A41F65C0D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="96" y="62"/>
+            <targetAnchor x="38" y="46"/>
+            <bendingPoints x="241" y="153"/>
+            <boundaryEvent id="A1DD1770BE56D2C0D6DD95F30F5CB2AD">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD1770BE56D2C1D6DD95F30F5CB2AD">
+                <error/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD1770E6F90B80D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD177143BDFA10D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="110" y="22"/>
+            <targetAnchor x="64" y="26"/>
+            <bendingPoints x="469" y="65"/>
+          </sourceConnections>
+          <location x="87" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD1770B293A760D6DD95F30F5CB2AD" id="A1DD1770A41F65C0D6DD95F30F5CB2AD" name="Error adding worklist item" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="307" y="99"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD1771558A1940D6DD95F30F5CB2AD" id="A1DD1770DAA93080D6DD95F30F5CB2AD" name="" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD17716C7CBB80D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1770FF61FA10D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="26" y="30"/>
+            <targetAnchor x="100" y="42"/>
+            <bendingPoints x="907" y="125"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD177182159A20D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD17711090C7D0D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="24" y="32"/>
+            <targetAnchor x="36" y="26"/>
+          </sourceConnections>
+          <location x="945" y="85"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD177133AAD580D6DD95F30F5CB2AD A1DD17716C7CBB80D6DD95F30F5CB2AD" id="A1DD1770FF61FA10D6DD95F30F5CB2AD" name="Worklist error" taskType="Receive" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="729" y="99"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <outMessage message="A1DD177216258090D6DD95F30F5CB2AD"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD177139082000D6DD95F30F5CB2AD A1DD177182159A20D6DD95F30F5CB2AD" id="A1DD17711090C7D0D6DD95F30F5CB2AD" name="Worklist result" taskType="Receive" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="1069" y="99"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+          <outMessage message="A1DD177214E845A0D6DD95F30F5CB2AD"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD1770E6F90B80D6DD95F30F5CB2AD" id="A1DD177143BDFA10D6DD95F30F5CB2AD" name="Do anything" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD1771558A1940D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1770DAA93080D6DD95F30F5CB2AD">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="100" y="26"/>
+            <targetAnchor x="26" y="28"/>
+            <bendingPoints x="901" y="65"/>
+          </sourceConnections>
+          <location x="525" y="46"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255"/>
+        </children>
+        <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" messageUsages="//@children.6/@children.0/@children.0/@children.4/@outMessage" id="A1DD177214E845A0D6DD95F30F5CB2AD">
+          <properties name="parameters" type="iwlwsdl:InvokeWorklist_Response"/>
+        </messages>
+        <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" messageUsages="//@children.6/@children.0/@children.0/@children.3/@outMessage" id="A1DD177216258090D6DD95F30F5CB2AD">
+          <properties name="parameters" type="iwlwsdl:InvokeWorklist_Fault"/>
+        </messages>
+      </children>
+      <children xsi:type="bpmn:StartEvent" id="A1DD1771CC081D10D6DD95F30F5CB2AD" name="Start client">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD1771D81793B0D6DD95F30F5CB2AD" name="" routingType="RectilinearVertical" target="A1DD1770433EFB80D6DD95F30F5CB2AD">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="20" y="16"/>
+          <targetAnchor x="1234" y="108"/>
+          <bendingPoints x="1403" y="77"/>
+        </sourceConnections>
+        <location x="1491" y="65"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD1771F2F5EF10D6DD95F30F5CB2AD" id="A1DD1771EA02D3A0D6DD95F30F5CB2AD" name="End client">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="1491" y="177"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255"/>
+      </children>
+    </children>
+    <process name="Invoking process" id="A1DD1770439754B0D6DD95F30F5CB2AD"/>
+    <participant>
+      <role name="Participant3"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="wmeswsdl" value="urn:vispproject.org/052007/enterpriseServices/wmes/wsdl" location="D:/workspaces/release2\Project\modeling\enterpriseServices\wmes\wsdl\wmes_LT.wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+  <xMLNSPrefixMap key="iwlwsdl" value="urn:vispproject.org/052007/enterpriseServices/supportingServices/invokeWorklist/wsdl" location="D:/workspaces/release2\Project\modeling\enterpriseServices\supportingServices\invokeWorklist\wsdl\invokeWorklist_LT.wsdl"/>
+</bpmn:Diagram>

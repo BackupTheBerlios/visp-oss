@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC103C2BAF1950DF25E344B1D49F67" name="activateServiceSetUI" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-06-01T14:32:32.859+0200" modificationDate="2007-07-27T15:03:35.625+0200">
+  <children xsi:type="bpmn:Pool" id="A1DC10531ACC0320DF25E344B1D49F67" name="User Interface">
+    <fontColor/>
+    <lineColor/>
+    <font family="Times New Roman" height="8"/>
+    <location x="16" y="24"/>
+    <size width="2097" height="997"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DC10531ACC0321DF25E344B1D49F67" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Lucida Grande" height="8"/>
+      <size height="997"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DC10535C95E690DF25E344B1D49F67" name="StartUseCase-7-5">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC126CDB46F220D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC10536D2518F0DF25E344B1D49F67">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="13" y="17"/>
+          <targetAnchor x="60" y="35"/>
+        </sourceConnections>
+        <location x="93" y="45"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC126CDB46F220D124823E62C17794" id="A1DC10536D2518F0DF25E344B1D49F67" documentation="&lt;step 01> A service set activation page is displayed to the actor." name="Display activate SvS page" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC126CE96090A0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC10537155F160DF25E344B1D49F67">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="87" y="57"/>
+          <targetAnchor x="61" y="13"/>
+        </sourceConnections>
+        <location x="48" y="168"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC126CE96090A0D124823E62C17794" id="A1DC10537155F160DF25E344B1D49F67" documentation="&lt;step 02> The actor enters a more or less complete service set identification." name="User enters SvS identification" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC126D0AB34BD0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC10537947A260DF25E344B1D49F67">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="83" y="35"/>
+          <targetAnchor x="20" y="29"/>
+        </sourceConnections>
+        <location x="48" y="312"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DC126D0AB34BD0D124823E62C17794" id="A1DC10537947A260DF25E344B1D49F67" documentation="&lt;step 02 altered> The service set is already identified by any other mean: skip steps 2 to 6." name="SvS id complete?">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC127593383440D124823E62C17794" name="incomplete" routingType="RectilinearVertical" target="A1DC126E15162E70D124823E62C17794" conditionType="Expression">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="37" y="23"/>
+          <targetAnchor x="8" y="267"/>
+          <labelLocation x="-36" y="-25"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC12759E549850D124823E62C17794" name="complete" routingType="RectilinearVertical" target="A1DC126DE7C49E70D124823E62C17794" conditionType="Expression">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="25" y="6"/>
+          <targetAnchor x="30" y="9"/>
+          <bendingPoints x="493" y="35"/>
+          <bendingPoints x="768" y="250"/>
+          <labelLocation x="-59" y="94"/>
+        </sourceConnections>
+        <location x="273" y="321"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC12744AD5E3B0D124823E62C17794" id="A1DC126DCBC36DF0D124823E62C17794" name="Retrieve SvS" activityType="Subprocess" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15AB47134B70D0C39B7A836DBF4F" name="" routingType="RectilinearVertical" target="A1DC15AB241D1970D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="262" y="591"/>
+          <targetAnchor x="68" y="10"/>
+          <bendingPoints x="1226" y="574"/>
+          <bendingPoints x="1356" y="622"/>
+          <boundaryEvent id="A1DC15AB5B1B9F00D0C39B7A836DBF4F">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DC15AB5B1B9F01D0C39B7A836DBF4F">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15BF786FEC50D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC129533DBEB70D124823E62C17794">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="356" y="260"/>
+          <targetAnchor x="14" y="253"/>
+        </sourceConnections>
+        <location x="864" y="84"/>
+        <size width="358" height="832"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC1280DCED5F10D124823E62C17794" id="A1DC126E6623B170D124823E62C17794" documentation="&lt;step 07> The system displays the full service set description with the list of all services." name="Display SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1280E3405430D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC127FE65021B0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="58" y="60"/>
+            <targetAnchor x="61" y="37"/>
+          </sourceConnections>
+          <location x="85" y="192"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC1280B9B6C8B0D124823E62C17794" id="A1DC126E64EDC980D124823E62C17794" documentation="" name="Invoke retrieve SvS details">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1280DCED5F10D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC126E6623B170D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="67" y="65"/>
+            <targetAnchor x="60" y="30"/>
+          </sourceConnections>
+          <location x="85" y="84"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DC127467281A60D124823E62C17794" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1280B9B6C8B0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC126E64EDC980D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="19" y="11"/>
+            <targetAnchor x="50" y="43"/>
+            <bendingPoints x="133" y="68"/>
+          </sourceConnections>
+          <location x="25" y="48"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC1280E3405430D124823E62C17794" id="A1DC127FE65021B0D124823E62C17794" documentation="&lt;step 08> The actor clicks on the “activate” button to activate the service set." name="Activate SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1280EB68CCA0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC127FE63AC4F0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="62" y="67"/>
+            <targetAnchor x="61" y="39"/>
+          </sourceConnections>
+          <location x="84" y="300"/>
+          <size width="123" height="83"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC1280EB68CCA0D124823E62C17794" id="A1DC127FE63AC4F0D124823E62C17794" documentation="&lt;step 09> The system requires to confirm the request to commission." name="Display confirmation request" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC12811C6CDD50D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC127FE5E021D0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="102" y="51"/>
+            <targetAnchor x="76" y="24"/>
+            <bendingPoints x="146" y="489"/>
+          </sourceConnections>
+          <location x="84" y="406"/>
+          <size width="123" height="84"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC12899AD96430D124823E62C17794" id="A1DC12801B08FD00D124823E62C17794" documentation="&lt;step 19> The system confirms either that the commissioning started or is finished." name="Display confirmation message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1289F8582CE0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC1289DCBB1560D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="113" y="42"/>
+            <targetAnchor x="16" y="13"/>
+          </sourceConnections>
+          <location x="85" y="720"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC12811C6CDD50D124823E62C17794" id="A1DC127FE5E021D0D124823E62C17794" documentation="&lt;step 10> The actor confirms the request to commission." name="Confirm activation start" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1289939F4360D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC12898AF39130D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="66" y="57"/>
+            <targetAnchor x="25" y="20"/>
+          </sourceConnections>
+          <location x="85" y="516"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DC1289939F4360D124823E62C17794" id="A1DC12898AF39130D124823E62C17794" name="Confirmation result">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC12899AD96430D124823E62C17794" name="confirmed" routingType="RectilinearHorizontal" target="A1DC12801B08FD00D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Times New Roman" height="8"/>
+            <sourceAnchor x="32" y="29"/>
+            <targetAnchor x="55" y="14"/>
+            <bendingPoints x="146" y="701"/>
+            <labelLocation x="-1" y="-18"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1289F448BF20D124823E62C17794" name="not confirmed" routingType="RectilinearVertical" target="A1DC1289DF2E1130D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Times New Roman" height="8"/>
+            <sourceAnchor x="35" y="26"/>
+            <targetAnchor x="14" y="13"/>
+            <labelLocation x="-48" y="-25"/>
+          </sourceConnections>
+          <location x="121" y="636"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <labelLocation x="-96" y="-7"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC1289F8582CE0D124823E62C17794" id="A1DC1289DCBB1560D124823E62C17794" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="265" y="744"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC1289F448BF20D124823E62C17794" id="A1DC1289DF2E1130D124823E62C17794" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="265" y="648"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DC15A9C193D6A0D0C39B7A836DBF4F">
+            <error/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Gateway" targetConnections="A1DC127445C02980D124823E62C17794 A1DC12759E549850D124823E62C17794" id="A1DC126DE7C49E70D124823E62C17794" name="">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC12744AD5E3B0D124823E62C17794" name="" routingType="RectilinearVertical" target="A1DC126DCBC36DF0D124823E62C17794">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="49" y="26"/>
+          <targetAnchor x="9" y="265"/>
+          <bendingPoints x="768" y="345"/>
+        </sourceConnections>
+        <location x="744" y="324"/>
+        <size width="51" height="51"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC127593383440D124823E62C17794" id="A1DC126E15162E70D124823E62C17794" name="Identify SvS" activityType="Subprocess" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC127445C02980D124823E62C17794" name="" routingType="RectilinearVertical" target="A1DC126DE7C49E70D124823E62C17794">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="244" y="255"/>
+          <targetAnchor x="26" y="15"/>
+          <bendingPoints x="662" y="346"/>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15A93AF93860D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC15A9324FF730D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="259" y="489"/>
+          <targetAnchor x="68" y="46"/>
+          <bendingPoints x="768" y="416"/>
+          <boundaryEvent id="A1DC15A93E407420D0C39B7A836DBF4F">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DC15A93E407421D0C39B7A836DBF4F">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="396" y="84"/>
+        <size width="262" height="726"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC127520EB2FF0D124823E62C17794" id="A1DC126E69A696A0D124823E62C17794" documentation="&lt;step 04> The system queries the Service Set Catalogue to find all matching validated service sets." name="Invoke matching SvS" implementation="Unspecified">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15A998C44C50D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC127534242590D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="99" y="55"/>
+            <targetAnchor x="79" y="38"/>
+            <bendingPoints x="125" y="271"/>
+          </sourceConnections>
+          <location x="66" y="208"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC12751B2C1660D124823E62C17794" id="A1DC126E694E3D70D124823E62C17794" documentation="&lt;step 03> The actor clicks on the “search” button to search for validated service sets." name="Start search for matching SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC127520EB2FF0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC126E69A696A0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="61" y="63"/>
+            <targetAnchor x="60" y="46"/>
+            <labelLocation y="-15"/>
+          </sourceConnections>
+          <location x="66" y="100"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DC1274641C8810D124823E62C17794" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC12751B2C1660D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC126E694E3D70D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="27" y="14"/>
+            <targetAnchor x="60" y="31"/>
+          </sourceConnections>
+          <location x="15" y="61"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC15A998C44C50D0C39B7A836DBF4F" id="A1DC127534242590D124823E62C17794" documentation="&lt;step 05> The system displays the list of found matching commissioned service set summaries." name="Display matching SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC1275448F7C40D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC127532EE1690D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="59" y="70"/>
+            <targetAnchor x="60" y="29"/>
+          </sourceConnections>
+          <location x="68" y="321"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC1275448F7C40D124823E62C17794" id="A1DC127532EE1690D124823E62C17794" documentation="&lt;step 06> The actor selects a given service set summary." name="User selects SvS" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC14406B1BAAB0D501B139DF9475BB" name="" routingType="RectilinearHorizontal" target="A1DC1275FDA90B60D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="60" y="54"/>
+            <targetAnchor x="25" y="21"/>
+            <bendingPoints x="116" y="529"/>
+          </sourceConnections>
+          <location x="68" y="429"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC143EEF8C4EF0D501B139DF9475BB" id="A1DC1278CD29B3B0D124823E62C17794" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="102" y="647"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DC14406B1BAAB0D501B139DF9475BB" id="A1DC1275FDA90B60D124823E62C17794" name="SvS found?" labelWidth="79">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC127983CBB320D124823E62C17794" name="no" routingType="RectilinearVertical" target="A1DC1278CBFAF7B0D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Times New Roman" height="8"/>
+            <sourceAnchor x="49" y="25"/>
+            <targetAnchor x="15" y="13"/>
+            <bendingPoints x="173" y="576"/>
+            <labelLocation x="9" y="-33"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC143EEF8C4EF0D501B139DF9475BB" name="yes" routingType="RectilinearHorizontal" target="A1DC1278CD29B3B0D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="29" y="32"/>
+            <targetAnchor x="15" y="10"/>
+            <bendingPoints x="116" y="606"/>
+            <labelLocation x="-1" y="-12"/>
+          </sourceConnections>
+          <location x="91" y="551"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <labelLocation x="-75" y="-2"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC127983CBB320D124823E62C17794" id="A1DC1278CBFAF7B0D124823E62C17794" documentation="&lt;step 05 variation> No service set is found: stops with error message." name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="187" y="561"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DC15A97D18DCF0D0C39B7A836DBF4F">
+            <error/>
+          </results>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC15BF786FEC50D0C39B7A836DBF4F" id="A1DC129533DBEB70D124823E62C17794" name="SvS Commission" activityType="Subprocess" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15AB4557DFD0D0C39B7A836DBF4F" name="" routingType="RectilinearVertical" target="A1DC15AB236C8E20D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="322" y="606"/>
+          <targetAnchor x="58" y="13"/>
+          <bendingPoints x="1864" y="574"/>
+          <bendingPoints x="1946" y="721"/>
+          <boundaryEvent id="A1DC15AB60232860D0C39B7A836DBF4F">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DC15AB60232861D0C39B7A836DBF4F">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <location x="1476" y="84"/>
+        <size width="361" height="839"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DC129589073410D124823E62C17794" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129B71BAA340D124823E62C17794" name="" routingType="RectilinearVertical" target="A1DC15A9DEBF2F40D0C39B7A836DBF4F">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="24" y="25"/>
+            <targetAnchor x="2" y="42"/>
+            <bendingPoints x="103" y="72"/>
+          </sourceConnections>
+          <location x="17" y="58"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129BFD284D60D124823E62C17794" id="A1DC129B0EB13E80D124823E62C17794" documentation="&lt;step 19> The system confirms either that the commissioning started or is finished." name="Display activation result" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15A9ECC10000D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC129C1E2E9640D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="95" y="50"/>
+            <targetAnchor x="16" y="30"/>
+          </sourceConnections>
+          <location x="33" y="653"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129C0020CCE0D124823E62C17794" id="A1DC1274835B7E70D124823E62C17794" documentation="&lt;step 19 altered> The actor may request to be warned by e-mail when the service set in commissioned." name="Send activation result by email" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15A9F12173F0D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC129C1FA4E290D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="64" y="45"/>
+            <targetAnchor x="15" y="17"/>
+          </sourceConnections>
+          <location x="201" y="653"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129B75CC8200D124823E62C17794" id="A1DC129B00CE6770D124823E62C17794" documentation="" name="Receive activation error" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129BBCDE2C20D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC129B91AC6EE0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="86" y="46"/>
+            <targetAnchor x="42" y="23"/>
+            <bendingPoints x="267" y="307"/>
+            <bendingPoints x="249" y="393"/>
+          </sourceConnections>
+          <location x="202" y="250"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129B7DA66540D124823E62C17794" id="A1DC129B00F94800D124823E62C17794" documentation="" name="Receive activation confirmation" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129BADFEA590D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC129B91AC6EE0D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="61" y="32"/>
+            <targetAnchor x="25" y="27"/>
+            <bendingPoints x="92" y="326"/>
+            <labelLocation x="-23" y="32"/>
+          </sourceConnections>
+          <location x="34" y="250"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129BCBA5E4F0D124823E62C17794" id="A1DC129B00904D00D124823E62C17794" documentation="" name="Assign activation result" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129BFAA943A0D124823E62C17794" name="Confirmation mode" routingType="RectilinearHorizontal" target="A1DC129BE75AF140D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Times New Roman" height="8"/>
+            <sourceAnchor x="73" y="49"/>
+            <targetAnchor x="25" y="9"/>
+            <labelLocation x="-53" y="57"/>
+          </sourceConnections>
+          <location x="117" y="473"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DC15AA6B9717C0D0C39B7A836DBF4F" id="A1DC129B5E545C10D124823E62C17794" name="" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129B75CC8200D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC129B00CE6770D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="28" y="28"/>
+            <targetAnchor x="61" y="33"/>
+            <bendingPoints x="263" y="247"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129B7DA66540D124823E62C17794" name="" routingType="RectilinearVertical" target="A1DC129B00F94800D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="26" y="22"/>
+            <targetAnchor x="44" y="17"/>
+            <bendingPoints x="206" y="179"/>
+            <bendingPoints x="94" y="225"/>
+          </sourceConnections>
+          <location x="238" y="154"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DC129BADFEA590D124823E62C17794 A1DC129BBCDE2C20D124823E62C17794" id="A1DC129B91AC6EE0D124823E62C17794" name="">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129BCBA5E4F0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC129B00904D00D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="40" y="18"/>
+            <targetAnchor x="59" y="11"/>
+            <bendingPoints x="183" y="441"/>
+            <labelLocation x="10" y="-24"/>
+          </sourceConnections>
+          <location x="157" y="367"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DC129BFAA943A0D124823E62C17794" id="A1DC129BE75AF140D124823E62C17794" name="">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129BFD284D60D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC129B0EB13E80D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="40" y="22"/>
+            <targetAnchor x="58" y="38"/>
+            <bendingPoints x="93" y="599"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC129C0020CCE0D124823E62C17794" name="" routingType="RectilinearHorizontal" target="A1DC1274835B7E70D124823E62C17794" conditionType="Expression">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="23" y="26"/>
+            <targetAnchor x="56" y="38"/>
+            <bendingPoints x="268" y="575"/>
+          </sourceConnections>
+          <location x="153" y="581"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15A9ECC10000D0C39B7A836DBF4F" id="A1DC129C1E2E9640D124823E62C17794" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="76" y="765"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15A9F12173F0D0C39B7A836DBF4F" id="A1DC129C1FA4E290D124823E62C17794" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <location x="249" y="768"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DC129B71BAA340D124823E62C17794" id="A1DC15A9DEBF2F40D0C39B7A836DBF4F" documentation="" name="Invoke Activation" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <font family="Times New Roman" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15AA6B9717C0D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC129B5E545C10D124823E62C17794">
+            <fontColor/>
+            <lineColor/>
+            <font family="Lucida Grande" height="8"/>
+            <sourceAnchor x="69" y="49"/>
+            <targetAnchor x="26" y="23"/>
+          </sourceConnections>
+          <location x="195" y="37"/>
+          <size width="122" height="82"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <webService/>
+        </children>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC15A93AF93860D0C39B7A836DBF4F" id="A1DC15A9324FF730D0C39B7A836DBF4F" documentation="&lt;step 05 variation> No service set is found: stops with error message." name="Error during identification" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15A952C99070D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC15A94F03FCF0D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="68" y="28"/>
+          <targetAnchor x="14" y="12"/>
+          <bendingPoints x="770" y="758"/>
+        </sourceConnections>
+        <location x="708" y="648"/>
+        <size width="122" height="82"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15A952C99070D0C39B7A836DBF4F" id="A1DC15A94F03FCF0D0C39B7A836DBF4F" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <location x="756" y="792"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC15AB4557DFD0D0C39B7A836DBF4F" id="A1DC15AB236C8E20D0C39B7A836DBF4F" documentation="" name="Error during activation" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15AB40932BD0D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC15AB3D0DD5A0D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="91" y="30"/>
+          <targetAnchor x="14" y="17"/>
+        </sourceConnections>
+        <location x="1884" y="648"/>
+        <size width="122" height="82"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DC15AB47134B70D0C39B7A836DBF4F" id="A1DC15AB241D1970D0C39B7A836DBF4F" documentation="&lt;step 10 variation> The actor cancels the request: nothing is changed." name="Error during retrieval" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DC15AB43279250D0C39B7A836DBF4F" name="" routingType="RectilinearHorizontal" target="A1DC15AB3B4DAF10D0C39B7A836DBF4F">
+          <fontColor/>
+          <lineColor/>
+          <font family="Lucida Grande" height="8"/>
+          <sourceAnchor x="108" y="43"/>
+          <targetAnchor x="16" y="19"/>
+        </sourceConnections>
+        <location x="1296" y="648"/>
+        <size width="122" height="82"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15AB43279250D0C39B7A836DBF4F" id="A1DC15AB3B4DAF10D0C39B7A836DBF4F" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <location x="1344" y="840"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15AB40932BD0D0C39B7A836DBF4F" id="A1DC15AB3D0DD5A0D0C39B7A836DBF4F" name="EndEvent3">
+        <fontColor/>
+        <lineColor/>
+        <font family="Times New Roman" height="8"/>
+        <location x="1932" y="840"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="User Interface" id="A1DC10535CB02551DF25E344B1D49F67"/>
+    <participant>
+      <role name="Participant2"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+</bpmn:Diagram>

@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD82FBA620EA00C14D92023D9DE84D" name="modifyTechnicalProcess" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-09-15T09:55:22.656+0200" modificationDate="2008-09-16T15:04:38.718+0200">
+  <children xsi:type="bpmn:Pool" id="A1DD82FBAD0EBF90C14D92023D9DE84D" name="Modify technical process - business process">
+    <fontColor/>
+    <lineColor/>
+    <font family="Arial" height="8"/>
+    <location x="12" y="16"/>
+    <size width="1068" height="1868"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD82FBAD0EBF91C14D92023D9DE84D" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Arial" height="8"/>
+      <size height="1868"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DD82FC8AC4B6A0C14D92023D9DE84D" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD82FCAD7F3F30C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD82FC9A3336C0C14D92023D9DE84D">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="26" y="15"/>
+          <targetAnchor x="58" y="64"/>
+        </sourceConnections>
+        <location x="76" y="66"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD82FCAD7F3F30C14D92023D9DE84D" id="A1DD82FC9A3336C0C14D92023D9DE84D" name="Global catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8332C6FFF6D0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8332C0574090C14D92023D9DE84D">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="32" y="204"/>
+          <targetAnchor x="58" y="43"/>
+          <boundaryEvent id="A1DD83E8AA31E1B0E70BA2526EF451F4">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD83E8AA31E1B1E70BA2526EF451F4">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83E8B1888B30E70BA2526EF451F4" name="" routingType="RectilinearHorizontal" target="A1DD83E8AE05CD10E70BA2526EF451F4">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="12" y="575"/>
+          <targetAnchor x="16" y="14"/>
+        </sourceConnections>
+        <location x="211" y="21"/>
+        <size width="786" height="1819"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:StartEvent" id="A1DD82FCC195EAA0C14D92023D9DE84D" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD82FCF92ABCC0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD82FCEECACAE0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="22" y="15"/>
+            <targetAnchor x="53" y="42"/>
+          </sourceConnections>
+          <location x="58" y="77"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD82FCF92ABCC0C14D92023D9DE84D" id="A1DD82FCEECACAE0C14D92023D9DE84D" name="Receive request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD82FD419FC770C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD82FD3ECFB780C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="110" y="39"/>
+            <targetAnchor x="80" y="53"/>
+          </sourceConnections>
+          <location x="213" y="51"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD82FD021DFF40C14D92023D9DE84D"/>
+          <webService interface="modtechwsdl:ModifyTechnicalProcess_PT" operation="modifyTechnicalProcess" role="modifyTechnicalProcess_Provider" partnerLink="modifyTechnicalProcess" partnerLinkType="modtechwsdl:modifyTechnicalProcess_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD82FD419FC770C14D92023D9DE84D" id="A1DD82FD3ECFB780C14D92023D9DE84D" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830BCDB8EB70C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830BC8D53DC0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="113" y="41"/>
+            <targetAnchor x="28" y="35"/>
+            <bendingPoints x="470" y="151"/>
+          </sourceConnections>
+          <location x="407" y="49"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD830BCDB8EB70C14D92023D9DE84D" id="A1DD830BC8D53DC0C14D92023D9DE84D" name="Get Technical Process">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831171A9D0A0C14D92023D9DE84D" name="" routingType="RectilinearVertical" target="A1DD831101A4E790C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="79"/>
+            <targetAnchor x="59" y="42"/>
+            <bendingPoints x="388" y="230"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD833084AD1F30C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD83307794EB20C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="104" y="36"/>
+            <targetAnchor x="25" y="45"/>
+            <boundaryEvent id="A1DD833089B6F280C14D92023D9DE84D">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD833089B6F281C14D92023D9DE84D">
+                <error message="A1DD8320387D97D0C14D92023D9DE84D" errorCode="tpcwsdl:vispFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <location x="409" y="192"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD830BC8D53DC1C14D92023D9DE84D"/>
+          <outMessage message="A1DD830BC8D53DC2C14D92023D9DE84D"/>
+          <webService interface="tpcwsdl:tpcAccess_PT" operation="queryTPC" role="TPC_Provider" partnerLink="TPC" partnerLinkType="tpcwsdl:TPC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8330B68548C0C14D92023D9DE84D" id="A1DD830D4654A9B0C14D92023D9DE84D" name="Modify status" activityType="Subprocess">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831F58A0F030C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831E0E04B530C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="551" y="220"/>
+            <targetAnchor x="60" y="35"/>
+          </sourceConnections>
+          <location x="28" y="459"/>
+          <size width="563" height="412"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD830D65D19370C14D92023D9DE84D" id="A1DD830BF024DED0C14D92023D9DE84D" name="Check if status modified" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830D6EB67E10C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830C11587940C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="115" y="41"/>
+              <targetAnchor x="22" y="26"/>
+              <bendingPoints x="265" y="127"/>
+            </sourceConnections>
+            <location x="208" y="31"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DD830D6EB67E10C14D92023D9DE84D" id="A1DD830C11587940C14D92023D9DE84D" name="Check if status modified">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830E1E197AB0C14D92023D9DE84D" name="change possible" routingType="RectilinearVertical" target="A1DD830E0BE6AA70C14D92023D9DE84D" conditionType="Expression" conditionExpression="'old status = draft and new status = ready or old status = ready and new status = draft'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="18" y="24"/>
+              <targetAnchor x="87" y="38"/>
+              <labelLocation x="-37" y="-28"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830E377331E0C14D92023D9DE84D" name="wasn't changed" routingType="RectilinearVertical" target="A1DD830E325D77B0C14D92023D9DE84D" conditionType="Expression" conditionExpression="'old status = new status'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="24" y="44"/>
+              <targetAnchor x="58" y="23"/>
+              <labelLocation x="3" y="1"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830E90A6E360C14D92023D9DE84D" name="change impossible" routingType="RectilinearVertical" target="A1DD830E74DEEB50C14D92023D9DE84D" conditionType="Default">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="41" y="27"/>
+              <targetAnchor x="75" y="42"/>
+              <bendingPoints x="348" y="206"/>
+            </sourceConnections>
+            <location x="240" y="182"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:StartEvent" id="A1DD830D5C58CD40C14D92023D9DE84D" name="StartEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830D65D19370C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830BF024DED0C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="19" y="11"/>
+              <targetAnchor x="20" y="40"/>
+            </sourceConnections>
+            <location x="53" y="55"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD830E1E197AB0C14D92023D9DE84D" id="A1DD830E0BE6AA70C14D92023D9DE84D" name="Change status" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830EC89D8490C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830EC5A74F00C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="58" y="72"/>
+              <targetAnchor x="16" y="12"/>
+            </sourceConnections>
+            <location x="35" y="168"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD830E377331E0C14D92023D9DE84D" id="A1DD830E325D77B0C14D92023D9DE84D" name="Save old status" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830EC2673F30C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830EC03480B0C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="114" y="38"/>
+              <targetAnchor x="18" y="17"/>
+            </sourceConnections>
+            <location x="206" y="306"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD830E90A6E360C14D92023D9DE84D" id="A1DD830E74DEEB50C14D92023D9DE84D" name="Assign error message" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD830EDCD59AB0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830ECB939310C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="57" y="9"/>
+              <targetAnchor x="15" y="15"/>
+            </sourceConnections>
+            <location x="389" y="168"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD830EC2673F30C14D92023D9DE84D" id="A1DD830EC03480B0C14D92023D9DE84D" name="EndEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="420" y="328"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD830EC89D8490C14D92023D9DE84D" id="A1DD830EC5A74F00C14D92023D9DE84D" name="EndEvent2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="76" y="317"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD830EDCD59AB0C14D92023D9DE84D" id="A1DD830ECB939310C14D92023D9DE84D" name="EndEvent3">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="427" y="64"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DD830ED27F1EB0C14D92023D9DE84D">
+              <error errorCode="statusCannotBeModified"/>
+            </results>
+          </children>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD831171A9D0A0C14D92023D9DE84D" id="A1DD831101A4E790C14D92023D9DE84D" documentation="Create variable that will be passed to TPC Java operation &quot;modifyTechnicalProcess&quot;.&#xD;&#xA;Inside this variable keep old values of:&#xD;&#xA;- partner ID&#xD;&#xA;- TPCID&#xD;&#xA;- Creation date&#xD;&#xA;- Times used&#xD;&#xA;Because they cannot be modified" name="Save old PartnerId and TPCID" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83308EF7B450C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8311745AE6E0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="1" y="40"/>
+            <targetAnchor x="55" y="21"/>
+            <bendingPoints x="155" y="287"/>
+          </sourceConnections>
+          <location x="213" y="190"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD83308EF7B450C14D92023D9DE84D" id="A1DD8311745AE6E0C14D92023D9DE84D" documentation="Increment version number of technical process" name="Increment version number" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8312875D6DC0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8312792C0180C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="8" y="41"/>
+            <targetAnchor x="69" y="36"/>
+          </sourceConnections>
+          <location x="94" y="322"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8312875D6DC0C14D92023D9DE84D" id="A1DD8312792C0180C14D92023D9DE84D" documentation="Use xpath/xQuery function to obtain current date and time" name="Generate modification date" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8312BE3383C0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD83129F96C0D0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="10" y="41"/>
+            <targetAnchor x="79" y="43"/>
+          </sourceConnections>
+          <location x="283" y="321"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8312BE3383C0C14D92023D9DE84D" id="A1DD83129F96C0D0C14D92023D9DE84D" documentation="Modify other parameters then technical process files which aren't controlled by an application:&#xD;&#xA;- SKBID&#xD;&#xA;- technical process type&#xD;&#xA;- administrative operation type&#xD;&#xA;- TPFamilyIdentifier&#xD;&#xA;- Service characteristics&#xD;&#xA;- Comments" name="Modify possible parameters" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8330B68548C0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD830D4654A9B0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="60" y="78"/>
+            <targetAnchor x="488" y="38"/>
+          </sourceConnections>
+          <location x="460" y="320"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD831F5DB46070C14D92023D9DE84D" id="A1DD831304487E60C14D92023D9DE84D" name="Modify files" activityType="Subprocess">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831FD9540550C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831FCDDAB430C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="323" y="578"/>
+            <targetAnchor x="60" y="40"/>
+          </sourceConnections>
+          <location x="38" y="919"/>
+          <size width="686" height="585"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <children xsi:type="bpmn:StartEvent" id="A1DD83134601C000C14D92023D9DE84D" name="StartEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831353178310C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD83134AA77A50C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="21" y="13"/>
+              <targetAnchor x="56" y="54"/>
+            </sourceConnections>
+            <location x="128" y="55"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831353178310C14D92023D9DE84D" id="A1DD83134AA77A50C14D92023D9DE84D" name="Check if files are modified" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831444683ED0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8314346F5900C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="55" y="74"/>
+              <targetAnchor x="26" y="32"/>
+            </sourceConnections>
+            <location x="261" y="42"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Gateway" targetConnections="A1DD831444683ED0C14D92023D9DE84D" id="A1DD8314346F5900C14D92023D9DE84D" name="Check if files are modified">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83156FC31270C14D92023D9DE84D" name="immediate change possible" routingType="RectilinearVertical" target="A1DD83156A421350C14D92023D9DE84D" conditionType="Expression" conditionExpression="'files are modified and status = draft'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="20" y="26"/>
+              <targetAnchor x="64" y="43"/>
+              <labelLocation x="-53" y="-42"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831AB6732250C14D92023D9DE84D" name="files weren't changed" routingType="RectilinearVertical" target="A1DD8315C2DD2E50C14D92023D9DE84D" conditionType="Default">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="38" y="23"/>
+              <targetAnchor x="112" y="35"/>
+              <bendingPoints x="423" y="215"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831ACFD8C060C14D92023D9DE84D" name="immediate change impossible" routingType="RectilinearHorizontal" target="A1DD831ACA365690C14D92023D9DE84D" conditionType="Expression" conditionExpression="'files are modified and staus = ready or status = oerational'">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="26" y="39"/>
+              <targetAnchor x="50" y="37"/>
+              <bendingPoints x="322" y="282"/>
+              <labelLocation x="7" y="7"/>
+            </sourceConnections>
+            <location x="297" y="190"/>
+            <size width="51" height="51"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD83156FC31270C14D92023D9DE84D" id="A1DD83156A421350C14D92023D9DE84D" name="Simply save new files paths" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8315AED269C0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8315AD60D860C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="61" y="74"/>
+              <targetAnchor x="14" y="8"/>
+            </sourceConnections>
+            <location x="40" y="172"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD8315AED269C0C14D92023D9DE84D" id="A1DD8315AD60D860C14D92023D9DE84D" name="EndEvent1">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="46" y="75"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831AB6732250C14D92023D9DE84D" id="A1DD8315C2DD2E50C14D92023D9DE84D" name="Save old files" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831AC64D0E70C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831AC2D15530C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="54" y="7"/>
+              <targetAnchor x="16" y="19"/>
+            </sourceConnections>
+            <location x="465" y="177"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD831AC64D0E70C14D92023D9DE84D" id="A1DD831AC2D15530C14D92023D9DE84D" name="EndEvent2">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="506" y="65"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831ACFD8C060C14D92023D9DE84D" id="A1DD831ACA365690C14D92023D9DE84D" name="Copy files to temporary location">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831C16658DA0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831C0F15E900C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="113" y="42"/>
+              <targetAnchor x="73" y="43"/>
+            </sourceConnections>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83EFE1C09520E70BA2526EF451F4" name="" routingType="RectilinearHorizontal" target="A1DD83EFD526DFE0E70BA2526EF451F4">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="20" y="41"/>
+              <targetAnchor x="99" y="51"/>
+              <boundaryEvent id="A1DD83EFE4A628E0E70BA2526EF451F4">
+                <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD83EFE4A628E1E70BA2526EF451F4">
+                  <error message="A1DD8320387D97D0C14D92023D9DE84D" errorCode="tpcwsdl:vispFault"/>
+                </triggers>
+              </boundaryEvent>
+            </sourceConnections>
+            <location x="261" y="318"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage message="A1DD83EFB374C6A0E70BA2526EF451F4"/>
+            <outMessage message="A1DD83EFB374C6A1E70BA2526EF451F4"/>
+            <webService interface="tpcwsdl:tpcAccess_PT" operation="copyTechnicalProcessFile" role="TPC_Provider" partnerLink="TPC" partnerLinkType="tpcwsdl:TPC_LT"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831C16658DA0C14D92023D9DE84D" id="A1DD831C0F15E900C14D92023D9DE84D" name="Save old files" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831CA78AFE50C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831C5E719D50C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="61" y="73"/>
+              <targetAnchor x="60" y="34"/>
+            </sourceConnections>
+            <location x="467" y="316"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831CA78AFE50C14D92023D9DE84D" id="A1DD831C5E719D50C14D92023D9DE84D" name="Change status to pending update" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831CD178A2D0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831CC3EDFDE0C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="17" y="37"/>
+              <targetAnchor x="38" y="61"/>
+            </sourceConnections>
+            <location x="470" y="463"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD831CD178A2D0C14D92023D9DE84D" id="A1DD831CC3EDFDE0C14D92023D9DE84D" name="Prepare response string" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831D5F8B7C50C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831D5D185970C14D92023D9DE84D">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="12" y="39"/>
+              <targetAnchor x="17" y="20"/>
+            </sourceConnections>
+            <location x="263" y="464"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD831D5F8B7C50C14D92023D9DE84D" id="A1DD831D5D185970C14D92023D9DE84D" name="EndEvent3">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="108" y="490"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+          </children>
+          <children xsi:type="bpmn:Activity" targetConnections="A1DD83EFE1C09520E70BA2526EF451F4" id="A1DD83EFD526DFE0E70BA2526EF451F4" name="Assign error message" taskType="None">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83EFF41963F0E70BA2526EF451F4" name="" routingType="RectilinearHorizontal" target="A1DD83EFF0F84DD0E70BA2526EF451F4">
+              <fontColor/>
+              <lineColor/>
+              <font family="Arial" height="8"/>
+              <sourceAnchor x="65" y="68"/>
+              <targetAnchor x="13" y="16"/>
+              <bendingPoints x="124" y="410"/>
+            </sourceConnections>
+            <location x="63" y="317"/>
+            <size width="120" height="80"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <inMessage/>
+            <outMessage/>
+            <webService/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" targetConnections="A1DD83EFF41963F0E70BA2526EF451F4" id="A1DD83EFF0F84DD0E70BA2526EF451F4" name="EndEvent4">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <location x="32" y="436"/>
+            <size width="31" height="31"/>
+            <fillColor red="255" green="255" blue="255"/>
+            <results xsi:type="bpmn:ErrorResult" id="A1DD83EFF8FD38B0E70BA2526EF451F4" implementation="WebService">
+              <error errorCode="TPCError"/>
+            </results>
+          </children>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD831F58A0F030C14D92023D9DE84D" id="A1DD831E0E04B530C14D92023D9DE84D" name="Initialize response information" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831F5DB46070C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831304487E60C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="58" y="73"/>
+            <targetAnchor x="634" y="48"/>
+            <bendingPoints x="684" y="879"/>
+          </sourceConnections>
+          <location x="624" y="783"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8320615B7A00C14D92023D9DE84D" id="A1DD831F134AB1B0C14D92023D9DE84D" name="Send response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD831F21FCE6B0C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831F1E008BC0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="108" y="37"/>
+            <targetAnchor x="20" y="20"/>
+          </sourceConnections>
+          <location x="181" y="1706"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD831F8F3457E0C14D92023D9DE84D"/>
+          <outMessage/>
+          <webService interface="modtechwsdl:ModifyTechnicalProcess_PT" operation="modifyTechnicalProcess" role="modifyTechnicalProcess_Provider" partnerLink="modifyTechnicalProcess" partnerLinkType="modtechwsdl:modifyTechnicalProcess_LT"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD831F21FCE6B0C14D92023D9DE84D" id="A1DD831F1E008BC0C14D92023D9DE84D" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="402" y="1726"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD831FD9540550C14D92023D9DE84D" id="A1DD831FCDDAB430C14D92023D9DE84D" name="Modify Technical Process in TPC">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8320052CD800C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD832000DF4FD0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="110" y="41"/>
+            <targetAnchor x="46" y="46"/>
+            <boundaryEvent id="A1DD832008F72670C14D92023D9DE84D">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD832008F72671C14D92023D9DE84D">
+                <error message="A1DD8320387D97D0C14D92023D9DE84D" errorCode="tpcwsdl:vispFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD8320615B7A00C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD831F134AB1B0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="62" y="72"/>
+            <targetAnchor x="57" y="38"/>
+          </sourceConnections>
+          <location x="179" y="1565"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD831FCDDAB431C14D92023D9DE84D"/>
+          <outMessage message="A1DD831FCDDAB432C14D92023D9DE84D"/>
+          <webService interface="tpcwsdl:tpcAccess_PT" operation="modifyTechnicalProcess" role="TPC_Provider" partnerLink="TPC" partnerLinkType="tpcwsdl:TPC_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD8320052CD800C14D92023D9DE84D" id="A1DD832000DF4FD0C14D92023D9DE84D" name="Assing error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD832026273A00C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8320223DCAD0C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="109" y="36"/>
+            <targetAnchor x="17" y="19"/>
+          </sourceConnections>
+          <location x="371" y="1565"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD832026273A00C14D92023D9DE84D" id="A1DD8320223DCAD0C14D92023D9DE84D" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="567" y="1582"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD8320297F1790C14D92023D9DE84D">
+            <error errorCode="TPCError"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD833084AD1F30C14D92023D9DE84D" id="A1DD83307794EB20C14D92023D9DE84D" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83309A7A7B50C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD83309767BD10C14D92023D9DE84D">
+            <fontColor/>
+            <lineColor/>
+            <font family="Arial" height="8"/>
+            <sourceAnchor x="55" y="12"/>
+            <targetAnchor x="14" y="19"/>
+          </sourceConnections>
+          <location x="600" y="189"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage/>
+          <outMessage/>
+          <webService/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD83309A7A7B50C14D92023D9DE84D" id="A1DD83309767BD10C14D92023D9DE84D" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <location x="644" y="81"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD83309E5321A0C14D92023D9DE84D">
+            <error errorCode="TPCFault"/>
+          </results>
+        </children>
+        <messages name="visp_Fault" type="tpcwsdl:visp_Fault" id="A1DD8320387D97D0C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.13/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.3/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.9/@children.7/@sourceConnections.1/@boundaryEvent/@triggers.0/@error">
+          <properties name="vispErrorMessage" type="comxsd:VispError"/>
+        </messages>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD8332C6FFF6D0C14D92023D9DE84D" id="A1DD8332C0574090C14D92023D9DE84D" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD83348C141F90C14D92023D9DE84D" name="" routingType="RectilinearHorizontal" target="A1DD8332CF0249A0C14D92023D9DE84D">
+          <fontColor/>
+          <lineColor/>
+          <font family="Arial" height="8"/>
+          <sourceAnchor x="54" y="71"/>
+          <targetAnchor x="17" y="17"/>
+        </sourceConnections>
+        <location x="49" y="298"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage/>
+        <outMessage/>
+        <webService/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD83348C141F90C14D92023D9DE84D" id="A1DD8332CF0249A0C14D92023D9DE84D" name="Send error message">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="95" y="462"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <results xsi:type="bpmn:ErrorResult" id="A1DD83348941C5B0C14D92023D9DE84D" implementation="WebService">
+          <error message="A1DD8334BDD93650C14D92023D9DE84D" errorCode="modtechwsdl:modifyTechnicalProcessFault"/>
+          <webService interface="modtechwsdl:ModifyTechnicalProcess_PT" operation="modifyTechnicalProcess" role="modifyTechnicalProcess_Provider" partnerLink="modifyTechnicalProcess" partnerLinkType="modtechwsdl:modifyTechnicalProcess_LT"/>
+        </results>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD83E8B1888B30E70BA2526EF451F4" id="A1DD83E8AE05CD10E70BA2526EF451F4" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Arial" height="8"/>
+        <location x="91" y="671"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+    </children>
+    <process name="modifyTechnicalProcess" id="A1DD82FC8B430E60C14D92023D9DE84D" targetNamespace="urn:vispproject.org/052007/useCases/34/modifyTechnicalProcess/bpel">
+      <messages name="ModifyTechnicalProcess_Request" type="modtechwsdl:ModifyTechnicalProcess_Request" id="A1DD82FD021DFF40C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
+        <properties name="parameters" type="modtechwsdl:modifyTechnicalProcess"/>
+      </messages>
+      <messages name="queryTPC_Request" type="tpcwsdl:queryTPC_Request" id="A1DD830BC8D53DC1C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage">
+        <properties name="queryTPC_Input" type="tpcwsdl:QueryTPC"/>
+      </messages>
+      <messages name="queryTPC_Response" type="tpcwsdl:queryTPC_Response" id="A1DD830BC8D53DC2C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage">
+        <properties name="queryTPC_Output" type="tpcwsdl:QueryOutType"/>
+      </messages>
+      <messages name="ModifyTechnicalProcess_Response" type="modtechwsdl:ModifyTechnicalProcess_Response" id="A1DD831F8F3457E0C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.11/@inMessage">
+        <properties name="parameters" type="modtechwsdl:modifyTechnicalProcess_Response"/>
+      </messages>
+      <messages name="modifyTPC_Request" type="tpcwsdl:modifyTechnicalProcess_Request" id="A1DD831FCDDAB431C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.13/@inMessage">
+        <properties name="modifyTechnicalProcess_Input" type="tpcwsdl:modifyTechnicalProcess"/>
+      </messages>
+      <messages name="modifyTPC_Response" type="tpcwsdl:modifyTechnicalProcess_Response" id="A1DD831FCDDAB432C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.1/@children.13/@outMessage">
+        <properties name="modifyTechnicalProcess_Output" type="comxsd:String"/>
+      </messages>
+      <messages name="ModifyTechnicalProcess_Error" type="modtechwsdl:ModifyTechnicalProcess_Error" id="A1DD8334BDD93650C14D92023D9DE84D" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error">
+        <properties name="parameters" type="modtechwsdl:modifyTechnicalProcess_Fault"/>
+      </messages>
+      <messages name="copyTechnicalProcessFile_Request" type="tpcwsdl:copyTechnicalProcessFile_Request" id="A1DD83EFB374C6A0E70BA2526EF451F4" messageUsages="//@children.0/@children.0/@children.1/@children.9/@children.7/@inMessage">
+        <properties name="copyTechnicalProcessFile_Input" type="tpcwsdl:copyTechnicalProcessFile"/>
+      </messages>
+      <messages name="copyTechnicalProcessFile_Response" type="tpcwsdl:copyTechnicalProcessFile_Response" id="A1DD83EFB374C6A1E70BA2526EF451F4" messageUsages="//@children.0/@children.0/@children.1/@children.9/@children.7/@outMessage">
+        <properties name="copyTechnicalProcessFile_Output" type="comxsd:String"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpel" value="http://docs.oasis-open.org/wsbpel/2.0/process/executable"/>
+  <xMLNSPrefixMap key="modtechwsdl" value="urn:vispproject.org/052007/useCases/34/modifyTechnicalProcess/wsdl"/>
+  <xMLNSPrefixMap key="tpcwsdl" value="urn:vispproject.org/052007/enterpriseServices/tpc/wsdl"/>
+  <xMLNSPrefixMap key="comxsd" value="urn:vispproject.org/052007/common/xsd"/>
+</bpmn:Diagram>

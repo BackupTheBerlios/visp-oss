@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5406A55FAA30D015C0FEBA49FE75" name="getServicePrice" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-17T15:45:40.953+0200" modificationDate="2008-07-18T09:08:42.093+0200">
+  <children xsi:type="bpmn:Pool" id="A1DD5406D8C5EDD0D015C0FEBA49FE75" name="Get Service Availability - Provider">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="37" y="38"/>
+    <size width="949" height="720"/>
+    <fillColor red="255" green="255" blue="255"/>
+    <children xsi:type="bpmn:Lane" id="A1DD5406D8C5EDD1D015C0FEBA49FE75" name="Lane1">
+      <fontColor/>
+      <lineColor/>
+      <font family="Tahoma" height="8"/>
+      <size height="720"/>
+      <fillColor red="255" green="255" blue="255"/>
+      <children xsi:type="bpmn:StartEvent" id="A1DD5406ED4CC030D015C0FEBA49FE75" name="StartEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5408A7127860D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD54089AC50E60D015C0FEBA49FE75">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="26" y="13"/>
+          <targetAnchor x="92" y="47"/>
+        </sourceConnections>
+        <location x="61" y="39"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD5408A7127860D015C0FEBA49FE75" id="A1DD54089AC50E60D015C0FEBA49FE75" name="Catch all" activityType="Subprocess">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C1CD0F560D015C0FEBA49FE75" name="" routingType="RectilinearVertical" target="A1DD540C18D47360D015C0FEBA49FE75">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="19" y="171"/>
+          <targetAnchor x="60" y="15"/>
+          <bendingPoints x="157" y="197"/>
+          <boundaryEvent id="A1DD540C2114E0A0D015C0FEBA49FE75">
+            <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD540C2114E0A1D015C0FEBA49FE75">
+              <error/>
+            </triggers>
+          </boundaryEvent>
+        </sourceConnections>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C9E157510D015C0FEBA49FE75" name="" routingType="RectilinearVertical" target="A1DD540C9B28B560D015C0FEBA49FE75">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="6" y="627"/>
+          <targetAnchor x="12" y="17"/>
+          <bendingPoints x="124" y="652"/>
+        </sourceConnections>
+        <location x="190" y="18"/>
+        <size width="709" height="690"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5408FFC58830D015C0FEBA49FE75" id="A1DD5408ACA6B160D015C0FEBA49FE75" name="Receive request" taskType="Receive" instantiate="true">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5408F7F541E0D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD5408E3D28880D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="114" y="40"/>
+            <targetAnchor x="29" y="38"/>
+          </sourceConnections>
+          <location x="113" y="49"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD54951DA907A0F669D265E946F168"/>
+          <webService interface="trdavailablwsdl:getServiceAvailability_PT" operation="getServiceAvailability" role="getServiceAvailability_Provider" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5408F7F541E0D015C0FEBA49FE75" id="A1DD5408E3D28880D015C0FEBA49FE75" name="Initialize error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD54091C392990D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540911A27040D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="58" y="78"/>
+            <targetAnchor x="58" y="33"/>
+          </sourceConnections>
+          <location x="290" y="50"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:StartEvent" id="A1DD5408FD632E30D015C0FEBA49FE75" name="StartEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5408FFC58830D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD5408ACA6B160D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="28" y="15"/>
+            <targetAnchor x="36" y="36"/>
+          </sourceConnections>
+          <location x="28" y="70"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD54091C392990D015C0FEBA49FE75" id="A1DD540911A27040D015C0FEBA49FE75" name="Prepare message for erp-ms" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5409383CCB10D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD54092F31BAD0D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="60" y="68"/>
+            <targetAnchor x="57" y="19"/>
+          </sourceConnections>
+          <location x="291" y="178"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5409383CCB10D015C0FEBA49FE75" id="A1DD54092F31BAD0D015C0FEBA49FE75" name="Get Service Availability">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540948788640D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540945A14A60D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="8" y="42"/>
+            <targetAnchor x="80" y="44"/>
+            <boundaryEvent id="A1DD540950E61E00D015C0FEBA49FE75">
+              <triggers xsi:type="bpmn:ErrorTrigger" id="A1DD540950E61E01D015C0FEBA49FE75">
+                <error message="A1DD549583D86480F669D265E946F168" errorCode="erpmswsdl:ErpFault"/>
+              </triggers>
+            </boundaryEvent>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540AFBC7BBC0D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540AF758C8E0D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="66" y="69"/>
+            <targetAnchor x="24" y="30"/>
+          </sourceConnections>
+          <location x="292" y="309"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD54956320B0D0F669D265E946F168"/>
+          <outMessage message="A1DD5495767FCC10F669D265E946F168"/>
+          <webService interface="erpmswsdl:erpMs_PT" operation="GetServiceAvailability" role="erp-ms_Provider" partnerLink="erp-ms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD540948788640D015C0FEBA49FE75" id="A1DD540945A14A60D015C0FEBA49FE75" name="Assign error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540A1E24D780D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540A183D4E60D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="64" y="11"/>
+            <targetAnchor x="16" y="15"/>
+          </sourceConnections>
+          <location x="114" y="309"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD540A1E24D780D015C0FEBA49FE75" id="A1DD540A183D4E60D015C0FEBA49FE75" name="EndEvent1">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="161" y="205"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD540A224E8400D015C0FEBA49FE75">
+            <error errorCode="CommunicationFault"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Gateway" targetConnections="A1DD540AFBC7BBC0D015C0FEBA49FE75" id="A1DD540AF758C8E0D015C0FEBA49FE75" name="Gateway1" exclusiveGatewayType="EventBased">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540B15A967A0D015C0FEBA49FE75" name="" routingType="RectilinearVertical" target="A1DD54959BC7B640F669D265E946F168">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="4" y="24"/>
+            <targetAnchor x="53" y="37"/>
+          </sourceConnections>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540BC2542210D015C0FEBA49FE75" name="" routingType="RectilinearVertical" target="A1DD5495BB8EA150F669D265E946F168">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="40" y="24"/>
+            <targetAnchor x="40" y="38"/>
+          </sourceConnections>
+          <location x="329" y="446"/>
+          <size width="51" height="51"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5495D6D5D0A0F669D265E946F168" id="A1DD540BCE01F0B0D015C0FEBA49FE75" name="Assing error message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540BF25DCD30D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540BE6CEF840D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="5"/>
+            <targetAnchor x="15" y="18"/>
+          </sourceConnections>
+          <location x="477" y="303"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD540BF25DCD30D015C0FEBA49FE75" id="A1DD540BE6CEF840D015C0FEBA49FE75" name="EndEvent2">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="516" y="205"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <results xsi:type="bpmn:ErrorResult" id="A1DD540BE9E8E270D015C0FEBA49FE75">
+            <error errorCode="priceUnavailable"/>
+          </results>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD5495A9336180F669D265E946F168" id="A1DD540BF7D55670D015C0FEBA49FE75" name="Prepare response message" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C10181F60D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD5495E7602100F669D265E946F168">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="113" y="39"/>
+            <targetAnchor x="15" y="35"/>
+          </sourceConnections>
+          <location x="119" y="567"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" targetConnections="A1DD540C14D0EC80D015C0FEBA49FE75" id="A1DD540C1355BE30D015C0FEBA49FE75" name="EndEvent3">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <location x="499" y="592"/>
+          <size width="31" height="31"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD540B15A967A0D015C0FEBA49FE75" id="A1DD54959BC7B640F669D265E946F168" name="Get Service Availability Response" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5495A9336180F669D265E946F168" name="" routingType="RectilinearHorizontal" target="A1DD540BF7D55670D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="61" y="66"/>
+            <targetAnchor x="55" y="28"/>
+          </sourceConnections>
+          <location x="116" y="432"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD54959BC7B641F669D265E946F168"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="GetServiceAvailability_Response" role="erp-ms_Requester" partnerLink="erp-ms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD540BC2542210D015C0FEBA49FE75" id="A1DD5495BB8EA150F669D265E946F168" name="Get Service Availability Error" taskType="Receive">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD5495D6D5D0A0F669D265E946F168" name="" routingType="RectilinearHorizontal" target="A1DD540BCE01F0B0D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="60" y="19"/>
+            <targetAnchor x="61" y="44"/>
+          </sourceConnections>
+          <location x="478" y="431"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <outMessage message="A1DD5495BB8EA151F669D265E946F168"/>
+          <webService interface="erpmswsdl:erpMs_CB" operation="GetServiceAvailability_Error" role="erp-ms_Requester" partnerLink="erp-ms" partnerLinkType="erpmswsdl:erp-ms_LT"/>
+        </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DD540C10181F60D015C0FEBA49FE75" id="A1DD5495E7602100F669D265E946F168" name="Send response" taskType="Send">
+          <fontColor/>
+          <lineColor/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C14D0EC80D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540C1355BE30D015C0FEBA49FE75">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="107" y="36"/>
+            <targetAnchor x="28" y="18"/>
+          </sourceConnections>
+          <location x="301" y="571"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+          <inMessage message="A1DD5495E7602101F669D265E946F168"/>
+          <webService interface="trdavailablwsdl:getServiceAvailability_CB" operation="getServiceAvailability_Response" role="getServiceAvailability_Requester" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+        </children>
+        <messages name="ErpFault" type="erpmswsdl:ErpFault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD549583D86480F669D265E946F168">
+          <properties name="parameters" type="erpmswsdl:ErpFault"/>
+        </messages>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD540C1CD0F560D015C0FEBA49FE75" id="A1DD540C18D47360D015C0FEBA49FE75" name="Finalize error message" taskType="None">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C6AD2E610D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD549659EFFAB0F669D265E946F168">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="59" y="73"/>
+          <targetAnchor x="61" y="10"/>
+        </sourceConnections>
+        <location x="40" y="263"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD540C8A869740D015C0FEBA49FE75" id="A1DD540C7DA79BA0D015C0FEBA49FE75" name="EndEvent1">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="88" y="533"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:EndEvent" targetConnections="A1DD540C9E157510D015C0FEBA49FE75" id="A1DD540C9B28B560D015C0FEBA49FE75" name="EndEvent2">
+        <fontColor/>
+        <lineColor/>
+        <font family="Tahoma" height="8"/>
+        <location x="53" y="635"/>
+        <size width="31" height="31"/>
+        <fillColor red="255" green="255" blue="255"/>
+      </children>
+      <children xsi:type="bpmn:Activity" targetConnections="A1DD540C6AD2E610D015C0FEBA49FE75" id="A1DD549659EFFAB0F669D265E946F168" name="Send error message" taskType="Send">
+        <fontColor/>
+        <lineColor/>
+        <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD540C8A869740D015C0FEBA49FE75" name="" routingType="RectilinearHorizontal" target="A1DD540C7DA79BA0D015C0FEBA49FE75">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceAnchor x="64" y="70"/>
+          <targetAnchor x="14" y="13"/>
+        </sourceConnections>
+        <location x="41" y="404"/>
+        <size width="120" height="80"/>
+        <fillColor red="255" green="255" blue="255"/>
+        <inMessage message="A1DD549659EFFAB1F669D265E946F168"/>
+        <webService interface="trdavailablwsdl:getServiceAvailability_CB" operation="getServiceAvailability_Error" role="getServiceAvailability_Requester" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
+      </children>
+    </children>
+    <process name="getServiceAvailability" id="A1DD5406EDEC5B90D015C0FEBA49FE75" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/getServiceAvailability/bpel">
+      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DD54951DA907A0F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability"/>
+      </messages>
+      <messages name="erpms_GetServiceAvailability_Request" type="erpmswsdl:GetServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DD54956320B0D0F669D265E946F168">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability"/>
+      </messages>
+      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD5495767FCC10F669D265E946F168">
+        <properties name="parameters" type="erpmswsdl:SynchronousConfirmation"/>
+      </messages>
+      <messages name="erpms_GetServiceAvailability_Response" type="erpmswsdl:GetServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.1/@children.12/@outMessage" id="A1DD54959BC7B641F669D265E946F168">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Response"/>
+      </messages>
+      <messages name="erpms_GetServiceAvailability_Error" type="erpmswsdl:GetServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.1/@children.13/@outMessage" id="A1DD5495BB8EA151F669D265E946F168">
+        <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Error"/>
+      </messages>
+      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.1/@children.14/@inMessage" id="A1DD5495E7602101F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Response"/>
+      </messages>
+      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.5/@inMessage" id="A1DD549659EFFAB1F669D265E946F168">
+        <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Error"/>
+      </messages>
+    </process>
+    <participant>
+      <role name="Participant1"/>
+    </participant>
+  </children>
+  <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
+  <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+  <xMLNSPrefixMap key="trdgetpricewsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/getServicePrice/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\businessProcesses\trading\common\getServicePrice\wsdl\getServicePrice.wsdl"/>
+  <xMLNSPrefixMap key="erpmswsdl" value="urn:vispproject.org/052007/mediationServices/erp/erp-ms/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\mediationServices\erp\erp-ms\wsdl\erp-ms.wsdl"/>
+  <xMLNSPrefixMap key="trdavailablwsdl" value="urn:vispproject.org/052007/processes/bp/trading/common/getServiceAvailability/wsdl" location="D:\ITTI\Workspaces\dev_3_AB\Project\modeling\businessProcesses\trading\common\getServiceAvailability\wsdl\getServiceAvailability.wsdl"/>
+</bpmn:Diagram>
