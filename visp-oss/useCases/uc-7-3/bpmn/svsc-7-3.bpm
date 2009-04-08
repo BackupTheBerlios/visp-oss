@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC103C2BAF1950DF25E344B1D49F67" name="comissionServiceSet" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-06-01T14:32:32.859+0200" modificationDate="2008-08-06T11:11:04.859+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC103C2BAF1950DF25E344B1D49F67" name="comissionServiceSet" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-06-01T15:32:32.859+0300" modificationDate="2009-04-08T14:52:53.804+0300">
   <children xsi:type="bpmn:Pool" id="A1DC135AEB5E6A50F5C0883C3DC80C0D" name="VISP Application - SVS Commission">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="12" y="12"/>
+    <location x="13" y="174"/>
     <size width="1134" height="1418"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DC135AEB5E6A51F5C0883C3DC80C0D" name="Lane1">
@@ -424,16 +424,16 @@
             <inMessage message="A1DC2BA0C4851510FB5CCD9093FDA4FA"/>
             <webService interface="cmssiwsdl:commissionService_PT" operation="commissionService_Request" role="commissionService_Provider" partnerLink="commissionService" partnerLinkType="cmssiwsdl:commissionService_LT"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop"/>
-          <messages name="commissionService_Request" type="cmssiwsdl:commissionService_Request" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.9/@inMessage" id="A1DC2BA0C4851510FB5CCD9093FDA4FA">
+          <messages name="commissionService_Request" type="cmssiwsdl:commissionService_Request" id="A1DC2BA0C4851510FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.9/@inMessage">
             <properties name="commissionService_Input" type="cmssiwsdl:CommissionService_Input"/>
           </messages>
-          <messages name="commissionService_Response" type="cmssiwsdl:commissionService_Response" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.0/@outMessage" id="A1DC2BA0DA1938C0FB5CCD9093FDA4FA">
+          <messages name="commissionService_Response" type="cmssiwsdl:commissionService_Response" id="A1DC2BA0DA1938C0FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.0/@outMessage">
             <properties name="commissionService_Output" type="cmssiwsdl:CommissionService_Output"/>
           </messages>
           <messages name="commissionService_Fault" type="cmssiwsdl:commissionService_Fault" id="A1DC2BA0DB754650FB5CCD9093FDA4FA">
             <properties name="vispError" type="comxsd:VispError"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop"/>
         </children>
         <children xsi:type="bpmn:EndEvent" targetConnections="A1DC15B08413CDB0D0C39B7A836DBF4F" id="A1DC15B065E97BA0D0C39B7A836DBF4F" name="EndEvent1">
           <fontColor/>
@@ -742,22 +742,22 @@
           <outMessage message="A1DD5CBACE645FE0E736FC450B9A340D"/>
           <webService interface="sscwsdl:sscEnterpriseService_PT" operation="serviceForestToList" role="sscEnterpriseService_Provider" partnerLink="sscEnterpriseService" partnerLinkType="sscwsdl:sscEnterpriseService_LT"/>
         </children>
-        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" messageUsages="//@children.0/@children.0/@children.0/@children.1/@inMessage" id="A1DC2B9FACA5E560FB5CCD9093FDA4FA">
+        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" id="A1DC2B9FACA5E560FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.1/@inMessage">
           <properties name="parameters" type="sscmsgxsd:getServiceSet"/>
         </messages>
-        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" messageUsages="//@children.0/@children.0/@children.0/@children.1/@outMessage" id="A1DC2B9FAF038470FB5CCD9093FDA4FA">
+        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" id="A1DC2B9FAF038470FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.1/@outMessage">
           <properties name="parameters" type="sscmsgxsd:getServiceSetResponse"/>
         </messages>
-        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" messageUsages="//@children.0/@children.0/@children.0/@children.9/@inMessage //@children.0/@children.0/@children.0/@children.4/@inMessage" id="A1DC2B9FCEEBB320FB5CCD9093FDA4FA">
+        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" id="A1DC2B9FCEEBB320FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.9/@inMessage //@children.0/@children.0/@children.0/@children.4/@inMessage">
           <properties name="parameters" type="sscmsgxsd:setOperationalStatus"/>
         </messages>
-        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" messageUsages="//@children.0/@children.0/@children.0/@children.9/@outMessage //@children.0/@children.0/@children.0/@children.4/@outMessage" id="A1DC2B9FD0219B10FB5CCD9093FDA4FA">
+        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" id="A1DC2B9FD0219B10FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.9/@outMessage //@children.0/@children.0/@children.0/@children.4/@outMessage">
           <properties name="parameters" type="sscmsgxsd:setOperationalStatusReponse"/>
         </messages>
-        <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.0/@children.1/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.0/@children.9/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.0/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DC2BA0135F80E0FB5CCD9093FDA4FA">
+        <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" id="A1DC2BA0135F80E0FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.1/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.0/@children.9/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.0/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
           <properties name="vispError" type="comxsd:VispError"/>
         </messages>
-        <messages name="serviceTreeToList_Fault" type="sscwsdl:serviceTreeToList_Fault" messageUsages="//@children.0/@children.0/@children.0/@children.30/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DC2BA0607563E0FB5CCD9093FDA4FA">
+        <messages name="serviceTreeToList_Fault" type="sscwsdl:serviceTreeToList_Fault" id="A1DC2BA0607563E0FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.0/@children.30/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
           <properties name="vispError" type="comxsd:VispError"/>
         </messages>
       </children>
@@ -1028,48 +1028,55 @@
       </children>
     </children>
     <process name="svsc-7-3-gen" id="A1DC135C538534F0F5C0883C3DC80C0D" targetNamespace="urn:vispproject.org/052007/useCases/commissionSvS/bpel">
-      <messages name="commissionServiceSet_Request" type="cmssvswsdl:commissionServiceSet_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DC2B9F42D98BA0FB5CCD9093FDA4FA">
+      <messages name="commissionServiceSet_Request" type="cmssvswsdl:commissionServiceSet_Request" id="A1DC2B9F42D98BA0FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.1/@outMessage">
         <properties name="commissionServiceSet_Input" type="cmssvswsdl:CommissionServiceSet_Input"/>
       </messages>
-      <messages name="commissionServiceSet_Response" type="cmssvswsdl:commissionServiceSet_Response" messageUsages="//@children.0/@children.0/@children.2/@inMessage" id="A1DC2BA109D8E290FB5CCD9093FDA4FA">
+      <messages name="commissionServiceSet_Response" type="cmssvswsdl:commissionServiceSet_Response" id="A1DC2BA109D8E290FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.2/@inMessage">
         <properties name="commissionServiceSet_Output" type="cmssvswsdl:CommissionServiceSet_Output"/>
       </messages>
-      <messages name="commissionServiceSet_Fault" type="cmssvswsdl:commissionServiceSet_Fault" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DC2BA10B13AC80FB5CCD9093FDA4FA">
+      <messages name="commissionServiceSet_Fault" type="cmssvswsdl:commissionServiceSet_Fault" id="A1DC2BA10B13AC80FB5CCD9093FDA4FA" messageUsages="//@children.0/@children.0/@children.3/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="commissionService_Fault" type="cmssiwsdl:commissionService_Fault" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.1/@outMessage" id="A1DC2BA6A24700C0E108968408DE104A">
+      <messages name="commissionService_Fault" type="cmssiwsdl:commissionService_Fault" id="A1DC2BA6A24700C0E108968408DE104A" messageUsages="//@children.0/@children.0/@children.0/@children.10/@children.1/@outMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="commissionSvS_syncFault" type="cmssvswsdl:commissionSvS_syncFault" messageUsages="//@children.0/@children.0/@children.8/@inMessage" id="A1DCCB4F7989A131E089D49B75451A47">
+      <messages name="commissionSvS_syncFault" type="cmssvswsdl:commissionSvS_syncFault" id="A1DCCB4F7989A131E089D49B75451A47" messageUsages="//@children.0/@children.0/@children.8/@inMessage">
         <properties name="commissionServiceSet_Input" type="cmssvswsdl:CommissionServiceSet_Input"/>
       </messages>
-      <messages name="commissionSvS_syncResponse" type="cmssvswsdl:commissionSvS_syncResponse" messageUsages="//@children.0/@children.0/@children.0/@children.23/@inMessage" id="A1DCCB4F7989A132E089D49B75451A47">
+      <messages name="commissionSvS_syncResponse" type="cmssvswsdl:commissionSvS_syncResponse" id="A1DCCB4F7989A132E089D49B75451A47" messageUsages="//@children.0/@children.0/@children.0/@children.23/@inMessage">
         <properties name="parameters" type="cmssvswsdl:CommissionSvS_SyncOutput"/>
       </messages>
-      <messages name="RegisterSalesOrderForCustomer_Request" type="erpmswsdl:RegisterSalesOrderForCustomer_Request" messageUsages="//@children.0/@children.0/@children.0/@children.25/@inMessage" id="A1DD5CB8615940C1E736FC450B9A340D">
+      <messages name="RegisterSalesOrderForCustomer_Request" type="erpmswsdl:RegisterSalesOrderForCustomer_Request" id="A1DD5CB8615940C1E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.25/@inMessage">
         <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer"/>
       </messages>
-      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" messageUsages="//@children.0/@children.0/@children.0/@children.25/@outMessage" id="A1DD5CB8615BB1C0E736FC450B9A340D">
+      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" id="A1DD5CB8615BB1C0E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.25/@outMessage">
         <properties name="parameters" type="erpmswsdl:SynchronousConfirmation"/>
       </messages>
-      <messages name="RegisterSalesOrderForCustomer_Response" type="erpmswsdl:RegisterSalesOrderForCustomer_Response" messageUsages="//@children.0/@children.0/@children.0/@children.27/@outMessage" id="A1DD5CB883769EF1E736FC450B9A340D">
+      <messages name="RegisterSalesOrderForCustomer_Response" type="erpmswsdl:RegisterSalesOrderForCustomer_Response" id="A1DD5CB883769EF1E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.27/@outMessage">
         <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer_Response"/>
       </messages>
-      <messages name="RegisterSalesOrderForCustomer_Error" type="erpmswsdl:RegisterSalesOrderForCustomer_Error" messageUsages="//@children.0/@children.0/@children.0/@children.28/@outMessage" id="A1DD5CB8890866F1E736FC450B9A340D">
+      <messages name="RegisterSalesOrderForCustomer_Error" type="erpmswsdl:RegisterSalesOrderForCustomer_Error" id="A1DD5CB8890866F1E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.28/@outMessage">
         <properties name="parameters" type="erpmswsdl:RegisterSalesOrderForCustomer_Error"/>
       </messages>
-      <messages name="serviceForestToListRequest" type="sscwsdl:serviceForestToListRequest" messageUsages="//@children.0/@children.0/@children.0/@children.30/@inMessage" id="A1DD5CBACE5FA4F1E736FC450B9A340D"/>
-      <messages name="serviceForestToListResponse" type="sscwsdl:serviceForestToListResponse" messageUsages="//@children.0/@children.0/@children.0/@children.30/@outMessage" id="A1DD5CBACE645FE0E736FC450B9A340D"/>
-      <messages name="setSSCFaultStatus_Request" type="sscwsdl:setSSCFaultStatus_Request" messageUsages="//@children.0/@children.0/@children.10/@inMessage //@children.0/@children.0/@children.12/@inMessage" id="A1DD639702CD6691C88CC49C7E4601F2">
+      <messages name="serviceForestToListRequest" type="sscwsdl:serviceForestToListRequest" id="A1DD5CBACE5FA4F1E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.30/@inMessage"/>
+      <messages name="serviceForestToListResponse" type="sscwsdl:serviceForestToListResponse" id="A1DD5CBACE645FE0E736FC450B9A340D" messageUsages="//@children.0/@children.0/@children.0/@children.30/@outMessage"/>
+      <messages name="setSSCFaultStatus_Request" type="sscwsdl:setSSCFaultStatus_Request" id="A1DD639702CD6691C88CC49C7E4601F2" messageUsages="//@children.0/@children.0/@children.10/@inMessage //@children.0/@children.0/@children.12/@inMessage">
         <properties name="parameters" type="sscwsdl:setSSCFaultStatus"/>
       </messages>
-      <messages name="setSSCFaultStatus_Response" type="sscwsdl:setSSCFaultStatus_Response" messageUsages="//@children.0/@children.0/@children.10/@outMessage //@children.0/@children.0/@children.12/@outMessage" id="A1DD639702D24890C88CC49C7E4601F2">
+      <messages name="setSSCFaultStatus_Response" type="sscwsdl:setSSCFaultStatus_Response" id="A1DD639702D24890C88CC49C7E4601F2" messageUsages="//@children.0/@children.0/@children.10/@outMessage //@children.0/@children.0/@children.12/@outMessage">
         <properties name="parameters" type="sscwsdl:setSSCFaultStatus_Output"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="9" y="8"/>
+    <size width="817"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

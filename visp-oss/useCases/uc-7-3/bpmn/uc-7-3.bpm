@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC103C2BAF1950DF25E344B1D49F67" name="comissionServiceSet" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-06-01T14:32:32.859+0200" modificationDate="2007-08-24T14:17:21.156+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC103C2BAF1950DF25E344B1D49F67" name="comissionServiceSet" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-06-01T15:32:32.859+0300" modificationDate="2009-04-08T14:51:27.007+0300">
   <children xsi:type="bpmn:Pool" id="A1DC10531ACC0320DF25E344B1D49F67" name="User Interface">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="16" y="24"/>
+    <location x="17" y="177"/>
     <size width="2097" height="997"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DC10531ACC0321DF25E344B1D49F67" name="Lane1">
@@ -733,6 +733,13 @@
     <participant>
       <role name="Participant2"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="14" y="10"/>
+    <size width="798"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC6DC585E89770F00FB21953B8142E" name="Get Offer Details" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-09-28T15:20:03.687+0200" modificationDate="2007-12-05T09:01:26.642+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC6DC585E89770F00FB21953B8142E" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="Get Offer Details" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-09-28T16:20:03.687+0300" modificationDate="2009-04-08T14:27:34.179+0300">
   <children xsi:type="bpmn:Pool" id="A1DC6DC5B208D360F00FB21953B8142E" name="Get Offer Details - process on Provider's side">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="78" y="43"/>
+    <location x="75" y="174"/>
     <size width="887" height="631"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DC6DC5B208D361F00FB21953B8142E" name="Lane1">
@@ -370,20 +370,27 @@
       </children>
     </children>
     <process name="getOfferDetails" id="A1DC6DC5D5017660F00FB21953B8142E" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/getOfferDetails/bpel">
-      <messages name="getOfferDetails_Response" type="trdgetofferwsdl:getOfferDetails_Response" messageUsages="//@children.0/@children.0/@children.4/@inMessage" id="A1DC77FEEB9A51B0FBAAF1CA7DFF25AE">
+      <messages name="getOfferDetails_Response" type="trdgetofferwsdl:getOfferDetails_Response" id="A1DC77FEEB9A51B0FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.4/@inMessage">
         <properties name="parameters" type="trdgetoffer:getOfferDetails_Response"/>
       </messages>
-      <messages name="getOfferDetails_Fault" type="trdgetofferwsdl:getOfferDetails_Fault" messageUsages="//@children.0/@children.0/@children.2/@inMessage" id="A1DC77FEECE82E70FBAAF1CA7DFF25AE">
+      <messages name="getOfferDetails_Fault" type="trdgetofferwsdl:getOfferDetails_Fault" id="A1DC77FEECE82E70FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.2/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="getOfferDetails_Request" type="trdgetofferwsdl:getOfferDetails_Request" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage" id="A1DC77FF107E22E0FBAAF1CA7DFF25AE"/>
-      <messages name="ShowQuote" type="trdgetquotewsdl:ShowQuote" messageUsages="//@children.0/@children.0/@children.1/@children.3/@children.0/@outMessage" id="A1DC77FFDA64D7C0FBAAF1CA7DFF25AE"/>
-      <messages name="ConfirmBOD" type="trdgetquotewsdl:ConfirmBOD" messageUsages="//@children.0/@children.0/@children.1/@children.3/@children.2/@outMessage" id="A1DC77FFDC5005F0FBAAF1CA7DFF25AE"/>
-      <messages name="ProcessRFQ" type="trdgetquotewsdl:ProcessRFQ" messageUsages="//@children.0/@children.0/@children.1/@children.2/@inMessage" id="A1DC77FFE73F1871FBAAF1CA7DFF25AE"/>
+      <messages name="getOfferDetails_Request" type="trdgetofferwsdl:getOfferDetails_Request" id="A1DC77FF107E22E0FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage"/>
+      <messages name="ShowQuote" type="trdgetquotewsdl:ShowQuote" id="A1DC77FFDA64D7C0FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.1/@children.3/@children.0/@outMessage"/>
+      <messages name="ConfirmBOD" type="trdgetquotewsdl:ConfirmBOD" id="A1DC77FFDC5005F0FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.1/@children.3/@children.2/@outMessage"/>
+      <messages name="ProcessRFQ" type="trdgetquotewsdl:ProcessRFQ" id="A1DC77FFE73F1871FBAAF1CA7DFF25AE" messageUsages="//@children.0/@children.0/@children.1/@children.2/@inMessage"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="71" y="3"/>
+    <size width="811"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

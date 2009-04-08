@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCFCDF7D835DA0E0C5FF08F2D265C1" name="ttp-65" author="kpe" version="1.0" language="Deutsch" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-28T16:56:12.450+0100" modificationDate="2008-08-13T18:14:35.812+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCFCDF7D835DA0E0C5FF08F2D265C1" name="ttp-65" author="kpe" version="1.0" language="Deutsch" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-28T17:56:12.450+0200" modificationDate="2009-04-08T14:25:01.820+0300">
   <children xsi:type="bpmn:Pool" id="A1DCFCDF874D2A00E0C5FF08F2D265C1" name="WMES">
     <fontColor/>
     <lineColor/>
@@ -169,9 +169,9 @@
       </children>
     </children>
     <process name="WMES" id="A1DCFCE06B6B4BE1E0C5FF08F2D265C1">
-      <messages name="addWorklistItem_Request" type="wmeswsdl:addWorklistItem_Request" messageUsages="//@children.0/@children.0/@children.0/@children.0/@outMessage" id="A1DCFCE10B079641E0C5FF08F2D265C1"/>
-      <messages name="addWorklistItem_Response" type="wmeswsdl:addWorklistItem_Response" messageUsages="//@children.0/@children.0/@children.0/@children.1/@inMessage //@children.0/@children.0/@children.0/@children.2/@inMessage" id="A1DCFCE10B079642E0C5FF08F2D265C1"/>
-      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" messageUsages="//@children.0/@children.0/@children.0/@children.4/@inMessage" id="A1DD176B07E94311D6DD95F30F5CB2AD"/>
+      <messages name="addWorklistItem_Request" type="wmeswsdl:addWorklistItem_Request" id="A1DCFCE10B079641E0C5FF08F2D265C1" messageUsages="//@children.0/@children.0/@children.0/@children.0/@outMessage"/>
+      <messages name="addWorklistItem_Response" type="wmeswsdl:addWorklistItem_Response" id="A1DCFCE10B079642E0C5FF08F2D265C1" messageUsages="//@children.0/@children.0/@children.0/@children.1/@inMessage //@children.0/@children.0/@children.0/@children.2/@inMessage"/>
+      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" id="A1DD176B07E94311D6DD95F30F5CB2AD" messageUsages="//@children.0/@children.0/@children.0/@children.4/@inMessage"/>
     </process>
     <participant>
       <role name="Participant1"/>
@@ -491,13 +491,13 @@
               <error errorCode="Item execution error"/>
             </results>
           </children>
-          <loop xsi:type="bpmn:StandardLoop" loopCondition="completed" testTime="Before"/>
           <messages name="AddWorklistItem_Response" type="wmeswsdl:AddWorklistItem_Response" id="A1DD1600E0A87390EA48EE06A2EE06A4">
             <properties name="parameters" type="wmeswsdl:AddWorklistItem_Response"/>
           </messages>
           <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" id="A1DD1600E3D326A0EA48EE06A2EE06A4">
             <properties name="parameters" type="wmeswsdl:Wmes_Fault"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop" loopCondition="completed" testTime="Before"/>
         </children>
         <children xsi:type="bpmn:Activity" targetConnections="A1DCFCE25C6B5A20E0C5FF08F2D265C1 A1DCFE3A714D1E70E3F984E1C03A91D3" id="A1DCFCE24C002A80E0C5FF08F2D265C1" name="Prepare timeout fault message" taskType="None">
           <fontColor/>
@@ -704,13 +704,13 @@
           <location x="685" y="495"/>
           <fillColor red="255" green="255" blue="255"/>
         </children>
-        <messages name="AddWorklistItem_SyncRequest" type="wmeswsdl:AddWorklistItem_SyncRequest" messageUsages="//@children.1/@children.0/@children.0/@children.0/@inMessage" id="A1DD16009EC93360EA48EE06A2EE06A4">
+        <messages name="AddWorklistItem_SyncRequest" type="wmeswsdl:AddWorklistItem_SyncRequest" id="A1DD16009EC93360EA48EE06A2EE06A4" messageUsages="//@children.1/@children.0/@children.0/@children.0/@inMessage">
           <properties name="parameters" type="wmeswsdl:AddWorklistItem"/>
         </messages>
-        <messages name="AddWorklistItem_SyncResponse" type="wmeswsdl:AddWorklistItem_SyncResponse" messageUsages="//@children.1/@children.0/@children.0/@children.0/@outMessage" id="A1DD1600A0F254F0EA48EE06A2EE06A4">
+        <messages name="AddWorklistItem_SyncResponse" type="wmeswsdl:AddWorklistItem_SyncResponse" id="A1DD1600A0F254F0EA48EE06A2EE06A4" messageUsages="//@children.1/@children.0/@children.0/@children.0/@outMessage">
           <properties name="parameters" type="wmeswsdl:AddWorklistItem_SyncResponse"/>
         </messages>
-        <messages name="AddWorklistItem_SyncFault" type="wmeswsdl:AddWorklistItem_SyncFault" messageUsages="//@children.1/@children.0/@children.0/@children.0/@sourceConnections.1/@boundaryEvent/@triggers.0/@error" id="A1DD1600A30F8FA0EA48EE06A2EE06A4">
+        <messages name="AddWorklistItem_SyncFault" type="wmeswsdl:AddWorklistItem_SyncFault" id="A1DD1600A30F8FA0EA48EE06A2EE06A4" messageUsages="//@children.1/@children.0/@children.0/@children.0/@sourceConnections.1/@boundaryEvent/@triggers.0/@error">
           <properties name="parameters" type="wmeswsdl:Wmes_SyncFault"/>
         </messages>
       </children>
@@ -1074,15 +1074,15 @@
       </children>
     </children>
     <process name="invokeWorklist-gen-BPEL1" id="A1DCFCDFEC48C1D0E0C5FF08F2D265C1" targetNamespace="urn:vispproject.org/052007/enterpriseServices/supportingServices/invokeWorklist/bpel">
-      <messages name="AddWorklistItem_Response" type="wmeswsdl:AddWorklistItem_Response" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DD16014538ED80EA48EE06A2EE06A4"/>
-      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.11/@outMessage" id="A1DD16014B0637E0EA48EE06A2EE06A4"/>
-      <messages name="InvokeWorklist_SyncRequest" type="iwlwsdl:InvokeWorklist_SyncRequest" messageUsages="//@children.1/@children.0/@children.16/@outMessage" id="A1DD1764890B4AD0F57DE01D9F64BBA5"/>
-      <messages name="InvokeWorklist_SyncFault" type="iwlwsdl:InvokeWorklist_SyncFault" messageUsages="//@children.1/@children.0/@children.8/@results.0/@error" id="A1DD17649355DFF0F57DE01D9F64BBA5">
+      <messages name="AddWorklistItem_Response" type="wmeswsdl:AddWorklistItem_Response" id="A1DD16014538ED80EA48EE06A2EE06A4" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.0/@outMessage"/>
+      <messages name="AddWorklistItem_Fault" type="wmeswsdl:AddWorklistItem_Fault" id="A1DD16014B0637E0EA48EE06A2EE06A4" messageUsages="//@children.1/@children.0/@children.0/@children.1/@children.11/@outMessage"/>
+      <messages name="InvokeWorklist_SyncRequest" type="iwlwsdl:InvokeWorklist_SyncRequest" id="A1DD1764890B4AD0F57DE01D9F64BBA5" messageUsages="//@children.1/@children.0/@children.16/@outMessage"/>
+      <messages name="InvokeWorklist_SyncFault" type="iwlwsdl:InvokeWorklist_SyncFault" id="A1DD17649355DFF0F57DE01D9F64BBA5" messageUsages="//@children.1/@children.0/@children.8/@results.0/@error">
         <properties name="parameters" type="iwlwsdl:InvokeWorklist_SyncFault"/>
       </messages>
-      <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" messageUsages="//@children.1/@children.0/@children.18/@inMessage" id="A1DD17652E858161F57DE01D9F64BBA5"/>
-      <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" messageUsages="//@children.1/@children.0/@children.19/@inMessage" id="A1DD17657790B191F57DE01D9F64BBA5"/>
-      <messages name="InvokeWorklist_SyncResponse" type="iwlwsdl:InvokeWorklist_SyncResponse" messageUsages="//@children.1/@children.0/@children.20/@inMessage" id="A1DD1765C7B226E2F57DE01D9F64BBA5"/>
+      <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" id="A1DD17652E858161F57DE01D9F64BBA5" messageUsages="//@children.1/@children.0/@children.18/@inMessage"/>
+      <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" id="A1DD17657790B191F57DE01D9F64BBA5" messageUsages="//@children.1/@children.0/@children.19/@inMessage"/>
+      <messages name="InvokeWorklist_SyncResponse" type="iwlwsdl:InvokeWorklist_SyncResponse" id="A1DD1765C7B226E2F57DE01D9F64BBA5" messageUsages="//@children.1/@children.0/@children.20/@inMessage"/>
     </process>
     <participant>
       <role name="Participant2"/>
@@ -1123,7 +1123,7 @@
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location y="1587"/>
+    <location y="1756"/>
     <size width="157"/>
     <fillColor red="255" green="255" blue="255"/>
   </children>
@@ -1269,10 +1269,10 @@
           <size width="120" height="80"/>
           <fillColor red="255" green="255"/>
         </children>
-        <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" messageUsages="//@children.6/@children.0/@children.0/@children.4/@outMessage" id="A1DD177214E845A0D6DD95F30F5CB2AD">
+        <messages name="InvokeWorklist_Response" type="iwlwsdl:InvokeWorklist_Response" id="A1DD177214E845A0D6DD95F30F5CB2AD" messageUsages="//@children.6/@children.0/@children.0/@children.4/@outMessage">
           <properties name="parameters" type="iwlwsdl:InvokeWorklist_Response"/>
         </messages>
-        <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" messageUsages="//@children.6/@children.0/@children.0/@children.3/@outMessage" id="A1DD177216258090D6DD95F30F5CB2AD">
+        <messages name="InvokeWorklist_Fault" type="iwlwsdl:InvokeWorklist_Fault" id="A1DD177216258090D6DD95F30F5CB2AD" messageUsages="//@children.6/@children.0/@children.0/@children.3/@outMessage">
           <properties name="parameters" type="iwlwsdl:InvokeWorklist_Fault"/>
         </messages>
       </children>
@@ -1305,6 +1305,13 @@
     <participant>
       <role name="Participant3"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="-5" y="1587"/>
+    <size width="806"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

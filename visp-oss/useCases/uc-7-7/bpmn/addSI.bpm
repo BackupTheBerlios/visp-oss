@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E3AB5D830D3F7913EC3C00DE7" name="addService" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T13:17:05.843+0100" modificationDate="2008-04-22T16:37:47.953+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E3AB5D830D3F7913EC3C00DE7" name="addService" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T14:17:05.843+0200" modificationDate="2009-04-08T14:49:01.460+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF037DC951EA0D3F7913EC3C00DE7" documentation="" name="Add Service Instance">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="-72" y="-179"/>
+    <location x="-65" y="179"/>
     <size width="1179" height="1056"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF037DC951EA1D3F7913EC3C00DE7" name="Lane1">
@@ -333,25 +333,25 @@
           <size width="120" height="80"/>
           <fillColor red="255" green="255"/>
         </children>
-        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DD107883BEEA70DBBA97A4C15C12EA">
+        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DD107883BEEA70DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
           <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
         </messages>
-        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage" id="A1DD107884EB5C80DBBA97A4C15C12EA">
+        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DD107884EB5C80DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage">
           <properties name="vispError" type="comxsd:VispError"/>
         </messages>
-        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.1/@children.7/@outMessage" id="A1DD107885B87080DBBA97A4C15C12EA">
+        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DD107885B87080DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.7/@outMessage">
           <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
         </messages>
-        <messages name="setServiceInstanceStatus_Request" type="sibwsdl:setServiceInstanceStatus_Request" messageUsages="//@children.0/@children.0/@children.1/@children.5/@inMessage" id="A1DD10789B266E90DBBA97A4C15C12EA">
+        <messages name="setServiceInstanceStatus_Request" type="sibwsdl:setServiceInstanceStatus_Request" id="A1DD10789B266E90DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.5/@inMessage">
           <properties name="SetServiceInstanceStatus_Input" type="sibwsdl:SetServiceInstanceStatus_Input"/>
         </messages>
-        <messages name="setServiceInstanceStatus_Response" type="sibwsdl:setServiceInstanceStatus_Response" messageUsages="//@children.0/@children.0/@children.1/@children.5/@outMessage" id="A1DD10789C4DFEA0DBBA97A4C15C12EA">
+        <messages name="setServiceInstanceStatus_Response" type="sibwsdl:setServiceInstanceStatus_Response" id="A1DD10789C4DFEA0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.5/@outMessage">
           <properties name="setServiceInstanceStatus_Output" type="comxsd:String"/>
         </messages>
-        <messages name="addNewServiceInstance_Request" type="sibwsdl:addNewServiceInstance_Request" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DD1078AD51EBD0DBBA97A4C15C12EA">
+        <messages name="addNewServiceInstance_Request" type="sibwsdl:addNewServiceInstance_Request" id="A1DD1078AD51EBD0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage">
           <properties name="addNewServiceInstance_Input" type="repxsd:ServiceInstanceDescription"/>
         </messages>
-        <messages name="addNewServiceInstance_Response" type="sibwsdl:addNewServiceInstance_Response" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DD1078AEB2DB60DBBA97A4C15C12EA">
+        <messages name="addNewServiceInstance_Response" type="sibwsdl:addNewServiceInstance_Response" id="A1DD1078AEB2DB60DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage">
           <properties name="addNewServiceInstance_Output" type="repxsd:ReferenceNumber"/>
         </messages>
       </children>
@@ -453,19 +453,26 @@
       </children>
     </children>
     <process name="addSI-gen" id="A1DCF037DC951F1CD3F7913EC3C00DE7" targetNamespace="urn:vispproject.org/052007/useCases/addSI/bpel">
-      <messages name="addSI_Request" type="addsiwsdl:addSI_Request" messageUsages="//@children.0/@children.0/@children.0/@outMessage" id="A1DD1078C5F412D0DBBA97A4C15C12EA">
+      <messages name="addSI_Request" type="addsiwsdl:addSI_Request" id="A1DD1078C5F412D0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.0/@outMessage">
         <properties name="addSI_Input" type="addsiwsdl:AddSI_Input"/>
       </messages>
-      <messages name="addSI_Response" type="addsiwsdl:addSI_Response" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DD10792DDC9160DBBA97A4C15C12EA">
+      <messages name="addSI_Response" type="addsiwsdl:addSI_Response" id="A1DD10792DDC9160DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.3/@inMessage">
         <properties name="addSI_Output" type="addsiwsdl:AddSI_Output"/>
       </messages>
-      <messages name="addSI_Fault" type="addsiwsdl:addSI_Fault" messageUsages="//@children.0/@children.0/@children.6/@inMessage" id="A1DD10792F5527A0DBBA97A4C15C12EA">
+      <messages name="addSI_Fault" type="addsiwsdl:addSI_Fault" id="A1DD10792F5527A0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.6/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
     </process>
     <participant>
       <role name="Participant5"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="-68" y="9"/>
+    <size width="811"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

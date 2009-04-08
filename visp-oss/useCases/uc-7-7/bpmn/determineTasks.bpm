@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E2270C550D3F7913EC3C00DE7" name="determineTasks" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T13:16:25.125+0100" modificationDate="2008-04-22T17:04:42.890+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E2270C550D3F7913EC3C00DE7" name="determineTasks" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T14:16:25.125+0200" modificationDate="2009-04-08T14:48:40.710+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF02F5F8BD140D3F7913EC3C00DE7" name="Determine tasks for Service Set Actualization">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="12"/>
+    <location x="13" y="177"/>
     <size width="1057" height="3709"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF02F5F8BD141D3F7913EC3C00DE7" name="Lane1">
@@ -328,13 +328,13 @@
             <location x="405" y="45"/>
             <fillColor red="255" green="255" blue="255"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop"/>
-          <messages name="querySIB_Request" type="sibwsdl:querySIB_Request" messageUsages="//@children.0/@children.0/@children.2/@children.2/@children.2/@inMessage" id="A1DD10711C0EBE20DBBA97A4C15C12EA">
+          <messages name="querySIB_Request" type="sibwsdl:querySIB_Request" id="A1DD10711C0EBE20DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.2/@children.2/@children.2/@inMessage">
             <properties name="querySIB_Input" type="sibwsdl:QueryInType"/>
           </messages>
-          <messages name="querySIB_Response" type="sibwsdl:querySIB_Response" messageUsages="//@children.0/@children.0/@children.2/@children.2/@children.2/@outMessage" id="A1DD107123C4C5B0DBBA97A4C15C12EA">
+          <messages name="querySIB_Response" type="sibwsdl:querySIB_Response" id="A1DD107123C4C5B0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.2/@children.2/@children.2/@outMessage">
             <properties name="querySIB_Output" type="sibwsdl:QueryOutType"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop"/>
         </children>
         <children xsi:type="bpmn:Activity" targetConnections="A1DCF10D75DFEAB0F7F9856E1AF2EE14" id="A1DCF10D6C113C50F7F9856E1AF2EE14" documentation="" name="Prepare a ServicesToBeRemoved list(for storing services to beremoved)" taskType="None">
           <fontColor/>
@@ -647,10 +647,10 @@
             <size width="31" height="31"/>
             <fillColor green="255"/>
           </children>
-          <messages name="querySIB_Request" type="sibwsdl:querySIB_Request" messageUsages="//@children.0/@children.0/@children.2/@children.4/@children.7/@inMessage" id="A1DD10778E0DBAC0DBBA97A4C15C12EA">
+          <messages name="querySIB_Request" type="sibwsdl:querySIB_Request" id="A1DD10778E0DBAC0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.2/@children.4/@children.7/@inMessage">
             <properties name="querySIB_Input" type="sibwsdl:QueryInType"/>
           </messages>
-          <messages name="querySIB_Response" type="sibwsdl:querySIB_Response" messageUsages="//@children.0/@children.0/@children.2/@children.4/@children.7/@outMessage" id="A1DD10778F4613B0DBBA97A4C15C12EA">
+          <messages name="querySIB_Response" type="sibwsdl:querySIB_Response" id="A1DD10778F4613B0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.2/@children.4/@children.7/@outMessage">
             <properties name="querySIB_Output" type="sibwsdl:QueryOutType"/>
           </messages>
         </children>
@@ -1227,19 +1227,26 @@
       </children>
     </children>
     <process name="determineTasks-gen" id="A1DCF02FC4FEBBF0D3F7913EC3C00DE7">
-      <messages name="determineTasks_Request" type="determwsdl:determineTasks_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DD1070EC267DB0DBBA97A4C15C12EA">
+      <messages name="determineTasks_Request" type="determwsdl:determineTasks_Request" id="A1DD1070EC267DB0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@outMessage">
         <properties name="determineTasks_Input" type="determwsdl:DetermineTasks_Input"/>
       </messages>
-      <messages name="determineTasks_Response" type="determwsdl:determineTasks_Response" messageUsages="//@children.0/@children.0/@children.4/@inMessage" id="A1DD107611995630DBBA97A4C15C12EA">
+      <messages name="determineTasks_Response" type="determwsdl:determineTasks_Response" id="A1DD107611995630DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.4/@inMessage">
         <properties name="determineTasks_Output" type="determwsdl:DetermineTasks_Output"/>
       </messages>
-      <messages name="determineTasks_Fault" type="determwsdl:determineTasks_Fault" messageUsages="//@children.0/@children.0/@children.8/@inMessage" id="A1DD107612C35740DBBA97A4C15C12EA">
+      <messages name="determineTasks_Fault" type="determwsdl:determineTasks_Fault" id="A1DD107612C35740DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.8/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="12" y="8"/>
+    <size width="811"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

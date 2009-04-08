@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD8348E716F50C591B8DC5D6A1C9C" name="modifyValue" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-11T01:01:55.162+0100" modificationDate="2008-02-11T01:32:02.457+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD8348E716F50C591B8DC5D6A1C9C" name="modifyValue" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-11T02:01:55.162+0200" modificationDate="2009-04-08T14:37:30.445+0300">
   <children xsi:type="bpmn:Pool" id="A1DCD8349F1F7450C591B8DC5D6A1C9C" name="VISP-Application - Modify Characteristic Value">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="17" y="10"/>
+    <location x="21" y="186"/>
     <size width="842" height="772"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCD8349F1F7451C591B8DC5D6A1C9C" name="Lane1">
@@ -221,24 +221,31 @@
       </children>
     </children>
     <process name="modifyValue" id="A1DCD834C9654AF0C591B8DC5D6A1C9C" targetNamespace="urn:vispproject.org/052007/useCases/68/modifyValue/bpel">
-      <messages name="modifyValue_Request" type="modvalwsdl:modifyValue_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCD834DF161E61C591B8DC5D6A1C9C">
+      <messages name="modifyValue_Request" type="modvalwsdl:modifyValue_Request" id="A1DCD834DF161E61C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="modvalwsdl:modifyValue"/>
       </messages>
-      <messages name="modifyValue_Response" type="modvalwsdl:modifyValue_Response" messageUsages="//@children.0/@children.0/@children.1/@children.7/@inMessage" id="A1DCD834DF186850C591B8DC5D6A1C9C">
+      <messages name="modifyValue_Response" type="modvalwsdl:modifyValue_Response" id="A1DCD834DF186850C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.1/@children.7/@inMessage">
         <properties name="parameters" type="modvalwsdl:modifyValue_Response"/>
       </messages>
-      <messages name="modifyCharacteristicToService_Request" type="sscwsdl:modifyCharacteristicToService_Request" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DCD835181555F1C591B8DC5D6A1C9C">
+      <messages name="modifyCharacteristicToService_Request" type="sscwsdl:modifyCharacteristicToService_Request" id="A1DCD835181555F1C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage">
         <properties name="parameters" type="sscwsdl:modifyCharacteristicToService"/>
       </messages>
-      <messages name="modifyCharacteristicToService_Response" type="sscwsdl:modifyCharacteristicToService_Response" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DCD83518179FE0C591B8DC5D6A1C9C">
+      <messages name="modifyCharacteristicToService_Response" type="sscwsdl:modifyCharacteristicToService_Response" id="A1DCD83518179FE0C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage">
         <properties name="parameters" type="sscwsdl:modifyCharacteristicToService_Output"/>
       </messages>
-      <messages name="modifyValue_Error" type="modvalwsdl:modifyValue_Error" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCD835FE9387E0C591B8DC5D6A1C9C"/>
-      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DCD838B3B787F0C591B8DC5D6A1C9C"/>
+      <messages name="modifyValue_Error" type="modvalwsdl:modifyValue_Error" id="A1DCD835FE9387E0C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error"/>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" id="A1DCD838B3B787F0C591B8DC5D6A1C9C" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="15" y="9"/>
+    <size width="811"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

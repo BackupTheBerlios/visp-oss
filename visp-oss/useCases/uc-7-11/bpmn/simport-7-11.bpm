@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD570D760EFE0EA589D632A121EC2" name="simport-7-11" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-07T12:35:54.078+0100" modificationDate="2008-08-05T11:57:21.125+0200">
-  <children xsi:type="bpmn:TextAnnotation" id="A1DCDB0332FF4FD0F935A646BB833D76" text="Author:  Michal Smaga&#xD;&#xA;Source:  D7.0 Draft 1.0&#xD;&#xA;Version: 1.0&#xD;&#xA;File:        simport-7-11&#xD;&#xA;Date:     2008-02-14">
-    <fontColor/>
-    <lineColor/>
-    <font family="Tahoma" height="8"/>
-    <location x="60" y="2172"/>
-    <size width="169"/>
-    <fillColor red="255" green="255" blue="255"/>
-  </children>
-  <children xsi:type="bpmn:Pool" id="A1DCDB0332FF4FD1F935A646BB833D76" name="VISP-Application - Import Service Instance">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD570D760EFE0EA589D632A121EC2" name="simport-7-11" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-07T13:35:54.078+0200" modificationDate="2009-04-08T14:55:27.538+0300">
+  <children xsi:type="bpmn:Pool" id="A1DCDB0332FF4FD1F935A646BB833D76" name="Copyright 2009 VISP Consortium - VISP-Application - Import Service Instance">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="60" y="-60"/>
+    <location x="60" y="171"/>
     <size width="1753" height="2209"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCDB0332FF4FD2F935A646BB833D76" name="Lane1">
@@ -836,28 +828,28 @@
           <size width="132" height="80"/>
           <fillColor green="255"/>
         </children>
-        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" messageUsages="//@children.1/@children.0/@children.2/@children.17/@inMessage" id="A1DCE935D61633B0F759ACC6FD7C1D8C">
+        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" id="A1DCE935D61633B0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.17/@inMessage">
           <properties name="parameters" type="sscwsdl:getServiceSet"/>
         </messages>
-        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" messageUsages="//@children.1/@children.0/@children.2/@children.17/@outMessage" id="A1DCE935D73DC3C0F759ACC6FD7C1D8C">
+        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" id="A1DCE935D73DC3C0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.17/@outMessage">
           <properties name="parameters" type="sscwsdl:getServiceSet_Output"/>
         </messages>
-        <messages name="addNewServiceInstance_Request" type="sibwsdl:addNewServiceInstance_Request" messageUsages="//@children.1/@children.0/@children.2/@children.42/@inMessage" id="A1DCE935FD198980F759ACC6FD7C1D8C">
+        <messages name="addNewServiceInstance_Request" type="sibwsdl:addNewServiceInstance_Request" id="A1DCE935FD198980F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.42/@inMessage">
           <properties name="addNewServiceInstance_Input" type="repxsd:ServiceInstanceDescription"/>
         </messages>
-        <messages name="addNewServiceInstance_Response" type="sibwsdl:addNewServiceInstance_Response" messageUsages="//@children.1/@children.0/@children.2/@children.42/@outMessage" id="A1DCE935FDF01360F759ACC6FD7C1D8C">
+        <messages name="addNewServiceInstance_Response" type="sibwsdl:addNewServiceInstance_Response" id="A1DCE935FDF01360F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.42/@outMessage">
           <properties name="addNewServiceInstance_Output" type="repxsd:ReferenceNumber"/>
         </messages>
-        <messages name="importService_syncResponse" type="impsiwsdl:importService_syncResponse" messageUsages="//@children.1/@children.0/@children.2/@children.27/@inMessage" id="A1DCE938C9091BD0F759ACC6FD7C1D8C">
+        <messages name="importService_syncResponse" type="impsiwsdl:importService_syncResponse" id="A1DCE938C9091BD0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.27/@inMessage">
           <properties name="parameters" type="impsiwsdl:ImportService_SyncOutput"/>
         </messages>
-        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.1/@children.0/@children.2/@children.8/@inMessage" id="A1DCE93D892F2F40F759ACC6FD7C1D8C">
+        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DCE93D892F2F40F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.8/@inMessage">
           <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
         </messages>
-        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.1/@children.0/@children.2/@children.10/@outMessage" id="A1DCE93D8AE36EF0F759ACC6FD7C1D8C">
+        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DCE93D8AE36EF0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.10/@outMessage">
           <properties name="vispError" type="comxsd:VispError"/>
         </messages>
-        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.1/@children.0/@children.2/@children.9/@outMessage" id="A1DCE93D8B93FA40F759ACC6FD7C1D8C">
+        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DCE93D8B93FA40F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.2/@children.9/@outMessage">
           <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
         </messages>
       </children>
@@ -1289,28 +1281,43 @@
       </children>
     </children>
     <process name="simport-7-11-gen" id="A1DCDB0332FF5060F935A646BB833D76" targetNamespace="urn:vispproject.org/052007/useCases/importSI/bpel">
-      <messages name="importService_Request" type="impsiwsdl:importService_Request" messageUsages="//@children.1/@children.0/@children.1/@outMessage" id="A1DCE93628719370F759ACC6FD7C1D8C">
+      <messages name="importService_Request" type="impsiwsdl:importService_Request" id="A1DCE93628719370F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.1/@outMessage">
         <properties name="importService_Input" type="impsiwsdl:ImportService_Input"/>
       </messages>
-      <messages name="importService_Response" type="impsiwsdl:importService_Response" messageUsages="//@children.1/@children.0/@children.7/@inMessage" id="A1DCE936454492E0F759ACC6FD7C1D8C">
+      <messages name="importService_Response" type="impsiwsdl:importService_Response" id="A1DCE936454492E0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.7/@inMessage">
         <properties name="importService_Output" type="impsiwsdl:ImportService_Output"/>
       </messages>
-      <messages name="importService_Fault" type="impsiwsdl:importService_Fault" messageUsages="//@children.1/@children.0/@children.6/@inMessage //@children.1/@children.0/@children.3/@inMessage" id="A1DCE936471F1F40F759ACC6FD7C1D8C">
+      <messages name="importService_Fault" type="impsiwsdl:importService_Fault" id="A1DCE936471F1F40F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.6/@inMessage //@children.0/@children.0/@children.3/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="importService_syncFault" type="impsiwsdl:importService_syncFault" messageUsages="//@children.1/@children.0/@children.15/@inMessage //@children.1/@children.0/@children.14/@inMessage" id="A1DCE938DB584DB0F759ACC6FD7C1D8C">
+      <messages name="importService_syncFault" type="impsiwsdl:importService_syncFault" id="A1DCE938DB584DB0F759ACC6FD7C1D8C" messageUsages="//@children.0/@children.0/@children.15/@inMessage //@children.0/@children.0/@children.14/@inMessage">
         <properties name="parameters" type="comxsd:VispError"/>
       </messages>
-      <messages name="setServiceInstanceFaultStatus_Request" type="sibwsdl:setServiceInstanceFaultStatus_Request" messageUsages="//@children.1/@children.0/@children.18/@inMessage //@children.1/@children.0/@children.22/@inMessage //@children.1/@children.0/@children.26/@inMessage" id="A1DD62D1F2C5A931C6F3ED6B0D1BC0BE">
+      <messages name="setServiceInstanceFaultStatus_Request" type="sibwsdl:setServiceInstanceFaultStatus_Request" id="A1DD62D1F2C5A931C6F3ED6B0D1BC0BE" messageUsages="//@children.0/@children.0/@children.18/@inMessage //@children.0/@children.0/@children.22/@inMessage //@children.0/@children.0/@children.26/@inMessage">
         <properties name="setServiceInstanceFaultStatus_Input" type="sibwsdl:SetServiceInstanceFaultStatus"/>
       </messages>
-      <messages name="setServiceInstanceFaultStatus_Response" type="sibwsdl:setServiceInstanceFaultStatus_Response" messageUsages="//@children.1/@children.0/@children.18/@outMessage //@children.1/@children.0/@children.22/@outMessage //@children.1/@children.0/@children.26/@outMessage" id="A1DD62D1F2C81A30C6F3ED6B0D1BC0BE">
+      <messages name="setServiceInstanceFaultStatus_Response" type="sibwsdl:setServiceInstanceFaultStatus_Response" id="A1DD62D1F2C81A30C6F3ED6B0D1BC0BE" messageUsages="//@children.0/@children.0/@children.18/@outMessage //@children.0/@children.0/@children.22/@outMessage //@children.0/@children.0/@children.26/@outMessage">
         <properties name="setServiceInstanceFaultStatus_Output" type="comxsd:Boolean"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="59" y="-1"/>
+    <size width="786"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:TextAnnotation" id="A1DCDB0332FF4FD0F935A646BB833D76" text="Author:  Michal Smaga&#xD;&#xA;Source:  D7.0 Draft 1.0&#xD;&#xA;Version: 1.0&#xD;&#xA;File:        simport-7-11&#xD;&#xA;Date:     2008-02-14">
+    <fontColor/>
+    <lineColor/>
+    <font family="Tahoma" height="8"/>
+    <location x="62" y="2389"/>
+    <size width="169"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

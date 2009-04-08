@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF01036DB31B0D901A441E2DFA44B" name="moveServiceInList" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T09:42:14.475+0100" modificationDate="2008-03-12T10:19:44.955+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF01036DB31B0D901A441E2DFA44B" name="moveServiceInList" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T10:42:14.475+0200" modificationDate="2009-04-08T14:42:14.398+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF01070377D60D901A441E2DFA44B" name="VISP-Application - Move a Service in the List">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="19" y="17"/>
+    <location x="20" y="179"/>
     <size width="743" height="848"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF01070377D61D901A441E2DFA44B" name="Lane1">
@@ -248,23 +248,30 @@
       </children>
     </children>
     <process name="moveServiceInList" id="A1DCF012F4A62900D901A441E2DFA44B" targetNamespace="urn:vispproject.org/052007/useCases/613/moveServiceInList/bpel">
-      <messages name="MoveServiceInList_Request" type="moveinlist:MoveServiceInList_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCF0131107A1F0D901A441E2DFA44B">
+      <messages name="MoveServiceInList_Request" type="moveinlist:MoveServiceInList_Request" id="A1DCF0131107A1F0D901A441E2DFA44B" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="moveinlist:moveServiceInList"/>
       </messages>
-      <messages name="MoveServiceInList_Response" type="moveinlist:MoveServiceInList_Response" messageUsages="//@children.0/@children.0/@children.1/@children.6/@inMessage" id="A1DCF0131107A1F1D901A441E2DFA44B">
+      <messages name="MoveServiceInList_Response" type="moveinlist:MoveServiceInList_Response" id="A1DCF0131107A1F1D901A441E2DFA44B" messageUsages="//@children.0/@children.0/@children.1/@children.6/@inMessage">
         <properties name="parameters" type="moveinlist:moveServiceInList_Response"/>
       </messages>
-      <messages name="moveAServiceInListOfServices_Request" type="sscwsdl:moveAServiceInListOfServices_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCF01346E415B1D901A441E2DFA44B">
+      <messages name="moveAServiceInListOfServices_Request" type="sscwsdl:moveAServiceInListOfServices_Request" id="A1DCF01346E415B1D901A441E2DFA44B" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="sscwsdl:moveAServiceInListOfServices"/>
       </messages>
-      <messages name="moveAServiceInListOfServices_Response" type="sscwsdl:moveAServiceInListOfServices_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCF01346E8D0A0D901A441E2DFA44B">
+      <messages name="moveAServiceInListOfServices_Response" type="sscwsdl:moveAServiceInListOfServices_Response" id="A1DCF01346E8D0A0D901A441E2DFA44B" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="sscwsdl:moveAServiceInListOfServices_Output"/>
       </messages>
-      <messages name="MoveServiceInList_Fault" type="moveinlist:MoveServiceInList_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCF014555554A0D901A441E2DFA44B"/>
+      <messages name="MoveServiceInList_Fault" type="moveinlist:MoveServiceInList_Fault" id="A1DCF014555554A0D901A441E2DFA44B" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="16" y="-1"/>
+    <size width="793"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

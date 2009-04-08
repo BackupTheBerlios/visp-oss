@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC6DA8C4B2AE90F00FB21953B8142E" name="FindServiceProvider" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-09-28T11:54:12.953+0200" modificationDate="2008-07-18T12:46:15.203+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC6DA8C4B2AE90F00FB21953B8142E" name="FindServiceProvider" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-09-28T12:54:12.953+0300" modificationDate="2009-04-08T14:29:18.663+0300">
   <children xsi:type="bpmn:Pool" id="A1DC6DA8EF4BD550F00FB21953B8142E" name="find service provider in Monopoly - Broker">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="62" y="-40"/>
+    <location x="64" y="168"/>
     <size width="1230" height="897"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DC6DA8EF4BD551F00FB21953B8142E" name="Lane1">
@@ -528,31 +528,38 @@
       </children>
     </children>
     <process name="findSP_monopoly-gen" id="A1DC6DA9CED9E7C0F00FB21953B8142E" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/monopoly/findSP/bpel">
-      <messages name="findSP_monopoly_Request" type="monfindwsdl:findSP_monopoly_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DC70CC6EE5B760FB45A933B4A40317">
+      <messages name="findSP_monopoly_Request" type="monfindwsdl:findSP_monopoly_Request" id="A1DC70CC6EE5B760FB45A933B4A40317" messageUsages="//@children.0/@children.0/@children.1/@outMessage">
         <properties name="parameters" type="monfindwsdl:findSP_monopoly"/>
       </messages>
-      <messages name="findSP_monopoly_Response" type="monfindwsdl:findSP_monopoly_Response" messageUsages="//@children.0/@children.0/@children.6/@inMessage" id="A1DC70CC748F4D20FB45A933B4A40317">
+      <messages name="findSP_monopoly_Response" type="monfindwsdl:findSP_monopoly_Response" id="A1DC70CC748F4D20FB45A933B4A40317" messageUsages="//@children.0/@children.0/@children.6/@inMessage">
         <properties name="parameters" type="monfindwsdl:findSP_monopoly_Response"/>
       </messages>
-      <messages name="findSP_monopoly_Fault" type="monfindwsdl:findSP_monopoly_Fault" messageUsages="//@children.0/@children.0/@children.5/@inMessage" id="A1DC70CC756D2A00FB45A933B4A40317">
+      <messages name="findSP_monopoly_Fault" type="monfindwsdl:findSP_monopoly_Fault" id="A1DC70CC756D2A00FB45A933B4A40317" messageUsages="//@children.0/@children.0/@children.5/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="selectBestProvider_monopoly_Request" type="monselbestwsdl:selectBestProvider_monopoly_Request" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.12/@inMessage" id="A1DC7D663BA1D4F1DDB2BF128211BB38"/>
-      <messages name="selectBestProvider_monopoly_Fault" type="monselbestwsdl:selectBestProvider_monopoly_Fault" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.13/@outMessage" id="A1DC7D6663ADE831DDB2BF128211BB38"/>
-      <messages name="selectBestProvider_monopoly_Response" type="monselbestwsdl:selectBestProvider_monopoly_Response" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.14/@outMessage" id="A1DC7D6687B3DC81DDB2BF128211BB38"/>
-      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.18/@inMessage" id="A1DD54B60B60B091F669D265E946F168">
+      <messages name="selectBestProvider_monopoly_Request" type="monselbestwsdl:selectBestProvider_monopoly_Request" id="A1DC7D663BA1D4F1DDB2BF128211BB38" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.12/@inMessage"/>
+      <messages name="selectBestProvider_monopoly_Fault" type="monselbestwsdl:selectBestProvider_monopoly_Fault" id="A1DC7D6663ADE831DDB2BF128211BB38" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.13/@outMessage"/>
+      <messages name="selectBestProvider_monopoly_Response" type="monselbestwsdl:selectBestProvider_monopoly_Response" id="A1DC7D6687B3DC81DDB2BF128211BB38" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.14/@outMessage"/>
+      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" id="A1DD54B60B60B091F669D265E946F168" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.18/@inMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability"/>
       </messages>
-      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.19/@outMessage" id="A1DD54B628A891E1F669D265E946F168">
+      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" id="A1DD54B628A891E1F669D265E946F168" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.19/@outMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Error"/>
       </messages>
-      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.20/@outMessage" id="A1DD54B63996FB41F669D265E946F168">
+      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" id="A1DD54B63996FB41F669D265E946F168" messageUsages="//@children.0/@children.0/@children.2/@children.1/@children.20/@outMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Response"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="59"/>
+    <size width="789"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/" location=""/>

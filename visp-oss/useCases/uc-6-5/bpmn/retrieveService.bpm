@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCA40E2A542FD0C0D0E2998DAEFB74" name="retrieveService" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-12-06T16:16:05.873+0100" modificationDate="2007-12-07T00:44:14.747+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCA40E2A542FD0C0D0E2998DAEFB74" name="retrieveService" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-12-06T17:16:05.873+0200" modificationDate="2009-04-08T10:33:47.031+0300">
   <children xsi:type="bpmn:Pool" targetConnections="A1DCA439D145DCA0C0D0E2998DAEFB74 A1DCA439E0094FB0C0D0E2998DAEFB74 A1DCA43A2E2F9140C0D0E2998DAEFB74 A1DCA43B9A03AC70C0D0E2998DAEFB74" id="A1DCA40E2F483130C0D0E2998DAEFB74" name="GUI">
     <fontColor/>
     <lineColor/>
@@ -460,14 +460,14 @@
       </children>
     </children>
     <process name="retrieveService" id="A1DCA40EAA4CA780C0D0E2998DAEFB74" targetNamespace="urn:vispproject.org/052007/useCases/65/retrieveService/bpel">
-      <messages name="retrieveMatchingServices_Request" type="retrservwsdl:retrieveMatchingServices_Request" messageUsages="//@children.1/@children.0/@children.8/@outMessage" id="A1DCA410355C0F91C0D0E2998DAEFB74"/>
-      <messages name="retrieveMatchingServices_Response" type="retrservwsdl:retrieveMatchingServices_Response" messageUsages="//@children.1/@children.0/@children.3/@inMessage //@children.1/@children.0/@children.4/@inMessage" id="A1DCA410355C0F92C0D0E2998DAEFB74"/>
-      <messages name="querySKB_Request" type="skbwsdl:querySKB_Request" messageUsages="//@children.1/@children.0/@children.2/@children.1/@inMessage" id="A1DCA417549B76F1C0D0E2998DAEFB74"/>
-      <messages name="querySKB_Response" type="skbwsdl:querySKB_Response" messageUsages="//@children.1/@children.0/@children.2/@children.1/@outMessage" id="A1DCA417549DE7F0C0D0E2998DAEFB74"/>
-      <messages name="retrieveServiceDetails_Request" type="retrservwsdl:retrieveServiceDetails_Request" messageUsages="//@children.1/@children.0/@children.9/@outMessage" id="A1DCA41C00235F71C0D0E2998DAEFB74"/>
-      <messages name="retrieveServiceDetails_Response" type="retrservwsdl:retrieveServiceDetails_Response" messageUsages="//@children.1/@children.0/@children.10/@inMessage //@children.1/@children.0/@children.12/@inMessage" id="A1DCA41C00235F72C0D0E2998DAEFB74"/>
-      <messages name="getServicesDetails_Request" type="skbwsdl:getServicesDetails_Request" messageUsages="//@children.1/@children.0/@children.7/@children.2/@inMessage" id="A1DCA41C2202F151C0D0E2998DAEFB74"/>
-      <messages name="getServicesDetails_Response" type="skbwsdl:getServicesDetails_Response" messageUsages="//@children.1/@children.0/@children.7/@children.2/@outMessage" id="A1DCA41C22056250C0D0E2998DAEFB74"/>
+      <messages name="retrieveMatchingServices_Request" type="retrservwsdl:retrieveMatchingServices_Request" id="A1DCA410355C0F91C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.8/@outMessage"/>
+      <messages name="retrieveMatchingServices_Response" type="retrservwsdl:retrieveMatchingServices_Response" id="A1DCA410355C0F92C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.3/@inMessage //@children.1/@children.0/@children.4/@inMessage"/>
+      <messages name="querySKB_Request" type="skbwsdl:querySKB_Request" id="A1DCA417549B76F1C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.2/@children.1/@inMessage"/>
+      <messages name="querySKB_Response" type="skbwsdl:querySKB_Response" id="A1DCA417549DE7F0C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.2/@children.1/@outMessage"/>
+      <messages name="retrieveServiceDetails_Request" type="retrservwsdl:retrieveServiceDetails_Request" id="A1DCA41C00235F71C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.9/@outMessage"/>
+      <messages name="retrieveServiceDetails_Response" type="retrservwsdl:retrieveServiceDetails_Response" id="A1DCA41C00235F72C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.10/@inMessage //@children.1/@children.0/@children.12/@inMessage"/>
+      <messages name="getServicesDetails_Request" type="skbwsdl:getServicesDetails_Request" id="A1DCA41C2202F151C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.7/@children.2/@inMessage"/>
+      <messages name="getServicesDetails_Response" type="skbwsdl:getServicesDetails_Response" id="A1DCA41C22056250C0D0E2998DAEFB74" messageUsages="//@children.1/@children.0/@children.7/@children.2/@outMessage"/>
     </process>
     <participant>
       <role name="Participant2"/>
@@ -508,6 +508,19 @@
     <participant>
       <role name="Participant3"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="18" y="1116"/>
+    <size width="797"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="18" y="1088"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

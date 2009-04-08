@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DDA41115FEC3C0DF1C8B16C075D8C0" name="sendEmailToUser" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-10-27T11:21:58.140+0100" modificationDate="2008-10-27T14:12:38.625+0100">
-  <children xsi:type="bpmn:Pool" id="A1DDA4111A10A280DF1C8B16C075D8C0" name="VISP-Application - send email to user">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DDA41115FEC3C0DF1C8B16C075D8C0" documentation="" name="sendEmailToUser" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-10-27T12:21:58.140+0200" modificationDate="2009-04-08T14:30:27.476+0300">
+  <children xsi:type="bpmn:Pool" id="A1DDA4111A10A280DF1C8B16C075D8C0" documentation="" name="VISP Application - Send email to user">
     <fontColor/>
     <lineColor/>
     <font family="Arial" height="8"/>
-    <location x="33" y="23"/>
+    <location x="31" y="152"/>
     <size width="817" height="668"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DDA4111A10A281DF1C8B16C075D8C0" name="Lane1">
@@ -318,6 +318,13 @@
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="32" y="-22"/>
+    <size width="812"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpel" value="http://docs.oasis-open.org/wsbpel/2.0/process/executable"/>

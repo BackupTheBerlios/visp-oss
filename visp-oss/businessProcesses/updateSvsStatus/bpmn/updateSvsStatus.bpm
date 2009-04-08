@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCDEF162551520ED92D1B2D8D34523" name="setApproperiateSvSStatus" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-19T14:48:42.875+0100" modificationDate="2008-02-25T19:10:08.281+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCDEF162551520ED92D1B2D8D34523" name="setApproperiateSvSStatus" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-19T15:48:42.875+0200" modificationDate="2009-04-08T14:30:02.226+0300">
   <children xsi:type="bpmn:Pool" id="A1DCE06B99CD8DE0D5DBF543B60B9D8B" name="VISP-Application - Update SvS Status">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="60" y="-72"/>
+    <location x="62" y="171"/>
     <size width="1585" height="2665"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCE06B99CD8DE1D5DBF543B60B9D8B" name="Lane1">
@@ -857,7 +857,7 @@
               <targetAnchor x="22" y="16"/>
               <bendingPoints x="251" y="328"/>
             </sourceConnections>
-            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCE098F20F1DC0F964A0CE5A67635A" name="" routingType="RectilinearHorizontal" target="A1DCE098D416B120F964A0CE5A67635A" conditionType="Default" conditionExpression="ELSE">
+            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCE098F20F1DC0F964A0CE5A67635A" name="" routingType="RectilinearHorizontal" target="A1DCE098D416B120F964A0CE5A67635A" conditionType="Default">
               <fontColor/>
               <lineColor/>
               <font family="Lucida Grande" height="8"/>
@@ -902,13 +902,13 @@
             <size width="51" height="51"/>
             <fillColor red="255" green="255" blue="255"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop" loopCondition="loop counter greater 0" testTime="Before"/>
-          <messages name="getServiceInstaceStatus_Request" type="sibwsdl:getServiceInstaceStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.13/@children.0/@inMessage" id="A1DCE06B99CD8E26D5DBF543B60B9D8B">
+          <messages name="getServiceInstaceStatus_Request" type="sibwsdl:getServiceInstaceStatus_Request" id="A1DCE06B99CD8E26D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.13/@children.0/@inMessage">
             <properties name="getServiceInstaceStatus_Input" type="repxsd:ReferenceNumber"/>
           </messages>
-          <messages name="getServiceInstaceStatus_Response" type="sibwsdl:getServiceInstaceStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.13/@children.0/@outMessage" id="A1DCE06B99CD8E27D5DBF543B60B9D8B">
+          <messages name="getServiceInstaceStatus_Response" type="sibwsdl:getServiceInstaceStatus_Response" id="A1DCE06B99CD8E27D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.13/@children.0/@outMessage">
             <properties name="getServiceInstaceStatus_Output" type="repxsd:OperationalStatus"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop" loopCondition="loop counter greater 0" testTime="Before"/>
         </children>
         <children xsi:type="bpmn:Activity" targetConnections="A1DCE06B99CD8E2ED5DBF543B60B9D8B" id="A1DCE06B99CD8E28D5DBF543B60B9D8B" documentation="Set the loop counter to the to be equal with the number of instances within the service set" name="Initialize loop counter" taskType="None">
           <fontColor/>
@@ -1015,22 +1015,22 @@
           <size width="132" height="80"/>
           <fillColor red="255" green="255"/>
         </children>
-        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" messageUsages="//@children.0/@children.0/@children.2/@children.11/@inMessage" id="A1DCE06CE660B6E0D5DBF543B60B9D8B">
+        <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" id="A1DCE06CE660B6E0D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.11/@inMessage">
           <properties name="parameters" type="sscwsdl:getServiceSet"/>
         </messages>
-        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" messageUsages="//@children.0/@children.0/@children.2/@children.11/@outMessage" id="A1DCE06CE7A4F6B0D5DBF543B60B9D8B">
+        <messages name="getServiceSet_Response" type="sscwsdl:getServiceSet_Response" id="A1DCE06CE7A4F6B0D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.11/@outMessage">
           <properties name="parameters" type="sscwsdl:getServiceSet_Output"/>
         </messages>
-        <messages name="serviceTreeToList_Request" type="sscwsdl:serviceTreeToList_Request" messageUsages="//@children.0/@children.0/@children.2/@children.15/@inMessage" id="A1DCE06CFAC3D4A0D5DBF543B60B9D8B">
+        <messages name="serviceTreeToList_Request" type="sscwsdl:serviceTreeToList_Request" id="A1DCE06CFAC3D4A0D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.15/@inMessage">
           <properties name="serviceTreeToList_Input" type="sscwsdl:ServiceTreeToList_Input"/>
         </messages>
-        <messages name="serviceTreeToList_Response" type="sscwsdl:serviceTreeToList_Response" messageUsages="//@children.0/@children.0/@children.2/@children.15/@outMessage" id="A1DCE06CFC033270D5DBF543B60B9D8B">
+        <messages name="serviceTreeToList_Response" type="sscwsdl:serviceTreeToList_Response" id="A1DCE06CFC033270D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.15/@outMessage">
           <properties name="serviceTreeToList_Output" type="sscwsdl:ServiceTreeToList_Output"/>
         </messages>
-        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.4/@inMessage" id="A1DCE06D419C4650D5DBF543B60B9D8B">
+        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" id="A1DCE06D419C4650D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.4/@inMessage">
           <properties name="parameters" type="sscwsdl:setOperationalStatus"/>
         </messages>
-        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.4/@outMessage" id="A1DCE06D71658D10D5DBF543B60B9D8B">
+        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" id="A1DCE06D71658D10D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.2/@children.4/@outMessage">
           <properties name="parameters" type="sscwsdl:setOperationalStatus_Output"/>
         </messages>
       </children>
@@ -1119,17 +1119,24 @@
       </children>
     </children>
     <process name="updateSvsStatus-gen" id="A1DCE06B99CD8E47D5DBF543B60B9D8B" targetNamespace="urn:vispproject.org/052007/processes/bp/updateSvsStatus/bpel">
-      <messages name="updateSvsStatus_Request" type="updwsdl:updateSvsStatus_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DCE06CBE1B9240D5DBF543B60B9D8B"/>
-      <messages name="updateSvsStatus_Response" type="updwsdl:updateSvsStatus_Response" messageUsages="//@children.0/@children.0/@children.5/@inMessage" id="A1DCE06CCD5805E0D5DBF543B60B9D8B">
+      <messages name="updateSvsStatus_Request" type="updwsdl:updateSvsStatus_Request" id="A1DCE06CBE1B9240D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.1/@outMessage"/>
+      <messages name="updateSvsStatus_Response" type="updwsdl:updateSvsStatus_Response" id="A1DCE06CCD5805E0D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.5/@inMessage">
         <properties name="updateSvsStatus_Output" type="updwsdl:UpdateSvsStatus_Output"/>
       </messages>
-      <messages name="updateSvsStatus_Fault" type="updwsdl:updateSvsStatus_Fault" messageUsages="//@children.0/@children.0/@children.4/@inMessage" id="A1DCE06CCE822E00D5DBF543B60B9D8B">
+      <messages name="updateSvsStatus_Fault" type="updwsdl:updateSvsStatus_Fault" id="A1DCE06CCE822E00D5DBF543B60B9D8B" messageUsages="//@children.0/@children.0/@children.4/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="61" y="2"/>
+    <size width="798"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

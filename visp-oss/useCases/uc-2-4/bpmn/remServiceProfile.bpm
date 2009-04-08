@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5F1179D26FE0F0ABBEBC1C9A5F25" name="remServiceProfile" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-31T17:00:55.390+0200" modificationDate="2008-07-31T17:17:32.843+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5F1179D26FE0F0ABBEBC1C9A5F25" name="remServiceProfile" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-31T18:00:55.390+0300" modificationDate="2009-04-08T14:34:59.945+0300">
   <children xsi:type="bpmn:Pool" id="A1DD5F117DC09A00F0ABBEBC1C9A5F25" name="Remove service profile business process">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="46" y="30"/>
+    <location x="47" y="179"/>
     <size width="802" height="624"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD5F117DC09A01F0ABBEBC1C9A5F25" name="Lane1">
@@ -250,28 +250,35 @@
       </children>
     </children>
     <process name="removeServiceProfile" id="A1DD5F118DEDFD50F0ABBEBC1C9A5F25" targetNamespace="urn:vispproject.org/052007/useCases/24/removeServiceProfile/bpel">
-      <messages name="RemoveServiceProfileRequest" type="mdwsdl:RemoveServiceProfileRequest" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DD5F127E384591F0ABBEBC1C9A5F25">
+      <messages name="RemoveServiceProfileRequest" type="mdwsdl:RemoveServiceProfileRequest" id="A1DD5F127E384591F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage">
         <properties name="parameters" type="mdwsdl:RemoveServiceProfile"/>
       </messages>
-      <messages name="RemoveServiceProfileResponse" type="mdwsdl:RemoveServiceProfileResponse" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage" id="A1DD5F127E3AB690F0ABBEBC1C9A5F25">
+      <messages name="RemoveServiceProfileResponse" type="mdwsdl:RemoveServiceProfileResponse" id="A1DD5F127E3AB690F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.1/@children.3/@outMessage">
         <properties name="parameters" type="mdwsdl:RemoveServiceProfileResponse"/>
       </messages>
-      <messages name="removeServiceProfile_Request" type="remspwsdl:removeServiceProfile_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD5F1296909251F0ABBEBC1C9A5F25">
+      <messages name="removeServiceProfile_Request" type="remspwsdl:removeServiceProfile_Request" id="A1DD5F1296909251F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="remspwsdl:removeServiceProfile"/>
       </messages>
-      <messages name="removeServiceProfile_Response" type="remspwsdl:removeServiceProfile_Response" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage" id="A1DD5F1296930350F0ABBEBC1C9A5F25">
+      <messages name="removeServiceProfile_Response" type="remspwsdl:removeServiceProfile_Response" id="A1DD5F1296930350F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage">
         <properties name="parameters" type="remspwsdl:removeServiceProfile_Response"/>
       </messages>
-      <messages name="MDFault" type="mdwsdl:MDFault" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD5F12F515A770F0ABBEBC1C9A5F25">
+      <messages name="MDFault" type="mdwsdl:MDFault" id="A1DD5F12F515A770F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.1/@children.3/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
         <properties name="parameters" type="comxsd:VispError"/>
       </messages>
-      <messages name="removeServiceProfile_Fault" type="remspwsdl:removeServiceProfile_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DD5F1354191450F0ABBEBC1C9A5F25">
+      <messages name="removeServiceProfile_Fault" type="remspwsdl:removeServiceProfile_Fault" id="A1DD5F1354191450F0ABBEBC1C9A5F25" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error">
         <properties name="parameters" type="remspwsdl:removeServiceProfile_Fault"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="43" y="8"/>
+    <size width="795"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

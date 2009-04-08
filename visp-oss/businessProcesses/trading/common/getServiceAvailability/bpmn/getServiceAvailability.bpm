@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5406A55FAA30D015C0FEBA49FE75" name="getServicePrice" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-17T15:45:40.953+0200" modificationDate="2008-07-18T09:08:42.093+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5406A55FAA30D015C0FEBA49FE75" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="getServicePrice" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-17T16:45:40.953+0300" modificationDate="2009-04-08T14:28:13.351+0300">
   <children xsi:type="bpmn:Pool" id="A1DD5406D8C5EDD0D015C0FEBA49FE75" name="Get Service Availability - Provider">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="37" y="38"/>
+    <location x="39" y="179"/>
     <size width="949" height="720"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD5406D8C5EDD1D015C0FEBA49FE75" name="Lane1">
@@ -291,7 +291,7 @@
           <inMessage message="A1DD5495E7602101F669D265E946F168"/>
           <webService interface="trdavailablwsdl:getServiceAvailability_CB" operation="getServiceAvailability_Response" role="getServiceAvailability_Requester" partnerLink="getServiceAvailability" partnerLinkType="trdavailablwsdl:getServiceAvailability_LT"/>
         </children>
-        <messages name="ErpFault" type="erpmswsdl:ErpFault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD549583D86480F669D265E946F168">
+        <messages name="ErpFault" type="erpmswsdl:ErpFault" id="A1DD549583D86480F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
           <properties name="parameters" type="erpmswsdl:ErpFault"/>
         </messages>
       </children>
@@ -344,31 +344,38 @@
       </children>
     </children>
     <process name="getServiceAvailability" id="A1DD5406EDEC5B90D015C0FEBA49FE75" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/getServiceAvailability/bpel">
-      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DD54951DA907A0F669D265E946F168">
+      <messages name="getServiceAvailability_Request" type="trdavailablwsdl:getServiceAvailability_Request" id="A1DD54951DA907A0F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability"/>
       </messages>
-      <messages name="erpms_GetServiceAvailability_Request" type="erpmswsdl:GetServiceAvailability_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DD54956320B0D0F669D265E946F168">
+      <messages name="erpms_GetServiceAvailability_Request" type="erpmswsdl:GetServiceAvailability_Request" id="A1DD54956320B0D0F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="erpmswsdl:GetServiceAvailability"/>
       </messages>
-      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD5495767FCC10F669D265E946F168">
+      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" id="A1DD5495767FCC10F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="erpmswsdl:SynchronousConfirmation"/>
       </messages>
-      <messages name="erpms_GetServiceAvailability_Response" type="erpmswsdl:GetServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.1/@children.12/@outMessage" id="A1DD54959BC7B641F669D265E946F168">
+      <messages name="erpms_GetServiceAvailability_Response" type="erpmswsdl:GetServiceAvailability_Response" id="A1DD54959BC7B641F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.12/@outMessage">
         <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Response"/>
       </messages>
-      <messages name="erpms_GetServiceAvailability_Error" type="erpmswsdl:GetServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.1/@children.13/@outMessage" id="A1DD5495BB8EA151F669D265E946F168">
+      <messages name="erpms_GetServiceAvailability_Error" type="erpmswsdl:GetServiceAvailability_Error" id="A1DD5495BB8EA151F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.13/@outMessage">
         <properties name="parameters" type="erpmswsdl:GetServiceAvailability_Error"/>
       </messages>
-      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" messageUsages="//@children.0/@children.0/@children.1/@children.14/@inMessage" id="A1DD5495E7602101F669D265E946F168">
+      <messages name="getServiceAvailability_Response" type="trdavailablwsdl:getServiceAvailability_Response" id="A1DD5495E7602101F669D265E946F168" messageUsages="//@children.0/@children.0/@children.1/@children.14/@inMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Response"/>
       </messages>
-      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" messageUsages="//@children.0/@children.0/@children.5/@inMessage" id="A1DD549659EFFAB1F669D265E946F168">
+      <messages name="getServiceAvailability_Error" type="trdavailablwsdl:getServiceAvailability_Error" id="A1DD549659EFFAB1F669D265E946F168" messageUsages="//@children.0/@children.0/@children.5/@inMessage">
         <properties name="parameters" type="trdavailablwsdl:getServiceAvailability_Error"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="37" y="10"/>
+    <size width="802"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

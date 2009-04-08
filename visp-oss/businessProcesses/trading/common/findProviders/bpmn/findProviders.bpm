@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCA7361BBB8920D0DDD4B9E4D9C1C1" name="ProcessModel" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-12-10T16:39:34.649+0100" modificationDate="2008-07-24T13:48:44.000+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCA7361BBB8920D0DDD4B9E4D9C1C1" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="ProcessModel" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-12-10T17:39:34.649+0200" modificationDate="2009-04-08T14:31:22.257+0300">
   <children xsi:type="bpmn:Pool" id="A1DCA7363567CD20D0DDD4B9E4D9C1C1" name="Find Service Providers">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="61" y="30"/>
+    <location x="60" y="172"/>
     <size width="1273" height="1589"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCA7363567CD21D0DDD4B9E4D9C1C1" name="Lane1">
@@ -86,7 +86,7 @@
             <targetAnchor x="215" y="51"/>
             <bendingPoints x="254" y="273"/>
           </sourceConnections>
-          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD595C76D0ED90D29FB4B31A263401" name="" routingType="RectilinearVertical" target="A1DD5975FB80F080E90FEEABC167DC6F" conditionType="Default" conditionExpression="'commodity'">
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DD595C76D0ED90D29FB4B31A263401" name="" routingType="RectilinearVertical" target="A1DD5975FB80F080E90FEEABC167DC6F" conditionType="Default">
             <fontColor/>
             <lineColor/>
             <font family="Tahoma" height="8"/>
@@ -273,21 +273,6 @@
             </sourceConnections>
             <location x="130" y="31"/>
             <size width="51" height="51"/>
-            <fillColor red="255" green="255" blue="255"/>
-          </children>
-          <children xsi:type="bpmn:Activity" targetConnections="A1DCAD4291ED3140FE0AACBE719652E4" id="A1DCAD4287A77E20FE0AACBE719652E4" name="Go to next Service" taskType="None">
-            <fontColor/>
-            <lineColor/>
-            <font family="Tahoma" height="8"/>
-            <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCAD42D7247610FE0AACBE719652E4" name="" routingType="RectilinearHorizontal" target="A1DCAD42D41672C0FE0AACBE719652E4">
-              <fontColor/>
-              <lineColor/>
-              <font family="Tahoma" height="8"/>
-              <sourceAnchor x="56" y="65"/>
-              <targetAnchor x="16" y="22"/>
-            </sourceConnections>
-            <location x="30" y="180"/>
-            <size width="120" height="80"/>
             <fillColor red="255" green="255" blue="255"/>
           </children>
           <children xsi:type="bpmn:EndEvent" targetConnections="A1DCAD42D7247610FE0AACBE719652E4" id="A1DCAD42D41672C0FE0AACBE719652E4" name="EndEvent3">
@@ -846,6 +831,21 @@
           <size width="120" height="80"/>
           <fillColor red="255" green="255" blue="255"/>
         </children>
+        <children xsi:type="bpmn:Activity" targetConnections="A1DCAD4291ED3140FE0AACBE719652E4" id="A1DCAD4287A77E20FE0AACBE719652E4" name="Go to next Service" taskType="None">
+          <fontColor/>
+          <lineColor/>
+          <font family="Tahoma" height="8"/>
+          <sourceConnections xsi:type="bpmn:SequenceFlow" id="A1DCAD42D7247610FE0AACBE719652E4" name="" routingType="RectilinearHorizontal" target="A1DCAD42D41672C0FE0AACBE719652E4">
+            <fontColor/>
+            <lineColor/>
+            <font family="Tahoma" height="8"/>
+            <sourceAnchor x="56" y="65"/>
+            <targetAnchor x="16" y="22"/>
+          </sourceConnections>
+          <location x="-20" y="472"/>
+          <size width="120" height="80"/>
+          <fillColor red="255" green="255" blue="255"/>
+        </children>
       </children>
       <children xsi:type="bpmn:Activity" targetConnections="A1DD58A91358B1C0F28DC7CCD81955B5" id="A1DCA741DC9EF4F0D0DDD4B9E4D9C1C1" name="Send Error Message" taskType="Send">
         <fontColor/>
@@ -896,41 +896,48 @@
       </children>
     </children>
     <process name="findProviders" id="A1DCA7365C2BF710D0DDD4B9E4D9C1C1" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/findProviders/bpel">
-      <messages name="findProviders_Request" type="trdfindwsdl:findProviders_Request" messageUsages="//@children.0/@children.0/@children.1/@children.7/@outMessage" id="A1DCA7384ED4FA61D0DDD4B9E4D9C1C1"/>
-      <messages name="findSP_monopoly_Request" type="monfindwsdl:findSP_monopoly_Request" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.6/@inMessage" id="A1DCA73EDC8A62E1D0DDD4B9E4D9C1C1">
+      <messages name="findProviders_Request" type="trdfindwsdl:findProviders_Request" id="A1DCA7384ED4FA61D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.1/@children.7/@outMessage"/>
+      <messages name="findSP_monopoly_Request" type="monfindwsdl:findSP_monopoly_Request" id="A1DCA73EDC8A62E1D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.6/@inMessage">
         <properties name="parameters" type="monfindwsdl:findSP_monopoly"/>
       </messages>
-      <messages name="findSP_monopoly_Response" type="monfindwsdl:findSP_monopoly_Response" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.7/@outMessage" id="A1DCA73F09745771D0DDD4B9E4D9C1C1">
+      <messages name="findSP_monopoly_Response" type="monfindwsdl:findSP_monopoly_Response" id="A1DCA73F09745771D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.7/@outMessage">
         <properties name="parameters" type="monfindwsdl:findSP_monopoly_Response"/>
       </messages>
-      <messages name="findSP_monopoly_Fault" type="monfindwsdl:findSP_monopoly_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.8/@outMessage" id="A1DCA73F2BFCAC71D0DDD4B9E4D9C1C1">
+      <messages name="findSP_monopoly_Fault" type="monfindwsdl:findSP_monopoly_Fault" id="A1DCA73F2BFCAC71D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.8/@outMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="findProviders_Fault" type="trdfindwsdl:findProviders_Fault" messageUsages="//@children.0/@children.0/@children.2/@inMessage" id="A1DCA740E041B3A1D0DDD4B9E4D9C1C1"/>
-      <messages name="findProviders_Response" type="trdfindwsdl:findProviders_Response" messageUsages="//@children.0/@children.0/@children.1/@children.9/@inMessage" id="A1DCA741F27B9351D0DDD4B9E4D9C1C1"/>
-      <messages name="setServiceProvider_Request" type="sscwsdl:setServiceProvider_Request" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.13/@inMessage //@children.0/@children.0/@children.1/@children.2/@children.28/@inMessage" id="A1DCAD45F5BB6540DFF8FFABDA82EFA8"/>
-      <messages name="setServiceProvider_Response" type="sscwsdl:setServiceProvider_Response" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.13/@outMessage //@children.0/@children.0/@children.1/@children.2/@children.28/@outMessage" id="A1DCAD45F5BB6541DFF8FFABDA82EFA8"/>
-      <messages name="QueryRequest" type="mdwsdl:QueryRequest" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@children.1/@inMessage" id="A1DCAD9D05C09491EE65B5AD58D7EFB2">
+      <messages name="findProviders_Fault" type="trdfindwsdl:findProviders_Fault" id="A1DCA740E041B3A1D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.2/@inMessage"/>
+      <messages name="findProviders_Response" type="trdfindwsdl:findProviders_Response" id="A1DCA741F27B9351D0DDD4B9E4D9C1C1" messageUsages="//@children.0/@children.0/@children.1/@children.9/@inMessage"/>
+      <messages name="setServiceProvider_Request" type="sscwsdl:setServiceProvider_Request" id="A1DCAD45F5BB6540DFF8FFABDA82EFA8" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@inMessage //@children.0/@children.0/@children.1/@children.2/@children.27/@inMessage"/>
+      <messages name="setServiceProvider_Response" type="sscwsdl:setServiceProvider_Response" id="A1DCAD45F5BB6541DFF8FFABDA82EFA8" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@outMessage //@children.0/@children.0/@children.1/@children.2/@children.27/@outMessage"/>
+      <messages name="QueryRequest" type="mdwsdl:QueryRequest" id="A1DCAD9D05C09491EE65B5AD58D7EFB2" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.11/@children.1/@inMessage">
         <properties name="parameters" type="mdwsdl:Query"/>
       </messages>
-      <messages name="QueryResponse" type="mdwsdl:QueryResponse" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@children.1/@outMessage" id="A1DCAD9D05C54F80EE65B5AD58D7EFB2">
+      <messages name="QueryResponse" type="mdwsdl:QueryResponse" id="A1DCAD9D05C54F80EE65B5AD58D7EFB2" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.11/@children.1/@outMessage">
         <properties name="parameters" type="mdwsdl:QueryResponse"/>
       </messages>
-      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.13/@sourceConnections.1/@boundaryEvent/@triggers.0/@error" id="A1DCAD9F1C253CC0EE65B5AD58D7EFB2"/>
-      <messages name="MDFault" type="mdwsdl:MDFault" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@sourceConnections.1/@boundaryEvent/@triggers.0/@error" id="A1DCAD9F44E50FA0EE65B5AD58D7EFB2"/>
-      <messages name="findSP_commodity_Request" type="comfindwsdl:findSP_commodity_Request" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.25/@inMessage" id="A1DD595974A896B0D29FB4B31A263401">
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" id="A1DCAD9F1C253CC0EE65B5AD58D7EFB2" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.12/@sourceConnections.1/@boundaryEvent/@triggers.0/@error"/>
+      <messages name="MDFault" type="mdwsdl:MDFault" id="A1DCAD9F44E50FA0EE65B5AD58D7EFB2" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.11/@sourceConnections.1/@boundaryEvent/@triggers.0/@error"/>
+      <messages name="findSP_commodity_Request" type="comfindwsdl:findSP_commodity_Request" id="A1DD595974A896B0D29FB4B31A263401" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.24/@inMessage">
         <properties name="parameters" type="comfindwsdl:findSP_commodity"/>
       </messages>
-      <messages name="findSP_commodity_Response" type="comfindwsdl:findSP_commodity_Response" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.22/@outMessage" id="A1DD595B4A911121D29FB4B31A263401">
+      <messages name="findSP_commodity_Response" type="comfindwsdl:findSP_commodity_Response" id="A1DD595B4A911121D29FB4B31A263401" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.21/@outMessage">
         <properties name="parameters" type="comfindwsdl:findSP_commodity_Response"/>
       </messages>
-      <messages name="findSP_commodity_Fault" type="comfindwsdl:findSP_commodity_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.23/@outMessage" id="A1DD595BBB1BA4F1D29FB4B31A263401">
+      <messages name="findSP_commodity_Fault" type="comfindwsdl:findSP_commodity_Fault" id="A1DD595BBB1BA4F1D29FB4B31A263401" messageUsages="//@children.0/@children.0/@children.1/@children.2/@children.22/@outMessage">
         <properties name="vispError" type="comfindwsdl:findSP_commodity_Fault"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="61" y="2"/>
+    <size width="799"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

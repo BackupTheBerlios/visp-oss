@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD572353148AF0E22F9665472F4823" name="findSP_commodity" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-21T14:48:31.765+0200" modificationDate="2008-07-22T12:41:00.578+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD572353148AF0E22F9665472F4823" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="findSP_commodity" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-21T15:48:31.765+0300" modificationDate="2009-04-08T14:30:51.882+0300">
   <children xsi:type="bpmn:Pool" id="A1DD572355C33030E22F9665472F4823" name="find service provider in Commodity Market - Broker">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="25" y="14"/>
+    <location x="26" y="138"/>
     <size width="974" height="1305"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD572355C33031E22F9665472F4823" name="Lane1">
@@ -510,28 +510,35 @@
       </children>
     </children>
     <process name="findSP_commodity" id="A1DD5726B6FF95C0E22F9665472F4823" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/commodity/findSP/bpel">
-      <messages name="findSP_commodity_Request" type="comfindwsdl:findSP_commodity_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DD57344339A4B0E22F9665472F4823">
+      <messages name="findSP_commodity_Request" type="comfindwsdl:findSP_commodity_Request" id="A1DD57344339A4B0E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="comfindwsdl:findSP_commodity"/>
       </messages>
-      <messages name="getServicePrice_Request" type="trdgetpricewsdl:getServicePrice_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.2/@inMessage" id="A1DD5737290ABBD1E22F9665472F4823">
+      <messages name="getServicePrice_Request" type="trdgetpricewsdl:getServicePrice_Request" id="A1DD5737290ABBD1E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.2/@inMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice"/>
       </messages>
-      <messages name="getServicePrice_Response" type="trdgetpricewsdl:getServicePrice_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.4/@outMessage" id="A1DD573741251531E22F9665472F4823">
+      <messages name="getServicePrice_Response" type="trdgetpricewsdl:getServicePrice_Response" id="A1DD573741251531E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.4/@outMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Response"/>
       </messages>
-      <messages name="getServicePrice_Error" type="trdgetpricewsdl:getServicePrice_Error" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.5/@outMessage" id="A1DD573753C7BE41E22F9665472F4823">
+      <messages name="getServicePrice_Error" type="trdgetpricewsdl:getServicePrice_Error" id="A1DD573753C7BE41E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.5/@outMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Error"/>
       </messages>
-      <messages name="findSP_commodity_Response" type="comfindwsdl:findSP_commodity_Response" messageUsages="//@children.0/@children.0/@children.1/@children.10/@inMessage" id="A1DD57394CB97D81E22F9665472F4823">
+      <messages name="findSP_commodity_Response" type="comfindwsdl:findSP_commodity_Response" id="A1DD57394CB97D81E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.1/@children.10/@inMessage">
         <properties name="parameters" type="comfindwsdl:findSP_commodity_Response"/>
       </messages>
-      <messages name="findSP_commodity_Fault" type="comfindwsdl:findSP_commodity_Fault" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DD57398C82D601E22F9665472F4823">
+      <messages name="findSP_commodity_Fault" type="comfindwsdl:findSP_commodity_Fault" id="A1DD57398C82D601E22F9665472F4823" messageUsages="//@children.0/@children.0/@children.3/@inMessage">
         <properties name="vispError" type="comfindwsdl:findSP_commodity_Fault"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="26" y="-41"/>
+    <size width="823"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC9F63F1FED260CA30C2787CB4A8DB" name="dummyERP" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-11-30T17:47:32.486+0100" modificationDate="2008-01-30T09:28:36.299+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DC9F63F1FED260CA30C2787CB4A8DB" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="dummyERP" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2007-11-30T18:47:32.486+0200" modificationDate="2009-04-08T14:26:59.398+0300">
   <children xsi:type="bpmn:Pool" id="A1DC9F63F4EDDC00CA30C2787CB4A8DB" name="Dummy ERP Mediation Server">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="37" y="7"/>
+    <location x="40" y="180"/>
     <size width="1065" height="674"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DC9F63F4EDDC01CA30C2787CB4A8DB" name="Lane1">
@@ -319,22 +319,29 @@
       </children>
     </children>
     <process name="dummyERP" id="A1DC9F6418F92780CA30C2787CB4A8DB" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/erp/bpel">
-      <messages name="ConfirmBOD" type="trdgetquotewsdl:ConfirmBOD" messageUsages="//@children.0/@children.0/@children.2/@inMessage" id="A1DC9F646F8D7601CA30C2787CB4A8DB"/>
-      <messages name="ShowQuote" type="trdgetquotewsdl:ShowQuote" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage" id="A1DC9F65D6BE20D1CA30C2787CB4A8DB"/>
-      <messages name="ProcessRFQ" type="trdgetquotewsdl:ProcessRFQ" messageUsages="//@children.0/@children.0/@children.6/@outMessage" id="A1DC9F6630ABFA91CA30C2787CB4A8DB"/>
-      <messages name="ProcessPurchaseOrder" type="trdorderwsdl:ProcessPurchaseOrder" messageUsages="//@children.0/@children.0/@children.7/@outMessage" id="A1DCCF0BB1BAEE00C1D1DA10850B352B">
+      <messages name="ConfirmBOD" type="trdgetquotewsdl:ConfirmBOD" id="A1DC9F646F8D7601CA30C2787CB4A8DB" messageUsages="//@children.0/@children.0/@children.2/@inMessage"/>
+      <messages name="ShowQuote" type="trdgetquotewsdl:ShowQuote" id="A1DC9F65D6BE20D1CA30C2787CB4A8DB" messageUsages="//@children.0/@children.0/@children.1/@children.3/@inMessage"/>
+      <messages name="ProcessRFQ" type="trdgetquotewsdl:ProcessRFQ" id="A1DC9F6630ABFA91CA30C2787CB4A8DB" messageUsages="//@children.0/@children.0/@children.6/@outMessage"/>
+      <messages name="ProcessPurchaseOrder" type="trdorderwsdl:ProcessPurchaseOrder" id="A1DCCF0BB1BAEE00C1D1DA10850B352B" messageUsages="//@children.0/@children.0/@children.7/@outMessage">
         <properties name="parameters" type="oa:ProcessPurchaseOrder"/>
       </messages>
-      <messages name="ShowPurchaseOrder" type="trdorderwsdl:ShowPurchaseOrder" messageUsages="//@children.0/@children.0/@children.8/@children.2/@inMessage" id="A1DCCF0CF44D8331C1D1DA10850B352B">
+      <messages name="ShowPurchaseOrder" type="trdorderwsdl:ShowPurchaseOrder" id="A1DCCF0CF44D8331C1D1DA10850B352B" messageUsages="//@children.0/@children.0/@children.8/@children.2/@inMessage">
         <properties name="parameters" type="oa:ShowPurchaseOrder"/>
       </messages>
-      <messages name="ConfirmBOD1" type="trdorderwsdl:ConfirmBOD" messageUsages="//@children.0/@children.0/@children.9/@inMessage" id="A1DCCF0D0D02BD01C1D1DA10850B352B">
+      <messages name="ConfirmBOD1" type="trdorderwsdl:ConfirmBOD" id="A1DCCF0D0D02BD01C1D1DA10850B352B" messageUsages="//@children.0/@children.0/@children.9/@inMessage">
         <properties name="parameters" type="oa:ConfirmBOD"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="36" y="7"/>
+    <size width="809"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

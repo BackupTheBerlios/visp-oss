@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF0537D056690C747A60C01E325D2" name="moveTreeBranch" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T17:43:48.473+0100" modificationDate="2008-03-13T11:36:35.688+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF0537D056690C747A60C01E325D2" name="moveTreeBranch" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T18:43:48.473+0200" modificationDate="2009-04-08T14:44:45.679+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF053A1F593D0C747A60C01E325D2" name="VISP-Application - Move a Tree Branch">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="42" y="17"/>
+    <location x="42" y="172"/>
     <size width="746" height="837"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF053A1F593D1C747A60C01E325D2" name="Lane1">
@@ -247,24 +247,31 @@
       </children>
     </children>
     <process name="moveTreeBranch" id="A1DCF053CC2B3DD0C747A60C01E325D2" targetNamespace="urn:vispproject.org/052007/useCases/614/moveTreeBranch/bpel">
-      <messages name="MoveTreeBranch_Request" type="movebranch:MoveTreeBranch_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCF0E68D7128A1FF7AE2035D812C56">
+      <messages name="MoveTreeBranch_Request" type="movebranch:MoveTreeBranch_Request" id="A1DCF0E68D7128A1FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="movebranch:moveTreeBranch"/>
       </messages>
-      <messages name="MoveTreeBranch_Response" type="movebranch:MoveTreeBranch_Response" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage" id="A1DCF0E68D7128A2FF7AE2035D812C56">
+      <messages name="MoveTreeBranch_Response" type="movebranch:MoveTreeBranch_Response" id="A1DCF0E68D7128A2FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.1/@children.8/@inMessage">
         <properties name="parameters" type="movebranch:moveTreeBranch_Response"/>
       </messages>
-      <messages name="moveABranchInTheTreeOfServices_Request" type="sscwsdl:moveABranchInTheTreeOfServices_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCF0E6CCC63B80FF7AE2035D812C56">
+      <messages name="moveABranchInTheTreeOfServices_Request" type="sscwsdl:moveABranchInTheTreeOfServices_Request" id="A1DCF0E6CCC63B80FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="sscwsdl:moveABranchInTheTreeOfServices"/>
       </messages>
-      <messages name="moveABranchInTheTreeOfServices_Response" type="sscwsdl:moveABranchInTheTreeOfServices_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCF0E6CCCAF670FF7AE2035D812C56">
+      <messages name="moveABranchInTheTreeOfServices_Response" type="sscwsdl:moveABranchInTheTreeOfServices_Response" id="A1DCF0E6CCCAF670FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="sscwsdl:moveABranchInTheTreeOfServices_Output"/>
       </messages>
-      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DCF0E6FA4E1DC0FF7AE2035D812C56"/>
-      <messages name="MoveTreeBranch_Fault" type="movebranch:MoveTreeBranch_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCF0E8F54D6040FF7AE2035D812C56"/>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" id="A1DCF0E6FA4E1DC0FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error"/>
+      <messages name="MoveTreeBranch_Fault" type="movebranch:MoveTreeBranch_Fault" id="A1DCF0E8F54D6040FF7AE2035D812C56" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="35" y="-3"/>
+    <size width="787"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

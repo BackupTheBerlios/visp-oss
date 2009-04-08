@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCEEAA97558ED0F8CAB1DDEFF9C818" name="removeCharacteristic" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-10T15:02:16.509+0100" modificationDate="2008-03-10T17:17:02.809+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCEEAA97558ED0F8CAB1DDEFF9C818" name="removeCharacteristic" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-10T16:02:16.509+0200" modificationDate="2009-04-08T14:37:52.335+0300">
   <children xsi:type="bpmn:Pool" id="A1DCEEAAA2C32020F8CAB1DDEFF9C818" name="VISP-Application - Remove Characteristic">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="16" y="16"/>
+    <location x="16" y="171"/>
     <size width="734" height="859"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCEEAAA2C32021F8CAB1DDEFF9C818" name="Lane1">
@@ -248,24 +248,31 @@
       </children>
     </children>
     <process name="removeCharacteristic" id="A1DCEEAAC34DF770F8CAB1DDEFF9C818" targetNamespace="urn:vispproject.org/052007/useCases/69/removeCharacteristic/bpel">
-      <messages name="RemoveCharacteristic_Request" type="remcharwsdl:RemoveCharacteristic_Request" messageUsages="//@children.0/@children.0/@children.1/@children.2/@outMessage" id="A1DCEEAB0D651961F8CAB1DDEFF9C818">
+      <messages name="RemoveCharacteristic_Request" type="remcharwsdl:RemoveCharacteristic_Request" id="A1DCEEAB0D651961F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.1/@children.2/@outMessage">
         <properties name="parameters" type="remcharwsdl:removeCharacteristic"/>
       </messages>
-      <messages name="RemoveCharacteristic_Response" type="remcharwsdl:RemoveCharacteristic_Response" messageUsages="//@children.0/@children.0/@children.1/@children.9/@inMessage" id="A1DCEEAB0D678A60F8CAB1DDEFF9C818">
+      <messages name="RemoveCharacteristic_Response" type="remcharwsdl:RemoveCharacteristic_Response" id="A1DCEEAB0D678A60F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.1/@children.9/@inMessage">
         <properties name="parameters" type="remcharwsdl:removeCharacteristic_Response"/>
       </messages>
-      <messages name="removeCharacteristicFromService_Request" type="sscwsdl:removeCharacteristicFromService_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DCEEABAFFBDF11F8CAB1DDEFF9C818">
+      <messages name="removeCharacteristicFromService_Request" type="sscwsdl:removeCharacteristicFromService_Request" id="A1DCEEABAFFBDF11F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="sscwsdl:removeCharacteristicFromService"/>
       </messages>
-      <messages name="removeCharacteristicFromService_Response" type="sscwsdl:removeCharacteristicFromService_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DCEEABB0009A00F8CAB1DDEFF9C818">
+      <messages name="removeCharacteristicFromService_Response" type="sscwsdl:removeCharacteristicFromService_Response" id="A1DCEEABB0009A00F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="sscwsdl:removeCharacteristicFromService_Output"/>
       </messages>
-      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DCEEAC9D907D30F8CAB1DDEFF9C818"/>
-      <messages name="RemoveCharacteristic_Fault" type="remcharwsdl:RemoveCharacteristic_Fault" messageUsages="//@children.0/@children.0/@children.2/@results.0/@error" id="A1DCEEB70F206780F8CAB1DDEFF9C818"/>
+      <messages name="SSC_Fault" type="sscwsdl:SSC_Fault" id="A1DCEEAC9D907D30F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error"/>
+      <messages name="RemoveCharacteristic_Fault" type="remcharwsdl:RemoveCharacteristic_Fault" id="A1DCEEB70F206780F8CAB1DDEFF9C818" messageUsages="//@children.0/@children.0/@children.2/@results.0/@error"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="13"/>
+    <size width="791"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

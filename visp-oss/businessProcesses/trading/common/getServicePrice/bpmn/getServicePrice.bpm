@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5406A55FAA30D015C0FEBA49FE75" name="getServicePrice" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-17T15:45:40.953+0200" modificationDate="2008-07-17T16:29:59.953+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5406A55FAA30D015C0FEBA49FE75" documentation="Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership.  &#xD;&#xA;The VISP consortium licenses this file to you under the VISP License, Version 1.0 (the &quot;License&quot;); &#xD;&#xA;you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at:&#xD;&#xA;&#xD;&#xA;http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is &#xD;&#xA;distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. &#xD;&#xA;See the License for the specific language governing permissions and limitations under the License." name="getServicePrice" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-17T16:45:40.953+0300" modificationDate="2009-04-08T14:28:50.242+0300">
   <children xsi:type="bpmn:Pool" id="A1DD5406D8C5EDD0D015C0FEBA49FE75" name="Get Service Price - Provider">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="37" y="38"/>
+    <location x="33" y="173"/>
     <size width="949" height="720"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD5406D8C5EDD1D015C0FEBA49FE75" name="Lane1">
@@ -341,34 +341,41 @@
       </children>
     </children>
     <process name="getServicePrice" id="A1DD5406EDEC5B90D015C0FEBA49FE75" targetNamespace="urn:vispproject.org/052007/processes/bp/trading/common/getServicePrice/bpel">
-      <messages name="getServicePrice_Request" type="trdgetpricewsdl:getServicePrice_Request" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage" id="A1DD5408ACA6B161D015C0FEBA49FE75">
+      <messages name="getServicePrice_Request" type="trdgetpricewsdl:getServicePrice_Request" id="A1DD5408ACA6B161D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.0/@outMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice"/>
       </messages>
-      <messages name="GetServicePrice_Request" type="erpmswsdl:GetServicePrice_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DD54092F31BAD1D015C0FEBA49FE75">
+      <messages name="GetServicePrice_Request" type="erpmswsdl:GetServicePrice_Request" id="A1DD54092F31BAD1D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="erpmswsdl:GetServicePrice"/>
       </messages>
-      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD54092F342BD0D015C0FEBA49FE75">
+      <messages name="SynchronousConfirmation" type="erpmswsdl:SynchronousConfirmation" id="A1DD54092F342BD0D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="erpmswsdl:SynchronousConfirmation"/>
       </messages>
-      <messages name="ErpFault" type="erpmswsdl:ErpFault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD54096EBF69E0D015C0FEBA49FE75">
+      <messages name="ErpFault" type="erpmswsdl:ErpFault" id="A1DD54096EBF69E0D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
         <properties name="parameters" type="erpmswsdl:ErpFault"/>
       </messages>
-      <messages name="GetServicePrice_Response" type="erpmswsdl:GetServicePrice_Response" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage" id="A1DD540B0ABCC621D015C0FEBA49FE75">
+      <messages name="GetServicePrice_Response" type="erpmswsdl:GetServicePrice_Response" id="A1DD540B0ABCC621D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.8/@outMessage">
         <properties name="parameters" type="erpmswsdl:GetServicePrice_Response"/>
       </messages>
-      <messages name="GetServicePrice_Error" type="erpmswsdl:GetServicePrice_Error" messageUsages="//@children.0/@children.0/@children.1/@children.9/@outMessage" id="A1DD540BBDD6FE61D015C0FEBA49FE75">
+      <messages name="GetServicePrice_Error" type="erpmswsdl:GetServicePrice_Error" id="A1DD540BBDD6FE61D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.9/@outMessage">
         <properties name="parameters" type="erpmswsdl:GetServicePrice_Error"/>
       </messages>
-      <messages name="getServicePrice_Response" type="trdgetpricewsdl:getServicePrice_Response" messageUsages="//@children.0/@children.0/@children.1/@children.13/@inMessage" id="A1DD540C0BFCA3B1D015C0FEBA49FE75">
+      <messages name="getServicePrice_Response" type="trdgetpricewsdl:getServicePrice_Response" id="A1DD540C0BFCA3B1D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.1/@children.13/@inMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Response"/>
       </messages>
-      <messages name="getServicePrice_Error" type="trdgetpricewsdl:getServicePrice_Error" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DD540C64740A11D015C0FEBA49FE75">
+      <messages name="getServicePrice_Error" type="trdgetpricewsdl:getServicePrice_Error" id="A1DD540C64740A11D015C0FEBA49FE75" messageUsages="//@children.0/@children.0/@children.3/@inMessage">
         <properties name="parameters" type="trdgetpricewsdl:getServicePrice_Error"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="30" y="1"/>
+    <size width="799"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

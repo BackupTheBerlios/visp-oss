@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E810B3730D3F7913EC3C00DE7" name="adaptCharacteristics" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T13:19:03.843+0100" modificationDate="2008-04-22T16:53:12.109+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF02E810B3730D3F7913EC3C00DE7" name="adaptCharacteristics" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-12T14:19:03.843+0200" modificationDate="2009-04-08T14:51:48.398+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF43B5E616040DBEE8B4392A8BC15" documentation="" name="Adapt Characteristics">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="-72" y="-179"/>
+    <location x="-63" y="180"/>
     <size width="1069" height="2376"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF43B5E616041DBEE8B4392A8BC15" name="Lane1">
@@ -310,16 +310,16 @@
             <size width="31" height="31"/>
             <fillColor green="255"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop"/>
-          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.5/@inMessage" id="A1DD107B7783A180DBBA97A4C15C12EA">
+          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DD107B7783A180DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.5/@inMessage">
             <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
           </messages>
-          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.3/@outMessage" id="A1DD107B78AB58A0DBBA97A4C15C12EA">
+          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DD107B78AB58A0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.3/@outMessage">
             <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
           </messages>
-          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.0/@outMessage" id="A1DD107B79B66000DBBA97A4C15C12EA">
+          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DD107B79B66000DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.4/@children.0/@outMessage">
             <properties name="vispError" type="comxsd:VispError"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop"/>
         </children>
         <children xsi:type="bpmn:Activity" targetConnections="A1DD0C97A6638D40CD8FFFAF3982315B" id="A1DD0C968FEC7928CD8FFFAF3982315B" name="Remove characteristic from a service" activityType="Subprocess" loopType="Standard">
           <fontColor/>
@@ -512,16 +512,16 @@
             <size width="31" height="31"/>
             <fillColor green="255"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop"/>
-          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.5/@inMessage" id="A1DD107B732CA370DBBA97A4C15C12EA">
+          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DD107B732CA370DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.5/@inMessage">
             <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
           </messages>
-          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.0/@outMessage" id="A1DD107B744391B0DBBA97A4C15C12EA">
+          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DD107B744391B0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.0/@outMessage">
             <properties name="vispError" type="comxsd:VispError"/>
           </messages>
-          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.3/@outMessage" id="A1DD107B7542B230DBBA97A4C15C12EA">
+          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DD107B7542B230DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.5/@children.3/@outMessage">
             <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop"/>
         </children>
         <children xsi:type="bpmn:Activity" targetConnections="A1DD0C97D572D2D0CD8FFFAF3982315B" id="A1DD0C9697A9AC90CD8FFFAF3982315B" name="Add characteristic to a service" activityType="Subprocess" loopType="Standard">
           <fontColor/>
@@ -714,16 +714,16 @@
             <size width="31" height="31"/>
             <fillColor green="255"/>
           </children>
-          <loop xsi:type="bpmn:StandardLoop"/>
-          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.5/@inMessage" id="A1DD107B692E5990DBBA97A4C15C12EA">
+          <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DD107B692E5990DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.5/@inMessage">
             <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
           </messages>
-          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.0/@outMessage" id="A1DD107B6A3BD1F0DBBA97A4C15C12EA">
+          <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DD107B6A3BD1F0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.0/@outMessage">
             <properties name="vispError" type="comxsd:VispError"/>
           </messages>
-          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.3/@outMessage" id="A1DD107B6B4B9440DBBA97A4C15C12EA">
+          <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DD107B6B4B9440DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.1/@children.6/@children.3/@outMessage">
             <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
           </messages>
+          <loop xsi:type="bpmn:StandardLoop"/>
         </children>
         <children xsi:type="bpmn:Gateway" targetConnections="A1DD0C97D2863A30CD8FFFAF3982315B" id="A1DD0C977DF84300CD8FFFAF3982315B" name="Check if service instance is in error condition" labelWidth="140">
           <fontColor/>
@@ -858,19 +858,26 @@
       </children>
     </children>
     <process name="adaptCharacteristics-gen" id="A1DCF43B5E61607BDBEE8B4392A8BC15" targetNamespace="urn:vispproject.org/052007/useCases/addSI/bpel">
-      <messages name="adaptCharacteristics_Request" type="adaptwsdl:adaptCharacteristics_Request" messageUsages="//@children.0/@children.0/@children.0/@outMessage" id="A1DD107B2630FF30DBBA97A4C15C12EA">
+      <messages name="adaptCharacteristics_Request" type="adaptwsdl:adaptCharacteristics_Request" id="A1DD107B2630FF30DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.0/@outMessage">
         <properties name="adaptCharacteristics_Input" type="adaptwsdl:Adapt_Input"/>
       </messages>
-      <messages name="adaptCharacteristics_Response" type="adaptwsdl:adaptCharacteristics_Response" messageUsages="//@children.0/@children.0/@children.3/@inMessage" id="A1DD107B2AE02F60DBBA97A4C15C12EA">
+      <messages name="adaptCharacteristics_Response" type="adaptwsdl:adaptCharacteristics_Response" id="A1DD107B2AE02F60DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.3/@inMessage">
         <properties name="adaptCharacteristics_Output" type="adaptwsdl:Adapt_Output"/>
       </messages>
-      <messages name="adaptCharacteristics_Fault" type="adaptwsdl:adaptCharacteristics_Fault" messageUsages="//@children.0/@children.0/@children.6/@inMessage" id="A1DD107B2BE67BD0DBBA97A4C15C12EA">
+      <messages name="adaptCharacteristics_Fault" type="adaptwsdl:adaptCharacteristics_Fault" id="A1DD107B2BE67BD0DBBA97A4C15C12EA" messageUsages="//@children.0/@children.0/@children.6/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
     </process>
     <participant>
       <role name="Participant5"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="-68" y="5"/>
+    <size width="813"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

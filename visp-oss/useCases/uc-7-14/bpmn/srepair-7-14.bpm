@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD0CAF62FEF20DFD9FF8DC612E14B" name="srepair-7-14" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-01T14:38:24.658+0100" modificationDate="2008-08-05T12:45:26.640+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCD0CAF62FEF20DFD9FF8DC612E14B" name="srepair-7-14" author="ms" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-02-01T15:38:24.658+0200" modificationDate="2009-04-08T14:57:03.695+0300">
   <children xsi:type="bpmn:Pool" id="A1DCD4B1A6EC0DA0ECFAFA6BD454A40A" name="VISP-Application - Repair Service Instance">
     <fontColor/>
     <lineColor/>
     <font family="Lucida Grande" height="8"/>
-    <location x="60" y="-72"/>
+    <location x="58" y="172"/>
     <size width="1753" height="2305"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCD4B1A6EC0DA1ECFAFA6BD454A40A" name="Lane1">
@@ -841,31 +841,31 @@
           <inMessage message="A1DCD4B2E6709F80ECFAFA6BD454A40A"/>
           <webService interface="repairsiwsdl:repairService_PT" operation="repairService_Request" role="repairService_Provider" partnerLink="repairService" partnerLinkType="repairsiwsdl:repairService_LT"/>
         </children>
-        <messages name="getServiceInstanceDescription_Request" type="sibwsdl:getServiceInstanceDescription_Request" messageUsages="//@children.0/@children.0/@children.2/@children.22/@inMessage" id="A1DCD4B4629D73C0ECFAFA6BD454A40A">
+        <messages name="getServiceInstanceDescription_Request" type="sibwsdl:getServiceInstanceDescription_Request" id="A1DCD4B4629D73C0ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.22/@inMessage">
           <properties name="getServiceInstanceDescription_Input" type="repxsd:ReferenceNumber"/>
         </messages>
-        <messages name="getServiceInstanceDescription_Response" type="sibwsdl:getServiceInstanceDescription_Response" messageUsages="//@children.0/@children.0/@children.2/@children.22/@outMessage" id="A1DCD4B4637D9A90ECFAFA6BD454A40A">
+        <messages name="getServiceInstanceDescription_Response" type="sibwsdl:getServiceInstanceDescription_Response" id="A1DCD4B4637D9A90ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.22/@outMessage">
           <properties name="getServiceInstanceDescription_Output" type="repxsd:ServiceInstanceDescription"/>
         </messages>
-        <messages name="setServiceInstanceStatus_Request" type="sibwsdl:setServiceInstanceStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.6/@inMessage //@children.0/@children.0/@children.2/@children.13/@inMessage" id="A1DCD4B470A42680ECFAFA6BD454A40A">
+        <messages name="setServiceInstanceStatus_Request" type="sibwsdl:setServiceInstanceStatus_Request" id="A1DCD4B470A42680ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.6/@inMessage //@children.0/@children.0/@children.2/@children.13/@inMessage">
           <properties name="SetServiceInstanceStatus_Input" type="sibwsdl:SetServiceInstanceStatus_Input"/>
         </messages>
-        <messages name="setServiceInstanceStatus_Response" type="sibwsdl:setServiceInstanceStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.6/@outMessage //@children.0/@children.0/@children.2/@children.13/@outMessage" id="A1DCD4B471CE2790ECFAFA6BD454A40A">
+        <messages name="setServiceInstanceStatus_Response" type="sibwsdl:setServiceInstanceStatus_Response" id="A1DCD4B471CE2790ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.6/@outMessage //@children.0/@children.0/@children.2/@children.13/@outMessage">
           <properties name="setServiceInstanceStatus_Output" type="comxsd:String"/>
         </messages>
-        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.29/@inMessage" id="A1DCD4B47E9A1060ECFAFA6BD454A40A">
+        <messages name="setOperationalStatus_Request" type="sscwsdl:setOperationalStatus_Request" id="A1DCD4B47E9A1060ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.29/@inMessage">
           <properties name="parameters" type="sscwsdl:setOperationalStatus"/>
         </messages>
-        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.29/@outMessage" id="A1DCD4B47FC1A070ECFAFA6BD454A40A">
+        <messages name="setOperationalStatus_Response" type="sscwsdl:setOperationalStatus_Response" id="A1DCD4B47FC1A070ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.29/@outMessage">
           <properties name="parameters" type="sscwsdl:setOperationalStatus_Output"/>
         </messages>
-        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" messageUsages="//@children.0/@children.0/@children.2/@children.9/@inMessage" id="A1DCD4B48C8FD330ECFAFA6BD454A40A">
+        <messages name="invokeATP_Request" type="invwsdl:invokeATP_Request" id="A1DCD4B48C8FD330ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.9/@inMessage">
           <properties name="invokeATP_Request" type="invxsd:invokeATP_Request"/>
         </messages>
-        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" messageUsages="//@children.0/@children.0/@children.2/@children.10/@outMessage" id="A1DCD4B48DB51950ECFAFA6BD454A40A">
+        <messages name="invokeATP_Response" type="invwsdl:invokeATP_Response" id="A1DCD4B48DB51950ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.10/@outMessage">
           <properties name="invokeATP_Response" type="invxsd:invokeATP_Response"/>
         </messages>
-        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" messageUsages="//@children.0/@children.0/@children.2/@children.11/@outMessage" id="A1DCD4B48E8E1430ECFAFA6BD454A40A">
+        <messages name="invokeATP_Fault" type="invwsdl:invokeATP_Fault" id="A1DCD4B48E8E1430ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.11/@outMessage">
           <properties name="vispError" type="comxsd:VispError"/>
         </messages>
         <messages name="getServiceSet_Request" type="sscwsdl:getServiceSet_Request" id="A1DCD96E346A3D80F20DE5E98CCF87E2">
@@ -880,10 +880,10 @@
         <messages name="serviceTreeToList_Response" type="sscwsdl:serviceTreeToList_Response" id="A1DCD96E425DB660F20DE5E98CCF87E2">
           <properties name="serviceTreeToList_Output" type="sscwsdl:ServiceTreeToList_Output"/>
         </messages>
-        <messages name="updateSvsStatus_Request" type="updwsdl:updateSvsStatus_Request" messageUsages="//@children.0/@children.0/@children.2/@children.38/@inMessage" id="A1DCE3C931786E20CB2C846274619719">
+        <messages name="updateSvsStatus_Request" type="updwsdl:updateSvsStatus_Request" id="A1DCE3C931786E20CB2C846274619719" messageUsages="//@children.0/@children.0/@children.2/@children.38/@inMessage">
           <properties name="updateSvsStatus_Input" type="updwsdl:UpdateSvsStatus_Input"/>
         </messages>
-        <messages name="updateSvsStatus_Response" type="updwsdl:updateSvsStatus_Response" messageUsages="//@children.0/@children.0/@children.2/@children.38/@outMessage" id="A1DCE3C932968850CB2C846274619719">
+        <messages name="updateSvsStatus_Response" type="updwsdl:updateSvsStatus_Response" id="A1DCE3C932968850CB2C846274619719" messageUsages="//@children.0/@children.0/@children.2/@children.38/@outMessage">
           <properties name="updateSvsStatus_Output" type="updwsdl:UpdateSvsStatus_Output"/>
         </messages>
       </children>
@@ -1318,21 +1318,21 @@
       </children>
     </children>
     <process name="srepair-7-14-gen" id="A1DCD4B1A6EC0E3EECFAFA6BD454A40A" targetNamespace="urn:vispproject.org/052007/useCases/repairSI/bpel">
-      <messages name="repairService_Request" type="repairsiwsdl:repairService_Request" messageUsages="//@children.0/@children.0/@children.1/@outMessage" id="A1DCD4B2C9836150ECFAFA6BD454A40A"/>
-      <messages name="repairService_syncResponse" type="repairsiwsdl:repairService_syncResponse" messageUsages="//@children.0/@children.0/@children.2/@children.44/@inMessage" id="A1DCD4B2E6709F80ECFAFA6BD454A40A"/>
-      <messages name="repairService_syncFault" type="repairsiwsdl:repairService_syncFault" messageUsages="//@children.0/@children.0/@children.14/@inMessage //@children.0/@children.0/@children.15/@inMessage" id="A1DCD4B32485B850ECFAFA6BD454A40A">
+      <messages name="repairService_Request" type="repairsiwsdl:repairService_Request" id="A1DCD4B2C9836150ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.1/@outMessage"/>
+      <messages name="repairService_syncResponse" type="repairsiwsdl:repairService_syncResponse" id="A1DCD4B2E6709F80ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.2/@children.44/@inMessage"/>
+      <messages name="repairService_syncFault" type="repairsiwsdl:repairService_syncFault" id="A1DCD4B32485B850ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.14/@inMessage //@children.0/@children.0/@children.15/@inMessage">
         <properties name="parameters" type="comxsd:VispError"/>
       </messages>
-      <messages name="repairService_Fault" type="repairsiwsdl:repairService_Fault" messageUsages="//@children.0/@children.0/@children.3/@inMessage //@children.0/@children.0/@children.6/@inMessage" id="A1DCD4B39FDDCCE0ECFAFA6BD454A40A">
+      <messages name="repairService_Fault" type="repairsiwsdl:repairService_Fault" id="A1DCD4B39FDDCCE0ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.3/@inMessage //@children.0/@children.0/@children.6/@inMessage">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="repairService_Response" type="repairsiwsdl:repairService_Response" messageUsages="//@children.0/@children.0/@children.7/@inMessage" id="A1DCD4B3A8491AB0ECFAFA6BD454A40A">
+      <messages name="repairService_Response" type="repairsiwsdl:repairService_Response" id="A1DCD4B3A8491AB0ECFAFA6BD454A40A" messageUsages="//@children.0/@children.0/@children.7/@inMessage">
         <properties name="repairSI_Output" type="repairsiwsdl:RepairService_Output"/>
       </messages>
-      <messages name="setServiceInstanceFaultStatus_Request" type="sibwsdl:setServiceInstanceFaultStatus_Request" messageUsages="//@children.0/@children.0/@children.18/@inMessage //@children.0/@children.0/@children.25/@inMessage //@children.0/@children.0/@children.22/@inMessage" id="A1DD62DA860C79A1C6F3ED6B0D1BC0BE">
+      <messages name="setServiceInstanceFaultStatus_Request" type="sibwsdl:setServiceInstanceFaultStatus_Request" id="A1DD62DA860C79A1C6F3ED6B0D1BC0BE" messageUsages="//@children.0/@children.0/@children.18/@inMessage //@children.0/@children.0/@children.25/@inMessage //@children.0/@children.0/@children.22/@inMessage">
         <properties name="setServiceInstanceFaultStatus_Input" type="sibwsdl:SetServiceInstanceFaultStatus"/>
       </messages>
-      <messages name="setServiceInstanceFaultStatus_Response" type="sibwsdl:setServiceInstanceFaultStatus_Response" messageUsages="//@children.0/@children.0/@children.18/@outMessage //@children.0/@children.0/@children.25/@outMessage //@children.0/@children.0/@children.22/@outMessage" id="A1DD62DA86113490C6F3ED6B0D1BC0BE">
+      <messages name="setServiceInstanceFaultStatus_Response" type="sibwsdl:setServiceInstanceFaultStatus_Response" id="A1DD62DA86113490C6F3ED6B0D1BC0BE" messageUsages="//@children.0/@children.0/@children.18/@outMessage //@children.0/@children.0/@children.25/@outMessage //@children.0/@children.0/@children.22/@outMessage">
         <properties name="setServiceInstanceFaultStatus_Output" type="comxsd:Boolean"/>
       </messages>
     </process>
@@ -1344,8 +1344,15 @@
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="60" y="2260"/>
+    <location x="61" y="2485"/>
     <size width="169"/>
+    <fillColor red="255" green="255" blue="255"/>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="62" y="3"/>
+    <size width="788"/>
     <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>

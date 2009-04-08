@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD67870A9B51E0E03CF82F5F3ECFF6" name="removeConsumer" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-08-11T11:22:38.453+0200" modificationDate="2008-08-11T12:44:25.734+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD67870A9B51E0E03CF82F5F3ECFF6" name="removeConsumer" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-08-11T12:22:38.453+0300" modificationDate="2009-04-08T14:36:16.773+0300">
   <children xsi:type="bpmn:Pool" id="A1DD67871154D100E03CF82F5F3ECFF6" name="Remove consumer business process">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="7" y="5"/>
+    <location x="10" y="174"/>
     <size width="1086" height="1280"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD67871154D101E03CF82F5F3ECFF6" name="Lane1">
@@ -564,40 +564,47 @@
       </children>
     </children>
     <process name="removeConsumer" id="A1DD678728260891E03CF82F5F3ECFF6" targetNamespace="urn:vispproject.org/052007/useCases/54/removeConsumer/bpel">
-      <messages name="removeConsumer_Request" type="remcdwsdl:removeConsumer_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DD67878B2F6D51E03CF82F5F3ECFF6">
+      <messages name="removeConsumer_Request" type="remcdwsdl:removeConsumer_Request" id="A1DD67878B2F6D51E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="remcdwsdl:removeConsumer"/>
       </messages>
-      <messages name="removeConsumer_Response" type="remcdwsdl:removeConsumer_Response" messageUsages="//@children.0/@children.0/@children.1/@children.11/@inMessage" id="A1DD67878B31DE50E03CF82F5F3ECFF6">
+      <messages name="removeConsumer_Response" type="remcdwsdl:removeConsumer_Response" id="A1DD67878B31DE50E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.11/@inMessage">
         <properties name="parameters" type="remcdwsdl:removeConsumer_Response"/>
       </messages>
-      <messages name="queryRequest" type="cdwsdl:queryRequest" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage" id="A1DD678B97160261E03CF82F5F3ECFF6">
+      <messages name="queryRequest" type="cdwsdl:queryRequest" id="A1DD678B97160261E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.4/@inMessage">
         <properties name="parameters" type="cdwsdl:queryRequest"/>
       </messages>
-      <messages name="queryResponse" type="cdwsdl:queryResponse" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage" id="A1DD678B97187360E03CF82F5F3ECFF6">
+      <messages name="queryResponse" type="cdwsdl:queryResponse" id="A1DD678B97187360E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.4/@outMessage">
         <properties name="parameters" type="cdwsdl:consumerDirectory"/>
       </messages>
-      <messages name="CDFault" type="cdwsdl:CDFault" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.13/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.13/@children.6/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD678BC89388D0E03CF82F5F3ECFF6">
+      <messages name="CDFault" type="cdwsdl:CDFault" id="A1DD678BC89388D0E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.13/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.1/@children.13/@children.6/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
         <properties name="vispError" type="comxsd:VispError"/>
       </messages>
-      <messages name="removeCustomerRequest" type="cdwsdl:removeConsumerRequest" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.4/@inMessage" id="A1DD678D2938C961E03CF82F5F3ECFF6">
+      <messages name="removeCustomerRequest" type="cdwsdl:removeConsumerRequest" id="A1DD678D2938C961E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.4/@inMessage">
         <properties name="parameters" type="cdwsdl:removeConsumerRequest"/>
       </messages>
-      <messages name="removeCustomerResponse" type="cdwsdl:removeConsumerResponse" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.4/@outMessage" id="A1DD678D2938C962E03CF82F5F3ECFF6">
+      <messages name="removeCustomerResponse" type="cdwsdl:removeConsumerResponse" id="A1DD678D2938C962E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.4/@outMessage">
         <properties name="parameters" type="cdwsdl:removeConsumerResponse"/>
       </messages>
-      <messages name="changeCustomerStatusRequest" type="cdwsdl:changeConsumerStatusRequest" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.6/@inMessage" id="A1DD678F1656BB71E03CF82F5F3ECFF6">
+      <messages name="changeCustomerStatusRequest" type="cdwsdl:changeConsumerStatusRequest" id="A1DD678F1656BB71E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.6/@inMessage">
         <properties name="parameters" type="cdwsdl:changeConsumerStatusRequest"/>
       </messages>
-      <messages name="changeCustomerStatusResponse" type="cdwsdl:changeConsumerStatusResponse" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.6/@outMessage" id="A1DD678F16590560E03CF82F5F3ECFF6">
+      <messages name="changeCustomerStatusResponse" type="cdwsdl:changeConsumerStatusResponse" id="A1DD678F16590560E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.1/@children.13/@children.6/@outMessage">
         <properties name="parameters" type="cdwsdl:changeConsumerStatusResponse"/>
       </messages>
-      <messages name="removeConsumer_Fault" type="remcdwsdl:removeConsumer_Fault" messageUsages="//@children.0/@children.0/@children.4/@results.0/@error" id="A1DD678FCE3F1D90E03CF82F5F3ECFF6">
+      <messages name="removeConsumer_Fault" type="remcdwsdl:removeConsumer_Fault" id="A1DD678FCE3F1D90E03CF82F5F3ECFF6" messageUsages="//@children.0/@children.0/@children.4/@results.0/@error">
         <properties name="parameters" type="remcdwsdl:removeConsumer_Fault"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="9" y="5"/>
+    <size width="814"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

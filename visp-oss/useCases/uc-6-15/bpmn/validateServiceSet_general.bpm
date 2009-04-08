@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF51529047AB0EC57F2065EA7B3AB" name="validateServiceSet" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-18T19:00:14.211+0100" modificationDate="2008-03-19T11:30:40.302+0100">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DCF51529047AB0EC57F2065EA7B3AB" name="validateServiceSet" author="pisanka" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-03-18T20:00:14.211+0200" modificationDate="2009-04-08T14:43:16.570+0300">
   <children xsi:type="bpmn:Pool" id="A1DCF52DE75C1FA0EC57F2065EA7B3AB" name="VISP-Application - Validate a Service Set">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="37" y="39"/>
+    <location x="37" y="167"/>
     <size width="942" height="1179"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DCF52DE75C1FA1EC57F2065EA7B3AB" name="Lane1">
@@ -468,17 +468,24 @@
       </children>
     </children>
     <process name="VISP-Application - Validate a Service Set" id="A1DCF52E07A86750EC57F2065EA7B3AB">
-      <messages name="ValidateServiceSet_Request" type="valsvsbpel:ValidateServiceSet_Request" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage" id="A1DCF52F4F54FC71EC57F2065EA7B3AB">
+      <messages name="ValidateServiceSet_Request" type="valsvsbpel:ValidateServiceSet_Request" id="A1DCF52F4F54FC71EC57F2065EA7B3AB" messageUsages="//@children.0/@children.0/@children.1/@children.1/@outMessage">
         <properties name="parameters" type="valsvsbpel:validateServiceSet"/>
       </messages>
       <messages name="ValidateServiceSet_Response" type="valsvsbpel:ValidateServiceSet_Response" id="A1DCF52F4F576D70EC57F2065EA7B3AB">
         <properties name="parameters" type="valsvsbpel:ValidateServiceSet_Response"/>
       </messages>
-      <messages name="ValidateServiceSet_Fault" type="valsvsbpel:ValidateServiceSet_Fault" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error" id="A1DCF52FBA1CF440EC57F2065EA7B3AB"/>
+      <messages name="ValidateServiceSet_Fault" type="valsvsbpel:ValidateServiceSet_Fault" id="A1DCF52FBA1CF440EC57F2065EA7B3AB" messageUsages="//@children.0/@children.0/@children.3/@results.0/@error"/>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="39" y="1"/>
+    <size width="796"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>

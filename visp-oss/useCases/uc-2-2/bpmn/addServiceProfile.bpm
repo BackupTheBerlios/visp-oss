@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5D7554178FD0ED06BB7520CC05F3" name="addServiceProfile" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-29T15:50:39.187+0200" modificationDate="2008-07-31T13:17:49.281+0200">
+<bpmn:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http:///com/eclarus/model/bpmn.ecore" id="A1DD5D7554178FD0ED06BB7520CC05F3" name="addServiceProfile" author="marcin" version="1.0" language="polski" expressionLanguage="XPath 1.0" queryLanguage="XPath 1.0" creationDate="2008-07-29T16:50:39.187+0300" modificationDate="2009-04-08T14:34:01.398+0300">
   <children xsi:type="bpmn:Pool" id="A1DD5D759A5E96F0ED06BB7520CC05F3" name="Add service profile business process">
     <fontColor/>
     <lineColor/>
     <font family="Tahoma" height="8"/>
-    <location x="6" y="7"/>
+    <location x="5" y="176"/>
     <size width="1100" height="1116"/>
     <fillColor red="255" green="255" blue="255"/>
     <children xsi:type="bpmn:Lane" id="A1DD5D759A5E96F1ED06BB7520CC05F3" name="Lane1">
@@ -755,52 +755,59 @@
       </children>
     </children>
     <process name="addServiceProfile" id="A1DD5D75BC581970ED06BB7520CC05F3" targetNamespace="urn:vispproject.org/052007/useCases/22/addServiceProfile/bpel">
-      <messages name="AddServiceProfile_Request" type="addspwsdl:AddServiceProfile_Request" messageUsages="//@children.0/@children.0/@children.5/@outMessage" id="A1DD5D76376B35C0ED06BB7520CC05F3">
+      <messages name="AddServiceProfile_Request" type="addspwsdl:AddServiceProfile_Request" id="A1DD5D76376B35C0ED06BB7520CC05F3" messageUsages="//@children.0/@children.0/@children.5/@outMessage">
         <properties name="parameters" type="addspwsdl:addServiceProfile"/>
       </messages>
-      <messages name="AddServiceProfile_Response" type="addspwsdl:AddServiceProfile_Response" messageUsages="//@children.0/@children.0/@children.11/@inMessage" id="A1DD5D76376D7FB0ED06BB7520CC05F3">
+      <messages name="AddServiceProfile_Response" type="addspwsdl:AddServiceProfile_Response" id="A1DD5D76376D7FB0ED06BB7520CC05F3" messageUsages="//@children.0/@children.0/@children.11/@inMessage">
         <properties name="parameters" type="addspwsdl:addServiceProfile_Response"/>
       </messages>
-      <messages name="CheckPreconditions_Request" type="addspwsdl:CheckPreconditions_Request" messageUsages="//@children.0/@children.0/@children.6/@outMessage" id="A1DD5E1161CC3211E46EE9B955E2E050">
+      <messages name="CheckPreconditions_Request" type="addspwsdl:CheckPreconditions_Request" id="A1DD5E1161CC3211E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.6/@outMessage">
         <properties name="parameters" type="addspwsdl:checkPreconditions"/>
       </messages>
-      <messages name="CheckPreconditions_Response" type="addspwsdl:CheckPreconditions_Response" messageUsages="//@children.0/@children.0/@children.8/@inMessage" id="A1DD5E1161CEA310E46EE9B955E2E050">
+      <messages name="CheckPreconditions_Response" type="addspwsdl:CheckPreconditions_Response" id="A1DD5E1161CEA310E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.8/@inMessage">
         <properties name="parameters" type="addspwsdl:checkPreconditions_Response"/>
       </messages>
-      <messages name="QueryRequest" type="mdwsdl:QueryRequest" messageUsages="//@children.0/@children.0/@children.3/@children.8/@inMessage" id="A1DD5E1B25D4BD91E46EE9B955E2E050">
+      <messages name="QueryRequest" type="mdwsdl:QueryRequest" id="A1DD5E1B25D4BD91E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.8/@inMessage">
         <properties name="parameters" type="mdwsdl:Query"/>
       </messages>
-      <messages name="QueryResponse" type="mdwsdl:QueryResponse" messageUsages="//@children.0/@children.0/@children.3/@children.8/@outMessage" id="A1DD5E1B25D70780E46EE9B955E2E050">
+      <messages name="QueryResponse" type="mdwsdl:QueryResponse" id="A1DD5E1B25D70780E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.8/@outMessage">
         <properties name="parameters" type="mdwsdl:QueryResponse"/>
       </messages>
-      <messages name="MDFault" type="mdwsdl:MDFault" messageUsages="//@children.0/@children.0/@children.3/@children.8/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.2/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD5E1B4DA77150E46EE9B955E2E050">
+      <messages name="MDFault" type="mdwsdl:MDFault" id="A1DD5E1B4DA77150E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.8/@sourceConnections.1/@boundaryEvent/@triggers.0/@error //@children.0/@children.0/@children.2/@children.4/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
         <properties name="parameters" type="comxsd:VispError"/>
       </messages>
-      <messages name="getServicesDetails_Request" type="skbwsdl:getServicesDetails_Request" messageUsages="//@children.0/@children.0/@children.3/@children.12/@inMessage" id="A1DD5E1C1BE09061E46EE9B955E2E050">
+      <messages name="getServicesDetails_Request" type="skbwsdl:getServicesDetails_Request" id="A1DD5E1C1BE09061E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.12/@inMessage">
         <properties name="parameters" type="skbwsdl:getServicesDetails"/>
       </messages>
-      <messages name="getServicesDetails_Response" type="skbwsdl:getServicesDetails_Response" messageUsages="//@children.0/@children.0/@children.3/@children.12/@outMessage" id="A1DD5E1C1BE2DA50E46EE9B955E2E050">
+      <messages name="getServicesDetails_Response" type="skbwsdl:getServicesDetails_Response" id="A1DD5E1C1BE2DA50E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.12/@outMessage">
         <properties name="parameters" type="repxsd:ServiceDescription"/>
       </messages>
-      <messages name="visp_Fault" type="skbwsdl:visp_Fault" messageUsages="//@children.0/@children.0/@children.3/@children.12/@sourceConnections.0/@boundaryEvent/@triggers.0/@error" id="A1DD5E1C52122900E46EE9B955E2E050">
+      <messages name="visp_Fault" type="skbwsdl:visp_Fault" id="A1DD5E1C52122900E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.3/@children.12/@sourceConnections.0/@boundaryEvent/@triggers.0/@error">
         <properties name="vispErrorMessage" type="comxsd:VispError"/>
       </messages>
-      <messages name="CheckPreconditions_Fault" type="addspwsdl:CheckPreconditions_Fault" messageUsages="//@children.0/@children.0/@children.10/@results.0/@error" id="A1DD5E30F8D82960E46EE9B955E2E050">
+      <messages name="CheckPreconditions_Fault" type="addspwsdl:CheckPreconditions_Fault" id="A1DD5E30F8D82960E46EE9B955E2E050" messageUsages="//@children.0/@children.0/@children.10/@results.0/@error">
         <properties name="parameters" type="addspwsdl:vispError"/>
       </messages>
-      <messages name="AddNewService2ServiceProfileRequest" type="mdwsdl:AddNewService2ServiceProfileRequest" messageUsages="//@children.0/@children.0/@children.2/@children.4/@inMessage" id="A1DD5E7D504B7BB0E6DCAC29775C8255">
+      <messages name="AddNewService2ServiceProfileRequest" type="mdwsdl:AddNewService2ServiceProfileRequest" id="A1DD5E7D504B7BB0E6DCAC29775C8255" messageUsages="//@children.0/@children.0/@children.2/@children.4/@inMessage">
         <properties name="parameters" type="mdwsdl:AddNewService2ServiceProfile"/>
       </messages>
-      <messages name="AddNewService2ServiceProfileResponse" type="mdwsdl:AddNewService2ServiceProfileResponse" messageUsages="//@children.0/@children.0/@children.2/@children.4/@outMessage" id="A1DD5E7D504DC5A0E6DCAC29775C8255">
+      <messages name="AddNewService2ServiceProfileResponse" type="mdwsdl:AddNewService2ServiceProfileResponse" id="A1DD5E7D504DC5A0E6DCAC29775C8255" messageUsages="//@children.0/@children.0/@children.2/@children.4/@outMessage">
         <properties name="parameters" type="mdwsdl:AddNewService2ServiceProfileResponse"/>
       </messages>
-      <messages name="AddServiceProfile_Fault" type="addspwsdl:AddServiceProfile_Fault" messageUsages="//@children.0/@children.0/@children.13/@results.0/@error" id="A1DD5E7EB8724650E6DCAC29775C8255">
+      <messages name="AddServiceProfile_Fault" type="addspwsdl:AddServiceProfile_Fault" id="A1DD5E7EB8724650E6DCAC29775C8255" messageUsages="//@children.0/@children.0/@children.13/@results.0/@error">
         <properties name="parameters" type="addspwsdl:vispError"/>
       </messages>
     </process>
     <participant>
       <role name="Participant1"/>
     </participant>
+  </children>
+  <children xsi:type="bpmn:StyledText" text="Copyright 2009 VISP Consortium.&#xD;&#xA;&#xD;&#xA;Licensed to the VISP Consortium under one or more contributor license agreements.  &#xD;&#xA;&#xD;&#xA;See the LICENSE file distributed with this work for additional information regarding copyright ownership. The VISP consortium licenses this file to you under the &#xD;&#xA;VISP License, Version 1.0 (the &quot;License&quot;); you may not use this file except in compliance with the License.  &#xD;&#xA;&#xD;&#xA;You may obtain a copy of the License at: http://www.visp-project.org/licenses/LICENSE-1.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES &#xD;&#xA;OR CONDITIONS OF ANY KIND,  either express or implied. See the License for the specific language governing permissions and limitations under the License.">
+    <fontColor/>
+    <font family="Arial" height="8"/>
+    <location x="6" y="9"/>
+    <size width="808"/>
+    <fillColor red="255" green="255" blue="255"/>
   </children>
   <xMLNSPrefixMap key="xsd" value="http://www.w3.org/2001/XMLSchema"/>
   <xMLNSPrefixMap key="bpws" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
